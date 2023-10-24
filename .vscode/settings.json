@@ -1,0 +1,15 @@
+{
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": "/HD/static/css"
+    }
+  ],
+  "liveSassCompile.settings.generateMap": false,
+  "liveSassCompile.settings.includeItems": [
+    "/HD/static/css/scss/*.scss"
+  ],
+  "editor.fontLigatures": false,
+  "editor.fontVariations": false
+}

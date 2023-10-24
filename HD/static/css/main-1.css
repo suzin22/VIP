@@ -1,0 +1,245 @@
+.main{font-size: 20rem; background-color: var(--bgColor);}
+.main .section{position: relative;}
+
+.main .visual{width: 100%; height: 100vh; height: calc(var(--vh, 1vh) * 100); background-color: var(--ciColor); color: #fff; position: relative; overflow: hidden;}
+.main .visual .mainLine{width: 500rem; height: 1rem; background-color: #fff; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%) rotate(-45deg); transition: all 0.6s ease; z-index: 3;}
+.main .visual .txt{position: absolute; top: 50%; transform: translate(-50%,-50%); z-index: 1; transition: all 0.6s ease;}
+.main .visual .txt1{left: calc(50% - 210rem);}
+.main .visual .txt2{left: calc(50% + 210rem);}
+.main .visual .txt span{opacity: 0; transition: all 0.6s ease; font-weight: 300; display: block; }
+.main .visual .txt2 span{text-align: right;}
+.main .visual .contentWrap{width: 1rem; height: 960rem; opacity: 0; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%) rotate(45deg); transition: all 0.6s ease;}
+.main .visual .contentWrap > * {width: 100%; height: 100%; object-fit: cover;}
+.main .visual .textWrap{opacity: 0; transition: all 1s ease; text-align: center; width: 100%; position: absolute; top: 50%; transform: translateY(-50%); z-index: 5; transition: all 0.6s ease;}
+.main .visual .textWrap h4{font-size: 60rem; font-weight: 600; margin-bottom: 30rem; line-height: 1.25;}
+
+
+
+
+
+
+.main .main_section_01 .graphic{width: 100rem; height: 100rem; border-radius: 50%; background-color: var(--ciColor); position: absolute; left: 130rem; bottom: 0; transition: all 1s ease;}
+.main .main_section_01 .textWrap.left{opacity: 1; transition: opacity 1s ease 1.5s; color: inherit;}
+.main .main_section_01 .textWrap.right{background-color: transparent; color: #fff; position: absolute; right: 0; top: 0; height: 100%; padding-left: 91rem; width: 0; transition: all 1s ease; transition-delay: 2s; z-index: 6;}
+.main .main_section_01 .textWrap.right p{opacity: 0; transition: all 1s ease; transition-delay: 3s;}
+.main .main_section_01 svg{width: 1886rem; position: absolute; left: 0; bottom: 0; z-index: 4; }
+.main .main_section_01 svg path{stroke-dasharray: 2490; stroke-dashoffset: 2490; }
+.main .main_section_01.aos-animate svg path{animation: section01Svg 3s ease 1s forwards;}
+.main .main_section_01.aos-animate .graphic{width: 0; height: 0; }
+.main .main_section_01.aos-animate .textWrap.left{opacity: 0;}
+.main .main_section_01.aos-animate .textWrap.right{width: 721rem; background-color: rgba(135, 119, 106,0.9);}
+.main .main_section_01.aos-animate .textWrap.right p{opacity: 1;}
+@keyframes section01Svg {
+  0%{stroke-dashoffset: 2490; opacity: 1;}
+  50%{stroke-dashoffset: 0; opacity: 1;}
+  95%{stroke-dashoffset: 0; opacity: 0;}
+  100%{stroke-dashoffset: 0; opacity: 0;}
+}
+
+
+
+.main .main_section_02{padding-top: 100rem; padding-bottom: 153rem;}
+
+
+
+
+.main .main_section_03 {border-top: 1rem solid var(--borderColor); padding-top: 100rem; padding-bottom: 150rem; width: 100%; overflow: hidden;}
+.main .main_section_03  .scrollbar{bottom: 147rem;}
+.main .main_section_03 .slide{height: auto; transition: all 0.3s ease; position: relative; padding-bottom: 150rem; border-bottom: 1rem solid var(--borderColor); overflow: initial;}
+.main .main_section_03 .slide > .flex{flex-wrap: nowrap;width: 3583rem; transition: all 0.3s ease; }
+.main .main_section_03 .slide .box{width: 580rem; height: 530rem; position: relative; background-color: #EBEBEB; border: 1rem solid var(--borderColor); padding: 30rem;}
+.main .main_section_03 .slide .titleWrap{width: 855rem; }
+.main .main_section_03 .slide .titleWrap h3{margin: 30rem 0 45rem;}
+.main .main_section_03 .slide .box img{width: 100%; height: 100%; position: absolute; top: 0; left: 0; object-fit: cover; opacity: 0; transition: all 0.3s ease;}
+.main .main_section_03 .slide .box + .box{margin-left: 50rem;}
+.main .main_section_03 .slide .box .num{font-size: 70rem; font-weight: 250; color: var(--fontColor1); line-height: 1; position: absolute; z-index: 2; top: 38rem;}
+.main .main_section_03 .slide .box .textWrap{font-size: 18rem; position: absolute; bottom: 30rem;}
+.main .main_section_03 .slide .box .textWrap .title{font-size: 25rem; font-weight: 500; margin-bottom: 10rem;}
+.main .main_section_03 .slide .box .textWrap .sub{font-weight: 300;}
+.main .main_section_03 .slide .box.swiper-slide-active{color: #fff;}
+.main .main_section_03 .slide .box.swiper-slide-active img{opacity: 1;}
+.main .main_section_03 .slide .box.swiper-slide-active .num{color: #fff;}
+.main .main_section_03 .slide .box.swiper-slide-active .textWrap .title{font-weight: 400;}
+.main .main_section_03 .slide .box.swiper-slide-active .textWrap .sub{font-weight: 200;}
+
+@media screen and (min-width: 1281px) {
+  .main .main_section_03 .slide .box:hover{color: #fff;}
+  .main .main_section_03 .slide .box:hover img{opacity: 1;}
+  .main .main_section_03 .slide .box:hover .num{color: #fff;}
+  .main .main_section_03 .slide .box:hover .textWrap .title{font-weight: 400;}
+  .main .main_section_03 .slide .box:hover .textWrap .sub{font-weight: 200;}
+}
+
+
+
+
+
+.main .main_section_04{position: relative; width: 100%; color: #fff;}
+
+.main .main_section_04 .effect{width: 560rem; height: 560rem; position: absolute; left: 50%; top: 850rem; transform: translateX(-50%); transition: all 1s ease; transition-delay: 1.6s; transform-origin: top;}
+.main .main_section_04 .effect .img{position: absolute; width: 280rem; height: 280rem; top: 0; left: 0; transform-origin: top right; transition: transform 2s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 1s ease 2s;}
+.main .main_section_04 .effect.aos-animate{transform: translateX(-50%) rotate(45deg);}
+.main .main_section_04 .effect .img2{opacity: 0.5;}
+.main .main_section_04 .effect.aos-animate .img2{transform: rotate(90deg); opacity: 1;}
+.main .main_section_04 .effect.aos-animate .img3{transform: rotate(180deg);}
+.main .main_section_04 .effect .img4{opacity: 0.5;}
+.main .main_section_04 .effect.aos-animate .img4{transform: rotate(270deg); opacity: 1; }
+.main .main_section_04 .effect .last{opacity: 0; position: absolute; width: 560rem; height: 560rem; top: 0; left: 0; transform-origin: top; transform: translateY(-50%); transition: opacity 1s ease 2s; z-index: 3;}
+.main .main_section_04 .effect.aos-animate .last{opacity: 1;}
+
+.main .main_section_04 .area1{height: 850rem; position: relative; padding-top: 85rem;}
+.main .main_section_04 .area1 img{position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;}
+.main .main_section_04 .area1 .info{font-size: 25rem;}
+.main .main_section_04 .area1 h1{margin-bottom: 60rem;}
+.main .main_section_04 .area1 .sub{font-weight: 100; line-height: 1.2;}
+.main .main_section_04 .area1 .sub b{font-weight: 400;}
+.main .main_section_04 .area2{height: 800rem; background-color: #87776A; text-align: right; padding-top: 275rem;}
+.main .main_section_04 .area2 .sub{font-weight: 200; line-height: 1.25; margin-bottom: 50rem;}
+.main .main_section_04 .area2 .sub b{font-weight: 500;}
+
+
+
+
+
+.main .main_section_05 .textWrap{background-color: transparent; transition: background-color 1s ease 2s, color 1s ease 1s;}
+.main .main_section_05 .textWrap .box{position: absolute; bottom: 130rem;}
+.main .main_section_05 .textWrap .box .title{font-size: 30rem; font-weight: 600; margin-bottom: 30rem;}
+.main .main_section_05 .textWrap .box .sub{font-size: 25rem;}
+.main .main_section_05 .textWrap .box a{background-color: var(--ciColor); color: #fff; font-size: 20rem; font-weight: 200; padding: 19rem 0; display: flex; margin-top: 47rem; align-items: center; width: 354rem; justify-content: center;}
+.main .main_section_05 .textWrap .box a img{margin-left: 20rem; width: 23rem;}
+.main .main_section_05 .countWrap{position: absolute; top: 50%; transform: translateY(-50%); right: 254rem; z-index: 2; background-color: #fff; width: 691rem; height: 608rem;}
+.main .main_section_05 .countWrap em{font-size: 18rem;}
+.main .main_section_05 .countWrap .area{padding: 30rem 50rem 30rem 30rem; height: 50%;}
+.main .main_section_05 .countWrap .area  + .area{border-top: 1px solid #CCCCCC;}
+.main .main_section_05 .countWrap .area .counter{position: relative; width: 100%; height: 100%; text-align: right; padding-right: 50rem;}
+.main .main_section_05 .countWrap .area .counter .num{font-size: 150rem; }
+.main .main_section_05 .countWrap .area .counter p{position: absolute; bottom: 60rem; right: 0;}
+.main .main_section_05.aos-animate .textWrap{background-color: rgba(31, 31, 31,0.92);}
+
+
+
+
+.main .main_section_06{justify-content: space-between; padding-top: 150rem;}
+.main .main_section_06 .box{width: 520rem; height: 379rem; background-color: #fff; padding: 40rem 0 30rem 40rem; transition: background-color 0.3s ease, transform 1s ease; position: relative;}
+.main .main_section_06 .box .dot{font-size: inherit; font-weight: 400;}
+.main .main_section_06 .box .title{font-size: 40rem; margin-top: 90rem; position: relative; padding-bottom: 35rem; margin-bottom: 35rem;}
+.main .main_section_06 .box .title::after{content: ''; position: absolute; width: calc(100% + 40rem); height: 1rem; background-color: #cccccc; bottom: 0; left: -40rem;}
+.main .main_section_06 .box .sub{font-weight: 300; display: block; }
+.main .main_section_06 .box .moreBtn{font-size: 15rem; position: absolute; bottom: 30rem;}
+
+@media screen and (min-width: 1281px) {
+  .main .main_section_06 .box:hover{background-color: var(--ciColor); color: #fff;}
+  .main .main_section_06 .box:hover em{color: #fff;}
+  .main .main_section_06 .box:hover .dot{filter: brightness(10)grayscale(1);}
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1280px) {
+  .main{font-size: 15rem;}
+  .main footer{margin-top: 70rem;}
+
+  .main .visual h3{font-size: 35rem;}
+  .main .visual .txt{transform: translateY(-50%); opacity: 0; transition: all 2.5s ease;}
+  .main .visual .txt1{left: 25rem; }
+  .main .visual .txt2{right: 25rem; left: auto;}
+  .main .visual .contentWrap > * {object-fit: cover;}
+  .main .visual .contentWrap{height: 200rem; width: 1rem; transition: transform 2.5s ease, opacity 1s ease, height 2.5s ease, width 2.5s ease; visibility: hidden;}
+  .main .visual .textWrap h4{font-size: 25rem; margin-bottom: 18rem;}
+  .main .visual .mainLine{width: 0; transition: transform 2.5s ease, opacity 1s ease, width 2.5s ease;}
+  .main .visual .txt span{transition: all 1s ease;transition-delay: 1s;}
+  .main .visual .textWrap{visibility: hidden; transition-delay: 1s;}
+
+  .main .visual.start1 .txt{opacity: 1;}
+  .main .visual.start1 .mainLine{width: 200rem;}
+
+  .main .visual.start2 .txt{transform: none; }
+  .main .visual.start2 .txt1{top: 17vh; left: 25rem;}
+  .main .visual.start2 .txt2{top: calc(100% - 20vh); left: auto;}
+  .main .visual.start2 .txt span{margin-top: 10rem; opacity: 1;}
+  .main .visual.start2 .mainLine{width: 123vw;}
+  .main .visual.start2 .contentWrap{height: 10vw; visibility: visible;}
+
+  .main .visual.start3 .mainLine{transform: translate(-50%,-50%) rotate(-90deg); opacity: 0; width: 70vh; }
+  .main .visual.start3 .contentWrap{transform: translate(-50%,-50%); opacity: 1; height: 70vh;}
+
+  .main .visual.start4 .txt{opacity: 0; visibility: hidden;}
+  .main .visual.start4 .contentWrap{width: 100%; height: 100%;}
+  .main .visual.start4 .textWrap{opacity: 1; visibility: visible;}
+
+
+
+  .main .main_section_01 .graphic{width: 20rem; height: 20rem; bottom: 175rem; left: 25rem;}
+  .main .main_section_01 svg{display: none;}
+  .main .main_section_01 .textWrap.left{padding: 50rem 25rem 0; width: 100%; height: 192rem; bottom: 0; font-weight: 200; background-color: transparent; transition: background-color 1s ease 1s, color 1s ease;}
+  .main .main_section_01 .textWrap.right{display: none;}
+  .main .main_section_01.aos-animate .textWrap.left{color: #fff; opacity: 1; background-color: rgba(135, 119, 106,0.9);}
+
+  .main .main_section_02{display: block; padding-top: 50rem; padding-bottom: 72rem;}
+
+  .main .main_section_03{padding-top: 70rem; padding-bottom: 70rem; height: auto; overflow: initial;}
+  .main .main_section_03 .titleWrap{padding: 0 25rem; margin-bottom: 50rem;}
+  .main .main_section_03 .titleWrap h3{margin: 20rem 0 30rem;}
+  .main .main_section_03 .scrollbar{top: -2rem; bottom: auto;}
+  .main .main_section_03 .slide{padding: 0; width: 100%; border-bottom: none; }
+  .main .main_section_03 .slide > .flex{height: 100%; overflow: hidden; width: 100%; padding: 0 25rem;}
+  .main .main_section_03 .slide .m-slide{width: 100%; height: 100%;}
+  .main .main_section_03 .slide .box{height: 72.2222vw; width: 100%; padding: 20rem; max-height: 600rem;}
+  .main .main_section_03 .slide .box + .box{margin-left: initial;}
+  .main .main_section_03 .slide .box .num{font-size: 35rem; position: static;}
+  .main .main_section_03 .slide .box .textWrap{bottom: 20rem;}
+  .main .main_section_03 .slide .box .textWrap .title{font-size: 18rem;}
+  .main .main_section_03 .slide .box .textWrap .sub{font-size: 15rem;}
+  .main .main_section_03 .slide .box .textWrap .sub br{display: none;}
+
+  .main .main_section_04{padding-top: 0;}
+  .main .main_section_04 .effect{width: 150rem; height: 150rem; top: 400rem;}
+  .main .main_section_04 .effect .img{width: 75rem; height: 75rem;}
+  .main .main_section_04 .effect .last{width: 150rem; height: 150rem;}
+  .main .main_section_04 .area1{height: 400rem; padding-top: 50rem;}
+  .main .main_section_04 .area1 .info{font-size: 18rem;}
+  .main .main_section_04 .area1 .sub{font-weight: 200;}
+  .main .main_section_04 .area1 h1{white-space: nowrap; font-weight: 400; margin: 5rem 0 30rem;}
+  .main .main_section_04 .area2{height: 350rem; padding-top: 125rem;}
+  .main .main_section_04 .area2 h2{font-weight: 400;}
+  .main .main_section_04 .area2 .sub{margin-bottom: 20rem;}
+  
+  
+  .main .main_section_05{height: 677rem; padding-top: 325rem;}
+  .main .main_section_05 .imgWrap{width: 100%; height: 325rem; top: 0;}
+  .main .main_section_05 .textWrap{padding: 50rem 25rem; position: static; height: 100%;}
+  .main .main_section_05 .textWrap .logo{width: 145rem; margin-bottom: 20rem;}
+  .main .main_section_05 .textWrap .box{position: static; }
+  .main .main_section_05 .textWrap .box .title{font-size: 18rem; margin-bottom: 20rem;}
+  .main .main_section_05 .textWrap .box .sub{font-size: 18rem;}
+  .main .main_section_05 .textWrap .box .sub br{display: none;}
+  .main .main_section_05 .textWrap .box a{font-size: 15rem; width: 261rem; margin-top: 20rem; padding: 14rem 0;}
+  .main .main_section_05 .textWrap .box a img{width: 17rem; margin-left: 10rem;}
+  .main .main_section_05 .countWrap{width: calc(100% - 50rem); height: 256rem; max-width: 600rem; top: 35rem; transform: translateX(-50%); left: 50%;}
+  .main .main_section_05 .countWrap em{font-size: 15rem;}
+  .main .main_section_05 .countWrap .area{padding: 20rem;}
+  .main .main_section_05 .countWrap .area .counter{display: flex; align-items: flex-end; justify-content: flex-end; padding-right: 0; height: auto;}
+  .main .main_section_05 .countWrap .area .counter .num{font-size: 50rem; line-height: 1;}
+  .main .main_section_05 .countWrap .area .counter p{position: static; margin-left: 10rem;}
+  .main .main_section_05.aos-animate .imgWrap{height: 100%;}
+  .main .main_section_05.aos-animate .textWrap{font-weight: 100;}
+  .main .main_section_05.aos-animate .textWrap .box .title{font-weight: 300;}
+
+
+
+
+  .main .main_section_06{padding-top: 50rem;}
+  .main .main_section_06 .box{width: 100%; padding: 20rem; height: 298rem;}
+  .main .main_section_06 .box + .box{margin-top: 20rem;}
+  .main .main_section_06 .box .title{font-size: 30rem; margin-top: 65rem; padding-bottom: 25rem; margin-bottom: 30rem;}
+  .main .main_section_06 .box .title::after{left: -20rem; width: calc(100% + 40rem);}
+  .main .main_section_06 .box .sub{line-height: 1.25;}
+  .main .main_section_06 .box .moreBtn{bottom: 20rem;}
+}
