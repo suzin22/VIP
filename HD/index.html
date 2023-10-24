@@ -20,24 +20,173 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
 	<script src="static/js/front.js"></script>
 </head>
-<body class="main">
-  
+<body>
   <div class="wrap">
-    <main id="contentsArea">
-      <div class="visual">
-        <div class="mainLine"></div>
-        <div class="txt txt1"><h3 class="alex">Create</h3><span>새로운dd 가치를 창조하는</span></div>
-        <div class="txt txt2"><h3 class="alex">Future</h3><span>부동산 투자의 미래</span></div>
-        <div class="contentWrap">
-          <video src="http://www.lotteamc.com/resources/videos/mainVideo.mp4" muted loop playsinline autoplay></video>
+    <section class="media">
+      <div class="media-inner">
+        <div class="sticky-wrap">
+          <div class="sticky-tit">
+            <img src="static/images/text/sticky-tit.png">
+          </div>
+          <div class="sticky-btn">
+            <a href="#">
+              <img src="static/images/text/sticky-btn.png">
+            </a>
+          </div>
         </div>
-        <div class="textWrap">
-          <h4>새로운 가치를 창조하는 <br class="mo">부동산 투자의 미래 <br>LOTTE AMC가 함께 합니다.</h4>
-          <p>함께 가는 투자 파트너, LOTTE AMC</p>
+        <div class="tab" id="tab">
+          <div class="menu">
+            <div class="inner">
+              <ul class="menu-list">
+                <li>
+                  <button class="btn active" id="all">ALL</button>
+                </li>
+                <li>
+                  <button class="btn" id="type-1">조선해양</button>
+                </li>
+                <li>
+                  <button class="btn" id="type-2">에너지</button>
+                </li>
+                <li>
+                  <button class="btn" id="type-3">기계·로봇</button>
+                </li>
+                <li>
+                  <button class="btn" id="type-4">기타 서비스</button>
+                </li>
+                <li>
+                  <button class="btn" id="type-5">HD현대그룹</button>
+                </li>
+                <li>
+                  <button class="btn" id="type-6">매거진 H</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="tab-list">
+            <ul class="list" id="parent">
+              <li class="item type-1" data-show="type-1">
+                <a href="#" class="box">
+                  <div class="txt">
+                    <img src="static/images/text/media-type-1.png">
+                  </div>
+                  <div class="arrow"></div>
+                </a>
+              </li>
+              <li class="item type-1" data-show="type-1">
+                <a href="#" class="box">
+                  <div class="txt">
+                    <img src="static/images/text/media-type-2.png">
+                  </div>
+                  <div class="arrow"></div>
+                </a>
+              </li>
+              <li class="item type-1" data-show="type-1">
+                <a href="#" class="box">
+                  <div class="txt">
+                    <img src="static/images/text/media-type-3.png">
+                  </div>
+                  <div class="arrow"></div>
+                </a>
+              </li>
+              <li class="item type-1" data-show="type-1">
+                <a href="#" class="box">
+                  <div class="txt">
+                    <img src="static/images/text/media-type-4.png">
+                  </div>
+                  <div class="arrow"></div>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-    </main>
+    </section>
+    <section class="group-esg">
+      <div class="esg-tit">
+        <img src="static/images/text/esg-tit.png">
+      </div>
+      <ul class="box-list">
+        <li>
+          <div class="big-box">
+            <div class="inner">
+              <div class="img-wrap">
+                <img src="static/images/esg-img-1.png">
+              </div>
+              <div class="text-wrap">
+                <img src="static/images/text/esg-text-1.png">
+              </div>
+            </div>
+          </div>
+        </li>
+        <!-- <li>
+          <div class="big-box">
+            <div class="inner">
+              <div class="img-wrap">
+                <img src="static/images/esg-img-1.png">
+              </div>
+              <div class="text-wrap">
+                <img src="static/images/text/esg-text-1.png">
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="big-box">
+            <div class="inner">
+              <div class="img-wrap">
+                <img src="static/images/esg-img-1.png">
+              </div>
+              <div class="text-wrap">
+                <img src="static/images/text/esg-text-1.png">
+              </div>
+            </div>
+          </div>
+        </li> -->
+      </ul>
+    </section>
+    <section class="stock">
+      <div class="inner">
+        <div class="tit">
+          <img src="static/images/text/stock-tit.png">
+        </div>
+        <div class="all-flex">
+          <div class="left">
+            <strong>75,400</strong>
+            <img src="static/images/text/stock-subtxt.png">
+          </div>
+          <div class="right">
+            <a href="#"><img src="static/images/text/stock-btn-1.png"></a>
+            <a href="#"><img src="static/images/text/stock-btn-2.png"></a>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
-
+  <footer id="footer" class="footer">
+    <div class="footer-inner">
+      <div class="left">
+        <div class="logo-wrap">
+          <img src="static/images/text/logo.png">
+        </div>
+        <div class="family-site">
+          
+        </div>
+        <div class="img">
+          <img src="static/images/text/ft-bottom-left.png">
+        </div>
+      </div>
+      <div class="right">
+        <div class="img">
+          <img src="static/images/text/sitemap.png">
+        </div>
+        <div class="img">
+          <img src="static/images/text/ft-bottom-right.png">
+        </div>
+      </div>
+    </div>
+    <div class="top-btn">
+      <a href="#"><img src="static/images/top-btn.png"></a>
+    </div>
+  </footer>
 </body>
 </html>
