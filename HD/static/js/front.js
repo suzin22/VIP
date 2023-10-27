@@ -35,6 +35,12 @@ $(document).ready(function(){
   gsap.set(".set-1 .bs-card-wrap", {yPercent:0}) // 조선해양
   gsap.set(".set-2 .bs-card-wrap", {yPercent:0}) // 에너지
   gsap.set(".set-3 .bs-card-wrap", {yPercent:0}) // 기계 로봇
+  gsap.set(".set-1 .en-text", {opacity:0, y: 50})
+  gsap.set(".set-1 .ko-text", {opacity:0, y: 100})
+  gsap.set(".set-2 .en-text", {opacity:0, y: 50})
+  gsap.set(".set-2 .ko-text", {opacity:0, y: 100})
+  gsap.set(".set-3 .en-text", {opacity:0, y: 50})
+  gsap.set(".set-3 .ko-text", {opacity:0, y: 100})
 
   //gsap.set(".bg-fff", {'opacity':'1'}) // bg fff
 
@@ -47,7 +53,7 @@ $(document).ready(function(){
       scrub: 2, // 숫자가 커질수록 부드러워짐
       pin: true, // pin: '.selector'시 특정 엘리먼트가 고정
       smooth: 1,
-      //markers: true,
+      // markers: true,
       onUpdate:(self) => {
         let result = '';
         let target = $('.set-1 .bs-card-wrap').css('transform');
@@ -56,7 +62,7 @@ $(document).ready(function(){
         //result += parseInt(sResult[length-2]) + " " + parseInt(sResult[length-1]) + " " + parseInt(sResult[length-3]);
         result += -(parseInt(sResult[length-2]));
         
-        if(result <= 150){
+        if(result == 0){
           $('.gsap-box-1 .card').removeClass('is-active')
           $('.gsap-box-1 .card-1').addClass('is-active')
         }
@@ -84,17 +90,19 @@ $(document).ready(function(){
   //.to(".bg-fff", {opacity: 0, duration: 1}, 'start1')
   .to(".split-tit", {opacity: 0, duration: 3}, 'start1')
   .to(".set-1", {yPercent: -88, duration: 1}, 'start1')
+  .to(".set-1 .en-text", {y: 0, opacity: 1, duration: 3}, 'start1.5')
+  .to(".set-1 .ko-text", {y: 0, opacity: 1, duration: 3}, 'start1.5')
 
 
-  .to(".set-1 .bs-card-wrap", {xPercent: -310, duration: 3}, 'start2')
+  .to(".set-1 .bs-card-wrap", {xPercent: -295, duration: 3}, 'start2')
 
   // 에너지
   let splitPin2 = gsap.timeline({
     scrollTrigger: {
       trigger: ".gsap-box-2",
       start: "-1040 top",
-      end: "3000", // 속도 조절
-      scrub: 0.5, // 숫자가 커질수록 부드러워짐
+      end: "2000", // 속도 조절
+      scrub: 2, // 숫자가 커질수록 부드러워짐
       pin: true, // pin: '.selector'시 특정 엘리먼트가 고정
       smooth: 1,
       //markers: true,
@@ -105,15 +113,13 @@ $(document).ready(function(){
         let length = sResult.length;
         //result += parseInt(sResult[length-2]) + " " + parseInt(sResult[length-1]) + " " + parseInt(sResult[length-3]);
         result += -(parseInt(sResult[length-2]));
-
-        console.log(result)
         
-        if(result <= 150){
+        if(result == 0){
           $('.set-2 .card').removeClass('is-active')
           $('.set-2 .card-1').addClass('is-active')
         }
         
-        if( result >= 500 ){
+        if( result >= 790 ){
           $('.set-2 .card').removeClass('is-active')
           $('.set-2 .card-2').addClass('is-active')
         }
@@ -138,6 +144,8 @@ $(document).ready(function(){
 
   splitPin2.addLabel("label2")
 
+  .to(".set-2 .en-text", {y: 0, opacity: 1, duration: 1}, 'start1')
+  .to(".set-2 .ko-text", {y: 0, opacity: 1, duration: 1}, 'start1')
   .to(".set-2 .bs-card-wrap", {xPercent: -610, duration: 3}, 'start2')
 
   // 기계 로봇
@@ -145,8 +153,8 @@ $(document).ready(function(){
     scrollTrigger: {
       trigger: ".gsap-box-3",
       start: "-1040 top",
-      end: "2000", // 속도 조절
-      scrub: 0.5, // 숫자가 커질수록 부드러워짐
+      end: "+=2000", // 속도 조절
+      scrub: 2, // 숫자가 커질수록 부드러워짐
       pin: true, // pin: '.selector'시 특정 엘리먼트가 고정
       smooth: 1,
       //markers: true,
@@ -160,7 +168,7 @@ $(document).ready(function(){
 
         console.log(result)
         
-        if(result <= 150){
+        if(result == 0){
           $('.gsap-box-3 .card').removeClass('is-active')
           $('.gsap-box-3 .card-1').addClass('is-active')
         }
@@ -179,6 +187,8 @@ $(document).ready(function(){
   });
 
   splitPin3.addLabel("label3")
+  .to(".set-3 .en-text", {y: 0, opacity: 1, duration: 1}, 'start1')
+  .to(".set-3 .ko-text", {y: 0, opacity: 1, duration: 1}, 'start1')
   .to(".set-3 .bs-card-wrap", {xPercent: -305, duration: 3}, 'start2')
 
 
@@ -254,8 +264,8 @@ $(document).ready(function(){
     scrollTrigger: {
       trigger: ".esg-pin",
       start: "center center",
-      end: "4000", // 속도 조절
-      scrub: true,
+      end: "+=4000", // 속도 조절
+      scrub: 2,
       pin: true,
       smooth: true,
       // markers: true,
@@ -271,7 +281,7 @@ $(document).ready(function(){
   .to(".esg-pin .box3", {yPercent: -182.7, duration: 3}, 'start2')
   // main group esg 스크롤 이벤트 e
 
-  // HD현대 in social swiper
+  // HD현대 in social swiper 
   function mainSocialSwiper() {
     var social_swiper = new Swiper(".main-social .social-swiper", {
       slidesPerView: 'auto',
@@ -309,6 +319,19 @@ $(document).ready(function(){
     })
   }
   // 상단 이동 버튼 e
+
+  $('.all-menu').click(function() {
+    $(this).toggleClass('on');
+    $('.all-menu-inner').slideToggle(300);
+    return false;
+  });
+
+  $('.gnb-wrap li a').each(function(i){
+    $(this).click(function(e){
+      e.preventDefault();
+      
+    })
+  })
 
   topBtnClick();
   mainSocialSwiper();

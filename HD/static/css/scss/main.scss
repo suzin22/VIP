@@ -493,8 +493,18 @@ body {
     }
     .bs-pin {
       background: #fff;
+      .bs-box {
+        .bs-card-wrap {
+          .card {
+            &::after {
+              background: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.9) 100%);
+            }
+          }
+        }
+      }
     }
   }
+
   .main-media {
     width: calc(100% + 160px);
     margin-left: -80px;
