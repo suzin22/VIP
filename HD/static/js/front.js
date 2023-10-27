@@ -47,7 +47,7 @@ $(document).ready(function(){
       scrub: 2, // 숫자가 커질수록 부드러워짐
       pin: true, // pin: '.selector'시 특정 엘리먼트가 고정
       smooth: 1,
-      markers: true,
+      //markers: true,
       onUpdate:(self) => {
         let result = '';
         let target = $('.set-1 .bs-card-wrap').css('transform');
@@ -56,7 +56,7 @@ $(document).ready(function(){
         //result += parseInt(sResult[length-2]) + " " + parseInt(sResult[length-1]) + " " + parseInt(sResult[length-3]);
         result += -(parseInt(sResult[length-2]));
         
-        if(result == 0){
+        if(result <= 150){
           $('.gsap-box-1 .card').removeClass('is-active')
           $('.gsap-box-1 .card-1').addClass('is-active')
         }
@@ -86,15 +86,15 @@ $(document).ready(function(){
   .to(".set-1", {yPercent: -88, duration: 1}, 'start1')
 
 
-  .to(".set-1 .bs-card-wrap", {xPercent: -295, duration: 3}, 'start2')
+  .to(".set-1 .bs-card-wrap", {xPercent: -310, duration: 3}, 'start2')
 
   // 에너지
   let splitPin2 = gsap.timeline({
     scrollTrigger: {
       trigger: ".gsap-box-2",
       start: "-1040 top",
-      end: "2000", // 속도 조절
-      scrub: 2, // 숫자가 커질수록 부드러워짐
+      end: "3000", // 속도 조절
+      scrub: 0.5, // 숫자가 커질수록 부드러워짐
       pin: true, // pin: '.selector'시 특정 엘리먼트가 고정
       smooth: 1,
       //markers: true,
@@ -105,13 +105,15 @@ $(document).ready(function(){
         let length = sResult.length;
         //result += parseInt(sResult[length-2]) + " " + parseInt(sResult[length-1]) + " " + parseInt(sResult[length-3]);
         result += -(parseInt(sResult[length-2]));
+
+        console.log(result)
         
-        if(result == 0){
+        if(result <= 150){
           $('.set-2 .card').removeClass('is-active')
           $('.set-2 .card-1').addClass('is-active')
         }
         
-        if( result >= 790 ){
+        if( result >= 500 ){
           $('.set-2 .card').removeClass('is-active')
           $('.set-2 .card-2').addClass('is-active')
         }
@@ -143,8 +145,8 @@ $(document).ready(function(){
     scrollTrigger: {
       trigger: ".gsap-box-3",
       start: "-1040 top",
-      end: "+=2000", // 속도 조절
-      scrub: 2, // 숫자가 커질수록 부드러워짐
+      end: "2000", // 속도 조절
+      scrub: 0.5, // 숫자가 커질수록 부드러워짐
       pin: true, // pin: '.selector'시 특정 엘리먼트가 고정
       smooth: 1,
       //markers: true,
@@ -158,7 +160,7 @@ $(document).ready(function(){
 
         console.log(result)
         
-        if(result == 0){
+        if(result <= 150){
           $('.gsap-box-3 .card').removeClass('is-active')
           $('.gsap-box-3 .card-1').addClass('is-active')
         }
@@ -252,7 +254,7 @@ $(document).ready(function(){
     scrollTrigger: {
       trigger: ".esg-pin",
       start: "center center",
-      end: "+=4000", // 속도 조절
+      end: "4000", // 속도 조절
       scrub: true,
       pin: true,
       smooth: true,
@@ -269,7 +271,7 @@ $(document).ready(function(){
   .to(".esg-pin .box3", {yPercent: -182.7, duration: 3}, 'start2')
   // main group esg 스크롤 이벤트 e
 
-  // HD현대 in social swiper 
+  // HD현대 in social swiper
   function mainSocialSwiper() {
     var social_swiper = new Swiper(".main-social .social-swiper", {
       slidesPerView: 'auto',
