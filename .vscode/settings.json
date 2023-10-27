@@ -11,5 +11,10 @@
     "/HD/static/css/scss/*.scss"
   ],
   "editor.fontLigatures": false,
-  "editor.fontVariations": false
+  "editor.fontVariations": false,
+  "launch": {
+    
+    "configurations": [],
+    "compounds": []
+  }
 }
