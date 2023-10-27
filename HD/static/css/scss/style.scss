@@ -231,14 +231,14 @@ button {background: transparent; border: none; outline: none;}
               display: flex;
               align-items: center;
               .counter {
-                width: 400px;
+                width: 425px;
                 color: var(--primary-6-white, #FFF);
                 font-size: 120px;
                 font-weight: 700;
                 line-height: 1.2;
               }
               .img {
-                margin-left: 20px;
+                margin-left: 10px;
               }
             }
             .num-left, .num-right {

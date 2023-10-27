@@ -289,14 +289,14 @@ button {
   align-items: center;
 }
 .sub-inner .tab-list-wrap .tab-list .inner .info .num-flex .count-flex .counter {
-  width: 400px;
+  width: 425px;
   color: var(--primary-6-white, #FFF);
   font-size: 120px;
   font-weight: 700;
   line-height: 1.2;
 }
 .sub-inner .tab-list-wrap .tab-list .inner .info .num-flex .count-flex .img {
-  margin-left: 20px;
+  margin-left: 10px;
 }
 .sub-inner .tab-list-wrap .tab-list .inner .info .num-flex .num-left, .sub-inner .tab-list-wrap .tab-list .inner .info .num-flex .num-right {
   width: 25%;
@@ -398,4 +398,4 @@ button {
   position: absolute;
   right: 0;
   bottom: 0;
-}
+}/*# sourceMappingURL=style.css.map */
