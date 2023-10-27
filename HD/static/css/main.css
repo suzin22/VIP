@@ -89,6 +89,11 @@ body {
   position: relative;
   overflow-x: hidden;
 }
+.main-business .bs-pin .bs-box .set-2,
+.main-business .bs-pin .bs-box .set-3{
+  padding-top:0;
+  padding-bottom:0;
+}
 .main-business .bs-pin .bs-box .box-tit {
   width: -moz-fit-content;
   width: fit-content;
@@ -137,6 +142,9 @@ body {
 }
 .main-business .bs-pin .bs-box .bs-card-wrap .card + .card {
   margin-left: 300px;
+}
+.main-business .bs-pin .bs-box .bs-card-wrap .card.is-active{
+  transform: scale(1.1);
 }
 .main-business .bs-pin .bs-box .text {
   position: absolute;

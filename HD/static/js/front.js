@@ -1,5 +1,9 @@
 $(document).ready(function(){
 
+  document.addEventListener('scroll', () => {
+    //console.log(`스크롤 위치 ${window.scrollY}`)
+  })
+
   // scroll fade animation s
   let $window = $(window)
   $window.on('scroll', function(event) {
@@ -19,17 +23,44 @@ $(document).ready(function(){
   // scroll fade animation e
 
   // main business 스크롤 이벤트 s
-  gsap.set(".bs-box .box-tit", {'opacity':'0', y:100});
+  gsap.set(".bs-box .box-tit", {'opacity':'0', y:100}) // 타이틀
+  gsap.set(".set-1 .bs-card-wrap", {yPercent:0}) // 조선해양
+  gsap.set(".set-2 .bs-card-wrap", {yPercent:0}) // 에너지
+  gsap.set(".set-3 .bs-card-wrap", {yPercent:0}) // 기계 로봇
 
+  // 상단 ~ 조선해양
   let splitPin = gsap.timeline({
     scrollTrigger: {
-      trigger: ".main-business",
+      trigger: ".gsap-box-1",
       start: "top top",
-      end: "+=2000", // 속도 조절
-      scrub: true,
-      pin: true,
+      end: "3000", // 속도 조절
+      scrub: true, // 숫자가 커질수록 부드러워짐
+      pin: true, // pin: '.selector'시 특정 엘리먼트가 고정
       smooth: 1,
-      // markers: true,
+      //markers: true,
+      onUpdate:(self) => {
+        let result = '';
+        let target = $('.set-1 .bs-card-wrap').css('transform');
+        let sResult = target.split(',');
+        let length = sResult.length;
+        //result += parseInt(sResult[length-2]) + " " + parseInt(sResult[length-1]) + " " + parseInt(sResult[length-3]);
+        result += -(parseInt(sResult[length-2]));
+        
+        if(result == 0){
+          $('.gsap-box-1 .card').removeClass('is-active')
+          $('.gsap-box-1 .card-1').addClass('is-active')
+        }
+        
+        if( result >= 790 ){
+          $('.gsap-box-1 .card').removeClass('is-active')
+          $('.gsap-box-1 .card-2').addClass('is-active')
+        }
+        
+        if( result >= 1550 ){
+          $('.gsap-box-1 .card').removeClass('is-active')
+          $('.gsap-box-1 .card-3').addClass('is-active')
+        }
+      }
     }
   });
 
@@ -41,7 +72,104 @@ $(document).ready(function(){
   .to(".bs-box", {yPercent: -75, duration: 3}, 'start0')
   .to(".bs-box .box-tit", {opacity: 1, y: 0, duration: 7}, 'start0')
   .to(".split-tit", {opacity: 0, duration: 3}, 'start1')
-  .to(".bs-box", {yPercent: -88, duration: 1}, 'start1')
+  .to(".set-1", {yPercent: -88, duration: 1}, 'start1')
+
+
+  .to(".set-1 .bs-card-wrap", {xPercent: -295, duration: 3}, 'start2')
+
+  // 에너지
+  let splitPin2 = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".gsap-box-2",
+      start: "-1040 top",
+      end: "2000", // 속도 조절
+      scrub: true, // 숫자가 커질수록 부드러워짐
+      pin: true, // pin: '.selector'시 특정 엘리먼트가 고정
+      smooth: 1,
+      markers: true,
+      onUpdate:(self) => {
+        let result = '';
+        let target = $('.set-2 .bs-card-wrap').css('transform');
+        let sResult = target.split(',');
+        let length = sResult.length;
+        //result += parseInt(sResult[length-2]) + " " + parseInt(sResult[length-1]) + " " + parseInt(sResult[length-3]);
+        result += -(parseInt(sResult[length-2]));
+        
+        if(result == 0){
+          $('.set-2 .card').removeClass('is-active')
+          $('.set-2 .card-1').addClass('is-active')
+        }
+        
+        if( result >= 790 ){
+          $('.set-2 .card').removeClass('is-active')
+          $('.set-2 .card-2').addClass('is-active')
+        }
+        
+        if( result >= 1550 ){
+          $('.set-2 .card').removeClass('is-active')
+          $('.set-2 .card-3').addClass('is-active')
+        }
+
+        if( result >= 2516 ){
+          $('.set-2 .card').removeClass('is-active')
+          $('.set-2 .card-4').addClass('is-active')
+        }
+
+        if( result >= 3400 ){
+          $('.set-2 .card').removeClass('is-active')
+          $('.set-2 .card-5').addClass('is-active')
+        }
+      }
+    }
+  });
+
+  splitPin2.addLabel("label2")
+
+  .to(".set-2 .bs-card-wrap", {xPercent: -610, duration: 3}, 'start2')
+
+  // 기계 로봇
+  let splitPin3 = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".gsap-box-3",
+      start: "-1040 top",
+      end: "2000", // 속도 조절
+      scrub: true, // 숫자가 커질수록 부드러워짐
+      pin: true, // pin: '.selector'시 특정 엘리먼트가 고정
+      smooth: 1,
+      markers: true,
+      onUpdate:(self) => {
+        let result = '';
+        let target = $('.set-3 .bs-card-wrap').css('transform');
+        let sResult = target.split(',');
+        let length = sResult.length;
+        //result += parseInt(sResult[length-2]) + " " + parseInt(sResult[length-1]) + " " + parseInt(sResult[length-3]);
+        result += -(parseInt(sResult[length-2]));
+
+        console.log(result)
+        
+        if(result == 0){
+          $('.gsap-box-3 .card').removeClass('is-active')
+          $('.gsap-box-3 .card-1').addClass('is-active')
+        }
+        
+        if( result >= 790 ){
+          $('.gsap-box-3 .card').removeClass('is-active')
+          $('.gsap-box-3 .card-2').addClass('is-active')
+        }
+        
+        if( result >= 1550 ){
+          $('.gsap-box-3 .card').removeClass('is-active')
+          $('.gsap-box-3 .card-3').addClass('is-active')
+        }
+      }
+    }
+  });
+
+  splitPin3.addLabel("label3")
+  .to(".set-3 .bs-card-wrap", {xPercent: -305, duration: 3}, 'start2')
+
+
+
   // .to(".bs-pin ")
   // main business 스크롤 이벤트 e
 
