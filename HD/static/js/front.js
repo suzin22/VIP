@@ -36,6 +36,8 @@ $(document).ready(function(){
   gsap.set(".set-2 .bs-card-wrap", {yPercent:0}) // 에너지
   gsap.set(".set-3 .bs-card-wrap", {yPercent:0}) // 기계 로봇
 
+  //gsap.set(".bg-fff", {'opacity':'1'}) // bg fff
+
   // 상단 ~ 조선해양
   let splitPin = gsap.timeline({
     scrollTrigger: {
@@ -79,6 +81,7 @@ $(document).ready(function(){
   .to(".split-tit .wrap-2 img", {'top':'-300px', duration: 3}, 'start0')
   .to(".bs-box", {yPercent: -75, duration: 3}, 'start0')
   .to(".bs-box .box-tit", {opacity: 1, y: 0, duration: 7}, 'start0')
+  //.to(".bg-fff", {opacity: 0, duration: 1}, 'start1')
   .to(".split-tit", {opacity: 0, duration: 3}, 'start1')
   .to(".set-1", {yPercent: -88, duration: 1}, 'start1')
 
@@ -94,7 +97,7 @@ $(document).ready(function(){
       scrub: true, // 숫자가 커질수록 부드러워짐
       pin: true, // pin: '.selector'시 특정 엘리먼트가 고정
       smooth: 1,
-      markers: true,
+      //markers: true,
       onUpdate:(self) => {
         let result = '';
         let target = $('.set-2 .bs-card-wrap').css('transform');
@@ -144,7 +147,7 @@ $(document).ready(function(){
       scrub: true, // 숫자가 커질수록 부드러워짐
       pin: true, // pin: '.selector'시 특정 엘리먼트가 고정
       smooth: 1,
-      markers: true,
+      //markers: true,
       onUpdate:(self) => {
         let result = '';
         let target = $('.set-3 .bs-card-wrap').css('transform');
