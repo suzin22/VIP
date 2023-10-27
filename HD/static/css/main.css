@@ -95,15 +95,15 @@ body {
   margin: 0 auto 120px;
 }
 .main-business .bs-pin .bs-box .bs-card-wrap {
-  width: 29.2vw;
+  width: 560px;
   margin: 0 auto;
   position: relative;
   display: flex;
   align-items: center;
 }
 .main-business .bs-pin .bs-box .bs-card-wrap .card {
-  width: 29.2vw;
-  height: 42.7vw;
+  width: 560px;
+  height: 820px;
   border-radius: 30px;
   overflow: hidden;
   flex-shrink: 0;
