@@ -21,6 +21,13 @@ html, body {
   height: 100%;
 }
 
+body.dark {
+  background: #1a1718;
+}
+body.white {
+  background: #fff;
+}
+
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, form, fieldset, p, button, input {
   margin: 0;
   padding: 0;
@@ -89,6 +96,12 @@ input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0 1000px white inset;
 }
 
+button {
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
 .hidden {
   clear: both;
   height: 0;
@@ -97,6 +110,222 @@ input:-webkit-autofill {
   position: absolute;
   top: -9999px;
   left: -9999px;
+}
+
+.fadeAni .move {
+  opacity: 0;
+  transform: translate(0, 100px);
+}
+
+.fadeAni.on .move[data-delay="0"] {
+  animation: fadeOn 0.8s forwards;
+}
+
+.fadeAni.on .move[data-delay="30"] {
+  animation: fadeOn 0.8s 0.3s forwards;
+}
+
+.fadeAni.on .move[data-delay="60"] {
+  animation: fadeOn 0.8s 0.6s forwards;
+}
+
+.fadeAni.on .move[data-delay="90"] {
+  animation: fadeOn 0.8s 0.9s forwards;
+}
+
+.fadeAni.on .move[data-delay="120"] {
+  animation: fadeOn 0.8s 1.2s forwards;
+}
+
+.fadeAni.on .move[data-delay="150"] {
+  animation: fadeOn 0.8s 1.5s forwards;
+}
+
+.fadeAni.on .move[data-delay="180"] {
+  animation: fadeOn 0.8s 1.8s forwards;
+}
+
+.fadeAni.on .move[data-delay="210"] {
+  animation: fadeOn 0.8s 2.1s forwards;
+}
+
+@keyframes fadeOn {
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+.sub-top .bg {
+  width: calc(100% + 160px);
+  height: 480px;
+  margin: 120px 0 80px -80px;
+  background: url(/HD/static/images/esg-img-1.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+}
+.sub-top .bg .tit-flex {
+  padding: 0 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  bottom: -53.5px;
+  left: 0;
+}
+
+.sub-inner {
+  width: 100%;
+  position: relative;
+  padding: 240px 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.sub-inner .tab-btn-wrap {
+  width: 260px;
+  position: relative;
+}
+.sub-inner .tab-btn-wrap .tab-btn li {
+  width: 100%;
+}
+.sub-inner .tab-btn-wrap .tab-btn li button {
+  color: #666;
+  font-size: 32px;
+  font-weight: 600;
+  width: 100%;
+  line-height: 1.4;
+  text-align: left;
+  cursor: pointer;
+}
+.sub-inner .tab-btn-wrap .tab-btn li.active button {
+  color: var(--primary-1-eco-green, #38D430);
+  font-weight: 700;
+}
+.sub-inner .tab-btn-wrap .tab-btn li + li {
+  margin-top: 40px;
+}
+.sub-inner .tab-list-wrap {
+  width: calc(100% - 300px);
+}
+.sub-inner .tab-list-wrap .tab-list {
+  display: none;
+}
+.sub-inner .tab-list-wrap .tab-list.show {
+  display: block;
+}
+.sub-inner .tab-list-wrap .tab-list .inner {
+  width: 100%;
+  position: relative;
+}
+.sub-inner .tab-list-wrap .tab-list .inner > div + div {
+  margin-top: 180px;
+}
+.sub-inner .tab-list-wrap .tab-list .inner .info {
+  width: 100%;
+  position: relative;
+}
+.sub-inner .tab-list-wrap .tab-list .inner .info .tit-flex {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #999;
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+}
+.sub-inner .tab-list-wrap .tab-list .inner .info .num-flex {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sub-inner .tab-list-wrap .tab-list .inner .info .num-flex .count-flex {
+  display: flex;
+  align-items: center;
+}
+.sub-inner .tab-list-wrap .tab-list .inner .info .num-flex .count-flex .counter {
+  width: 400px;
+  color: var(--primary-6-white, #FFF);
+  font-size: 120px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.sub-inner .tab-list-wrap .tab-list .inner .info .num-flex .count-flex .img {
+  margin-left: 20px;
+}
+.sub-inner .tab-list-wrap .tab-list .inner .info .num-flex .num-left, .sub-inner .tab-list-wrap .tab-list .inner .info .num-flex .num-right {
+  width: 25%;
+}
+.sub-inner .tab-list-wrap .tab-list .inner .info .num-flex .num-left img, .sub-inner .tab-list-wrap .tab-list .inner .info .num-flex .num-right img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.sub-inner .tab-list-wrap .tab-list .inner .info .box-flex {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.sub-inner .tab-list-wrap .tab-list .inner .info .box-flex .box {
+  width: calc(33.3% - 28px);
+}
+.sub-inner .tab-list-wrap .tab-list .inner .info .box-flex .box img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.sub-inner .tab-list-wrap .tab-list .inner .chart-div {
+  margin-top: 0;
+}
+.sub-inner .tab-list-wrap .tab-list .inner .chart-div .chart {
+  width: 100%;
+  margin-top: 80px;
+}
+.sub-inner .tab-list-wrap .tab-list .inner .chart-div .chart img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.sub-inner .tab-list-wrap .tab-list .inner .box-wrap {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.sub-inner .tab-list-wrap .tab-list .inner .box-wrap .box {
+  width: calc(33.3% - 28px);
+}
+.sub-inner .tab-list-wrap .tab-list .inner .box-wrap .box img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.sub-inner .tab-list-wrap .tab-list .inner .box-wrap .box:first-child {
+  width: 100%;
+}
+
+.white .sub-inner .tab-btn-wrap .tab-btn li button {
+  color: #999;
+}
+.white .sub-inner .tab-btn-wrap .tab-btn li.active button {
+  color: #38D430;
+}
+.white .sub-inner .tab-list-wrap .tab-list .inner .info .num-flex .count-flex .counter {
+  color: #000;
 }
 
 .footer {

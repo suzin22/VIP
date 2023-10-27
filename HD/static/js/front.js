@@ -13,10 +13,18 @@ $(document).ready(function(){
       // console.log(e.className)
       // console.log(`${e.offsetTop} + ${index}`)
 
-      if( $windowScrollTop + 1000 >= e.offsetTop){
-        e.classList.add('on')
+      if($('#main').length) {
+        if($windowScrollTop + 1000 >= e.offsetTop){
+          e.classList.add('on')
+        }else{
+          e.classList.remove('on')
+        }
       }else{
-        e.classList.remove('on')
+        if($windowScrollTop >= e.offsetTop){
+          e.classList.add('on')
+        }else{
+          e.classList.remove('on')
+        }
       }
     })
   });

@@ -11,6 +11,14 @@
 *{margin: 0; padding: 0; box-sizing: border-box;}
 html{-webkit-text-size-adjust: antialiased;-moz-osx-font-smoothing: grayscale;}
 html, body{width:100%; height:100%;}
+body {
+  &.dark {
+    background: #1a1718;
+  }
+  &.white {
+    background: #fff;
+  }
+}
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,p,button,input{margin:0;padding:0;-webkit-text-size-adjust:none;word-break:keep-all;}
 input,textarea{border-radius:0;resize:none;}
 body,h1,h2,h3,h4,h5,h6,input,button{font-family: 'Pretendard-Regular', Dotum,'돋움',Helvetica,AppleSDGothicNeo,sans-serif;font-size:12px;}
@@ -25,10 +33,248 @@ table{border-collapse:collapse;border-spacing:0;}
 hr{display:none;}
 input[type="submit"]{cursor:pointer;}
 input:-webkit-autofill {-webkit-box-shadow: 0 0 0 1000px white inset;}
+button {background: transparent; border: none; outline: none;}
 .hidden{clear:both;height:0;line-height:0;width:0;position:absolute;top:-9999px;left:-9999px;}
 // reset
 
+// delay 설정
+.fadeAni .move {
+  opacity: 0;
+  transform: translate(0, 100px);
+}
+.fadeAni.on .move[data-delay="0"] {
+  animation: fadeOn 0.8s forwards;
+}
+.fadeAni.on .move[data-delay="30"] {
+  animation: fadeOn 0.8s 0.3s forwards;
+}
+.fadeAni.on .move[data-delay="60"] {
+  animation: fadeOn 0.8s 0.6s forwards;
+}
+.fadeAni.on .move[data-delay="90"] {
+  animation: fadeOn 0.8s 0.9s forwards;
+}
+.fadeAni.on .move[data-delay="120"] {
+  animation: fadeOn 0.8s 1.2s forwards;
+}
+.fadeAni.on .move[data-delay="150"] {
+  animation: fadeOn 0.8s 1.5s forwards;
+}
+.fadeAni.on .move[data-delay="180"] {
+  animation: fadeOn 0.8s 1.8s forwards;
+}
+.fadeAni.on .move[data-delay="210"] {
+  animation: fadeOn 0.8s 2.1s forwards;
+}
 
+@keyframes fadeOn {
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+// delay 설정
+
+// sub
+.sub-top {
+  .bg {
+    width: calc(100% + 160px);
+    height: 480px;
+    margin: 120px 0 80px -80px;
+    background: url(/HD/static/images/esg-img-1.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    .tit-flex {
+      padding: 0 80px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: absolute;
+      bottom: -53.5px;
+      left: 0;
+    }
+  }
+}
+
+.sub-inner {
+  width: 100%;
+  position: relative;
+  padding: 240px 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  .tab-btn-wrap {
+    width: 260px;
+    position: relative;
+    .tab-btn {
+      li {
+        width: 100%;
+        button {
+          color: #666;
+          font-size: 32px;
+          font-weight: 600;
+          width: 100%;
+          line-height: 1.4;
+          text-align: left;
+          cursor: pointer;
+        }
+        &.active {
+          button {
+            color: var(--primary-1-eco-green, #38D430);
+            font-weight: 700;
+          }
+        }
+        & + li {
+          margin-top: 40px;
+        }
+      }
+    }
+  }
+  .tab-list-wrap {
+    width: calc(100% - 300px);
+    .tab-list {
+      display: none;
+      &.show {
+        display: block;
+      }
+      .inner {
+        width: 100%;
+        position: relative;
+        & > div + div {
+          margin-top: 180px;
+        }
+        .info {
+          width: 100%;
+          position: relative;
+          .tit-flex {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #999;
+            padding-bottom: 40px;
+            margin-bottom: 40px;
+          }
+          .num-flex {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .count-flex {
+              display: flex;
+              align-items: center;
+              .counter {
+                width: 400px;
+                color: var(--primary-6-white, #FFF);
+                font-size: 120px;
+                font-weight: 700;
+                line-height: 1.2;
+              }
+              .img {
+                margin-left: 20px;
+              }
+            }
+            .num-left, .num-right {
+              width: 25%;
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              }
+            }
+          }
+          .box-flex {
+            width: 100%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 40px;
+            .box {
+              width: calc(33.3% - 28px);
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              }
+            }
+          }
+        }
+        .chart-div {
+          margin-top: 0;
+          .chart {
+            width: 100%;
+            margin-top: 80px;
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+        }
+        .box-wrap {
+          width: 100%;
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          gap: 40px;
+          .box {
+            width: calc(33.3% - 28px);
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+            &:first-child {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.white {
+  .sub-inner {
+    .tab-btn-wrap {
+      .tab-btn {
+        li {
+          button {
+            color: #999;
+          }
+          &.active {
+            button {
+              color: #38D430;
+            }
+          }
+        }
+      }
+    }
+    .tab-list-wrap {
+      .tab-list {
+        .inner {
+          .info {
+            .num-flex {
+              .count-flex {
+                .counter {
+                  color: #000;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// sub
 
 // footer
 .footer {
