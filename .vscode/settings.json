@@ -6,7 +6,7 @@
       "savePath": "/HD/static/css"
     }
   ],
-  "liveSassCompile.settings.generateMap": false,
+  "liveSassCompile.settings.generateMap": true,
   "liveSassCompile.settings.includeItems": [
     "/HD/static/css/scss/*.scss"
   ],
