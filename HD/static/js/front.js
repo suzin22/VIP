@@ -44,10 +44,10 @@ $(document).ready(function(){
       trigger: ".gsap-box-1",
       start: "top top",
       end: "3000", // 속도 조절
-      scrub: true, // 숫자가 커질수록 부드러워짐
+      scrub: 2, // 숫자가 커질수록 부드러워짐
       pin: true, // pin: '.selector'시 특정 엘리먼트가 고정
       smooth: 1,
-      //markers: true,
+      markers: true,
       onUpdate:(self) => {
         let result = '';
         let target = $('.set-1 .bs-card-wrap').css('transform');
@@ -94,7 +94,7 @@ $(document).ready(function(){
       trigger: ".gsap-box-2",
       start: "-1040 top",
       end: "2000", // 속도 조절
-      scrub: true, // 숫자가 커질수록 부드러워짐
+      scrub: 2, // 숫자가 커질수록 부드러워짐
       pin: true, // pin: '.selector'시 특정 엘리먼트가 고정
       smooth: 1,
       //markers: true,
@@ -126,7 +126,7 @@ $(document).ready(function(){
           $('.set-2 .card-4').addClass('is-active')
         }
 
-        if( result >= 3400 ){
+        if( result >= 3300 ){
           $('.set-2 .card').removeClass('is-active')
           $('.set-2 .card-5').addClass('is-active')
         }
@@ -143,8 +143,8 @@ $(document).ready(function(){
     scrollTrigger: {
       trigger: ".gsap-box-3",
       start: "-1040 top",
-      end: "2000", // 속도 조절
-      scrub: true, // 숫자가 커질수록 부드러워짐
+      end: "+=2000", // 속도 조절
+      scrub: 2, // 숫자가 커질수록 부드러워짐
       pin: true, // pin: '.selector'시 특정 엘리먼트가 고정
       smooth: 1,
       //markers: true,
