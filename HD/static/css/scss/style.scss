@@ -68,6 +68,7 @@
 // reset
 *{margin: 0; padding: 0; box-sizing: border-box;}
 html{-webkit-text-size-adjust: antialiased;-moz-osx-font-smoothing: grayscale;}
+html::-webkit-scrollbar{display: none; scroll-behavior: initial;}
 html, body{width:100%; height:100%;}
 body {
   &.dark {
