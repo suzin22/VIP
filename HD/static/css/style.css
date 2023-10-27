@@ -114,9 +114,8 @@ input:-webkit-autofill {
 }
 .footer .footer-inner .left .family-site {
   width: 277px;
-  height: 48px;
-  border: 1px solid darkslategrey;
   margin-top: 80px;
+  cursor: pointer;
 }
 .footer .footer-inner .left .img {
   margin-top: 190px;

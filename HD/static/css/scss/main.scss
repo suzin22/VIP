@@ -2,19 +2,180 @@ body {
   background: #1A1718;
 }
 
+// 공통
 .wrap {
   width: 100%;
   position: relative;
-  padding: 80px;
+  padding: 0 80px 80px;
+  // max-width: 1920px;
+  // margin: 0 auto;
 }
 
+.section-tit {
+  margin-bottom: 147px;
+}
+
+.fadeAni {
+  .move {
+    opacity: 0;
+    transform: translate(0, 100px);
+  }
+  &.on {
+    .move {
+      &[data-delay="30"] {
+        animation: fadeOn 0.8s 0.3s forwards;
+      }
+      &[data-delay="60"] {
+        animation: fadeOn 0.8s 0.6s forwards;
+      }
+      &[data-delay="90"] {
+        animation: fadeOn 0.8s 0.9s forwards;
+      }
+      &[data-delay="120"] {
+        animation: fadeOn 0.8s 1.2s forwards;
+      }
+      &[data-delay="150"] {
+        animation: fadeOn 0.8s 1.5s forwards;
+      }
+      &[data-delay="180"] {
+        animation: fadeOn 0.8s 1.8s forwards;
+      }
+      &[data-delay="210"] {
+        animation: fadeOn 0.8s 2.1s forwards;
+      }
+    }
+  }
+}
+
+@keyframes fadeOn {
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+// 공통
+
+
+// business
+.main-business {
+  width: calc(100% + 160px);
+  margin-left: -80px;
+  background: #000;
+  .split-tit {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 99;
+    .item-wrap {
+      width: 100%;
+      height: 50%;
+      position: relative;
+      overflow: hidden;
+      background: #fff;
+      img {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%)
+      }
+      &.wrap-1 {
+        img {
+          bottom: -112px;
+        }
+      }
+      &.wrap-2 {
+        img {
+          top: -112px;
+        }
+      }
+    }
+  }
+  .bs-pin {
+    width: 100%;
+    position: relative;
+    display: block;
+    background: #000;
+    .bs-box {
+      width: 100%;
+      padding: 320px 0 578px;
+      position: relative;
+      overflow-x: hidden;
+      .box-tit {
+        width: fit-content;
+        margin: 0 auto 120px;
+      }
+      .bs-card-wrap {
+        width: 29.2vw;
+        margin: 0 auto;
+        position: relative;
+        display: flex;
+        align-items: center;
+        .card {
+          width: 29.2vw;
+          height: 42.7vw;
+          border-radius: 30px;
+          overflow: hidden;
+          flex-shrink: 0;
+          position: relative;
+          &::after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 50%, rgba(0, 0, 0, 0.90) 100%)
+          }
+          .img {
+            width: 100%;
+            height: 100%;
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+          .text {
+            position: absolute;
+            top: 11vw;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+          }
+          & + .card {
+            margin-left: 300px;
+          }
+        }
+      }
+      .text {
+        position: absolute;
+        img {
+          width: 100%;
+          object-fit: cover;
+        }
+        &.en-text {
+          left: 120px;
+          bottom: 478px;
+        }
+        &.ko-text {
+          right: 120px;
+          bottom: 320px;
+        }
+      }
+    }
+  }
+}
+// business
 
 // Media
-.media {
-  padding-top: 120px;
+.main-media {
+  padding: 320px 0;
   width: 100%;
   position: relative;
-  &-inner {
+  .media-inner {
     width: 100%;
     position: relative;
     display: flex;
@@ -36,12 +197,14 @@ body {
       }
     }
     .tab {
-      width: calc(100% - 277px);
-      padding: 40px 40px 40px 80px;
+      // width: calc(100% - 277px);
+      // padding: 40px 40px 40px 80px;
+      width: 100%;
+      padding: 0;
       position: relative;
       .menu {
         width: 100%;
-        margin-bottom: 40px;
+        margin-bottom: 80px;
         .menu-list {
           width: 100%;
           position: relative;
@@ -49,7 +212,7 @@ body {
           align-items: center;
           li {
             & + li {
-              margin-left: 40px;
+              margin-left: 60px;
             }
             button {
               cursor: pointer;
@@ -57,19 +220,20 @@ body {
               border: none;
               outline: none;
               color: #666;
-              font-size: 26px;
+              font-size: 42px;
               font-weight: 600;
-              line-height: 1.2;
+              line-height: 1.4;
+              border-bottom: 1px solid transparent;
               &.active {
                 color: var(--primary-1-eco-green, #38D430);
-                font-weight: 700;
-                border-bottom: 1px solid #38D430;
+                border-color: #38D430;
               }
             }
           }
         }
       }
       .tab-list {
+        height: 887px;
         .list {
           width: 100%;
           position: relative;
@@ -87,8 +251,8 @@ body {
               align-items: flex-start;
               justify-content: space-between;
               .arrow {
-                width: 50px;
-                height: 50px;
+                width: 60px;
+                height: 60px;
                 position: relative;
                 background: url(/HD/static/images/arrow-icon.png) no-repeat;
                 background-position: center;
@@ -108,31 +272,61 @@ body {
 .group-esg {
   width: 100%;
   position: relative;
-  padding: 120px 0;
-  .esg-tit {
-    margin-bottom: 40px;
-  }
-  .box-list {
+  padding: 188px 0 160px;
+  .esg-pin {
     width: 100%;
     position: relative;
-    li {
-      .big-box {
-        .inner {
+    height: 920px;
+    overflow: hidden;
+    .esg-box {
+      width: 100%;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .img-wrap {
+        width: calc(50% - 20px);
+        height: 920px;
+        border-radius: 30px 30px 0 0;
+        overflow: hidden;
+        img {
           width: 100%;
-          position: relative;
-          .img-wrap {
-            width: 100%;
-            height: 720px;
-            img {
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-            }
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .text-wrap {
+        width: calc(50% - 20px);
+        height: 920px;
+        position: relative;
+        background-image: linear-gradient(to top, #1A1718 92%, transparent 8%);
+        .num {
+          position: absolute;
+          top: 80px;
+          left: 40px;
+          z-index: 99;
+        }
+        .text {
+          position: absolute;
+          left: 40px;
+          bottom: 80px;
+        }
+      }
+      &.box2 {
+        position: absolute;
+        top: 100%;
+        .text-wrap {
+          .text {
+            bottom: 160px;
           }
-          .text-wrap {
-            position: absolute;
-            top: 80px;
-            left: 80px;
+        }
+      }
+      &.box3 {
+        position: absolute;
+        top: 200%;
+        .text-wrap {
+          .text {
+            bottom: 240px;
           }
         }
       }
@@ -141,40 +335,125 @@ body {
 }
 // GROUP ESG
 
+// HD현대 in social
+.main-social {
+  width: 100%;
+  position: relative;
+  padding: 160px 0;
+  .section-tit {
+    margin-bottom: 120px;
+  }
+  .scroll-inner {
+    width: calc(100% + 160px);
+    margin-left: -80px;
+    padding-left: 80px;
+    overflow-x: hidden;
+  } 
+  .social-swiper {
+    width: 100%;
+    position: relative;
+    padding-right: 80px;
+    li {
+      width: 560px;
+      & + li {
+        margin-left: 40px;
+      }
+      a {
+        width: 100%;
+        position: relative;
+        display: block;
+        .thumb-img {
+          width: 560px;
+          height: 560px;
+          border-radius: 30px;
+          overflow: hidden;
+          position: relative;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+          &::after {
+            display: block;
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url(/HD/static/images/hover_opacity.png) no-repeat;
+            background-position: center;
+            background-size: cover;
+            opacity: 0;
+            transition: opacity 0.5s;
+          }
+          &:hover {
+            &::after {
+              opacity: 1;
+            }
+          }
+        }
+        .sns-name {
+          margin: 27px 0 0 20px;
+        }
+      }
+      &.circle {
+        .inner {
+          .thumb-img {
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+  .social-progress-bar {
+    position: relative;
+    margin-top: 79px;
+    width: 375px;
+    .swiper-pagination-progressbar {
+      background: #333;
+      height: 2px;
+      .swiper-pagination-progressbar-fill {
+        background: #38D430;
+      }
+    }
+  }
+}
+// HD현대 in social
+
 // 주가정보
 .stock {
   width: 100%;
   position: relative;
-  padding: 0 0 40px;
+  padding: 190px 0 120px;
   .inner {
-    .all-flex { 
-      margin-top: 20px;
-      width: 100%;
+    .top-info {
       position: relative;
+      margin-bottom: 20px;
+    }
+    .all-flex {
+      width: 100%;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding-bottom: 40px;
-      border-bottom: 1px solid #333;
+      padding-bottom: 80px;
+      border-bottom: 2px solid var(--primary-6-white, #FFF);
       .left {
         display: flex;
         align-items: flex-end;
-        strong {
-          color: #fff;
-          font-size: 90px;
+        .counter {
+          color: var(--primary-6-white, #FFF);
+          font-size: 120px;
           font-weight: 700;
           line-height: 1.2;
-          letter-spacing: -1.8px;
         }
-        img {
-          margin: 0 0 20px 20px;
+        .num {
+          margin-left: 40px;
         }
       }
       .right {
-        display: flex;
-        align-items: center;
         a + a {
-          margin-left: 20px;
+          margin-left: 40px;
         }
       }
     }
