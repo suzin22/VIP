@@ -25,7 +25,7 @@ body.dark {
   background: #1a1718;
 }
 body.white {
-  background: #fff;
+  background: #f1f1f1;
 }
 
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, form, fieldset, p, button, input {
@@ -158,8 +158,8 @@ button {
 .sub-top .bg {
   width: calc(100% + 160px);
   height: 480px;
-  margin: 120px 0 80px -80px;
-  background: url(/HD/static/images/esg-img-1.png) no-repeat;
+  margin: 120px 0 185px -80px;
+  background: url(/HD/static/images/sub-top.png) no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -174,6 +174,12 @@ button {
   position: absolute;
   bottom: -53.5px;
   left: 0;
+}
+.sub-top .bg .modeBtn {
+  width: 195px;
+  position: absolute;
+  bottom: -185px;
+  right: 80px;
 }
 
 .sub-inner {
