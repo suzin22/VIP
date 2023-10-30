@@ -375,6 +375,7 @@ $(document).ready(function(){
   var item = gsap.utils.toArray(".kv-pin")
 
   const itemMotion = (panel, i) => {
+    console.log(panel)
     document.querySelectorAll('.kv-pin').forEach((e) => {
       e.classList.remove('is-active')
     })

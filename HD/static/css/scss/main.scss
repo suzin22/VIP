@@ -67,7 +67,7 @@ body {
     &.kv-pin-3 {
       transform: translate(0, 0);
     }
-    &.is-active{
+    &.is-active{ // kv addclass
       .top{
         img{
           opacity: 1;
