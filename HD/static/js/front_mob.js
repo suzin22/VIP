@@ -10,7 +10,7 @@ $(function(){
       },
     })
   }
-  // HD현대 in social swiper 
+  // //HD현대 in social swiper 
 
   // main 주가정보
   const counterHtml = document.querySelector('.counter').innerHTML
@@ -128,4 +128,15 @@ $(function(){
   .to(".split-tit .wrap-1 img", {'bottom':'-300px', duration: 3}, 'start0')
   .to(".split-tit .wrap-2", {yPercent:100, duration: 3}, 'start0')
   .to(".split-tit .wrap-2 img", {'top':'-300px', duration: 3}, 'start0')
+
+  // BUSINESS ITEM
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1.7,
+    spaceBetween: 57,
+    centeredSlides: true,
+    loop: false,
+  });
+
+  // $('html, body').animate({scrollTop:3800}, 300);
 })
+// //BUSINESS ITEM

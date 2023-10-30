@@ -1096,4 +1096,47 @@ button {
 }
 .mob.white .sub-inner .tab-list-wrap .tab-list .inner .table-list .item + .item {
   border-top: 1px solid #eee;
+}
+.mob .mySwiper {
+  margin: 0 -20px;
+  position: relative;
+  min-height: 800px;
+}
+.mob .mySwiper h1 {
+  text-align: center;
+  padding: 80px 0 100px 0;
+}
+.mob .mySwiper .swiper-button-next,
+.mob .mySwiper .swiper-button-prev {
+  display: none;
+}
+.mob .mySwiper .swiper-slide {
+  text-align: center;
+  width: 190px;
+  position: relative;
+  opacity: 0.3;
+  transition: all 0.4s;
+}
+.mob .mySwiper .swiper-slide img {
+  width: 190px;
+}
+.mob .mySwiper .swiper-slide:after {
+  content: "";
+  display: block;
+}
+.mob .mySwiper .swiper-slide.swiper-slide-active {
+  opacity: 1;
+}
+.mob .mySwiper .img-1,
+.mob .mySwiper .img-2 {
+  position: absolute;
+  left: 20px;
+}
+.mob .mySwiper .img-1 {
+  position: absolute;
+  bottom: 144px;
+}
+.mob .mySwiper .img-2 {
+  position: absolute;
+  bottom: 80px;
 }/*# sourceMappingURL=style.css.map */
