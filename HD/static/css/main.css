@@ -355,7 +355,7 @@ body {
 .group-esg .esg-pin .esg-box .img-wrap {
   width: calc(50% - 20px);
   height: 920px;
-  border-radius: 30px 30px 0 0;
+  border-radius: 30px;
   overflow: hidden;
 }
 .group-esg .esg-pin .esg-box .img-wrap img {

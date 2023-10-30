@@ -389,7 +389,7 @@ body {
 
 // GROUP ESG
 .group-esg {
-  width: 100%;
+  width: 100%; 
   position: relative;
   padding: 188px 0 160px;
   .esg-pin {
@@ -406,7 +406,7 @@ body {
       .img-wrap {
         width: calc(50% - 20px);
         height: 920px;
-        border-radius: 30px 30px 0 0;
+        border-radius: 30px;
         overflow: hidden;
         img {
           width: 100%;

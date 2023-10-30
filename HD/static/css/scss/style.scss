@@ -472,11 +472,20 @@ button {background: transparent; border: none; outline: none;}
     width: calc(100% + 160px);
     height: 480px;
     margin: 204px 0 185px -80px;
-    background: url(/HD/static/images/sub-top.png) no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
     position: relative;
+    .banner-visual{
+      height: 480px;
+      overflow: hidden;
+      img{
+        top: -35vw;
+        left: 0;
+        width: 100%;
+        height: auto;
+        object-fit: unset;
+        position: relative;
+        transition: all 1.8s;
+      }
+    }
     .tit-flex {
       padding: 0 80px;
       width: 100%;
@@ -654,7 +663,7 @@ button {background: transparent; border: none; outline: none;}
           }
         }
       }
-      .en-btn {
+      .en-btn { 
         span {
           color: #000;
         }
