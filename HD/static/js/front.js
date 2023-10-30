@@ -320,9 +320,14 @@ $(document).ready(function(){
   }
   // 상단 이동 버튼 e
 
-  $('.all-menu').click(function() {
+  $('.all-menu').click(function(e) {
     $(this).toggleClass('on');
     $('.all-menu-inner').slideToggle(300);
+
+    // close img 리셋
+    setTimeout(() => {
+      !$(this).is('.on') ? document.querySelector('.header .header-inner .all-menu-inner .wrap .img .list-0').style.display = 'block' : null
+    }, 300)
     return false;
   });
 
@@ -330,6 +335,16 @@ $(document).ready(function(){
     $(this).click(function(e){
       e.preventDefault();
       
+    })
+  })
+
+  // 메뉴 뎁스 hover 시 img change
+  document.querySelectorAll('.all-menu-inner .wrap .list > li').forEach((e, index) => {
+    e.addEventListener("mouseover", function(){
+      document.querySelectorAll('.header .header-inner .all-menu-inner .wrap .img img').forEach((e) => {
+        e.style.display = 'none'
+      })
+      document.querySelector('.header .header-inner .all-menu-inner .wrap .img .list-' + index).style.display = 'block'
     })
   })
 
