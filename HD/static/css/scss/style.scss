@@ -75,7 +75,10 @@ body {
     background: #1a1718;
   }
   &.white {
-    background: #f1f1f1;
+    background: #fff;
+    .wrap {
+      background: #fff;
+    }
   }
 }
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,p,button,input{margin:0;padding:0;-webkit-text-size-adjust:none;word-break:keep-all;}
@@ -454,7 +457,7 @@ button {background: transparent; border: none; outline: none;}
   .bg {
     width: calc(100% + 160px);
     height: 480px;
-    margin: 120px 0 185px -80px;
+    margin: 204px 0 185px -80px;
     background: url(/HD/static/images/sub-top.png) no-repeat;
     background-size: cover;
     background-position: center;
@@ -698,7 +701,7 @@ button {background: transparent; border: none; outline: none;}
           }
           &.active {
             button {
-              color: #38D430;
+              color: #000;
             }
           }
         }
@@ -882,7 +885,7 @@ button {background: transparent; border: none; outline: none;}
       background-size: cover;
       .tit {
         position: absolute;
-        bottom: -24px;
+        bottom: -18px;
         left: 20px;
       }
     }
@@ -1016,6 +1019,75 @@ button {background: transparent; border: none; outline: none;}
           width: 100%;
           height: 100%;
           object-fit: cover;
+        }
+      }
+    }
+  }
+
+  &.white {
+    .header {
+      .header-wrap {
+        background: #fff;
+        &-inner {
+          .header-acc {
+            .acc-inner {
+              .accordion {
+                color: #000;
+                &::after {
+                  filter: invert(1);
+                }
+              }
+              .panel {
+                li {
+                  a {
+                    color: #000;
+                  }
+                }
+              }
+            }
+          }
+          .en-btn {
+            li {
+              a {
+                color: #ccc;
+              }
+              &.active {
+                a {
+                  color: #000;
+                }
+              }
+              &:first-child {
+                &::after {
+                  background: #ccc;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .sub-inner {
+      .tab-btn-wrap {
+        .tab-btn {
+          li {
+            &.active {
+              button {
+                color: #000;
+              }
+            }
+          }
+        }
+      }
+      .tab-list-wrap {
+        .tab-list {
+          .inner {
+            .num-flex {
+              .counter {
+                color: #000;
+              }
+            }
+          }
         }
       }
     }

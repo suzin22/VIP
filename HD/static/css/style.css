@@ -66,7 +66,10 @@ body.dark {
   background: #1a1718;
 }
 body.white {
-  background: #f1f1f1;
+  background: #fff;
+}
+body.white .wrap {
+  background: #fff;
 }
 
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, form, fieldset, p, button, input {
@@ -465,7 +468,7 @@ button {
 .sub-top .bg {
   width: calc(100% + 160px);
   height: 480px;
-  margin: 120px 0 185px -80px;
+  margin: 204px 0 185px -80px;
   background: url(/HD/static/images/sub-top.png) no-repeat;
   background-size: cover;
   background-position: center;
@@ -677,7 +680,7 @@ button {
   color: #999;
 }
 .white .sub-inner .tab-btn-wrap .tab-btn li.active button {
-  color: #38D430;
+  color: #000;
 }
 .white .sub-inner .tab-list-wrap .tab-list .inner .info .num-flex .count-flex .counter {
   color: #000;
@@ -823,7 +826,7 @@ button {
 }
 .mob .sub-top .bg .tit {
   position: absolute;
-  bottom: -24px;
+  bottom: -18px;
   left: 20px;
 }
 .mob .sub-inner {
@@ -953,4 +956,31 @@ button {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.mob.white .header .header-wrap {
+  background: #fff;
+}
+.mob.white .header .header-wrap-inner .header-acc .acc-inner .accordion {
+  color: #000;
+}
+.mob.white .header .header-wrap-inner .header-acc .acc-inner .accordion::after {
+  filter: invert(1);
+}
+.mob.white .header .header-wrap-inner .header-acc .acc-inner .panel li a {
+  color: #000;
+}
+.mob.white .header .header-wrap-inner .en-btn li a {
+  color: #ccc;
+}
+.mob.white .header .header-wrap-inner .en-btn li.active a {
+  color: #000;
+}
+.mob.white .header .header-wrap-inner .en-btn li:first-child::after {
+  background: #ccc;
+}
+.mob.white .sub-inner .tab-btn-wrap .tab-btn li.active button {
+  color: #000;
+}
+.mob.white .sub-inner .tab-list-wrap .tab-list .inner .num-flex .counter {
+  color: #000;
 }/*# sourceMappingURL=style.css.map */
