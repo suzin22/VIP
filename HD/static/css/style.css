@@ -469,11 +469,21 @@ button {
   width: calc(100% + 160px);
   height: 480px;
   margin: 204px 0 185px -80px;
-  background: url(/HD/static/images/sub-top.png) no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
   position: relative;
+}
+.sub-top .bg .banner-visual {
+  height: 480px;
+  overflow: hidden;
+}
+.sub-top .bg .banner-visual img {
+  top: -35vw;
+  left: 0;
+  width: 100%;
+  height: auto;
+  -o-object-fit: unset;
+     object-fit: unset;
+  position: relative;
+  transition: all 1.8s;
 }
 .sub-top .bg .tit-flex {
   padding: 0 80px;
