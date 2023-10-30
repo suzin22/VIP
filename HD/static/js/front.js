@@ -338,7 +338,7 @@ $(document).ready(function(){
     })
   })
 
-  // 메뉴 뎁스 hover 시 img change
+  // 햄버거 메뉴 뎁스 hover 시 img change
   document.querySelectorAll('.all-menu-inner .wrap .list > li').forEach((e, index) => {
     e.addEventListener("mouseover", function(){
       document.querySelectorAll('.header .header-inner .all-menu-inner .wrap .img img').forEach((e) => {
@@ -346,6 +346,25 @@ $(document).ready(function(){
       })
       document.querySelector('.header .header-inner .all-menu-inner .wrap .img .list-' + index).style.display = 'block'
     })
+  })
+
+  // header 1뎁스 mouseover 시 메뉴 show
+  document.querySelectorAll('.gnb-wrap li a').forEach((e, index) => {
+    e.addEventListener('mouseover', (e) => {
+      document.querySelector('.gnb-list').style.display = 'block'
+      document.querySelectorAll('.gnb-list > li').forEach((e, index2) => {
+        if(index == index2){
+          e.style.display = 'block'
+        }else{
+          e.style.display = 'none'
+        }
+      })
+    })
+  });
+
+  // header mouseleave 시 메뉴 hide
+  document.querySelector('.header-inner').addEventListener('mouseleave', (e) => {
+    document.querySelector('.gnb-list').style.display = 'none'
   })
 
   topBtnClick();
