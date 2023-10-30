@@ -52,7 +52,7 @@ body {
   }
   .modeBtn {
     width: 195px;
-    position: absolute;
+    position: fixed;
     bottom: 40px;
     right: 80px;
   }
@@ -66,6 +66,7 @@ body {
     }
     &.kv-pin-3 {
       transform: translate(0, 0);
+      margin-bottom:100vh;
     }
     &.is-active{ // kv addclass
       .top{

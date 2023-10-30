@@ -50,7 +50,7 @@ body {
 }
 .main-kv .modeBtn {
   width: 195px;
-  position: absolute;
+  position: fixed;
   bottom: 40px;
   right: 80px;
 }
@@ -64,6 +64,7 @@ body {
 }
 .main-kv .kv-pin.kv-pin-3 {
   transform: translate(0, 0);
+  margin-bottom: 100vh;
 }
 .main-kv .kv-pin.is-active .top img {
   opacity: 1;
