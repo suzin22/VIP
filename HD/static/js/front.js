@@ -157,6 +157,7 @@ $(document).ready(function(){
       scrub: 2, // 숫자가 커질수록 부드러워짐
       pin: true, // pin: '.selector'시 특정 엘리먼트가 고정
       smooth: 1,
+      pinSpacing: false,
       //markers: true,
       onUpdate:(self) => {
         let result = '';
@@ -369,4 +370,14 @@ $(document).ready(function(){
 
   topBtnClick();
   mainSocialSwiper();
+
+  // 메인 상단 동영상 gsap 셋팅
+  const panel = document.querySelector(".kv-pin-1");
+
+  ScrollTrigger.create({
+      trigger: panel,
+      start: "top top",
+      pin: true,
+      pinSpacing: false
+  });
 })
