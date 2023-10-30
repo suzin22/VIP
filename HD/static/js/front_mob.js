@@ -131,7 +131,7 @@ $(function(){
 
   // BUSINESS ITEM
   var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 1.7,
+    slidesPerView: 1.6,
     spaceBetween: 57,
     centeredSlides: true,
     loop: false,
