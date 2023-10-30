@@ -374,6 +374,13 @@ $(document).ready(function(){
   // 메인 상단 동영상 gsap 셋팅
   var item = gsap.utils.toArray(".kv-pin")
 
+  const itemMotion = (panel, i) => {
+    $(panel).addClass('show')
+
+    gsap.set(".kv-pin", { opacity: "0"});
+    gsap.set(item[i], { opacity: "1"});
+  }
+
   item.forEach((panel, i) => {
     ScrollTrigger.create({
       trigger: panel,
@@ -383,12 +390,14 @@ $(document).ready(function(){
       markers: true,
 
       onEnter: () => {
-        gsap.set(".kv-pin", { opacity: "0"});
-        gsap.set(item[i], { opacity: "1"});
+        console.log(panel)
+
+        itemMotion(panel, i)
       },
       onEnterBack: () => {
-        gsap.set(".kv-pin", { opacity: "0"});
-        gsap.set(item[i], { opacity: "1"});
+        console.log(panel)
+
+        itemMotion(panel, i)
       }
     });
   });
