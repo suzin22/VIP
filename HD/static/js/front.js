@@ -375,7 +375,6 @@ $(document).ready(function(){
   var item = gsap.utils.toArray(".kv-pin")
 
   const itemMotion = (panel, i) => {
-    //console.log(panel)
     document.querySelectorAll('.kv-pin').forEach((e, index) => {
       e.classList.remove('is-active')
       $('.main-kv').find('.top').removeClass('is-' + index)
@@ -395,7 +394,7 @@ $(document).ready(function(){
       start: "top top",
       pin: true, 
       pinSpacing: false,
-      markers: true,
+      markers: false,
 
       onEnter: () => {
         itemMotion(panel, i)

@@ -127,6 +127,7 @@ body {
   padding: 0 80px 80px;
   z-index: 100;
   overflow: hidden;
+  background: #1a1718;
 }
 
 .section-tit {
@@ -137,6 +138,7 @@ body {
   width: calc(100% + 160px);
   margin-left: -80px;
   background: #000;
+  padding-bottom: 160px;
 }
 .main-business .split-tit {
   width: 100%;
