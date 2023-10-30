@@ -124,6 +124,10 @@ button {background: transparent; border: none; outline: none;}
       display: flex;
       align-items: center;
       gap: 80px;
+      transition: opacity 0.3s;
+      &.hidden {
+        opacity: 0;
+      }
       li {
         position: relative;
         width: fit-content;
@@ -256,11 +260,11 @@ button {background: transparent; border: none; outline: none;}
       width: 100%;
       padding: 40px 0 60px;
       background: #000;
-      box-shadow: 4px 4px 30px 0px rgba(0, 0, 0, 0.04), -2px -2px 30px 0px rgba(0, 0, 0, 0.04);
+      box-shadow: 0px 20px 60px 0px rgba(0, 0, 0, 0.05);
       position: absolute;
       top: 84px;
       left: 0;
-      border-top: 1px solid #333;
+      border-top: 2px solid #333;
       display: none;
       & > li {
         display: none;
@@ -302,6 +306,8 @@ button {background: transparent; border: none; outline: none;}
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
+        background: #000;
+        border-top: 2px solid #333;
         .list {
           & > li {
             display: flex;
@@ -376,6 +382,14 @@ button {background: transparent; border: none; outline: none;}
   }
 }
 // header
+
+.modeBtn {
+  width: 195px;
+  position: fixed;
+  bottom: 40px;
+  right: 80px;
+  z-index: 999;
+}
 
 // footer
 .footer {
@@ -484,9 +498,10 @@ button {background: transparent; border: none; outline: none;}
     }
     .modeBtn {
       width: 195px;
-      position: absolute;
-      bottom: -185px;
+      position: fixed;
+      bottom: 40px;
       right: 80px;
+      z-index: 9;
     }
   }
 }
@@ -648,7 +663,7 @@ button {background: transparent; border: none; outline: none;}
           }
         }
       }
-      .en-btn {
+      .en-btn { 
         span {
           color: #000;
         }
@@ -658,11 +673,13 @@ button {background: transparent; border: none; outline: none;}
       }
       .gnb-list {
         background: #fff;
-        border-top: 1px solid #e4e4e4;
+        border-top: 2px solid #e4e4e4;
       }
       .all-menu-inner {
         background: #fff;
-        .wrap {
+        .wrap { 
+          background: #fff;
+          border-top: 2px solid #e4e4e4;
           .list {
             & > li {
               p {
@@ -749,9 +766,25 @@ button {background: transparent; border: none; outline: none;}
       align-items: center;
       justify-content: space-between;
       padding: 0 20px;
+      .logo {
+        width: 76px;
+        a {
+          width: 100%;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+      }
       .menu-btn {
         cursor: pointer;
+        width: 36px;
+        height: 36px;
         img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
           &.x-btn {
             display: none;
           }
@@ -894,8 +927,15 @@ button {background: transparent; border: none; outline: none;}
       background-size: cover;
       .tit {
         position: absolute;
-        bottom: -18px;
+        width: 183px;
+        height: 48px;
+        bottom: -24px;
         left: 20px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
       }
     }
   }
@@ -940,6 +980,12 @@ button {background: transparent; border: none; outline: none;}
           }
           .sub-top-info {
             margin-bottom: 40px;
+            width: 100%;
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: contain;
+            }
           }
           .num-flex {
             width: 100%;
@@ -961,6 +1007,12 @@ button {background: transparent; border: none; outline: none;}
           }
           .num-bottom-info {
             margin-top: 8px;
+            width: 100%;
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: contain;
+            }
           }
           .table-list {
             width: 100%;
@@ -970,6 +1022,11 @@ button {background: transparent; border: none; outline: none;}
               padding: 20px 0;
               width: 100%;
               position: relative;
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+              }
               & + .item {
                 border-top: 1px solid #333;
               }
@@ -986,6 +1043,14 @@ button {background: transparent; border: none; outline: none;}
           .stock-info {
             width: 100%;
             position: relative;
+            &-tit {
+              width: 100%;
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+              }
+            }
             .stock-scroll {
               margin-top: 40px;
               width: calc(100% + 40px);
@@ -996,6 +1061,16 @@ button {background: transparent; border: none; outline: none;}
               gap: 0 20px;
               overflow-x: scroll;
               &::-webkit-scrollbar {display: none;}
+              .box {
+                width: 263px;
+                height: 106px;
+                flex-shrink: 0;
+                img {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;
+                }
+              }
             }
           }
           .move-list {
@@ -1019,6 +1094,12 @@ button {background: transparent; border: none; outline: none;}
   }
 
   .footer {
+    width: 100%;
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
     .top-btn {
       a {
         display: block;
@@ -1092,8 +1173,16 @@ button {background: transparent; border: none; outline: none;}
         .tab-list {
           .inner {
             .num-flex {
+              border-bottom: 1px solid #eee;
               .counter {
                 color: #000;
+              }
+            }
+            .table-list {
+              .item {
+                & + .item {
+                  border-top: 1px solid #eee;
+                }
               }
             }
           }

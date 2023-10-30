@@ -39,12 +39,6 @@ body {
   top: 418px;
   left: 0;
 }
-.main-kv .modeBtn {
-  width: 195px;
-  position: fixed;
-  bottom: 40px;
-  right: 80px;
-}
 .main-kv .kv-pin {
   width: 100%;
   height: 100vh;
@@ -161,7 +155,7 @@ body {
 .main-business .split-tit .item-wrap img {
   position: absolute;
   left: 50%;
-  transform: translate(-50%, 0) rotate(27deg) scale(0.5);
+  transform: translate(-50%, 0) scale(0.5);
 }
 .main-business .split-tit .item-wrap.wrap-1 {
   transform: translate(0%, 1px) translate3d(0px, 0px, 0px);
@@ -361,7 +355,7 @@ body {
 .group-esg .esg-pin .esg-box .img-wrap {
   width: calc(50% - 20px);
   height: 920px;
-  border-radius: 30px 30px 0 0;
+  border-radius: 30px;
   overflow: hidden;
 }
 .group-esg .esg-pin .esg-box .img-wrap img {
@@ -794,12 +788,24 @@ body {
 .mob .wrap .stock .num-flex .up-arrow {
   margin-bottom: 10px;
 }
+.mob .wrap .stock .bottom-info {
+  width: 100%;
+}
+.mob .wrap .stock .bottom-info img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
 .mob .wrap .stock .btn-flex {
   margin-top: 40px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.mob .wrap .stock .btn-flex img {
+  width: 150px;
 }
 .mob .main-business {
   width: calc(100% + 160px);
