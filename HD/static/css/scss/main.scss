@@ -803,6 +803,9 @@ body {
             }
             .menu-list {
               li {
+                flex-shrink: 0;
+                width: fit-content;
+                text-wrap: nowrap;
                 button {
                   color: #666;
                   font-size: 20px;
