@@ -54,6 +54,54 @@ body {
       margin-bottom: 100vh;
     }
   }
+
+  .scroll-box {
+    position: fixed;
+    top: 91vh;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    color: #fff;
+    p {
+      color: transparent;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 35px;
+        left: 50%;
+        width: 14px;
+        height: 14px;
+        border-width: 0 0 3px 3px;
+        border-style: solid;
+        border-color: transparent transparent #fff #fff;
+        transform: rotate(-45deg) translateX(-50%);
+        animation: scrollArrow1 2s linear infinite;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        top: 47px;
+        left: 50%;
+        width: 14px;
+        height: 14px;
+        border-width: 0 0 3px 3px;
+        border-style: solid;
+        border-color: transparent transparent #fff #fff;
+        transform: rotate(-45deg) translateX(-50%);
+        animation: scrollArrow2 2s linear infinite;
+      }
+    }
+  }
+}
+
+@keyframes scrollArrow1 {
+	0%, 60%, 100% {opacity:0}
+	20%, 40% {opacity:1}
+}
+
+@keyframes scrollArrow2 {
+	0%, 20%, 80%, 100% {opacity:0}
+	40%, 60% {opacity:1}
 }
 
 // 상단 모션
@@ -779,6 +827,10 @@ body {
           opacity: 1;
         }
       }
+    }
+
+    .scroll-box {
+      top: 86vh;
     }
   }
 
