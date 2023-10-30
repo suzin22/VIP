@@ -680,4 +680,52 @@ button {
 }
 .white .sub-inner .tab-list-wrap .tab-list .inner .info .num-flex .count-flex .counter {
   color: #000;
+}
+
+.mob .header {
+  width: 100%;
+  height: 76px;
+  position: fixed;
+}
+.mob .header .header-inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+.mob .header .header-inner .menu-btn {
+  cursor: pointer;
+}
+.mob .header .header-wrap {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: #000;
+  padding: 0 20px;
+}
+.mob .header .header-wrap-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.mob .header .header-wrap-inner .header-acc {
+  width: 100%;
+  position: relative;
+}
+.mob .footer .top-btn a {
+  display: block;
+  width: 52px;
+  height: 52px;
+}
+.mob .footer .top-btn a img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=style.css.map */

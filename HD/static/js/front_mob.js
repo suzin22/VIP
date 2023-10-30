@@ -28,7 +28,17 @@ $(function(){
   });
   // main 주가정보 e
 
+  // 상단 이동 버튼 s
+  function topBtnClick() {
+    var topBtn = $('.top-btn');
+
+    topBtn.on('click', function(e) {
+      e.preventDefault();
+      $('html, body').animate({scrollTop:0}, 300);
+    })
+  }
+  // 상단 이동 버튼 e
+
+  topBtnClick();
   mainSocialSwiper();
-
-
 })

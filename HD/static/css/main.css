@@ -498,22 +498,6 @@ body {
   color: #000;
 }
 
-.mob .header {
-  width: 100%;
-  height: 76px;
-  position: fixed;
-}
-.mob .header .header-inner {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
-}
-.mob .header .header-inner .menu-btn {
-  cursor: pointer;
-}
 .mob .main-kv {
   width: 100%;
   height: 100vh;

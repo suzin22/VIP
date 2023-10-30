@@ -587,23 +587,6 @@ body {
 
 // 모바일
 .mob {
-  .header {
-    width: 100%;
-    height: 76px;
-    position: fixed;
-    .header-inner {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 20px;
-      .menu-btn {
-        cursor: pointer;
-      }
-    }
-  }
-
   .main-kv {
     width: 100%;
     height: 100vh;
