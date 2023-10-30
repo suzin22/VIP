@@ -372,12 +372,25 @@ $(document).ready(function(){
   mainSocialSwiper();
 
   // 메인 상단 동영상 gsap 셋팅
-  const panel = document.querySelector(".kv-pin-1");
+  var item = gsap.utils.toArray(".kv-pin")
 
-  ScrollTrigger.create({
+  item.forEach((panel, i) => {
+    ScrollTrigger.create({
       trigger: panel,
       start: "top top",
-      pin: true,
-      pinSpacing: false
+      pin: true, 
+      pinSpacing: false,
+      markers: true,
+
+      onEnter: () => {
+        gsap.set(".kv-pin", { opacity: "0"});
+        gsap.set(item[i], { opacity: "1"});
+      },
+      onEnterBack: () => {
+        gsap.set(".kv-pin", { opacity: "0"});
+        gsap.set(item[i], { opacity: "1"});
+      }
+    });
   });
+
 })
