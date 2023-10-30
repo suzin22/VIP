@@ -310,8 +310,6 @@ $(document).ready(function(){
       const item = document.querySelector('.banner-visual img'),
             cnt = (window.scrollY / 1500) * 100
 
-      console.log(cnt)
-
       item.style.transform = 'translate3d(0px, -' + (cnt * 0.50) + '%, 0px)'
     }
   })
