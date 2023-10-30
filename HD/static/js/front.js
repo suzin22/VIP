@@ -326,7 +326,7 @@ $(document).ready(function(){
 
     // close img 리셋
     setTimeout(() => {
-      !$(this).is('.on') ? document.querySelector('.header .header-inner .all-menu-inner .wrap .img .list-0').style.display = 'block' : null
+      !$(this).is('.on') ? document.querySelector('.header .header-inner .all-menu-inner .wrap .img .list-0').style.display = 'block' : document.querySelector('.gnb-list').style.display = 'none'
     }, 300)
     return false;
   });
