@@ -322,6 +322,7 @@ $(document).ready(function(){
   $('.all-menu').click(function(e) {
     $(this).toggleClass('on');
     $('.all-menu-inner').slideToggle(300);
+    $('.gnb-wrap').toggleClass('hidden');
 
     // close img 리셋
     setTimeout(() => {
