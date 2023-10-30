@@ -28,11 +28,21 @@ body {
       .white {
         display: none;
       }
+      img{
+        transition: all .5s;
+        opacity: 0;
+        transform: translate(0, 50%);
+      }
     }
     .bottom {
       position: absolute;
       top: 185px;
       left: 0;
+      img{
+        transition: all 1s;
+        opacity: 0;
+        transform: translate(0, 50%);
+      }
     }
     .bottom-text {
       position: absolute;
@@ -56,6 +66,20 @@ body {
     }
     &.kv-pin-3 {
       transform: translate(0, 0);
+    }
+    &.is-active{
+      .top{
+        img{
+          opacity: 1;
+          transform: translate(0, 0);
+        }
+      }
+      .bottom{
+        img{
+          opacity: 1;
+          transform: translate(0, 0);
+        }
+      }
     }
   }
 }
