@@ -19,67 +19,206 @@
   <script src="static/js/jquery.waypoints.js"></script>
 	<script src="static/js/gsap.min.js"></script>
 	<script src="static/js/ScrollTrigger.min.js"></script>
-	<script src="static/js/front.js"></script>
+	<script src="static/js/front_mob.js"></script>
 </head>
-<body class="dark">
+<body class="mob dark">
   <!-- header s -->
-  <!-- header e -->
-
-  <!-- main contents s -->
-  <div class="wrap">
-    <!-- banner s -->
-    <div class="sub-top">
-      <div class="bg">
-        <div class="tit-flex">
-          <div class="tit">
-            <img src="static/images/text/sub/sub-top-tit.png">
+  <header id="header" class="header">
+    <div class="header-inner">
+      <h1 class="logo">
+        <a href="index.html">
+          <img src="static/images/mob/logo.png">
+        </a>
+      </h1>
+      <button type="button" class="menu-btn">
+        <img src="static/images/mob/menu.png">
+        <img src="static/images/mob/menu_x.png" class="x-btn">
+      </button>
+    </div>
+    <div class="header-wrap">
+      <div class="header-wrap-inner">
+        <div class="header-acc">
+          <div class="acc-inner">
+            <button class="accordion">그룹소개</button>
+            <div class="panel">
+              <ul class="inner">
+                <li><a href="#none">개요</a></li>
+                <li><a href="#none">인사말</a></li>
+                <li><a href="#none">역사</a></li>
+                <li><a href="#none">그룹50년사</a></li>
+                <li><a href="#none">가치체계</a></li>
+                <li><a href="#none">지속가능경영</a></li>
+                <li><a href="#none">CI</a></li>
+              </ul>
+            </div>
           </div>
-          <div class="text">
-            <img src="static/images/text/sub/sub-top-text.png">
+          <div class="acc-inner">
+            <button class="accordion">주요 계열사</button>
+            <div class="panel">
+              <ul class="inner">
+                <li><a href="#none">사업 영역</a></li>
+                <li><a href="#none">조선해양 부문</a></li>
+                <li><a href="#none">에너지 부문</a></li>
+                <li><a href="#none">기계 · 로봇</a></li>
+                <li><a href="#none">기타 서비스 부문</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="acc-inner">
+            <button class="accordion">미디어센터</button>
+            <div class="panel">
+              <ul class="inner">
+                <li><a href="#none">뉴스&미디어</a></li>
+                <li><a href="#none">매거진 H</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="acc-inner">
+            <button class="accordion">투자자 정보</button>
+            <div class="panel">
+              <ul class="inner">
+                <li><a href="#none">공시정보</a></li>
+                <li><a href="#none">재무정보</a></li>
+                <li><a href="#none">IR 자료실</a></li>
+                <li><a href="#none">IR 미팅</a></li>
+                <li><a href="#none">채용정보</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="acc-inner">
+            <button class="accordion">인재채용</button>
+            <div class="panel">
+              <ul class="inner">
+                <li><a href="#none">채용정보</a></li>
+              </ul>
+            </div>
           </div>
         </div>
-        <a href="sub_white.html" class="modeBtn">
-          <img src="static/images/light.png">
+        <ul class="en-btn">
+          <li class="active">
+            <a href="#none">KOR</a>
+          </li>
+          <li>
+            <a href="#none">ENG</a>
+          </li>
+        </ul>
+      </div>
+      <div class="modeBtn">
+        <a href="index_mob.html">
+          <img src="static/images/mob/light.png">
         </a>
       </div>
     </div>
-    <!-- banner e -->
+  </header>
+  <!-- header e -->
 
-    <!-- contents s -->
-    <div class="sub-inner">
-      
+  <!-- banner s -->
+  <div class="sub-top">
+    <div class="bg">
+      <div class="tit">
+        <img src="static/images/mob/sub-top-tit.png">
+      </div>
     </div>
-    <!-- contents e -->
+  </div>
+  <!-- banner e -->
+  
+  <!-- main contents s -->
+  <div class="sub-inner">
+    <div class="tab-btn-wrap">
+      <ul class="tab-btn">
+        <li class="active" data-tab="tab-1"><button>투자자 정보</button></li>
+        <li data-tab="tab-2"><button>공시정보</button></li>
+        <li><button>재무정보</button></li>
+        <li><button>IR 자료실</button></li>
+      </ul>
+    </div>
+    <div class="tab-list-wrap">
+      <div class="tab-list show" id="tab-1">
+        <div class="inner">
+          <div class="tab-top fadeAni on">
+            <div class="sub-top-info move" data-delay="0">
+              <img src="static/images/mob/sub-tab-top-info.png">
+            </div>
+            <div class="num-flex">
+              <span class="counter">75,400</span>
+              <div class="up-arrow">
+                <img src="static/images/mob/up-arrow.svg">
+              </div>
+            </div>
+            <div class="num-bottom-info move" data-delay="30">
+              <img src="static/images/mob/sub-tab-num-info.png">
+            </div>
+            <div class="table-list">
+              <div class="item" data-aos="fade-down" data-aos-duration="1000">
+                <img src="static/images/mob/sub-tab-table-1.png">
+              </div>
+              <div class="item" data-aos="fade-down" data-aos-duration="1000">
+                <img src="static/images/mob/sub-tab-table-2.png">
+              </div>
+              <div class="item" data-aos="fade-down" data-aos-duration="1000">
+                <img src="static/images/mob/sub-tab-table-3.png">
+              </div>
+              <div class="item" data-aos="fade-down" data-aos-duration="1000">
+                <img src="static/images/mob/sub-tab-table-4.png">
+              </div>
+            </div>
+            <div class="chart-div" data-aos="fade-down" data-aos-offset="300" data-aos-duration="1000">
+              <img src="static/images/mob/chart.png">
+            </div>
+          </div>
+          <div class="stock-info">
+            <div class="stock-info-tit">
+              <img src="static/images/mob/sub-box-tit.png">
+            </div>
+            <div class="stock-scroll">
+              <div class="box">
+                <img src="static/images/mob/sub-box-1.png">
+              </div>
+              <div class="box">
+                <img src="static/images/mob/sub-box-2.png">
+              </div>
+              <div class="box">
+                <img src="static/images/mob/sub-box-3.png">
+              </div>
+              <div class="box">
+                <img src="static/images/mob/sub-box-4.png">
+              </div>
+            </div>
+          </div>
+          <div class="move-list">
+            <div class="item">
+              <img src="static/images/mob/sub-move-list-1.png">
+            </div>
+            <div class="item">
+              <img src="static/images/mob/sub-move-list-2.png">
+            </div>
+            <div class="item">
+              <img src="static/images/mob/sub-move-list-3.png">
+            </div>
+            <div class="item">
+              <img src="static/images/mob/sub-move-list-4.png">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-list" id="tab-2">
+
+      </div>
+    </div>
   </div>
   <!-- main contents e -->
 
   <!-- footer s -->
   <footer id="footer" class="footer">
-    <div class="footer-inner">
-      <div class="left">
-        <div class="logo-wrap">
-          <img src="static/images/text/footer-logo.png">
-        </div>
-        <div class="family-site">
-          <img src="static/images/text/family-link.png">
-        </div>
-        <div class="img">
-          <img src="static/images/text/ft-bottom-left.png">
-        </div>
-      </div>
-      <div class="right">
-        <div class="img">
-          <img src="static/images/text/sitemap.png">
-        </div>
-        <div class="img">
-          <img src="static/images/text/ft-bottom-right.png">
-        </div>
-      </div>
-    </div>
+    <img src="static/images/mob/footer.png">
     <div class="top-btn">
       <a href="#none"><img src="static/images/top-btn.png"></a>
     </div>
   </footer>
   <!-- footer e -->
+
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>

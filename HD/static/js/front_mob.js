@@ -39,6 +39,35 @@ $(function(){
   }
   // 상단 이동 버튼 e
 
+  function accBtnClick() {
+    var accBtn = $('.accordion');
+
+    accBtn.on('click', function(e) {
+      if (!$(this).parents('.acc-inner').is('.active')) {
+        $('.acc-inner').removeClass('active');
+        $('.acc-inner').find('.panel').slideUp();
+
+        $(this).parents('.acc-inner').addClass('active');
+        $(this).parents('.acc-inner').find('.panel').stop().slideDown();
+      }else{
+        $(this).parents('.acc-inner').removeClass('active');
+        $(this).parents('.acc-inner').find('.panel').stop().slideUp();
+      }
+    })
+  }
+
+  $('.en-btn li').click(function(){
+    $(this).addClass('active').siblings().removeClass('active');
+  })
+
+  $('.menu-btn').click(function(e) {
+    $(this).toggleClass('on');
+    $('.header-wrap').toggleClass('active');
+
+    return false;
+  });
+
   topBtnClick();
   mainSocialSwiper();
+  accBtnClick();
 })
