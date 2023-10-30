@@ -375,14 +375,18 @@ $(document).ready(function(){
   var item = gsap.utils.toArray(".kv-pin")
 
   const itemMotion = (panel, i) => {
-    console.log(panel)
-    document.querySelectorAll('.kv-pin').forEach((e) => {
+    //console.log(panel)
+    document.querySelectorAll('.kv-pin').forEach((e, index) => {
       e.classList.remove('is-active')
+      $('.main-kv').find('.top').removeClass('is-' + index)
+      $('.main-kv').find('.bottom').removeClass('is-' + index)
+      $('.main-kv').find('.bottom-text').removeClass('is-' + index)
     })
-    $(panel).addClass('is-active')
 
-    gsap.set(".kv-pin", { opacity: "0"});
-    gsap.set(item[i], { opacity: "1"});
+    $('.main-kv').find('.top').addClass('is-' + i)
+    $('.main-kv').find('.bottom').addClass('is-' + i)
+    $('.main-kv').find('.bottom-text').addClass('is-' + i)
+    $(panel).addClass('is-active')
   }
 
   item.forEach((panel, i) => {

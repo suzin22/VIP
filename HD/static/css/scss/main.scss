@@ -1,11 +1,12 @@
 body {
-  background: #1A1718;
+  background: #1a1718;
 }
 
 .main-kv {
   width: 100%;
   //height: 100vh;
   position: relative;
+  z-index: 10;
   .kv-video {
     width: 100%;
     height: 100%;
@@ -20,7 +21,7 @@ body {
     background: #000;
   }
   .text {
-    position: absolute;
+    position: fixed;
     top: 375px;
     left: 92px;
     z-index: 9;
@@ -28,21 +29,11 @@ body {
       .white {
         display: none;
       }
-      img{
-        transition: all .5s;
-        opacity: 0;
-        transform: translate(0, 50%);
-      }
     }
     .bottom {
       position: absolute;
       top: 185px;
       left: 0;
-      img{
-        transition: all 1s;
-        opacity: 0;
-        transform: translate(0, 50%);
-      }
     }
     .bottom-text {
       position: absolute;
@@ -66,20 +57,103 @@ body {
     }
     &.kv-pin-3 {
       transform: translate(0, 0);
-      margin-bottom:100vh;
+      margin-bottom: 100vh;
     }
-    &.is-active{ // kv addclass
-      .top{
-        img{
-          opacity: 1;
-          transform: translate(0, 0);
-        }
+  }
+}
+
+// 상단 모션
+.main-kv {
+  .top-bg,
+  .kv-video {
+    opacity: 0;
+  }
+  .top,
+  .bottom,
+  .bottom-text {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .top {
+    height: 158px;
+  }
+  .bottom {
+    height: 158px;
+  }
+  .bottom-text {
+    height: 109px;
+  }
+  .top img,
+  .bottom img,
+  .bottom-text img {
+    padding-bottom: 30px;
+  }
+  .top img {
+    transition: all 0.5s;
+  }
+  .bottom img {
+    transition: transform 1s;
+    height: 188px;
+    width: fit-content;
+  }
+  .bottom-text img {
+    transition: transform 1.5s;
+    height: 118px;
+    width: fit-content;
+  }
+  .bottom img {
+  }
+  .bottom-text img {
+  }
+  .top {
+    &.is-1 {
+      // is-active
+      img {
+        transform: translate(0, -188px);
       }
-      .bottom{
-        img{
-          opacity: 1;
-          transform: translate(0, 0);
-        }
+    }
+    &.is-2 {
+      // is-active
+      img {
+        transform: translate(0, -376px);
+      }
+    }
+  }
+  .bottom {
+    &.is-1 {
+      // is-active
+      img {
+        transform: translate(0, -183px);
+      }
+    }
+    &.is-2 {
+      // is-active
+      img {
+        transform: translate(0, -371px);
+      }
+    }
+  }
+  .bottom-text {
+    &.is-1 {
+      // is-active
+      img {
+        transform: translate(0, -117px);
+      }
+    }
+    &.is-2 {
+      // is-active
+      img {
+        transform: translate(0, -241px);
+      }
+    }
+  }
+  .kv-pin {
+    &.is-active {
+      // is-active
+      .top-bg,
+      .kv-video {
+        opacity: 1;
       }
     }
   }
@@ -90,6 +164,7 @@ body {
   width: 100%;
   position: relative;
   padding: 0 80px 80px;
+  z-index: 100;
   // max-width: 1920px;
   // margin: 0 auto;
   overflow: hidden;
@@ -99,7 +174,6 @@ body {
   margin-bottom: 147px;
 }
 // 공통
-
 
 // business
 .main-business {
@@ -115,7 +189,7 @@ body {
     justify-content: space-between;
     position: relative;
     z-index: 99;
-    transform:rotate(-27deg) scale(2);//1
+    transform: rotate(-27deg) scale(2); //1
     .item-wrap {
       width: 100%;
       height: 50%;
@@ -130,14 +204,14 @@ body {
       &.wrap-1 {
         transform: translate(0%, 1px) translate3d(0px, 0px, 0px); //1
         img {
-          bottom: -119px;//1
-          left:calc(14% + 110px);//1
+          bottom: -119px; //1
+          left: calc(14% + 110px); //1
         }
       }
       &.wrap-2 {
         img {
-          top: -120px;//1
-          left:calc(14% + 110px);//1
+          top: -120px; //1
+          left: calc(14% + 110px); //1
         }
       }
     }
@@ -175,13 +249,13 @@ body {
             opacity: 1;
           }
           &::after {
-            content: '';
+            content: "";
             width: 100%;
             height: 100%;
             position: absolute;
             top: 0;
             left: 0;
-            background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 50%, rgba(0, 0, 0, 0.90) 100%)
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.9) 100%);
           }
           .img {
             width: 100%;
@@ -232,7 +306,7 @@ body {
       width: 277px;
       height: 914px;
       padding: 40px;
-      background: var(--primary-1-eco-green, #38D430);
+      background: var(--primary-1-eco-green, #38d430);
       position: sticky;
       top: 0;
       display: flex;
@@ -272,8 +346,8 @@ body {
               line-height: 1.4;
               border-bottom: 1px solid transparent;
               &.active {
-                color: var(--primary-1-eco-green, #38D430);
-                border-color: #38D430;
+                color: var(--primary-1-eco-green, #38d430);
+                border-color: #38d430;
               }
             }
           }
@@ -346,7 +420,7 @@ body {
         width: calc(50% - 20px);
         height: 920px;
         position: relative;
-        background-image: linear-gradient(to top, #1A1718 92%, transparent 8%);
+        background-image: linear-gradient(to top, #1a1718 92%, transparent 8%);
         .num {
           position: absolute;
           top: 80px;
@@ -395,7 +469,7 @@ body {
     margin-left: -80px;
     padding-left: 80px;
     overflow-x: hidden;
-  } 
+  }
   .social-swiper {
     width: 100%;
     position: relative;
@@ -422,7 +496,7 @@ body {
           }
           &::after {
             display: block;
-            content: '';
+            content: "";
             position: absolute;
             top: 0;
             left: 0;
@@ -461,7 +535,7 @@ body {
       background: #333;
       height: 2px;
       .swiper-pagination-progressbar-fill {
-        background: #38D430;
+        background: #38d430;
       }
     }
   }
@@ -484,12 +558,12 @@ body {
       align-items: center;
       justify-content: space-between;
       padding-bottom: 80px;
-      border-bottom: 2px solid var(--primary-6-white, #FFF);
+      border-bottom: 2px solid var(--primary-6-white, #fff);
       .left {
         display: flex;
         align-items: flex-end;
         .counter {
-          color: var(--primary-6-white, #FFF);
+          color: var(--primary-6-white, #fff);
           font-size: 120px;
           font-weight: 700;
           line-height: 1.2;
@@ -507,7 +581,6 @@ body {
   }
 }
 // 주가정보
-
 
 // white
 .white {
@@ -561,7 +634,7 @@ body {
                 border-bottom-width: 2px;
                 color: #999;
                 &.active {
-                  color: #38D430;
+                  color: #38d430;
                 }
               }
             }
@@ -637,7 +710,7 @@ body {
 
   .wrap {
     padding: 0 20px 120px;
-    background: #1A1718;
+    background: #1a1718;
 
     .section-tit {
       margin-bottom: 60px;
@@ -655,7 +728,7 @@ body {
             padding-right: 20px;
             overflow-x: scroll;
             &::-webkit-scrollbar {
-              display: none; 
+              display: none;
               scroll-behavior: initial;
             }
             .menu-list {
@@ -667,7 +740,7 @@ body {
                   line-height: 1.4;
                   text-wrap: nowrap;
                   &.active {
-                    color: #38D430;
+                    color: #38d430;
                   }
                 }
                 & + li {
@@ -761,7 +834,7 @@ body {
         border-bottom: 1px solid #666;
         margin-bottom: 8px;
         .counter {
-          color: var(--primary-6-white, #FFF);
+          color: var(--primary-6-white, #fff);
           font-size: 60px;
           font-weight: 700;
           line-height: 1.2;
@@ -780,4 +853,3 @@ body {
     }
   }
 }
-
