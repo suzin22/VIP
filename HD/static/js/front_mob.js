@@ -70,4 +70,39 @@ $(function(){
   topBtnClick();
   mainSocialSwiper();
   accBtnClick();
+
+  // 메인 상단 동영상 gsap 셋팅
+  var item = gsap.utils.toArray(".kv-pin")
+
+  const itemMotion = (panel, i) => {
+    document.querySelectorAll('.kv-pin').forEach((e, index) => {
+      e.classList.remove('is-active')
+      document.querySelector('.main-kv .top').classList.remove('is-' + index)
+      document.querySelector('.main-kv .bottom').classList.remove('is-' + index)
+      document.querySelector('.main-kv .bottom-text').classList.remove('is-' + index)
+    })
+
+    document.querySelector('.main-kv .top').classList.add('is-' + i)
+    document.querySelector('.main-kv .bottom').classList.add('is-' + i)
+    document.querySelector('.main-kv .bottom-text').classList.add('is-' + i)
+
+    $(panel).addClass('is-active')
+  }
+
+  item.forEach((panel, i) => {
+    ScrollTrigger.create({
+      trigger: panel,
+      start: "top top",
+      pin: true, 
+      pinSpacing: false,
+      markers: false,
+
+      onEnter: () => {
+        itemMotion(panel, i)
+      },
+      onEnterBack: () => {
+        itemMotion(panel, i)
+      }
+    });
+  });
 })

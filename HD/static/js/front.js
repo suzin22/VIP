@@ -377,14 +377,15 @@ $(document).ready(function(){
   const itemMotion = (panel, i) => {
     document.querySelectorAll('.kv-pin').forEach((e, index) => {
       e.classList.remove('is-active')
-      $('.main-kv').find('.top').removeClass('is-' + index)
-      $('.main-kv').find('.bottom').removeClass('is-' + index)
-      $('.main-kv').find('.bottom-text').removeClass('is-' + index)
+      document.querySelector('.main-kv .top').classList.remove('is-' + index)
+      document.querySelector('.main-kv .bottom').classList.remove('is-' + index)
+      document.querySelector('.main-kv .bottom-text').classList.remove('is-' + index)
     })
 
-    $('.main-kv').find('.top').addClass('is-' + i)
-    $('.main-kv').find('.bottom').addClass('is-' + i)
-    $('.main-kv').find('.bottom-text').addClass('is-' + i)
+    document.querySelector('.main-kv .top').classList.add('is-' + i)
+    document.querySelector('.main-kv .bottom').classList.add('is-' + i)
+    document.querySelector('.main-kv .bottom-text').classList.add('is-' + i)
+
     $(panel).addClass('is-active')
   }
 
