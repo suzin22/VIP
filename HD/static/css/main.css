@@ -161,7 +161,7 @@ body {
 .main-business .split-tit .item-wrap img {
   position: absolute;
   left: 50%;
-  transform: translate(-50%, 0) scale(0.5);
+  transform: translate(-50%, 0) rotate(27deg) scale(0.5);
 }
 .main-business .split-tit .item-wrap.wrap-1 {
   transform: translate(0%, 1px) translate3d(0px, 0px, 0px);
