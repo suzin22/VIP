@@ -530,7 +530,10 @@ button {
   position: relative;
 }
 .sub-inner .tab-btn-wrap .tab-btn li {
-  width: 100%;
+  flex-shrink: 0;
+  text-wrap: nowrap;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 .sub-inner .tab-btn-wrap .tab-btn li button {
   color: #666;

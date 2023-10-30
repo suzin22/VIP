@@ -241,7 +241,7 @@ body {
 }
 .main-business .bs-pin .bs-box .text.ko-text {
   right: 120px;
-  bottom: 320px;
+  bottom: 360px;
 }
 
 .main-media {
@@ -647,6 +647,12 @@ body {
 .mob .wrap .main-media .media-inner .tab .menu::-webkit-scrollbar {
   display: none;
   scroll-behavior: initial;
+}
+.mob .wrap .main-media .media-inner .tab .menu .menu-list li {
+  flex-shrink: 0;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-wrap: nowrap;
 }
 .mob .wrap .main-media .media-inner .tab .menu .menu-list li button {
   color: #666;
