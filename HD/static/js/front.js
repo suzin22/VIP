@@ -298,9 +298,15 @@ $(document).ready(function(){
   const counterHtml = document.querySelector('.counter').innerHTML
 
   window.addEventListener('scroll',(e) => {
-    if( document.querySelectorAll('.main-social').length > 0 ){
+    if( document.querySelectorAll('.main-social').length > 0 ){// 메인
       const mainSocialOffsetTop = document.querySelector('.main-social').offsetTop
       if( window.scrollY + 500 <= mainSocialOffsetTop){
+        document.querySelector('.counter').innerHTML = counterHtml
+      }
+    }
+
+    if( document.querySelectorAll('.sub-inner').length > 0 ){ // 서브
+      if( window.scrollY <= 300){
         document.querySelector('.counter').innerHTML = counterHtml
       }
     }
@@ -309,8 +315,14 @@ $(document).ready(function(){
     if( document.querySelectorAll('.banner-visual').length > 0 ){
       const item = document.querySelector('.banner-visual img'),
             cnt = (window.scrollY / 1500) * 100
-
-      item.style.transform = 'translate3d(0px, -' + (cnt * 0.50) + '%, 0px)'
+      
+      window.addEventListener('scroll', () => {
+        if( window.scrollY <= 700 ){
+          item.style.transform = 'translate3d(0px, -' + (cnt * 0.50) + '%, 0px)'
+        }else{
+          item.style.transform = 'translate3d(0px, -20%, 0px)'
+        }
+      })
     }
   })
   
