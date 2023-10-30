@@ -800,4 +800,43 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.mob .main-business {
+  width: calc(100% + 160px);
+  margin-left: -80px;
+  background: #000;
+  overflow: hidden;
+}
+.mob .main-business .split-tit {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 99;
+  transform: rotate(0) scale(1);
+}
+.mob .main-business .split-tit .item-wrap {
+  width: 100%;
+  height: 50%;
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+}
+.mob .main-business .split-tit .item-wrap img {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0) rotate(0) scale(1);
+  width: 303px;
+}
+.mob .main-business .split-tit .item-wrap.wrap-1 {
+  transform: translate(0, 0) translate3d(0px, 0px, 0px);
+}
+.mob .main-business .split-tit .item-wrap.wrap-1 img {
+  bottom: 0;
+}
+.mob .main-business .split-tit .item-wrap.wrap-2 img {
+  top: 0;
 }/*# sourceMappingURL=main.css.map */

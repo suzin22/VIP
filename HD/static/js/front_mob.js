@@ -105,4 +105,27 @@ $(function(){
       }
     });
   });
+
+  // main business 스크롤 이벤트 s
+  gsap.set(".split-tit .wrap-1 img", {'bottom':'78px', y:100}) // 타이틀
+  gsap.set(".split-tit .wrap-2 img", {'top':'-124px', y:100}) // 타이틀
+
+  // 상단 ~ 조선해양
+  let splitPin = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".gsap-box-1",
+      start: "top top",
+      scrub: 2, // 숫자가 커질수록 부드러워짐
+      pin: true, // pin: '.selector'시 특정 엘리먼트가 고정
+      smooth: 1,
+      pinSpacing: false,
+      // markers: true,
+    }
+  });
+
+  splitPin.addLabel("label1")
+  .to(".split-tit .wrap-1", {yPercent:-100, duration: 3}, 'start0')
+  .to(".split-tit .wrap-1 img", {'bottom':'-300px', duration: 3}, 'start0')
+  .to(".split-tit .wrap-2", {yPercent:100, duration: 3}, 'start0')
+  .to(".split-tit .wrap-2 img", {'top':'-300px', duration: 3}, 'start0')
 })

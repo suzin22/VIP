@@ -966,4 +966,52 @@ body {
       }
     }
   }
+
+  // business
+  .main-business {
+    width: calc(100% + 160px);
+    margin-left: -80px;
+    background: #000;
+    //padding-bottom: 160px;
+    overflow: hidden;
+    .split-tit {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+      z-index: 99;
+      transform: rotate(0) scale(1); //1
+      .item-wrap {
+        width: 100%;
+        height: 50%;
+        position: relative;
+        overflow: hidden;
+        background: #fff;
+        img {
+          position: absolute;
+          left: 50%;
+          transform: translate(-50%, 0) rotate(0) scale(1); //1
+          width: 303px;
+        }
+        &.wrap-1 {
+          transform: translate(0, 0) translate3d(0px, 0px, 0px); //1
+          img {
+            //margin:0 0 -23px 0;
+            bottom: 0; //1
+            //left: calc(14% + 110px); //1
+          }
+        }
+        &.wrap-2 {
+          img {
+            //margin:-23px 0 0 0;
+            top: 0; //1
+            //left: calc(14% + 110px); //1
+          }
+        }
+      }
+    }
+  }
 }

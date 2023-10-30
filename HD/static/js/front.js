@@ -42,8 +42,6 @@ $(document).ready(function(){
   gsap.set(".set-3 .en-text", {opacity:0, y: 50})
   gsap.set(".set-3 .ko-text", {opacity:0, y: 100})
 
-  //gsap.set(".bg-fff", {'opacity':'1'}) // bg fff
-
   // 상단 ~ 조선해양
   let splitPin = gsap.timeline({
     scrollTrigger: {
