@@ -872,6 +872,9 @@ body {
 .mob.white .main-business .split-tit .item-wrap {
   background: #000;
 }
+.mob.white .mySwiper {
+  background: #fff;
+}
 .mob.white .mySwiper .swiper-slide {
   position: relative;
   height: 380px;
