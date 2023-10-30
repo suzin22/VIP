@@ -4,57 +4,47 @@ body {
 
 .main-kv {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   position: relative;
-  z-index: 1000;
-  .kv-bg {
+  .kv-video {
     width: 100%;
     height: 100%;
-    background: url(/HD/static/images/mission-01.jpg) no-repeat;
-    background-position: center;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    & > div {
-      width: 100%;
-      position: relative;
-      .text {
-        color: #fff;
-        font-size: 200px;
-        font-weight: 700;
-        line-height: 120%;
-        position: absolute;
-        left: 80px;
-      }
-      &.white {
-        background: #fff;
-        height: 40%;
-        .text {
-          bottom: -20px;
-          @supports (background-clip:text) or (-webkit-background-clip:text) {
-            color: transparent;
-            background-clip: text;
-            -webkit-background-clip: text;
-            background-image: url(/HD/static/images/mission-01.jpg);
-            background-size: cover;
-            background-position: center;
-          }
-        }
-      }
-      &.transparent {
-        background: transparent;
-        height: 60%;
-        .text {
-          top: -20px;
-        }
-        .bt-text {
-          position: absolute;
-          left: 80px;
-          bottom: 183px;
-        }
+    position: relative;
+  }
+  .top-bg {
+    width: 100%;
+    height: 42.3%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #000;
+  }
+  .text {
+    position: absolute;
+    top: 375px;
+    left: 92px;
+    z-index: 9;
+    .top {
+      .white {
+        display: none;
       }
     }
+    .bottom {
+      position: absolute;
+      top: 185px;
+      left: 0;
+    }
+    .bottom-text {
+      position: absolute;
+      top: 418px;
+      left: 0;
+    }
+  }
+  .modeBtn {
+    width: 195px;
+    position: absolute;
+    bottom: 40px;
+    right: 80px;
   }
 }
 
@@ -484,6 +474,21 @@ body {
 
 // white
 .white {
+  .main-kv {
+    .top-bg {
+      background: #fff;
+    }
+    .text {
+      .top {
+        img {
+          display: block;
+        }
+        .dark {
+          display: none;
+        }
+      }
+    }
+  }
   .main-business {
     background: #fff;
     .split-tit {
@@ -566,3 +571,57 @@ body {
     }
   }
 }
+
+// 모바일
+.mob {
+  .header {
+    width: 100%;
+    height: 76px;
+    position: fixed;
+    .header-inner {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+      .menu-btn {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .main-kv {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    .top-bg {
+      height: 47.8%;
+    }
+    .text {
+      left: 20px;
+      top: 220px;
+      .bottom-text {
+        top: 0;
+      }
+      .top {
+        position: absolute;
+        left: 0;
+        top: 105px;
+      }
+      .bottom {
+        top: 175px;
+      }
+    }
+  }
+
+  .wrap {
+    padding: 0 20px 120px;
+    background: #1A1718;
+
+    .main-media {
+      padding: 120px 0;
+    }
+  }
+}
+
