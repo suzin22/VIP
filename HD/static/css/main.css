@@ -88,7 +88,7 @@ body {
 }
 .main-kv .bottom img {
   transition: transform 1s;
-  height: 188px;
+  height: 186px;
   width: -moz-fit-content;
   width: fit-content;
 }
@@ -568,25 +568,38 @@ body {
 .mob .main-kv {
   width: 100%;
   height: 100vh;
+  position: relative;
   overflow: hidden;
 }
-.mob .main-kv .top-bg {
-  height: 47.8%;
-}
 .mob .main-kv .text {
-  left: 20px;
   top: 220px;
-}
-.mob .main-kv .text .bottom-text {
-  top: 0;
+  left: 20px;
 }
 .mob .main-kv .text .top {
+  height: 72px;
   position: absolute;
-  left: 0;
   top: 105px;
+  left: 0;
+}
+.mob .main-kv .text .top img {
+  height: 72px;
 }
 .mob .main-kv .text .bottom {
-  top: 175px;
+  height: 72px;
+  top: 177px;
+}
+.mob .main-kv .text .bottom img {
+  height: 76px;
+}
+.mob .main-kv .text .bottom-text {
+  height: 74px;
+  top: 0;
+}
+.mob .main-kv .text .bottom-text img {
+  height: 74px;
+}
+.mob .main-kv .top-bg {
+  height: 47.6%;
 }
 .mob .wrap {
   padding: 0 20px 120px;
