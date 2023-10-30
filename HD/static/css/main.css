@@ -557,6 +557,9 @@ body {
 .white .group-esg .esg-pin .esg-box .text-wrap {
   background-image: linear-gradient(to top, #f4f4f4 92%, transparent 8%);
 }
+.white .main-social .social-progress-bar .swiper-pagination-progressbar {
+  background: #ccc;
+}
 .white .stock .inner .all-flex {
   border-bottom: 2px solid #000;
 }
@@ -760,9 +763,13 @@ body {
 .mob .wrap .main-social .social-swiper li a .thumb-img {
   width: 100%;
   height: calc(100% - 40px);
+  border-radius: 10px;
 }
 .mob .wrap .main-social .social-swiper li + li {
   margin-left: 0;
+}
+.mob .wrap .main-social .social-swiper li.circle a .thumb-img {
+  border-radius: 50%;
 }
 .mob .wrap .main-social .social-progress-bar {
   width: 100%;

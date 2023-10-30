@@ -670,6 +670,14 @@ body {
     }
   }
 
+  .main-social {
+    .social-progress-bar {
+      .swiper-pagination-progressbar {
+        background: #ccc;
+      }
+    }
+  }
+
   .stock {
     .inner {
       .all-flex {
@@ -917,10 +925,19 @@ body {
             .thumb-img {
               width: 100%;
               height: calc(100% - 40px);
+              border-radius: 10px;
+
             }
           }
           & + li {
             margin-left: 0;
+          }
+          &.circle {
+            a {
+              .thumb-img {
+                border-radius: 50%;
+              }
+            }
           }
         }
       }
