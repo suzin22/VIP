@@ -28,10 +28,20 @@ body {
 .main-kv .text .top .white {
   display: none;
 }
+.main-kv .text .top img {
+  transition: all 0.5s;
+  opacity: 0;
+  transform: translate(0, 50%);
+}
 .main-kv .text .bottom {
   position: absolute;
   top: 185px;
   left: 0;
+}
+.main-kv .text .bottom img {
+  transition: all 1s;
+  opacity: 0;
+  transform: translate(0, 50%);
 }
 .main-kv .text .bottom-text {
   position: absolute;
@@ -53,6 +63,14 @@ body {
   transform: translate(0, 0);
 }
 .main-kv .kv-pin.kv-pin-3 {
+  transform: translate(0, 0);
+}
+.main-kv .kv-pin.is-active .top img {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+.main-kv .kv-pin.is-active .bottom img {
+  opacity: 1;
   transform: translate(0, 0);
 }
 

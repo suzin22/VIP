@@ -375,7 +375,10 @@ $(document).ready(function(){
   var item = gsap.utils.toArray(".kv-pin")
 
   const itemMotion = (panel, i) => {
-    $(panel).addClass('show')
+    document.querySelectorAll('.kv-pin').forEach((e) => {
+      e.classList.remove('is-active')
+    })
+    $(panel).addClass('is-active')
 
     gsap.set(".kv-pin", { opacity: "0"});
     gsap.set(item[i], { opacity: "1"});
@@ -390,13 +393,9 @@ $(document).ready(function(){
       markers: true,
 
       onEnter: () => {
-        console.log(panel)
-
         itemMotion(panel, i)
       },
       onEnterBack: () => {
-        console.log(panel)
-
         itemMotion(panel, i)
       }
     });
