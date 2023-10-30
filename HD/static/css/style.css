@@ -409,7 +409,7 @@ button {
   width: 100%;
   position: relative;
   background: #000;
-  z-index: 100;
+  z-index: 9999;
 }
 .footer .footer-inner {
   width: 100%;
@@ -861,6 +861,7 @@ button {
   transform: translateY(-50%);
 }
 .mob .header .header-wrap .modeBtn {
+  width: auto;
   position: absolute;
   right: 20px;
   bottom: 40px;
