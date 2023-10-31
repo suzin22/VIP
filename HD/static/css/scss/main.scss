@@ -223,7 +223,7 @@ body {
   width: calc(100% + 160px);
   margin-left: -80px;
   background: #000;
-  padding-bottom: 160px;
+  padding-bottom: 400px;
   .split-tit {
     width: 100%;
     height: 100vh;
@@ -651,6 +651,7 @@ body {
   }
   .main-business {
     background: #fff;
+    overflow: hidden;
     .split-tit {
       .item-wrap {
         background: #000;

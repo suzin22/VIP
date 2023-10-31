@@ -66,10 +66,10 @@ body.dark {
   background: #1a1718;
 }
 body.white {
-  background: #fff;
+  background: #f4f4f4;
 }
 body.white .wrap {
-  background: #fff;
+  background: #f4f4f4;
 }
 
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, form, fieldset, p, button, input {
