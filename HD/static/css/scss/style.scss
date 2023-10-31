@@ -1288,3 +1288,55 @@ button {background: transparent; border: none; outline: none;}
     }
   }
 }
+
+/* gate */
+.box-gate{
+  .box-flex{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+  h1{
+    position: absolute;
+    top:30px;
+    left:40px;
+  }
+  .txt-1,
+  .txt-2,
+  .txt-3{
+    position: absolute;
+  }
+  .txt-1{
+    top:30px;
+    right:40px;
+  }
+  .txt-2{
+    bottom:40px;
+    left:40px;
+  }
+  .txt-3{
+    bottom:40px;
+    right:40px;
+  }
+  .box-type{
+    position: relative;
+    & + .box-type{
+      margin-left:16px;
+    }
+    .btn-pc,
+    .btn-mobile{
+      position: absolute;
+      bottom:40px;
+      width: 244px;
+      height: 60px;
+      background: red;
+    }
+    .btn-pc{
+      left:30px;
+    }
+    .btn-mobile{
+      right:30px;
+    }
+  }
+}
