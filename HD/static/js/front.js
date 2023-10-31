@@ -49,7 +49,7 @@ $(document).ready(function(){
       scrollTrigger: {
         trigger: ".gsap-box-1",
         start: "top top",
-        end: "+=3000", // 속도 조절
+        end: "+=6000", // 속도 조절
         scrub: 2, // 숫자가 커질수록 부드러워짐
         pin: true, // pin: '.selector'시 특정 엘리먼트가 고정
         smooth: 1,
@@ -99,7 +99,7 @@ $(document).ready(function(){
       scrollTrigger: {
         trigger: ".gsap-box-2",
         start: "-1040 top",
-        end: "+=3000", // 속도 조절
+        end: "+=6000", // 속도 조절
         scrub: 2, // 숫자가 커질수록 부드러워짐
         pin: true, // pin: '.selector'시 특정 엘리먼트가 고정
         smooth: 1,
