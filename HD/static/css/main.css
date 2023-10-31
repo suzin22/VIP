@@ -298,8 +298,10 @@ body {
 }
 
 .main-media {
-  padding: 320px 0;
-  width: 100%;
+  width: calc(100% + 160px);
+  margin-left: -80px;
+  padding: 320px 80px;
+  background: #1a1718;
   position: relative;
 }
 .main-media .media-inner {
@@ -690,6 +692,8 @@ body {
   margin-bottom: 60px;
 }
 .mob .wrap .main-media {
+  width: 100%;
+  margin: 0;
   padding: 120px 0;
 }
 .mob .wrap .main-media .section-tit {
