@@ -403,6 +403,17 @@ button {
   bottom: 40px;
   right: 80px;
   z-index: 999;
+  transition: all 0.5s;
+}
+.modeBtn.active {
+  width: 71px;
+  height: 71px;
+  overflow: hidden;
+  border-radius: 100px;
+}
+.modeBtn.active img {
+  left: -18px;
+  position: relative;
 }
 
 .footer {

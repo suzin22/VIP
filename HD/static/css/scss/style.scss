@@ -389,6 +389,17 @@ button {background: transparent; border: none; outline: none;}
   bottom: 40px;
   right: 80px;
   z-index: 999;
+  transition: all .5s;
+  &.active{
+    width:71px;
+    height:71px;
+    overflow:hidden;
+    border-radius: 100px;
+    img{
+      left:-18px;
+      position: relative;
+    }
+  }
 }
 
 // footer

@@ -95,6 +95,8 @@ $(document).ready(function(){
 
     .to(".set-1 .bs-card-wrap", {xPercent: -295, duration: 3}, 'start2')
 
+    $('html, body').animate({scrollTop:5100}, 300);
+
     // 에너지
     let splitPin2 = gsap.timeline({
       scrollTrigger: {
@@ -427,5 +429,23 @@ $(document).ready(function(){
         itemMotion(panel, i)
       }
     });
+  });
+
+  // Dark, White mode : 텍스트 애니메이션
+  gsap.to('.modeBtn', {
+    scrollTrigger: {
+      trigger: '.main-business',
+      start: "top 20%",
+      end: "bottom 10%",
+      scrub: true,
+      markers: true,
+      id: "box7",
+      onEnter: () => {
+        document.querySelector('.modeBtn').classList.add('active')
+      },
+      onLeaveBack: () => {
+        document.querySelector('.modeBtn').classList.remove('active')
+      }
+    }
   });
 })
