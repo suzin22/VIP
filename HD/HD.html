@@ -51,19 +51,24 @@
     //   }
 
     const box1 = document.querySelector(".box-type.type-1"),
-          box2 = document.querySelector(".box-type.type-2")
+          box2 = document.querySelector(".box-type.type-2");
     
+    // box1
     gsap.from(box1, {
       duration: 1,
-      y: 50,
+      y: 30,
       autoAlpha:0,
     });
 
+    // box2
     gsap.from(box2, {
       duration: 1,
-      y: -50,
+      y: -30,
       autoAlpha:0,
     });
+
+    gsap.from(box1, {"filter":"hue-rotate(2rad)", duration: 10});
+    gsap.from(box2, {"filter":"hue-rotate(2rad)", duration: 10});
   </script>
 
 </body>
