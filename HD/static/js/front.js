@@ -165,11 +165,13 @@ $(document).ready(function(){
           let length = sResult.length;
           //result += parseInt(sResult[length-2]) + " " + parseInt(sResult[length-1]) + " " + parseInt(sResult[length-3]);
           result += -(parseInt(sResult[length-2]));
+
+          console.log(result)
           
           if( result < 200 || result < 460 ){
             $('.gsap-box-3 .card').removeClass('is-active')
             $('.gsap-box-3 .card-1').addClass('is-active')
-          }else if( result > 500 && result < 700 ){
+          }else if( result > 500 && result < 900 ){
             $('.gsap-box-3 .card').removeClass('is-active')
             $('.gsap-box-3 .card-2').addClass('is-active')
           }else if( result > 1000 && result < 1800 ){
@@ -180,7 +182,7 @@ $(document).ready(function(){
       }
     });
 
-    $('html, body').animate({scrollTop:20600}, 300);
+    //$('html, body').animate({scrollTop:20600}, 300);
 
     splitPin3.addLabel("label3")
     .to(".set-3 .en-text", {y: 0, opacity: 1, duration: 1}, 'start1')
