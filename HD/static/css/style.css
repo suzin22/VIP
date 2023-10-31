@@ -532,7 +532,8 @@ button {
 }
 .sub-inner .tab-btn-wrap {
   width: 260px;
-  position: relative;
+  position: sticky;
+  top: 100px;
 }
 .sub-inner .tab-btn-wrap .tab-btn li {
   flex-shrink: 0;
@@ -558,6 +559,7 @@ button {
 }
 .sub-inner .tab-list-wrap {
   width: calc(100% - 300px);
+  position: relative;
 }
 .sub-inner .tab-list-wrap .tab-list {
   display: none;
