@@ -441,7 +441,7 @@ body {
 .group-esg {
   width: 100%; 
   position: relative;
-  padding: 188px 0 160px;
+  padding: 0 0 160px;
   .esg-pin {
     width: 100%;
     position: relative;
@@ -677,7 +677,7 @@ body {
     width: calc(100% + 160px);
     margin-left: -80px;
     background: #f4f4f4;
-    padding: 320px 80px 0;
+    padding: 320px 80px;
     .media-inner {
       .tab {
         .menu {
