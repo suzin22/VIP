@@ -31,9 +31,10 @@ $(document).ready(function(){
   // scroll fade animation e
 
   if( document.querySelectorAll('.bs-box').length > 0 ){
+
     // main business 스크롤 이벤트 s
     gsap.set(".bs-box .box-tit", {'opacity':'0', y:100}) // 타이틀
-    gsap.set(".set-1 .bs-card-wrap", {yPercent:0}) // 조선해양
+    //gsap.set(".set-1 .bs-card-wrap", {yPercent:0}) // 조선해양
     gsap.set(".set-2 .bs-card-wrap", {yPercent:0}) // 에너지
     gsap.set(".set-3 .bs-card-wrap", {yPercent:0}) // 기계 로봇
     gsap.set(".set-1 .en-text", {opacity:0, y: 50})
@@ -48,11 +49,12 @@ $(document).ready(function(){
       scrollTrigger: {
         trigger: ".gsap-box-1",
         start: "top top",
-        end: "3000", // 속도 조절
+        end: "+=6000", // 속도 조절
         scrub: 2, // 숫자가 커질수록 부드러워짐
         pin: true, // pin: '.selector'시 특정 엘리먼트가 고정
         smooth: 1,
-        // markers: true,
+        anticipatePin: 1,
+        markers: false,
         onUpdate:(self) => {
           let result = '';
           let target = $('.set-1 .bs-card-wrap').css('transform');
@@ -60,18 +62,14 @@ $(document).ready(function(){
           let length = sResult.length;
           //result += parseInt(sResult[length-2]) + " " + parseInt(sResult[length-1]) + " " + parseInt(sResult[length-3]);
           result += -(parseInt(sResult[length-2]));
-          
-          if(result == 0){
+
+          if( result < 200 ){
             $('.gsap-box-1 .card').removeClass('is-active')
             $('.gsap-box-1 .card-1').addClass('is-active')
-          }
-          
-          if( result >= 790 ){
+          }else if( result < 900 ){
             $('.gsap-box-1 .card').removeClass('is-active')
             $('.gsap-box-1 .card-2').addClass('is-active')
-          }
-          
-          if( result >= 1550 ){
+          }else if( result < 1600 ){
             $('.gsap-box-1 .card').removeClass('is-active')
             $('.gsap-box-1 .card-3').addClass('is-active')
           }
@@ -92,17 +90,16 @@ $(document).ready(function(){
     .to(".set-1 .en-text", {y: 0, opacity: 1, duration: 3}, 'start1.5')
     .to(".set-1 .ko-text", {y: 0, opacity: 1, duration: 3}, 'start1.5')
 
-
-    .to(".set-1 .bs-card-wrap", {xPercent: -295, duration: 3}, 'start2')
-
-    $('html, body').animate({scrollTop:5100}, 300);
+    .to(".set-1 .bs-card-wrap", {'transform': 'translate(0px, 0)', duration: 3}, 'start1')
+    .to(".set-1 .bs-card-wrap", {'transform': 'translate(-790px, 0)', duration: 3}, 'start2')
+    .to(".set-1 .bs-card-wrap", {'transform': 'translate(-1700px, 0)', duration: 3}, 'start7')
 
     // 에너지
     let splitPin2 = gsap.timeline({
       scrollTrigger: {
         trigger: ".gsap-box-2",
         start: "-1040 top",
-        end: "2000", // 속도 조절
+        end: "+=6000", // 속도 조절
         scrub: 2, // 숫자가 커질수록 부드러워짐
         pin: true, // pin: '.selector'시 특정 엘리먼트가 고정
         smooth: 1,
@@ -114,30 +111,24 @@ $(document).ready(function(){
           let length = sResult.length;
           //result += parseInt(sResult[length-2]) + " " + parseInt(sResult[length-1]) + " " + parseInt(sResult[length-3]);
           result += -(parseInt(sResult[length-2]));
-          
-          if(result == 0){
-            $('.set-2 .card').removeClass('is-active')
-            $('.set-2 .card-1').addClass('is-active')
-          }
-          
-          if( result >= 790 ){
-            $('.set-2 .card').removeClass('is-active')
-            $('.set-2 .card-2').addClass('is-active')
-          }
-          
-          if( result >= 1550 ){
-            $('.set-2 .card').removeClass('is-active')
-            $('.set-2 .card-3').addClass('is-active')
-          }
 
-          if( result >= 2516 ){
-            $('.set-2 .card').removeClass('is-active')
-            $('.set-2 .card-4').addClass('is-active')
-          }
+          //console.log(result)
 
-          if( result >= 3300 ){
-            $('.set-2 .card').removeClass('is-active')
-            $('.set-2 .card-5').addClass('is-active')
+          if( result < 200 || result < 599 ){
+            $('.gsap-box-2 .card').removeClass('is-active')
+            $('.gsap-box-2 .card-1').addClass('is-active')
+          }else if( result > 600 && result < 1299 ){
+            $('.gsap-box-2 .card').removeClass('is-active')
+            $('.gsap-box-2 .card-2').addClass('is-active')
+          }else if( result > 1400 && result < 1800 ){
+            $('.gsap-box-2 .card').removeClass('is-active')
+            $('.gsap-box-2 .card-3').addClass('is-active')
+          }else if( result > 1700 && result < 2690 ){
+            $('.gsap-box-2 .card').removeClass('is-active')
+            $('.gsap-box-2 .card-4').addClass('is-active')
+          }else if( result > 2700 && result < 3300 ){
+            $('.gsap-box-2 .card').removeClass('is-active')
+            $('.gsap-box-2 .card-5').addClass('is-active')
           }
         }
       }
@@ -147,7 +138,13 @@ $(document).ready(function(){
 
     .to(".set-2 .en-text", {y: 0, opacity: 1, duration: 1}, 'start1')
     .to(".set-2 .ko-text", {y: 0, opacity: 1, duration: 1}, 'start1')
-    .to(".set-2 .bs-card-wrap", {xPercent: -610, duration: 3}, 'start2')
+    //.to(".set-2 .bs-card-wrap", {xPercent: -610, duration: 3}, 'start2')
+
+    .to(".set-2 .bs-card-wrap", {'transform': 'translate(0px, 0)', duration: 3}, 'start1')
+    .to(".set-2 .bs-card-wrap", {'transform': 'translate(-861px, 0)', duration: 3}, 'start2')
+    .to(".set-2 .bs-card-wrap", {'transform': 'translate(-1721px, 0)', duration: 3}, 'start3')
+    .to(".set-2 .bs-card-wrap", {'transform': 'translate(-2581px, 0)', duration: 3}, 'start4')
+    .to(".set-2 .bs-card-wrap", {'transform': 'translate(-3441px, 0)', duration: 3}, 'start5')
 
     // 기계 로봇
     let splitPin3 = gsap.timeline({
@@ -159,7 +156,8 @@ $(document).ready(function(){
         pin: true, // pin: '.selector'시 특정 엘리먼트가 고정
         smooth: 1,
         pinSpacing: false,
-        //markers: true,
+        markers: false,
+        id: 'gsap-box-3',
         onUpdate:(self) => {
           let result = '';
           let target = $('.set-3 .bs-card-wrap').css('transform');
@@ -168,17 +166,13 @@ $(document).ready(function(){
           //result += parseInt(sResult[length-2]) + " " + parseInt(sResult[length-1]) + " " + parseInt(sResult[length-3]);
           result += -(parseInt(sResult[length-2]));
           
-          if(result == 0){
+          if( result < 200 || result < 460 ){
             $('.gsap-box-3 .card').removeClass('is-active')
             $('.gsap-box-3 .card-1').addClass('is-active')
-          }
-          
-          if( result >= 790 ){
+          }else if( result > 500 && result < 700 ){
             $('.gsap-box-3 .card').removeClass('is-active')
             $('.gsap-box-3 .card-2').addClass('is-active')
-          }
-          
-          if( result >= 1550 ){
+          }else if( result > 1000 && result < 1800 ){
             $('.gsap-box-3 .card').removeClass('is-active')
             $('.gsap-box-3 .card-3').addClass('is-active')
           }
@@ -186,15 +180,17 @@ $(document).ready(function(){
       }
     });
 
+    $('html, body').animate({scrollTop:20600}, 300);
+
     splitPin3.addLabel("label3")
     .to(".set-3 .en-text", {y: 0, opacity: 1, duration: 1}, 'start1')
     .to(".set-3 .ko-text", {y: 0, opacity: 1, duration: 1}, 'start1')
-    .to(".set-3 .bs-card-wrap", {xPercent: -305, duration: 3}, 'start2')
+    //.to(".set-3 .bs-card-wrap", {xPercent: -305, duration: 3}, 'start2')
+
+    .to(".set-3 .bs-card-wrap", {'transform': 'translate(0px, 0)', duration: 3}, 'start1')
+    .to(".set-3 .bs-card-wrap", {'transform': 'translate(-861px, 0)', duration: 3}, 'start2')
+    .to(".set-3 .bs-card-wrap", {'transform': 'translate(-1721px, 0)', duration: 3}, 'start3')
   }
-
-
-
-
 
   // .to(".bs-pin ")
   // main business 스크롤 이벤트 e
@@ -439,7 +435,7 @@ $(document).ready(function(){
       end: "bottom 10%",
       scrub: true,
       markers: false,
-      id: "box1",
+      id: "box7",
       onEnter: () => {
         document.querySelector('.modeBtn').classList.add('active')
       },
