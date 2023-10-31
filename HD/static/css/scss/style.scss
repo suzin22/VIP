@@ -966,6 +966,8 @@ button {background: transparent; border: none; outline: none;}
     display: block;
     .tab-btn-wrap {
       width: 100%;
+      position: relative;
+      top: auto;
       .tab-btn {
         width: calc(100% + 40px);
         margin-left: -20px;

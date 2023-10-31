@@ -916,6 +916,8 @@ button {
 }
 .mob .sub-inner .tab-btn-wrap {
   width: 100%;
+  position: relative;
+  top: auto;
 }
 .mob .sub-inner .tab-btn-wrap .tab-btn {
   width: calc(100% + 40px);
