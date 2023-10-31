@@ -2,74 +2,95 @@
 
 // font
 @font-face {
-  font-family: 'Pretendard';
+  font-family: "Pretendard";
   font-weight: 700;
   font-display: swap;
-  src: local('Pretendard Bold'),
-    url('/HD/static/fonts/Pretendard-Bold.subset.woff2') format('woff2'),
-    url('/HD/static/fonts/Pretendard-Bold.subset.woff') format('woff');
+  src:
+    local("Pretendard Bold"),
+    url("/HD/static/fonts/Pretendard-Bold.subset.woff2") format("woff2"),
+    url("/HD/static/fonts/Pretendard-Bold.subset.woff") format("woff");
 }
 
 @font-face {
-  font-family: 'Pretendard';
+  font-family: "Pretendard";
   font-weight: 600;
   font-display: swap;
-  src: local('Pretendard SemiBold'),
-    url('/HD/static/fonts/Pretendard-SemiBold.subset.woff2') format('woff2'),
-    url('/HD/static/fonts/Pretendard-SemiBold.subset.woff') format('woff');
+  src:
+    local("Pretendard SemiBold"),
+    url("/HD/static/fonts/Pretendard-SemiBold.subset.woff2") format("woff2"),
+    url("/HD/static/fonts/Pretendard-SemiBold.subset.woff") format("woff");
 }
 
 @font-face {
-  font-family: 'Pretendard';
+  font-family: "Pretendard";
   font-weight: 500;
   font-display: swap;
-  src: local('Pretendard Medium'),
-    url('/HD/static/fonts/Pretendard-Medium.subset.woff2') format('woff2'),
-    url('/HD/static/fonts/Pretendard-Medium.subset.woff') format('woff');
+  src:
+    local("Pretendard Medium"),
+    url("/HD/static/fonts/Pretendard-Medium.subset.woff2") format("woff2"),
+    url("/HD/static/fonts/Pretendard-Medium.subset.woff") format("woff");
 }
 
 @font-face {
-  font-family: 'Pretendard';
+  font-family: "Pretendard";
   font-weight: 400;
   font-display: swap;
-  src: local('Pretendard Regular'),
-    url('/HD/static/fonts/Pretendard-Regular.subset.woff2') format('woff2'),
-    url('/HD/static/fonts/Pretendard-Regular.subset.woff') format('woff');
+  src:
+    local("Pretendard Regular"),
+    url("/HD/static/fonts/Pretendard-Regular.subset.woff2") format("woff2"),
+    url("/HD/static/fonts/Pretendard-Regular.subset.woff") format("woff");
 }
 
 @font-face {
-  font-family: 'PPNeueMontreal';
+  font-family: "PPNeueMontreal";
   font-weight: 400;
   font-display: swap;
-  src: local('PPNeueMontreal Regular'),
-    url('/HD/static/fonts/PPNeueMontreal-Regular.woff2') format('woff2'),
-    url('/HD/static/fonts/PPNeueMontreal-Regular.woff') format('woff');
+  src:
+    local("PPNeueMontreal Regular"),
+    url("/HD/static/fonts/PPNeueMontreal-Regular.woff2") format("woff2"),
+    url("/HD/static/fonts/PPNeueMontreal-Regular.woff") format("woff");
 }
 
 @font-face {
-  font-family: 'PPNeueMontreal';
+  font-family: "PPNeueMontreal";
   font-weight: 500;
   font-display: swap;
-  src: local('PPNeueMontreal Medium'),
-    url('/HD/static/fonts/PPNeueMontreal-Medium.woff2') format('woff2'),
-    url('/HD/static/fonts/PPNeueMontreal-Medium.woff') format('woff');
+  src:
+    local("PPNeueMontreal Medium"),
+    url("/HD/static/fonts/PPNeueMontreal-Medium.woff2") format("woff2"),
+    url("/HD/static/fonts/PPNeueMontreal-Medium.woff") format("woff");
 }
 
 @font-face {
-  font-family: 'PPNeueMontreal';
+  font-family: "PPNeueMontreal";
   font-weight: 700;
   font-display: swap;
-  src: local('PPNeueMontreal Bold'),
-    url('/HD/static/fonts/PPNeueMontreal-Book.woff2') format('woff2'),
-    url('/HD/static/fonts/PPNeueMontreal-Bold.woff') format('woff');
+  src:
+    local("PPNeueMontreal Bold"),
+    url("/HD/static/fonts/PPNeueMontreal-Book.woff2") format("woff2"),
+    url("/HD/static/fonts/PPNeueMontreal-Bold.woff") format("woff");
 }
 // font
 
 // reset
-*{margin: 0; padding: 0; box-sizing: border-box;}
-html{-webkit-text-size-adjust: antialiased;-moz-osx-font-smoothing: grayscale;}
-html::-webkit-scrollbar{display: none; scroll-behavior: initial;}
-html, body{width:100%; height:100%;}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  -webkit-text-size-adjust: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+html::-webkit-scrollbar {
+  display: none;
+  scroll-behavior: initial;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
 body {
   &.dark {
     background: #1a1718;
@@ -81,22 +102,107 @@ body {
     }
   }
 }
-body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,p,button,input{margin:0;padding:0;-webkit-text-size-adjust:none;word-break:keep-all;}
-input,textarea{border-radius:0;resize:none;}
-body,h1,h2,h3,h4,h5,h6,input,button{font-family: 'Pretendard', Dotum,'돋움',Helvetica,AppleSDGothicNeo,sans-serif;font-size:12px;}
-body{color:#000;word-wrap:break-word;word-break:break-all;}
-caption, legend{font-size: 0;line-height: 0;text-indent: -5000px;}
-img, fieldset, iframe{border:0 none;vertical-align:top;}
-fieldset{font-size:0;}
-ul,ol{list-style:none;}
-a{color:#000;text-decoration:none;}
-i,em,address{font-style:normal;}
-table{border-collapse:collapse;border-spacing:0;}
-hr{display:none;}
-input[type="submit"]{cursor:pointer;}
-input:-webkit-autofill {-webkit-box-shadow: 0 0 0 1000px white inset;}
-button {background: transparent; border: none; outline: none;}
-.hidden{clear:both;height:0;line-height:0;width:0;position:absolute;top:-9999px;left:-9999px;}
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+p,
+button,
+input {
+  margin: 0;
+  padding: 0;
+  -webkit-text-size-adjust: none;
+  word-break: keep-all;
+}
+input,
+textarea {
+  border-radius: 0;
+  resize: none;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+button {
+  font-family: "Pretendard", Dotum, "돋움", Helvetica, AppleSDGothicNeo, sans-serif;
+  font-size: 12px;
+}
+body {
+  color: #000;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+caption,
+legend {
+  font-size: 0;
+  line-height: 0;
+  text-indent: -5000px;
+}
+img,
+fieldset,
+iframe {
+  border: 0 none;
+  vertical-align: top;
+}
+fieldset {
+  font-size: 0;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  color: #000;
+  text-decoration: none;
+}
+i,
+em,
+address {
+  font-style: normal;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+hr {
+  display: none;
+}
+input[type="submit"] {
+  cursor: pointer;
+}
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px white inset;
+}
+button {
+  background: transparent;
+  border: none;
+  outline: none;
+}
+.hidden {
+  clear: both;
+  height: 0;
+  line-height: 0;
+  width: 0;
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
 // reset
 
 // header
@@ -120,7 +226,7 @@ button {background: transparent; border: none; outline: none;}
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%,- 50%);
+      transform: translate(-50%, -50%);
       display: flex;
       align-items: center;
       gap: 80px;
@@ -132,7 +238,7 @@ button {background: transparent; border: none; outline: none;}
         position: relative;
         width: fit-content;
         a {
-          color: var(--primary-6-white, #FFF);
+          color: var(--primary-6-white, #fff);
           text-align: center;
           font-size: 18px;
           font-weight: 600;
@@ -179,13 +285,13 @@ button {background: transparent; border: none; outline: none;}
       height: 36px;
       cursor: pointer;
       span {
-        color: var(--primary-6-white, #FFF);
+        color: var(--primary-6-white, #fff);
         font-size: 18px;
         font-weight: 500;
         line-height: 36px;
       }
       &::after {
-        content: '';
+        content: "";
         width: 24px;
         height: 24px;
         position: absolute;
@@ -206,7 +312,9 @@ button {background: transparent; border: none; outline: none;}
         transform: translateX(-50%);
         background: #222;
         border-radius: 10px;
-        box-shadow: 4px 4px 30px 0px rgba(0, 0, 0, 0.04), -2px -2px 30px 0px rgba(0, 0, 0, 0.04);
+        box-shadow:
+          4px 4px 30px 0px rgba(0, 0, 0, 0.04),
+          -2px -2px 30px 0px rgba(0, 0, 0, 0.04);
         padding: 40px;
         display: none;
         li {
@@ -222,7 +330,7 @@ button {background: transparent; border: none; outline: none;}
             transition: color 0.2s;
             text-wrap: nowrap;
             &:hover {
-              color: #38D430;
+              color: #38d430;
             }
           }
           & + li {
@@ -282,7 +390,7 @@ button {background: transparent; border: none; outline: none;}
               line-height: 1;
               transition: color 0.3s;
               &:hover {
-                color: #38D430;
+                color: #38d430;
               }
             }
             & + li {
@@ -389,14 +497,14 @@ button {background: transparent; border: none; outline: none;}
   bottom: 40px;
   right: 80px;
   z-index: 999;
-  transition: all .5s;
-  &.active{
-    width:71px;
-    height:71px;
-    overflow:hidden;
+  transition: all 0.5s;
+  &.active {
+    width: 71px;
+    height: 71px;
+    overflow: hidden;
     border-radius: 100px;
-    img{
-      left:-18px;
+    img {
+      left: -18px;
       position: relative;
     }
   }
@@ -485,10 +593,10 @@ button {background: transparent; border: none; outline: none;}
     height: 480px;
     margin: 204px 0 80px 0;
     position: relative;
-    .banner-visual{
+    .banner-visual {
       height: 480px;
       overflow: hidden;
-      img{
+      img {
         top: -35vw;
         left: 0;
         width: 100%;
@@ -547,7 +655,7 @@ button {background: transparent; border: none; outline: none;}
         }
         &.active {
           button {
-            color: var(--primary-1-eco-green, #38D430);
+            color: var(--primary-1-eco-green, #38d430);
             font-weight: 700;
           }
         }
@@ -593,7 +701,7 @@ button {background: transparent; border: none; outline: none;}
               align-items: center;
               .counter {
                 width: 425px;
-                color: var(--primary-6-white, #FFF);
+                color: var(--primary-6-white, #fff);
                 font-size: 120px;
                 font-weight: 700;
                 line-height: 1.2;
@@ -602,7 +710,8 @@ button {background: transparent; border: none; outline: none;}
                 margin-left: 10px;
               }
             }
-            .num-left, .num-right {
+            .num-left,
+            .num-right {
               width: 25%;
               img {
                 width: 100%;
@@ -676,12 +785,12 @@ button {background: transparent; border: none; outline: none;}
             color: #000;
             transition: color 0.3s;
             &:hover {
-              color: #38D430;
+              color: #38d430;
             }
           }
         }
       }
-      .en-btn { 
+      .en-btn {
         span {
           color: #000;
         }
@@ -695,7 +804,7 @@ button {background: transparent; border: none; outline: none;}
       }
       .all-menu-inner {
         background: #fff;
-        .wrap { 
+        .wrap {
           background: #fff;
           border-top: 2px solid #e4e4e4;
           .list {
@@ -770,7 +879,6 @@ button {background: transparent; border: none; outline: none;}
 }
 // sub
 
-
 // mob
 .mob {
   .header {
@@ -841,14 +949,14 @@ button {background: transparent; border: none; outline: none;}
           position: relative;
           .acc-inner {
             .accordion {
-              color: var(--primary-6-white, #FFF);
+              color: var(--primary-6-white, #fff);
               font-size: 24px;
               font-weight: 700;
               line-height: 1.4;
               position: relative;
               cursor: pointer;
               &::after {
-                content: '';
+                content: "";
                 width: 34px;
                 height: 34px;
                 background: url(/HD/static/images/mob/header-arrow.png) no-repeat;
@@ -871,7 +979,7 @@ button {background: transparent; border: none; outline: none;}
                   margin-top: 16px;
                 }
                 a {
-                  color: var(--primary-6-white, #FFF);
+                  color: var(--primary-6-white, #fff);
                   font-size: 14px;
                   font-weight: 700;
                   line-height: 1.4;
@@ -906,14 +1014,14 @@ button {background: transparent; border: none; outline: none;}
             }
             &.active {
               a {
-                color: var(--primary-6-white, #FFF);
+                color: var(--primary-6-white, #fff);
                 font-size: 16px;
                 font-weight: 700;
                 line-height: 1;
               }
             }
             &:first-child::after {
-              content: '';
+              content: "";
               display: block;
               width: 1px;
               height: 10px;
@@ -976,7 +1084,10 @@ button {background: transparent; border: none; outline: none;}
         display: flex;
         align-items: center;
         overflow-x: scroll;
-        &::-webkit-scrollbar{display: none; scroll-behavior: initial;}
+        &::-webkit-scrollbar {
+          display: none;
+          scroll-behavior: initial;
+        }
         li {
           & + li {
             margin-top: 0;
@@ -985,7 +1096,6 @@ button {background: transparent; border: none; outline: none;}
           button {
             text-wrap: nowrap;
             font-size: 20px;
-            
           }
         }
       }
@@ -1017,7 +1127,7 @@ button {background: transparent; border: none; outline: none;}
             padding-bottom: 20px;
             border-bottom: 1px solid #333;
             .counter {
-              color: var(--primary-6-white, #FFF);
+              color: var(--primary-6-white, #fff);
               font-size: 60px;
               font-weight: 700;
               line-height: 1.2;
@@ -1081,7 +1191,9 @@ button {background: transparent; border: none; outline: none;}
               align-items: center;
               gap: 0 20px;
               overflow-x: scroll;
-              &::-webkit-scrollbar {display: none;}
+              &::-webkit-scrollbar {
+                display: none;
+              }
               .box {
                 width: 263px;
                 height: 106px;
@@ -1212,65 +1324,66 @@ button {background: transparent; border: none; outline: none;}
     }
   }
 
-  .mySwiper{
-    margin:0 -20px;
+  .mySwiper {
+    margin: 0 -20px;
     position: relative;
     min-height: 800px;
     z-index: 100;
     background: #000;
-    h1{
+    h1 {
       text-align: center;
-      padding:80px 0 100px 0;
+      padding: 80px 0 100px 0;
     }
     .swiper-button-next,
-    .swiper-button-prev{
+    .swiper-button-prev {
       display: none;
     }
-    .swiper-slide{
+    .swiper-slide {
       text-align: center;
       width: 190px;
       position: relative;
       opacity: 0.3;
-      transition: all .4s;
+      transition: all 0.4s;
       position: relative;
       height: 380px;
       overflow: hidden;
       border-radius: 10px;
       &::after {
-        content: '';
+        content: "";
         width: 100%;
         height: 380px;
         position: absolute;
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%), linear-gradient(180deg, rgba(0, 0, 0, 0.00) 50%, rgba(0, 0, 0, 0.80) 100%);
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.15) 100%),
+          linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.8) 100%);
         top: 0;
         left: 0;
       }
-      img{
+      img {
         width: 100%;
         height: 100%;
         object-fit: cover;
       }
-      &:after{
-        content: '';
+      &:after {
+        content: "";
         display: block;
       }
-      &.swiper-slide-active{
+      &.swiper-slide-active {
         opacity: 1;
       }
     }
     .img-1,
-    .img-2{
+    .img-2 {
       position: absolute;
-      left:20px;
+      left: 20px;
       z-index: 2;
     }
-    .img-1{
+    .img-1 {
       position: absolute;
-      bottom:164px;
+      bottom: 164px;
     }
-    .img-2{
+    .img-2 {
       position: absolute;
-      bottom:100px;
+      bottom: 100px;
       color: #fff;
       font-size: 16px;
       font-weight: 500;
@@ -1290,52 +1403,52 @@ button {background: transparent; border: none; outline: none;}
 }
 
 /* gate */
-.box-gate{
-  .box-flex{
+.box-gate {
+  .box-flex {
     display: flex;
     height: 100vh;
     justify-content: center;
     align-items: center;
   }
-  h1{
+  h1 {
     position: absolute;
-    top:30px;
-    left:40px;
+    top: 30px;
+    left: 40px;
   }
   .txt-1,
   .txt-2,
-  .txt-3{
+  .txt-3 {
     position: absolute;
   }
-  .txt-1{
-    top:30px;
-    right:40px;
+  .txt-1 {
+    top: 30px;
+    right: 40px;
   }
-  .txt-2{
-    bottom:40px;
-    left:40px;
+  .txt-2 {
+    bottom: 40px;
+    left: 40px;
   }
-  .txt-3{
-    bottom:40px;
-    right:40px;
+  .txt-3 {
+    bottom: 40px;
+    right: 40px;
   }
-  .box-type{
+  .box-type {
     position: relative;
-    & + .box-type{
-      margin-left:16px;
+    & + .box-type {
+      margin-left: 16px;
     }
     .btn-pc,
-    .btn-mobile{
+    .btn-mobile {
       position: absolute;
-      bottom:40px;
+      bottom: 40px;
       width: 244px;
       height: 60px;
     }
-    .btn-pc{
-      left:30px;
+    .btn-pc {
+      left: 30px;
     }
-    .btn-mobile{
-      right:30px;
+    .btn-mobile {
+      right: 30px;
     }
   }
 }
