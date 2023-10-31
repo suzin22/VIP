@@ -982,7 +982,7 @@ body {
   background-position: center;
 }
 .mob.white .group-esg {
-  padding: 120px 0;
+  padding: 0 0 120px;
 }
 .mob.white .stock .num-flex .counter {
   color: #000;
