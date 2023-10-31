@@ -438,8 +438,8 @@ $(document).ready(function(){
       start: "top 20%",
       end: "bottom 10%",
       scrub: true,
-      markers: true,
-      id: "box7",
+      markers: false,
+      id: "box1",
       onEnter: () => {
         document.querySelector('.modeBtn').classList.add('active')
       },
