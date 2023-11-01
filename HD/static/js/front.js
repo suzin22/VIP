@@ -36,7 +36,7 @@ $(document).ready(function(){
     gsap.set(".bs-box .box-tit", {'opacity':'0', y:100}) // 타이틀
     //gsap.set(".set-1 .bs-card-wrap", {yPercent:0}) // 조선해양
     gsap.set(".set-2 .bs-card-wrap", {yPercent:0}) // 에너지
-    gsap.set(".set-3 .bs-card-wrap", {yPercent:0}) // 기계 로봇
+    //gsap.set(".set-3 .bs-card-wrap", {yPercent:0}) // 기계 로봇
     gsap.set(".set-1 .en-text", {opacity:0, y: 50})
     gsap.set(".set-1 .ko-text", {opacity:0, y: 100})
     gsap.set(".set-2 .en-text", {opacity:0, y: 50})
@@ -150,12 +150,13 @@ $(document).ready(function(){
     let splitPin3 = gsap.timeline({
       scrollTrigger: {
         trigger: ".gsap-box-3",
-        start: "-1040 top",
-        end: "+=2000", // 속도 조절
+        start: "-780px 20%",
+        end: "+=6000", // 속도 조절
         scrub: 2, // 숫자가 커질수록 부드러워짐
         pin: true, // pin: '.selector'시 특정 엘리먼트가 고정
         smooth: 1,
-        pinSpacing: false,
+        //pinSpacing: false,
+        anticipatePin: 1,
         markers: false,
         id: 'gsap-box-3',
         onUpdate:(self) => {
@@ -189,7 +190,7 @@ $(document).ready(function(){
 
     .to(".set-3 .bs-card-wrap", {'transform': 'translate(0px, 0)', duration: 3}, 'start1')
     .to(".set-3 .bs-card-wrap", {'transform': 'translate(-861px, 0)', duration: 3}, 'start2')
-    .to(".set-3 .bs-card-wrap", {'transform': 'translate(-1721px, 0)', duration: 3}, 'start3')
+    .to(".set-3 .bs-card-wrap", {'transform': 'translate(-1721px, 0)', duration: 3}, 'start7')
   }
 
   // .to(".bs-pin ")
