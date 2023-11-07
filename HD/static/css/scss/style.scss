@@ -1472,6 +1472,12 @@ button {
   }
 }
 
+.mobile-frame{
+  width: 393px;
+  height: 804px;
+  overflow: hidden;
+}
+
 @media only screen and (max-width: 600px) {
   .mobile-vd-wrap {
     width: 100%;
