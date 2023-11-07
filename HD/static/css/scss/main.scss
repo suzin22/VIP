@@ -249,8 +249,9 @@ body {
     position: relative;
     z-index: 99;
     //transform: rotate(-27deg) scale(2); // 첫 셋팅
-    transform: rotate(-27deg) scale(1.8);
-    .item-wrap {
+    // transform: rotate(-27deg) scale(1.8);
+    transform: rotate(-27deg) scale(2.7);
+    .item-wrap { 
       width: 100%;
       height: 50%;
       position: relative;
@@ -260,7 +261,8 @@ body {
         position: absolute;
         left: 50%;
         //transform:translate(-50%, 0) scale(0.5); // 첫 셋팅
-        transform: translate(-50%, 0) rotate(27deg) scale(0.5);
+        // transform: translate(-50%, 0) rotate(27deg) scale(0.5);
+        transform: translate(-50%, 0) rotate(27deg) scale(0.34);
       }
       &.wrap-1 {
         transform: translate(0%, 1px) translate3d(0px, 0px, 0px); //1
