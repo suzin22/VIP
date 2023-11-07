@@ -1453,7 +1453,8 @@ button {
   }
 }
 
-.mobile-vd-wrap {
+.mobile-vd-wrap,
+.mobile-frame {
   width: 393px;
   height: 804px;
   background: url(/HD/static/images/mobile-frame.png) no-repeat;
@@ -1470,12 +1471,13 @@ button {
     border-radius: 52px;
     overflow: hidden;
   }
-}
-
-.mobile-frame{
-  width: 393px;
-  height: 804px;
-  overflow: hidden;
+  iframe{
+    left: 50%;
+    top: 14px;
+    position: absolute;
+    transform: translateX(-50%);
+    border-radius: 52px;
+  }
 }
 
 @media only screen and (max-width: 600px) {

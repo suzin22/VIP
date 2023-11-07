@@ -1276,7 +1276,8 @@ button {
   right: 30px;
 }
 
-.mobile-vd-wrap {
+.mobile-vd-wrap,
+.mobile-frame {
   width: 393px;
   height: 804px;
   background: url(/HD/static/images/mobile-frame.png) no-repeat;
@@ -1284,7 +1285,8 @@ button {
   background-position: center;
   position: relative;
 }
-.mobile-vd-wrap .box {
+.mobile-vd-wrap .box,
+.mobile-frame .box {
   width: 359px;
   height: 776px;
   position: absolute;
@@ -1294,11 +1296,13 @@ button {
   border-radius: 52px;
   overflow: hidden;
 }
-
-.mobile-frame {
-  width: 393px;
-  height: 804px;
-  overflow: hidden;
+.mobile-vd-wrap iframe,
+.mobile-frame iframe {
+  left: 50%;
+  top: 14px;
+  position: absolute;
+  transform: translateX(-50%);
+  border-radius: 52px;
 }
 
 @media only screen and (max-width: 600px) {
