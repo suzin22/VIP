@@ -354,13 +354,6 @@ $(document).ready(function(){
     return false;
   });
 
-  $('.gnb-wrap li a').each(function(i){
-    $(this).click(function(e){
-      e.preventDefault();
-      
-    })
-  })
-
   // 햄버거 메뉴 뎁스 hover 시 img change
   document.querySelectorAll('.all-menu-inner .wrap .list > li').forEach((e, index) => {
     e.addEventListener("mouseover", function(){
