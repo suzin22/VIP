@@ -259,8 +259,15 @@ button {
 }
 
 .ssf-wrap .box.a-top {
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left:33px;
 }
+
+.ssf-wrap .box.a-top .img-1{width: 94px;}
+.ssf-wrap .box.a-top .img-2{width: 246px;margin:23px 0 31px 0;}
+.ssf-wrap .box.a-top .img-3{width: 113px;}
 
 
 
