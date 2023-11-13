@@ -20,15 +20,11 @@ if (window.console == undefined) { console = { log: () => { } } }
 				speed: 800,
 				on: {
 					slideChange: function (swiper, activeIndex) {
-						//console.log(swiper.activeIndex);
 						if(swiper.activeIndex == 0){
-							console.log(0);
-							//document.querySelector('[data-event="slickToGo"]').classList.add('a');
+							document.querySelector('[data-event="slickToGo"]').classList.remove('a');
 						}else if(swiper.activeIndex == 1){
-							console.log(1);
-							//document.querySelector('[data-event="slickToGo"]').classList.remove('a');
+							document.querySelector('[data-event="slickToGo"]').classList.add('a');
 						}
-						//reviewAtype.slideTo((swiper.activeIndex), (1000), false)
 					}
 				}
 			});
@@ -75,6 +71,15 @@ if (window.console == undefined) { console = { log: () => { } } }
 				simulateTouch: true,
 				loop: false,
 				speed: 800,
+				on: {
+					slideChange: function (swiper, activeIndex) {
+						if(swiper.activeIndex == 0){
+							document.querySelector('[data-event="slickToGo"]').classList.remove('a');
+						}else if(swiper.activeIndex == 1){
+							document.querySelector('[data-event="slickToGo"]').classList.add('a');
+						}
+					}
+				}
 			});
       
 

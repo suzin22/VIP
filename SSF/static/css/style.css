@@ -306,6 +306,7 @@ button {
 }
 
 .a-box-1 {
+  overflow-x: hidden;
 }
 
 .a-box-1 .roller-text {
