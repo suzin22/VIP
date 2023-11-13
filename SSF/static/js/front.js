@@ -29,6 +29,16 @@ if (window.console == undefined) { console = { log: () => { } } }
 					reviewAtype.slideTo((0), (1000), false)
 				}
 			})
+
+			var reviewAtype2 = new Swiper(".review-swiper2", {
+        slidesPerView: 1.15,
+				slidesPerGroup: 1,
+				spaceBetween: 18,
+				simulateTouch: true,
+				loop: false,
+				speed: 800,
+				//centeredSlides:true
+			});
 		}
 	};
 
