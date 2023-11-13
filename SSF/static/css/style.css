@@ -326,9 +326,9 @@ button {
 
 .mobile-vd-wrap,
 .mobile-frame {
-  width: 393px;
-  height: 804px;
-  background: url(/HD/static/images/mobile-frame.png) no-repeat;
+  width: 413px;
+  height: 844px;
+  background: url(../images/mobile-frame.png) no-repeat;
   background-size: cover;
   background-position: center;
   position: relative;
