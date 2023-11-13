@@ -273,6 +273,14 @@ button {
   height: 100%;
 }
 
+.review-swiper .swiper-slide .text {
+  opacity: 0;
+}
+
+.review-swiper .swiper-slide.swiper-slide-active .text {
+  opacity: 1;
+}
+
 .ssf-wrap .box {
   width: 100%;
   position: relative;
