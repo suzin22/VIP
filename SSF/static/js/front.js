@@ -40,7 +40,7 @@ if (window.console == undefined) { console = { log: () => { } } }
 			})
 
 			var reviewAtype2 = new Swiper(".review-swiper2", {
-        slidesPerView: 1.15,
+        slidesPerView: 1.218,
 				slidesPerGroup: 1,
 				spaceBetween: 18,
 				simulateTouch: true,

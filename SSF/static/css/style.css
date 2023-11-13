@@ -244,6 +244,25 @@ button {
 .ssf .img-wrap .swiper-wrap [data-event="slickToGo"].a .img-2 {
   display: block;
 }
+
+.ssf .img-wrap.coupon {
+  width: calc(100% + 48px);
+  margin-left: -24px;
+  position: relative;
+}
+
+.ssf .img-wrap.coupon .review-swiper2 {
+  padding-left: 48px;
+}
+
+.ssf .img-wrap.coupon .swiper-slide .box span {
+  width: 100%;
+}
+
+.ssf .img-wrap.coupon .swiper-slide .box span img {
+  width: 100%;
+}
+
 .review-swiper {
   width: calc(100% + 48px);
   margin: 20px 0 20px -24px;
