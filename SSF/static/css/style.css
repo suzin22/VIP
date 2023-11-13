@@ -238,10 +238,10 @@ button {
 .ssf .img-wrap .swiper-wrap [data-event="slickToGo"] .img-2 {
   display: none;
 }
-.ssf .img-wrap .swiper-wrap [data-event="slickToGo"].a .img-1{
+.ssf .img-wrap .swiper-wrap [data-event="slickToGo"].a .img-1 {
   display: none;
 }
-.ssf .img-wrap .swiper-wrap [data-event="slickToGo"].a .img-2{
+.ssf .img-wrap .swiper-wrap [data-event="slickToGo"].a .img-2 {
   display: block;
 }
 .review-swiper {
@@ -371,6 +371,29 @@ button {
 }
 .a-box-3 .img-1 {
   width: 106px;
+}
+.a-box-4{
+  background: #EDEAE3;
+  padding:60px 24px;
+}
+.a-box-4 .img-1 {
+  width: 209px;
+  margin-bottom:24px;
+}
+.a-box-4 .img-2 {
+  width: 100%;
+}
+.a-box-5{
+  background: #fff;
+  padding:60px 24px;
+}
+.a-box-5 .img-1 {
+  width: 240px;
+  margin-bottom:24px;
+}
+.a-box-5 .img-2 {
+  width: 100%;
+  margin-bottom:4px;
 }
 
 /* gate */
