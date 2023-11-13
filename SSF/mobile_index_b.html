@@ -24,6 +24,7 @@
 	<script src="static/js/gsap.min.js"></script>
 	<script src="static/js/ScrollTrigger.min.js"></script>
   <script src="static/js/ScrollToPlugin.min.js"></script>
+  <script src="static/js/front.js"></script>
 </head>
 <body class="ssf">
   <div class="img-wrap">
@@ -39,8 +40,28 @@
     <div class="img">
       <img src="static/images/b_3.png">
     </div>
-    <div class="img">
-      <img src="static/images/b_4.png">
+    <div class="swiper-wrap">
+      <img src="static/images/a_4_title.png" style="width: 100%; margin-bottom: 24px;">
+      <img src="static/images/a_4_tab.png" style="width: 100%;">
+      <div class="review-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="box">
+              <span>
+                <img src="static/images/a_4_1.png">
+              </span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="box">
+              <span>
+                <img src="static/images/a_4_1.png">
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img src="static/images/a_4_text.png" style="width: 100%;">
     </div>
     <div class="img">
       <img src="static/images/b_5.png">
@@ -52,8 +73,9 @@
       <img src="static/images/footer.png">
     </div>
   </div>
+
   <script>
-    AOS.init();
+    reviewBtype.initialize();
   </script>
 </body>
 </html>
