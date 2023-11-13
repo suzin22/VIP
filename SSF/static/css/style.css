@@ -3,43 +3,64 @@
   font-family: "Pretendard";
   font-weight: 700;
   font-display: swap;
-  src: local("Pretendard Bold"), url("/HD/static/fonts/Pretendard-Bold.subset.woff2") format("woff2"), url("/HD/static/fonts/Pretendard-Bold.subset.woff") format("woff");
+  src:
+    local("Pretendard Bold"),
+    url("/HD/static/fonts/Pretendard-Bold.subset.woff2") format("woff2"),
+    url("/HD/static/fonts/Pretendard-Bold.subset.woff") format("woff");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 600;
   font-display: swap;
-  src: local("Pretendard SemiBold"), url("/HD/static/fonts/Pretendard-SemiBold.subset.woff2") format("woff2"), url("/HD/static/fonts/Pretendard-SemiBold.subset.woff") format("woff");
+  src:
+    local("Pretendard SemiBold"),
+    url("/HD/static/fonts/Pretendard-SemiBold.subset.woff2") format("woff2"),
+    url("/HD/static/fonts/Pretendard-SemiBold.subset.woff") format("woff");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 500;
   font-display: swap;
-  src: local("Pretendard Medium"), url("/HD/static/fonts/Pretendard-Medium.subset.woff2") format("woff2"), url("/HD/static/fonts/Pretendard-Medium.subset.woff") format("woff");
+  src:
+    local("Pretendard Medium"),
+    url("/HD/static/fonts/Pretendard-Medium.subset.woff2") format("woff2"),
+    url("/HD/static/fonts/Pretendard-Medium.subset.woff") format("woff");
 }
 @font-face {
   font-family: "Pretendard";
   font-weight: 400;
   font-display: swap;
-  src: local("Pretendard Regular"), url("/HD/static/fonts/Pretendard-Regular.subset.woff2") format("woff2"), url("/HD/static/fonts/Pretendard-Regular.subset.woff") format("woff");
+  src:
+    local("Pretendard Regular"),
+    url("/HD/static/fonts/Pretendard-Regular.subset.woff2") format("woff2"),
+    url("/HD/static/fonts/Pretendard-Regular.subset.woff") format("woff");
 }
 @font-face {
   font-family: "PPNeueMontreal";
   font-weight: 400;
   font-display: swap;
-  src: local("PPNeueMontreal Regular"), url("/HD/static/fonts/PPNeueMontreal-Regular.woff2") format("woff2"), url("/HD/static/fonts/PPNeueMontreal-Regular.woff") format("woff");
+  src:
+    local("PPNeueMontreal Regular"),
+    url("/HD/static/fonts/PPNeueMontreal-Regular.woff2") format("woff2"),
+    url("/HD/static/fonts/PPNeueMontreal-Regular.woff") format("woff");
 }
 @font-face {
   font-family: "PPNeueMontreal";
   font-weight: 500;
   font-display: swap;
-  src: local("PPNeueMontreal Medium"), url("/HD/static/fonts/PPNeueMontreal-Medium.woff2") format("woff2"), url("/HD/static/fonts/PPNeueMontreal-Medium.woff") format("woff");
+  src:
+    local("PPNeueMontreal Medium"),
+    url("/HD/static/fonts/PPNeueMontreal-Medium.woff2") format("woff2"),
+    url("/HD/static/fonts/PPNeueMontreal-Medium.woff") format("woff");
 }
 @font-face {
   font-family: "PPNeueMontreal";
   font-weight: 700;
   font-display: swap;
-  src: local("PPNeueMontreal Bold"), url("/HD/static/fonts/PPNeueMontreal-Book.woff2") format("woff2"), url("/HD/static/fonts/PPNeueMontreal-Bold.woff") format("woff");
+  src:
+    local("PPNeueMontreal Bold"),
+    url("/HD/static/fonts/PPNeueMontreal-Book.woff2") format("woff2"),
+    url("/HD/static/fonts/PPNeueMontreal-Bold.woff") format("woff");
 }
 * {
   margin: 0;
@@ -166,7 +187,7 @@ hr {
   display: none;
 }
 
-input[type=submit] {
+input[type="submit"] {
   cursor: pointer;
 }
 
@@ -214,7 +235,15 @@ button {
   overflow: hidden;
   background: #fff;
 }
-
+.ssf .img-wrap .swiper-wrap [data-event="slickToGo"] .img-2 {
+  display: none;
+}
+.ssf .img-wrap .swiper-wrap [data-event="slickToGo"].a .img-1{
+  display: none;
+}
+.ssf .img-wrap .swiper-wrap [data-event="slickToGo"].a .img-2{
+  display: block;
+}
 .review-swiper {
   width: calc(100% + 48px);
   margin: 20px 0 20px -24px;
@@ -262,18 +291,87 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-left:33px;
+  padding-left: 33px;
 }
 
-.ssf-wrap .box.a-top .img-1{width: 94px;}
-.ssf-wrap .box.a-top .img-2{width: 246px;margin:23px 0 31px 0;}
-.ssf-wrap .box.a-top .img-3{width: 113px;}
+.ssf-wrap .box.a-top .img-1 {
+  width: 94px;
+}
+.ssf-wrap .box.a-top .img-2 {
+  width: 246px;
+  margin: 23px 0 31px 0;
+}
+.ssf-wrap .box.a-top .img-3 {
+  width: 113px;
+}
 
+.a-box-1 {
+}
 
+.a-box-2 {
+  background: linear-gradient(0deg, rgba(231, 231, 244, 0.6) 0%, rgba(231, 231, 244, 0.6) 100%), #fff;
+}
 
-
-
-
+.a-box-2 .img-1 {
+  width: 327px;
+  margin: 49px 0 0 24px;
+}
+.a-box-2 .img-2 {
+  width: 120px;
+}
+.a-box-2 .img-3 {
+  width: 90px;
+}
+.a-box-2 .img-4 {
+  width: 120px;
+}
+.a-box-2 .img-5 {
+  width: 78px;
+}
+.a-box-2 .img-6 {
+  width: 120px;
+}
+.a-box-2 .img-7 {
+  width: 86px;
+}
+.a-box-2 .img-8 {
+  width: 120px;
+}
+.a-box-2 .img-9 {
+  width: 90px;
+}
+.a-box-2 .img-3,
+.a-box-2 .img-5,
+.a-box-2 .img-7,
+.a-box-2 .img-9 {
+  margin: 10px 0 10px 0;
+}
+.a-box-2 ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 33px 19px;
+}
+.a-box-2 ul li {
+  flex: 1 1 50%;
+  justify-content: flex-start;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 0 25px 0;
+}
+.a-box-3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../images/a/a_4_0.png);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  height: 480px;
+}
+.a-box-3 .img-1 {
+  width: 106px;
+}
 
 /* gate */
 .box-gate .box-flex {
@@ -368,9 +466,7 @@ button {
     transform: translateX(0);
     border-radius: 0;
   }
-}/*# sourceMappingURL=style.css.map */
-
-
+} /*# sourceMappingURL=style.css.map */
 
 @media only screen and (max-width: 600px) {
   .ssf {
@@ -384,7 +480,7 @@ button {
     width: 100%;
     height: 100%;
   }
-  
+
   .ssf .mobile-frame iframe {
     border-radius: 0;
     width: 100% !important;
