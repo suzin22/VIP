@@ -22,7 +22,7 @@ if (window.console == undefined) { console = { log: () => { } } }
 
 			document.querySelector('[data-event="slickToGo"]').addEventListener('click', (e) => {
 				document.querySelector('[data-event="slickToGo"]').classList.toggle('a');
-				console.log(document.querySelector('[data-event="slickToGo"]').classList.contains('a'));
+
 				if(document.querySelector('[data-event="slickToGo"]').classList.contains('a')){
 					reviewAtype.slideTo((1), (1000), false)
 				}else{
@@ -53,7 +53,17 @@ if (window.console == undefined) { console = { log: () => { } } }
 				loop: false,
 				speed: 800,
 			});
-		}
+      
+
+      document.querySelector('[data-event="slickToGo"]').addEventListener('click', (e) => {
+				document.querySelector('[data-event="slickToGo"]').classList.toggle('a');
+
+				if(document.querySelector('[data-event="slickToGo"]').classList.contains('a')){
+					reviewBtype.slideTo((1), (1000), false)
+				}else{
+					reviewBtype.slideTo((0), (1000), false)
+				}
+			})    }
 	};
 
 	window.reviewBtype = reviewBtype;
