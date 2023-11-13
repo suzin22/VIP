@@ -244,8 +244,33 @@ button {
   height: 100%;
 }
 
+.ssf-wrap .box {
+  width: 100%;
+  position: relative;
+}
+
+.ssf-wrap .box.a-top {
+  width: 100%;
+  height: 276px;
+  position: relative;
+  background: url(../images/a/a_top_0.png) no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.ssf-wrap .box.a-top {
+
+}
+
+
+
+
+
+
+
+
 .ssf .mobile-frame {
-  background: url(/static/images/mobile-frame.png) no-repeat;
+  background: url(../images/mobile-frame.png) no-repeat;
   background-position: center;
   background-size: cover;
   width: 413px;
