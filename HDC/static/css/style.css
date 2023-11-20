@@ -191,6 +191,9 @@ button {
 }
 
 /* gate */
+.box-gate {
+  background-color: #000;
+}
 .box-gate .box-flex {
   display: flex;
   height: 100vh;
