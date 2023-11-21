@@ -26,7 +26,7 @@ if (window.console == undefined) { console = { log: () => { } } }
       window.onscroll = (e) => {
         let windowTop = window.scrollY;
 
-        if ( windowTop > 60 ){
+        if ( windowTop > 120 ){
           tg.classList.add('on')
         } else {
           tg.classList.remove('on')
