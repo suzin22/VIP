@@ -69,6 +69,30 @@
       </div>
       <!-- //swiper-1 -->
     </div>
+    <div class="inner-gap-1">
+      <!-- swiper-2 -->
+      <div class="swiper-2">
+        <img src="static/images/main/box_2_2.png" alt="" class="img-1">
+        <p class="tit-1"><img src="static/images/main/box_2_1.png" alt=""></p>
+        <div class="box-flex">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="static/images/main/box_2_3.png" alt="">
+                <img src="static/images/main/box_2_4.png" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="static/images/main/box_2_4.png" alt="">
+                <img src="static/images/main/box_2_3.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+      <!-- //swiper-2 -->
+    </div>
     <!-- right-bottom-fixed -->
     <button class="right-bottom-fixed"><img src="static/images/side.png" alt=""></button>
     <!-- //right-bottom-fixed -->
@@ -160,6 +184,20 @@
       scrollbar: {
         el: '.swiper-1 .swiper-scrollbar',
         dragSize: 395
+      },
+    });
+
+    // 시계 swiper-1
+    var swiper = new Swiper(".swiper-2 .mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      //centeredSlides: true,
+      effect: 'fade',
+      //fadeEffect: { crossFade: true },
+      loop: true,
+      navigation: {
+        prevEl: '.swiper-2 .swiper-button-prev',
+        nextEl: '.swiper-2 .swiper-button-next'
       },
     });
   </script>

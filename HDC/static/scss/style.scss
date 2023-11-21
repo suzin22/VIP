@@ -357,51 +357,95 @@ button {
   height: 200px;
 }
 
-.inner-gap-1{
+.inner-gap-1 {
   max-width: 1600px;
-  margin:0 auto;
+  margin: 0 auto;
 }
 
 .swiper-1 {
-  padding:200px 0 0 0;
+  padding: 200px 0 0 0;
   position: relative;
   .tit-1 {
     text-align: center;
-    padding:0 0 41px 0;
+    padding: 0 0 41px 0;
   }
-  .box-flex{
+  .box-flex {
     display: flex;
-    padding:0 135px;
-    .img-1{
+    padding: 0 135px;
+    .img-1 {
       width: 520px;
-      margin-right:20px;
+      margin-right: 20px;
     }
-    .mySwiper{
+    .mySwiper {
       width: 790px;
     }
   }
 }
 .swiper-button-prev,
-.swiper-button-next{
+.swiper-button-next {
   position: absolute;
-  top:50%;
+  top: 50%;
   transform: translateY(calc(-50% + 126px));
   width: 51px !important;
   height: 51px !important;
   background-position: center;
   background-repeat: no-repeat;
   background-size: 51px !important;
-  &::after{
-    content: '' !important;
+  &::after {
+    content: "" !important;
     width: 51px !important;
     height: 51px !important;
   }
 }
-.swiper-button-prev{
-  left:39px !important;
+.swiper-button-prev {
+  left: 39px !important;
   background-image: url(../images/main/box_2_5.png);
 }
-.swiper-button-next{
-  right:39px !important;
+.swiper-button-next {
+  right: 39px !important;
   background-image: url(../images/main/box_2_6.png);
+}
+.swiper-scrollbar {
+  height: 1px !important;
+  border-radius: 0 !important;
+  background: #c5beb4 !important;
+}
+.swiper-scrollbar-drag {
+  background-color: #000 !important;
+}
+.swiper-2 {
+  padding: 100px 0 0 0;
+  position: relative;
+  .img-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .tit-1 {
+    text-align: center;
+    padding: 0 0 40px 0;
+  }
+  .box-flex {
+    padding: 0 135px;
+    .swiper-slide {
+      img {
+        width: 655px;
+        height: 655px;
+        margin-right: 0;
+        margin-left: 7px;
+        margin-top: 100px;
+        &:nth-child(1) {
+          margin-right: 7px;
+          margin-left: 0;
+          margin-top: 0;
+        }
+      }
+    }
+  }
+  .swiper-button-prev {
+    transform: translateY(calc(-50% + 90px));
+  }
+  .swiper-button-next {
+    transform: translateY(calc(-50% + 190px));
+  }
 }
