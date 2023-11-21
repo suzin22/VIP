@@ -324,7 +324,7 @@ button {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 3;
+  z-index: 9999;
 }
 
 .box-main .top-vs {
@@ -350,7 +350,7 @@ button {
   transition: all 0.1s;
   top: 743px;
   left: 50%;
-  z-index: 4;
+  z-index: 99999;
   transform: translate(-50%, 0);
 }
 
