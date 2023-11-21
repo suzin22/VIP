@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="static/css/aos.css">
 </head>
 
-<body style="height: 6000px;">
+<body>
   <header class="header" data-event="header">
     <div class="top-noti">
       <img src="static/images/header_1.png" alt="">
@@ -124,18 +124,33 @@
       <div class="box-pd">
         <p class="tit-1"><img src="static/images/main/box_4_1.png" alt=""></p>
         <div class="box-gap">
-          <img src="static/images/main/box_4_2.png" alt="" class="img-1" data-aos="fade-down"
-          data-aos-anchor-placement="top-center">
-          <img src="static/images/main/box_4_3.png" alt="" class="img img-2" data-aos="fade-down"
-          data-aos-anchor-placement="top-center">
-          <img src="static/images/main/box_4_4.png" alt="" class="img img-3" data-aos="fade-down"
-          data-aos-anchor-placement="top-center">
+          <img src="static/images/main/box_4_2.png" alt="" class="img-1" data-aos="fade-down" data-aos-anchor-placement="top-center">
+          <img src="static/images/main/box_4_3.png" alt="" class="img img-2" data-aos="fade-down" data-aos-anchor-placement="top-center">
+          <img src="static/images/main/box_4_4.png" alt="" class="img img-3" data-aos="fade-down" data-aos-anchor-placement="top-center">
           <img src="static/images/main/box_4_5.png" alt="" class="img img-4" data-aos="fade-down"
           data-aos-anchor-placement="top-center">
           <img src="static/images/main/box_4_6.png" alt="" class="img img-5" data-aos="fade-down"
           data-aos-anchor-placement="top-center">
         </div>
       </div>
+    </div>
+    <div class="inner-gap-2" style="padding:100px 0 100px 0;">
+      <img src="static/images/main/04.New.png" alt="">
+    </div>
+    <div class="inner-gap-2">
+      <img src="static/images/main/06.Sale.png" alt="">
+    </div>
+    <div class="inner-gap-2" style="padding:100px 0 100px 0;">
+      <img src="static/images/main/07.Promotion.png" alt="">
+    </div>
+    <div class="inner-gap-2">
+      <img src="static/images/main/08.Time Sale.png" alt="">
+    </div>
+    <div class="inner-gap-2" style="padding:60px 0 201px 0;">
+      <img src="static/images/main/Banner.png" alt="">
+    </div>
+    <div class="footer">
+      <img src="static/images/main/footer.png" alt="">
     </div>
     <!-- right-bottom-fixed -->
     <button class="right-bottom-fixed"><img src="static/images/side.png" alt=""></button>
@@ -178,6 +193,14 @@
       document.querySelector('body').style.overflow = 'initial';
     }, 3000);
 
+    setTimeout(function () {
+      document.querySelector('.header').style.top = '0';
+    }, 2400);
+
+    setTimeout(function () {
+      document.querySelector('.box-main').style.marginTop = '-180px';
+    }, 2000);
+
     // 우측 하단 top btn
     document.querySelector('.right-bottom-fixed').addEventListener('click', () => {
       window.scrollTo({
@@ -205,7 +228,7 @@
       const motion2 = document.querySelector(".loading");
 
       gsap.to(motion2, {
-        duration: 1,
+        duration: 1.5,
         ease: "expoScale(0.5,7,none)",
         scale: 1,
         //delay: 1.5, 1500

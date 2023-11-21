@@ -204,6 +204,8 @@ body {
   width: 100%;
   position: relative;
   z-index: 9999;
+  top: -100vmax;
+  transition: top 0.8s;
 }
 .header .top-noti {
   width: 100%;
@@ -403,7 +405,8 @@ body {
 }
 
 .box-main {
-  margin-top: -180px;
+  margin-top: -360px;
+  transition: all 1s;
 }
 .box-main .top-vs {
   position: relative;
@@ -426,7 +429,7 @@ body {
 .box-main .top-vs .text {
   position: absolute;
   transition: all 0.1s;
-  top: 788px;
+  top: 818px;
   left: 0;
   right: 0;
   text-align: center;
@@ -608,4 +611,9 @@ body {
 .box-pd .box-gap .img.img-5 {
   right: 0;
   bottom: 0;
+}
+
+.footer {
+  text-align: center;
+  background: var(--primary-16-bg, #F5F5F5);
 }/*# sourceMappingURL=style.css.map */
