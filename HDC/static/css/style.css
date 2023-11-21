@@ -327,10 +327,13 @@ button {
   z-index: 3;
 }
 
-.box-main #section1 {
+.box-main .top-vs {
   position: relative;
+  height: 800px;
+}
+.box-main .top-vs #section1 {
   position: absolute;
-  top: 0%;
+  top: 10%;
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
@@ -341,4 +344,16 @@ button {
   background-size: cover;
   background-position: center;
   background-image: url(../images/main/box_0_1.png);
+}
+.box-main .top-vs .text {
+  position: absolute;
+  transition: all 0.1s;
+  top: 743px;
+  left: 50%;
+  z-index: 4;
+  transform: translate(-50%, 0);
+}
+
+.swiper-1 .tit-1 {
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */

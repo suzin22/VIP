@@ -344,19 +344,36 @@ button {
   z-index: 3;
 }
 .box-main {
-  #section1 {
+  .top-vs {
     position: relative;
-    position: absolute;
-    top: 0%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
     height: 800px;
-    z-index: 2;
-    overflow: hidden;
-    background-color: #fff;
-    background-size: cover;
-    background-position: center;
-    background-image: url(../images/main/box_0_1.png);
+    #section1 {
+      position: absolute;
+      top: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      height: 800px;
+      z-index: 2;
+      overflow: hidden;
+      background-color: #fff;
+      background-size: cover;
+      background-position: center;
+      background-image: url(../images/main/box_0_1.png);
+    }
+    .text {
+      position: absolute;
+      transition: all .1s;
+      top:743px;
+      left:50%;
+      z-index: 4;
+      transform: translate(-50%, 0);
+    }
+  }
+}
+
+.swiper-1{
+  .tit-1{
+    text-align: center;
   }
 }
