@@ -23,15 +23,32 @@ if (window.console == undefined) { console = { log: () => { } } }
 
       const tg = document.querySelector('[data-event="header"]');
 
-      window.onscroll = (e) => {
-        let windowTop = window.scrollY;
+      // window.onscroll = (e) => {
+      //   let windowTop = window.scrollY;
 
-        if ( windowTop > 120 ){
-          tg.classList.add('on')
-        } else {
-          tg.classList.remove('on')
-        }
-      }
+      //   if ( windowTop > 120 ){
+      //     tg.classList.add('on')
+      //   } else {
+      //     tg.classList.remove('on')
+      //   }
+      // }
+
+			ScrollTrigger.create({
+				start: "top top",
+				end: 99999,
+				onUpdate: (self) => {
+					window.onscroll = (e) => {
+						let windowTop = window.scrollY;
+						
+						if ( windowTop > 120 ) {
+							self.direction === -1 ? tg.classList.add('up') : (tg.classList.add('on'), tg.classList.remove('up'));
+						} else {
+							tg.classList.remove('on');
+							tg.classList.remove('up');
+						}
+					}
+				}
+			});
 		}
 	};
 

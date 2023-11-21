@@ -227,6 +227,9 @@ body {
     .on {
       display: none;
     }
+    .up {
+      display: none;
+    }
     .top {
       width: 100%;
       position: relative;
@@ -328,6 +331,52 @@ body {
           display: none;
           &.on {
             display: block;
+          }
+        }
+      }
+    }
+
+    &.up {
+      .gnb {
+        height: 180px;
+        padding: 16px 160px;
+        .top {
+          display: flex;
+          img {
+            display: none;
+            &.on {
+              display: block;
+            }
+          }
+        }
+        .middle {
+          top: 27px;
+          .logo {
+            background: url(../images/header_4_up.png) no-repeat;
+            width: 182px;
+            height: 60px;
+          }
+          img {
+            &.right {
+              top: 35px;
+            }
+          }
+        }
+        .bottom {
+          height: auto;
+          top: auto;
+          position: absolute;
+          width: calc(100% - 320px);
+          left: 50%;
+          transform: translateX(-50%);
+          bottom: 18px;
+          img {
+            &.on {
+              display: none;
+            }
+            &.up {
+              display: block;
+            }
           }
         }
       }
