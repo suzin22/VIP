@@ -122,6 +122,9 @@ button {
   top: -9999px;
   left: -9999px;
 }
+body{
+  overflow: hidden;
+}
 // reset
 
 /* gate */
@@ -330,13 +333,14 @@ button {
 
 // pc
 .loading {
-  background-color: #fff;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
+  width: 100vmax;
+  height: 100vmax;
+  background-color: #fff;
   z-index: 9999;
+  cursor: none;
 }
 .box-main {
   margin-top: -180px;
@@ -349,7 +353,7 @@ button {
       left: 50%;
       transform: translateX(-50%);
       width: 100%;
-      height: 800px;
+      height: 1800px;
       z-index: 2;
       overflow: hidden;
       background-color: #fff;
@@ -398,6 +402,7 @@ button {
     }
     .mySwiper {
       width: 790px;
+      cursor:grab;
     }
   }
 }
@@ -438,8 +443,9 @@ button {
   position: relative;
   .img-1 {
     position: absolute;
-    top: 0;
+    top: 92px;
     left: 0;
+    z-index: 2;
   }
   .tit-1 {
     text-align: center;
@@ -463,9 +469,9 @@ button {
     }
   }
   .swiper-button-prev {
-    transform: translateY(calc(-50% + 90px));
+    transform: translateY(calc(-50% + 42px));
   }
   .swiper-button-next {
-    transform: translateY(calc(-50% + 190px));
+    transform: translateY(calc(-50% + 141px));
   }
 }

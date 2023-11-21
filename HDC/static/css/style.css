@@ -140,6 +140,10 @@ button {
   left: -9999px;
 }
 
+body {
+  overflow: hidden;
+}
+
 /* gate */
 .box-gate {
   background-color: #000;
@@ -342,13 +346,14 @@ button {
 }
 
 .loading {
-  background-color: #fff;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
+  width: 100vmax;
+  height: 100vmax;
+  background-color: #fff;
   z-index: 9999;
+  cursor: none;
 }
 
 .box-main {
@@ -364,7 +369,7 @@ button {
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  height: 800px;
+  height: 1800px;
   z-index: 2;
   overflow: hidden;
   background-color: #fff;
@@ -414,6 +419,7 @@ button {
 }
 .swiper-1 .box-flex .mySwiper {
   width: 790px;
+  cursor: grab;
 }
 
 .swiper-button-prev,
@@ -460,8 +466,9 @@ button {
 }
 .swiper-2 .img-1 {
   position: absolute;
-  top: 0;
+  top: 92px;
   left: 0;
+  z-index: 2;
 }
 .swiper-2 .tit-1 {
   text-align: center;
@@ -483,8 +490,8 @@ button {
   margin-top: 0;
 }
 .swiper-2 .swiper-button-prev {
-  transform: translateY(calc(-50% + 90px));
+  transform: translateY(calc(-50% + 42px));
 }
 .swiper-2 .swiper-button-next {
-  transform: translateY(calc(-50% + 190px));
+  transform: translateY(calc(-50% + 141px));
 }/*# sourceMappingURL=style.css.map */
