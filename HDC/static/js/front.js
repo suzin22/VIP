@@ -23,8 +23,6 @@ if (window.console == undefined) { console = { log: () => { } } }
 
       const tg = document.querySelector('[data-event="header"]');
 
-      tg.style.color = "hotpink";
-
       window.onscroll = (e) => {
         let windowTop = window.scrollY;
 
