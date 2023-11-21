@@ -208,6 +208,9 @@ button {
       left: 0;
       right: 0;
     }
+    .on {
+      display: none;
+    }
     .top {
       width: 100%;
       position: relative;
@@ -256,6 +259,51 @@ button {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  &.on {
+    .top-noti {
+      display: none;
+    }
+    .gnb {
+      background: #fff;
+      padding: 9px 160px;
+      height: 77px;
+      .top {
+        display: none;
+      }
+      .middle {
+        top: 9px;
+        img {
+          display: none;
+          &.on {
+            display: block;
+          }
+          &.logo {
+            width: 144.8px;
+            top: 3px;
+          }
+          &.right {
+            bottom: auto;
+            top: 16px;
+            width: 240px;
+          }
+        }
+      }
+      .bottom {
+        margin-top: 0;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        top: -2px;
+        img {
+          display: none;
+          &.on {
+            display: block;
+          }
+        }
       }
     }
   }

@@ -226,6 +226,9 @@ button {
   left: 0;
   right: 0;
 }
+.header .gnb .on {
+  display: none;
+}
 .header .gnb .top {
   width: 100%;
   position: relative;
@@ -275,6 +278,48 @@ button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.header.on .top-noti {
+  display: none;
+}
+.header.on .gnb {
+  background: #fff;
+  padding: 9px 160px;
+  height: 77px;
+}
+.header.on .gnb .top {
+  display: none;
+}
+.header.on .gnb .middle {
+  top: 9px;
+}
+.header.on .gnb .middle img {
+  display: none;
+}
+.header.on .gnb .middle img.on {
+  display: block;
+}
+.header.on .gnb .middle img.logo {
+  width: 144.8px;
+  top: 3px;
+}
+.header.on .gnb .middle img.right {
+  bottom: auto;
+  top: 16px;
+  width: 240px;
+}
+.header.on .gnb .bottom {
+  margin-top: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  top: -2px;
+}
+.header.on .gnb .bottom img {
+  display: none;
+}
+.header.on .gnb .bottom img.on {
+  display: block;
 }
 
 .loading {
