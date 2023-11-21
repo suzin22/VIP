@@ -71,7 +71,7 @@
     <div class="inner-gap-1">
       <!-- swiper-2 -->
       <div class="swiper-2">
-        <img src="static/images/main/box_2_2.png" alt="" class="img-1">
+        <img src="static/images/main/box_2_2.png" alt="" class="img-1" data-aos="fade-down" data-aos-anchor-placement="top-center">
         <p class="tit-1"><img src="static/images/main/box_2_1.png" alt=""></p>
         <div class="box-flex">
           <div class="swiper mySwiper">
@@ -91,6 +91,29 @@
         <div class="swiper-button-next"></div>
       </div>
       <!-- //swiper-2 -->
+    </div>
+    <div class="inner-gap-1">
+      <!-- swiper-3 -->
+      <div class="swiper-3">
+        <p class="tit-1"><img src="static/images/main/box_3_1.png" alt=""></p>
+        <div class="box-flex">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="static/images/main/box_3_2.png" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="static/images/main/box_3_3.png" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img src="static/images/main/box_3_4.png" alt="">
+              </div>
+            </div>
+            <div class="swiper-scrollbar"></div>
+          </div>
+        </div>
+      </div>
+      <!-- //swiper-3 -->
     </div>
     <!-- right-bottom-fixed -->
     <button class="right-bottom-fixed"><img src="static/images/side.png" alt=""></button>
@@ -115,14 +138,16 @@
 
   <script>
     // scroll smooth
-    // const lenis = new Lenis()
+    const lenis = new Lenis()
 
-    // function raf(time) {
-    //   lenis.raf(time)
-    //   requestAnimationFrame(raf)
-    // }
+    function raf(time) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
 
-    // requestAnimationFrame(raf)
+    requestAnimationFrame(raf)
+
+    AOS.init();
 
     const indexText = document.querySelector('.top-vs .text');
 
@@ -200,7 +225,7 @@
       },
     });
 
-    // 시계 swiper-1
+    // One Day Time Sale swiper-1
     var swiper = new Swiper(".swiper-2 .mySwiper", {
       slidesPerView: 1,
       spaceBetween: 20,
@@ -213,6 +238,18 @@
         prevEl: '.swiper-2 .swiper-button-prev',
         nextEl: '.swiper-2 .swiper-button-next'
       },
+    });
+
+    // 이벤트 swiper-3
+    var swiper = new Swiper(".swiper-3 .mySwiper", {
+      slidesPerView: 2.5,
+      spaceBetween: 20,
+      //centeredSlides: true,
+      scrollbar: {
+        el: '.swiper-3 .swiper-scrollbar',
+        dragSize: 665
+      },
+      loop: false,
     });
   </script>
 

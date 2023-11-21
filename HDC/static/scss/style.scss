@@ -122,7 +122,7 @@ button {
   top: -9999px;
   left: -9999px;
 }
-body{
+body {
   overflow: hidden;
 }
 // reset
@@ -194,7 +194,7 @@ body{
     opacity: 1;
     transition: 0.3s all;
     background: var(--primary-3, #877355);
-    border-bottom: 4px solid var(--primary-4, #A88F6A);
+    border-bottom: 4px solid var(--primary-4, #a88f6a);
     position: relative;
     img {
       width: 100%;
@@ -368,7 +368,7 @@ body{
     .text {
       position: absolute;
       transition: all 0.1s;
-      top: 756px;
+      top: 788px;
       left: 0;
       right: 0;
       text-align: center;
@@ -406,7 +406,7 @@ body{
     }
     .mySwiper {
       width: 790px;
-      cursor:grab;
+      cursor: grab;
     }
   }
 }
@@ -477,5 +477,19 @@ body{
   }
   .swiper-button-next {
     transform: translateY(calc(-50% + 141px));
+  }
+}
+.swiper-3 {
+  padding: 100px 0 50px 0;
+  position: relative;
+  cursor: grab;
+  .tit-1{
+    padding-bottom:39px;
+  }
+  .box-flex {
+    padding: 0 135px;
+    .swiper-slide {
+      width: 520px;
+    }
   }
 }
