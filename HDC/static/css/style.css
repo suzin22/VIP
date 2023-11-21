@@ -246,9 +246,6 @@ body {
 .header .gnb .on {
   display: none;
 }
-.header .gnb .up {
-  display: none;
-}
 .header .gnb .top {
   width: 100%;
   position: relative;
@@ -351,45 +348,6 @@ body {
 .header.on .gnb .bottom img.on {
   display: block;
 }
-.header.on.up .gnb {
-  height: 180px;
-  padding: 16px 160px;
-}
-.header.on.up .gnb .top {
-  display: flex;
-}
-.header.on.up .gnb .top img {
-  display: none;
-}
-.header.on.up .gnb .top img.on {
-  display: block;
-}
-.header.on.up .gnb .middle {
-  top: 27px;
-}
-.header.on.up .gnb .middle .logo {
-  background: url(../images/header_4_up.png) no-repeat;
-  width: 182px;
-  height: 60px;
-}
-.header.on.up .gnb .middle img.right {
-  top: 35px;
-}
-.header.on.up .gnb .bottom {
-  height: auto;
-  top: auto;
-  position: absolute;
-  width: calc(100% - 320px);
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 18px;
-}
-.header.on.up .gnb .bottom img.on {
-  display: none;
-}
-.header.on.up .gnb .bottom img.up {
-  display: block;
-}
 
 .loading {
   position: fixed;
@@ -442,9 +400,17 @@ body {
   height: 200px;
 }
 
+.inner-gap-1,
+.inner-gap-2 {
+  margin: 0 auto;
+}
+
 .inner-gap-1 {
   max-width: 1600px;
-  margin: 0 auto;
+}
+
+.inner-gap-2 {
+  max-width: 1920px;
 }
 
 .swiper-1 {
@@ -500,6 +466,7 @@ body {
   height: 1px !important;
   border-radius: 0 !important;
   background: #c5beb4 !important;
+  z-index: 4 !important;
 }
 
 .swiper-scrollbar-drag {
@@ -543,16 +510,60 @@ body {
 }
 
 .swiper-3 {
-  padding: 100px 0 50px 0;
+  padding: 100px 0 0 0;
   position: relative;
   cursor: grab;
 }
 .swiper-3 .tit-1 {
   padding-bottom: 39px;
 }
+.swiper-3 .mySwiper {
+  padding-bottom: 55px;
+}
 .swiper-3 .box-flex {
   padding: 0 135px;
 }
 .swiper-3 .box-flex .swiper-slide {
   width: 520px;
+}
+.swiper-3 .swiper-scrollbar {
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: auto !important;
+  position: static !important;
+  margin-top: 50px;
+}
+
+.box-pd {
+  padding: 45px 0 0 0;
+}
+.box-pd .tit-1 {
+  padding-bottom: 10px;
+}
+.box-pd .box-gap {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 370px 0 300px 0;
+}
+.box-pd .box-gap .img {
+  position: absolute;
+}
+.box-pd .box-gap .img.img-2 {
+  left: 0;
+  top: 70px;
+}
+.box-pd .box-gap .img.img-3 {
+  right: 0;
+  top: 71px;
+}
+.box-pd .box-gap .img.img-4 {
+  left: 0;
+  bottom: 0;
+}
+.box-pd .box-gap .img.img-5 {
+  right: 0;
+  bottom: 0;
 }/*# sourceMappingURL=style.css.map */

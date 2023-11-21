@@ -227,9 +227,6 @@ body {
     .on {
       display: none;
     }
-    .up {
-      display: none;
-    }
     .top {
       width: 100%;
       position: relative;
@@ -335,52 +332,6 @@ body {
         }
       }
     }
-
-    &.up {
-      .gnb {
-        height: 180px;
-        padding: 16px 160px;
-        .top {
-          display: flex;
-          img {
-            display: none;
-            &.on {
-              display: block;
-            }
-          }
-        }
-        .middle {
-          top: 27px;
-          .logo {
-            background: url(../images/header_4_up.png) no-repeat;
-            width: 182px;
-            height: 60px;
-          }
-          img {
-            &.right {
-              top: 35px;
-            }
-          }
-        }
-        .bottom {
-          height: auto;
-          top: auto;
-          position: absolute;
-          width: calc(100% - 320px);
-          left: 50%;
-          transform: translateX(-50%);
-          bottom: 18px;
-          img {
-            &.on {
-              display: none;
-            }
-            &.up {
-              display: block;
-            }
-          }
-        }
-      }
-    }
   }
 }
 
@@ -434,9 +385,15 @@ body {
   height: 200px;
 }
 
+.inner-gap-1,
+.inner-gap-2 {
+  margin: 0 auto;
+}
 .inner-gap-1 {
   max-width: 1600px;
-  margin: 0 auto;
+}
+.inner-gap-2 {
+  max-width: 1920px;
 }
 
 .swiper-1 {
@@ -487,6 +444,7 @@ body {
   height: 1px !important;
   border-radius: 0 !important;
   background: #c5beb4 !important;
+  z-index: 4 !important;
 }
 .swiper-scrollbar-drag {
   background-color: #000 !important;
@@ -529,16 +487,59 @@ body {
   }
 }
 .swiper-3 {
-  padding: 100px 0 50px 0;
+  padding: 100px 0 0 0;
   position: relative;
   cursor: grab;
-  .tit-1{
-    padding-bottom:39px;
+  .tit-1 {
+    padding-bottom: 39px;
+  }
+  .mySwiper {
+    padding-bottom: 55px;
   }
   .box-flex {
     padding: 0 135px;
     .swiper-slide {
       width: 520px;
+    }
+  }
+  .swiper-scrollbar {
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: auto !important;
+    position: static !important;
+    margin-top:50px;
+  }
+}
+.box-pd {
+  padding: 45px 0 0 0;
+  .tit-1 {
+    padding-bottom: 10px;
+  }
+  .box-gap {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:370px 0 300px 0;
+    .img {
+      position: absolute;
+      &.img-2 {
+        left:0;
+        top:70px;
+      }
+      &.img-3 {
+        right:0;
+        top:71px;
+      }
+      &.img-4 {
+        left:0;
+        bottom:0;
+      }
+      &.img-5 {
+        right:0;
+        bottom:0;
+      }
     }
   }
 }

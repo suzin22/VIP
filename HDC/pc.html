@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="static/css/aos.css">
 </head>
 
-<body style="height: 3000px;">
+<body style="height: 6000px;">
   <header class="header" data-event="header">
     <div class="top-noti">
       <img src="static/images/header_1.png" alt="">
@@ -75,7 +75,8 @@
     <div class="inner-gap-1">
       <!-- swiper-2 -->
       <div class="swiper-2">
-        <img src="static/images/main/box_2_2.png" alt="" class="img-1" data-aos="fade-down" data-aos-anchor-placement="top-center">
+        <img src="static/images/main/box_2_2.png" alt="" class="img-1" data-aos="fade-down"
+          data-aos-anchor-placement="top-center">
         <p class="tit-1"><img src="static/images/main/box_2_1.png" alt=""></p>
         <div class="box-flex">
           <div class="swiper mySwiper">
@@ -119,6 +120,23 @@
       </div>
       <!-- //swiper-3 -->
     </div>
+    <div class="inner-gap-2">
+      <div class="box-pd">
+        <p class="tit-1"><img src="static/images/main/box_4_1.png" alt=""></p>
+        <div class="box-gap">
+          <img src="static/images/main/box_4_2.png" alt="" class="img-1" data-aos="fade-down"
+          data-aos-anchor-placement="top-center">
+          <img src="static/images/main/box_4_3.png" alt="" class="img img-2" data-aos="fade-down"
+          data-aos-anchor-placement="top-center">
+          <img src="static/images/main/box_4_4.png" alt="" class="img img-3" data-aos="fade-down"
+          data-aos-anchor-placement="top-center">
+          <img src="static/images/main/box_4_5.png" alt="" class="img img-4" data-aos="fade-down"
+          data-aos-anchor-placement="top-center">
+          <img src="static/images/main/box_4_6.png" alt="" class="img img-5" data-aos="fade-down"
+          data-aos-anchor-placement="top-center">
+        </div>
+      </div>
+    </div>
     <!-- right-bottom-fixed -->
     <button class="right-bottom-fixed"><img src="static/images/side.png" alt=""></button>
     <!-- //right-bottom-fixed -->
@@ -159,6 +177,14 @@
       indexText.style.zIndex = 2;
       document.querySelector('body').style.overflow = 'initial';
     }, 3000);
+
+    // 우측 하단 top btn
+    document.querySelector('.right-bottom-fixed').addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    })
 
     // 상단 kv motion
     const motion1 = document.querySelector("#section1");
