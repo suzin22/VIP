@@ -249,11 +249,11 @@ button {
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  height: 100%;
+  height: 800px;
   z-index: 2;
   overflow: hidden;
   background-color: #fff;
   background-size: cover;
   background-position: center;
-  background-image: url(https://webstoryboy.github.io/gsap2023/assets/img/images04.jpg);
+  background-image: url(../images/main/box_0_1.png);
 }/*# sourceMappingURL=style.css.map */
