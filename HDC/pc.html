@@ -23,7 +23,7 @@
   <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
 </head>
 
-<body>
+<body style="height: 3000px;">
   <header class="header">
     <div class="top-noti">
       <img src="static/images/header_1.png" alt="">
@@ -53,25 +53,44 @@
       <p class="text"><img src="static/images/main/box_0_2.png" alt=""></p>
     </div>
     <!-- //top-vs -->
-    <!-- swiper-1 -->
-    <div class="swiper-1">
-      <p class="tit-1"><img src="static/images/main/box_1_1.png" alt=""></p>
+    <div class="inner-gap-1">
+      <!-- swiper-1 -->
+      <div class="swiper-1">
+        <p class="tit-1"><img src="static/images/main/box_1_1.png" alt=""></p>
+        <p class="img-1"><img src="static/images/main/box_1_3.png" alt=""></p>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <p class="img-1"><img src="static/images/main/box_1_4.png" alt=""></p>
+            </div>
+            <div class="swiper-slide">
+              <p class="img-1"><img src="static/images/main/box_1_5.png" alt=""></p>
+            </div>
+            <div class="swiper-slide">
+              <p class="img-1"><img src="static/images/main/box_1_6.png" alt=""></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- //swiper-1 -->
     </div>
-    <!-- //swiper-1 -->
+    <!-- right-bottom-fixed -->
+    <button class="right-bottom-fixed"><img src="static/images/side.png" alt=""></button>
+    <!-- //right-bottom-fixed -->
   </div>
 
   <div class="loading"></div>
 
   <script>
     // scroll smooth
-    const lenis = new Lenis()
+    // const lenis = new Lenis()
 
-    function raf(time) {
-      lenis.raf(time)
-      requestAnimationFrame(raf)
-    }
+    // function raf(time) {
+    //   lenis.raf(time)
+    //   requestAnimationFrame(raf)
+    // }
 
-    requestAnimationFrame(raf)
+    // requestAnimationFrame(raf)
 
     // 상단 kv motion
     const motion1 = document.querySelector("#section1");
@@ -106,11 +125,19 @@
 
       scrollTrigger: {
         trigger: motion1,
-        start: "top top",
+        start: "-20% top",
         end: "bottom 20%",
         scrub: 0.2,    //true, 1, 2,....
         markers: false,
       }
+    });
+
+    // 추천 브랜드 swiper-1
+    var swiper = new Swiper(".swiper-1 .mySwiper", {
+      slidesPerView: 1.6,
+      spaceBetween: 57,
+      centeredSlides: true,
+      loop: false,
     });
   </script>
 

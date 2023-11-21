@@ -169,6 +169,7 @@ button {
   background: transparent;
   border: none;
   outline: none;
+  cursor: pointer;
 }
 
 .hidden {
@@ -349,13 +350,31 @@ button {
 .box-main .top-vs .text {
   position: absolute;
   transition: all 0.1s;
-  top: 743px;
+  top: 756px;
   left: 0;
   right: 0;
   text-align: center;
   z-index: 99999;
 }
 
+.right-bottom-fixed {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 444;
+  width: 64px;
+  height: 200px;
+}
+
+.inner-gap-1 {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.swiper-1 {
+  padding: 200px 0 0 0;
+}
 .swiper-1 .tit-1 {
   text-align: center;
+  padding: 0 0 41px 0;
 }/*# sourceMappingURL=style.css.map */
