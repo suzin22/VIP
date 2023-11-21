@@ -331,8 +331,48 @@ button {
 
 .swiper-1 {
   padding: 200px 0 0 0;
+  position: relative;
 }
 .swiper-1 .tit-1 {
   text-align: center;
   padding: 0 0 41px 0;
+}
+.swiper-1 .box-flex {
+  display: flex;
+  padding: 0 135px;
+}
+.swiper-1 .box-flex .img-1 {
+  width: 520px;
+  margin-right: 20px;
+}
+.swiper-1 .box-flex .mySwiper {
+  width: 790px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(calc(-50% + 126px));
+  width: 51px !important;
+  height: 51px !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 51px !important;
+}
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  content: "" !important;
+  width: 51px !important;
+  height: 51px !important;
+}
+
+.swiper-button-prev {
+  left: 39px !important;
+  background-image: url(../images/main/box_2_5.png);
+}
+
+.swiper-button-next {
+  right: 39px !important;
+  background-image: url(../images/main/box_2_6.png);
 }/*# sourceMappingURL=style.css.map */

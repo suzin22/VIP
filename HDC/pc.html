@@ -50,20 +50,25 @@
       <!-- swiper-1 -->
       <div class="swiper-1">
         <p class="tit-1"><img src="static/images/main/box_1_1.png" alt=""></p>
-        <p class="img-1"><img src="static/images/main/box_1_3.png" alt=""></p>
-        <div class="swiper mySwiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <p class="img-1"><img src="static/images/main/box_1_4.png" alt=""></p>
+        <div class="box-flex">
+          <p class="img-1"><img src="static/images/main/box_1_3.png" alt=""></p>
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <p class="img-1"><img src="static/images/main/box_1_4.png" alt=""></p>
+              </div>
+              <div class="swiper-slide">
+                <p class="img-1"><img src="static/images/main/box_1_5.png" alt=""></p>
+              </div>
+              <div class="swiper-slide">
+                <p class="img-1"><img src="static/images/main/box_1_6.png" alt=""></p>
+              </div>
             </div>
-            <div class="swiper-slide">
-              <p class="img-1"><img src="static/images/main/box_1_5.png" alt=""></p>
-            </div>
-            <div class="swiper-slide">
-              <p class="img-1"><img src="static/images/main/box_1_6.png" alt=""></p>
-            </div>
+            <div class="swiper-scrollbar"></div>
           </div>
         </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
       </div>
       <!-- //swiper-1 -->
     </div>
@@ -141,10 +146,18 @@
 
     // 추천 브랜드 swiper-1
     var swiper = new Swiper(".swiper-1 .mySwiper", {
-      slidesPerView: 1.6,
-      spaceBetween: 57,
-      centeredSlides: true,
+      slidesPerView: 2,
+      spaceBetween: 20,
+      //centeredSlides: true,
       loop: false,
+      navigation: {
+        prevEl: '.swiper-1 .swiper-button-prev',
+        nextEl: '.swiper-1 .swiper-button-next'
+      },
+      scrollbar: {
+        el: '.swiper-1 .swiper-scrollbar',
+        dragSize: 395
+      },
     });
   </script>
 
