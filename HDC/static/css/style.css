@@ -1,46 +1,4 @@
 @charset "UTF-8";
-@font-face {
-  font-family: "Pretendard";
-  font-weight: 700;
-  font-display: swap;
-  src: local("Pretendard Bold"), url("/HD/static/fonts/Pretendard-Bold.subset.woff2") format("woff2"), url("/HD/static/fonts/Pretendard-Bold.subset.woff") format("woff");
-}
-@font-face {
-  font-family: "Pretendard";
-  font-weight: 600;
-  font-display: swap;
-  src: local("Pretendard SemiBold"), url("/HD/static/fonts/Pretendard-SemiBold.subset.woff2") format("woff2"), url("/HD/static/fonts/Pretendard-SemiBold.subset.woff") format("woff");
-}
-@font-face {
-  font-family: "Pretendard";
-  font-weight: 500;
-  font-display: swap;
-  src: local("Pretendard Medium"), url("/HD/static/fonts/Pretendard-Medium.subset.woff2") format("woff2"), url("/HD/static/fonts/Pretendard-Medium.subset.woff") format("woff");
-}
-@font-face {
-  font-family: "Pretendard";
-  font-weight: 400;
-  font-display: swap;
-  src: local("Pretendard Regular"), url("/HD/static/fonts/Pretendard-Regular.subset.woff2") format("woff2"), url("/HD/static/fonts/Pretendard-Regular.subset.woff") format("woff");
-}
-@font-face {
-  font-family: "PPNeueMontreal";
-  font-weight: 400;
-  font-display: swap;
-  src: local("PPNeueMontreal Regular"), url("/HD/static/fonts/PPNeueMontreal-Regular.woff2") format("woff2"), url("/HD/static/fonts/PPNeueMontreal-Regular.woff") format("woff");
-}
-@font-face {
-  font-family: "PPNeueMontreal";
-  font-weight: 500;
-  font-display: swap;
-  src: local("PPNeueMontreal Medium"), url("/HD/static/fonts/PPNeueMontreal-Medium.woff2") format("woff2"), url("/HD/static/fonts/PPNeueMontreal-Medium.woff") format("woff");
-}
-@font-face {
-  font-family: "PPNeueMontreal";
-  font-weight: 700;
-  font-display: swap;
-  src: local("PPNeueMontreal Bold"), url("/HD/static/fonts/PPNeueMontreal-Book.woff2") format("woff2"), url("/HD/static/fonts/PPNeueMontreal-Bold.woff") format("woff");
-}
 * {
   margin: 0;
   padding: 0;
