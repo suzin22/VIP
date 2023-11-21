@@ -42,7 +42,9 @@ if (window.console == undefined) { console = { log: () => { } } }
 						
 						if ( windowTop > 120 ) {
 							self.direction === -1 ? tg.classList.add('up') : (tg.classList.add('on'), tg.classList.remove('up'));
+              console.log(1);
 						} else {
+              console.log(2);
 							tg.classList.remove('on');
 							tg.classList.remove('up');
 						}

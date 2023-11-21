@@ -246,6 +246,9 @@ body {
 .header .gnb .on {
   display: none;
 }
+.header .gnb .up {
+  display: none;
+}
 .header .gnb .top {
   width: 100%;
   position: relative;
@@ -346,6 +349,45 @@ body {
   display: none;
 }
 .header.on .gnb .bottom img.on {
+  display: block;
+}
+.header.on.up .gnb {
+  height: 180px;
+  padding: 16px 160px;
+}
+.header.on.up .gnb .top {
+  display: flex;
+}
+.header.on.up .gnb .top img {
+  display: none;
+}
+.header.on.up .gnb .top img.on {
+  display: block;
+}
+.header.on.up .gnb .middle {
+  top: 27px;
+}
+.header.on.up .gnb .middle .logo {
+  background: url(../images/header_4_up.png) no-repeat;
+  width: 182px;
+  height: 60px;
+}
+.header.on.up .gnb .middle img.right {
+  top: 35px;
+}
+.header.on.up .gnb .bottom {
+  height: auto;
+  top: auto;
+  position: absolute;
+  width: calc(100% - 320px);
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 18px;
+}
+.header.on.up .gnb .bottom img.on {
+  display: none;
+}
+.header.on.up .gnb .bottom img.up {
   display: block;
 }
 
