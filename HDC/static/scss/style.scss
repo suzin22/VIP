@@ -468,15 +468,14 @@ body {
       left: 0;
       right: 0;
       text-align: center;
-      img{
+      img {
         opacity: 0;
         transition: all 5s;
       }
       .bg {
         width: 1920px;
         height: 800px;
-        background: url(../images/main/box_0_1.png)
-          no-repeat center/100%;
+        background: url(../images/main/box_0_1.png) no-repeat center/100%;
 
         background-attachment: fixed;
         background-clip: text;
@@ -499,15 +498,16 @@ body {
   z-index: 444;
   width: 64px;
   height: 200px;
-  transition: all .4s;
+  transition: all 0.4s;
   opacity: 0;
-  *{
+  * {
     cursor: pointer;
   }
 }
 
 .inner-gap-1,
-.inner-gap-2 {
+.inner-gap-2,
+.inner-gap-3 {
   margin: 0 auto;
 }
 .inner-gap-1 {
@@ -515,6 +515,9 @@ body {
 }
 .inner-gap-2 {
   max-width: 1920px;
+}
+.inner-gap-3 {
+  max-width: 960px;
 }
 
 .swiper-1 {
@@ -534,7 +537,7 @@ body {
     .mySwiper {
       width: 790px;
       cursor: grab;
-      *{
+      * {
         cursor: grab;
       }
     }
@@ -620,7 +623,7 @@ body {
   .mySwiper {
     padding-bottom: 55px;
     cursor: grab;
-    *{
+    * {
       cursor: grab;
     }
   }
@@ -677,19 +680,37 @@ body {
 }
 
 // event
-.box-event{
+.box-event {
   background-image: url(../images/event/box_0_1.png);
   background-size: cover;
   background-repeat: no-repeat;
-  height: 1300px;
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  .text-1{
-     
+  .inner-gap-1 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1000px;
   }
-  .img-1{
-
+  .text-1 {
+    position: absolute;
+    bottom: 124px;
+    left: 0;
+    img{
+      margin-top:23px;
+    }
+  }
+  .img-1 {
+    margin-top:167px;
+  }
+}
+.box-perfume{
+  background: var(--primary-2, #49433A);
+  padding:103px 0 99px 0;
+  .tit-1{
+    margin-bottom:60px;
+  }
+  ul{
+    
   }
 }

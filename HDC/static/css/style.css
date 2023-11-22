@@ -500,7 +500,8 @@ body {
 }
 
 .inner-gap-1,
-.inner-gap-2 {
+.inner-gap-2,
+.inner-gap-3 {
   margin: 0 auto;
 }
 
@@ -510,6 +511,10 @@ body {
 
 .inner-gap-2 {
   max-width: 1920px;
+}
+
+.inner-gap-3 {
+  max-width: 960px;
 }
 
 .swiper-1 {
@@ -683,9 +688,31 @@ body {
   background-image: url(../images/event/box_0_1.png);
   background-size: cover;
   background-repeat: no-repeat;
-  height: 1300px;
+  position: relative;
+}
+.box-event .inner-gap-1 {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 1000px;
+}
+.box-event .text-1 {
+  position: absolute;
+  bottom: 124px;
+  left: 0;
+}
+.box-event .text-1 img {
+  margin-top: 23px;
+}
+.box-event .img-1 {
+  margin-top: 167px;
+}
+
+.box-perfume {
+  background: var(--primary-2, #49433A);
+  padding: 103px 0 99px 0;
+}
+.box-perfume .tit-1 {
+  margin-bottom: 60px;
 }/*# sourceMappingURL=style.css.map */
