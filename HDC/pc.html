@@ -43,12 +43,12 @@
       <section id="section1" class="parallax__item">
         <div class="parallax__item__img"></div>
       </section>
-      <div class="text">
+      <!-- <div class="text">
         <div class="bg">
           <span>BEAUTY BRAND SALE</span>
         </div>
-      </div>
-      <!-- <p class="text"><img src="static/images/main/box_0_2.png" alt=""></p> -->
+      </div> -->
+      <p class="text"><img src="static/images/main/box_0_2.png" alt=""></p>
     </div>
     <!-- //top-vs -->
     <div class="inner-gap-1">
@@ -87,12 +87,12 @@
           <div class="swiper mySwiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <img src="static/images/main/box_2_3.png" alt="">
-                <img src="static/images/main/box_2_4.png" alt="">
+                <img src="static/images/main/box_2_3.png" alt="" data-aos="fade-down-right" data-aos-anchor-placement="top-center">
+                <img src="static/images/main/box_2_4.png" alt="" data-aos="fade-down-left" data-aos-anchor-placement="top-center">
               </div>
               <div class="swiper-slide">
-                <img src="static/images/main/box_2_4.png" alt="">
-                <img src="static/images/main/box_2_3.png" alt="">
+                <img src="static/images/main/box_2_4.png" alt="" data-aos="fade-down-right" data-aos-anchor-placement="top-center">
+                <img src="static/images/main/box_2_3.png" alt="" data-aos="fade-down-left" data-aos-anchor-placement="top-center">
               </div>
             </div>
           </div>
@@ -110,13 +110,13 @@
           <div class="swiper mySwiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <img src="static/images/main/box_3_2.png" alt="">
+                <img src="static/images/main/box_3_2.png" alt="" data-aos="fade-up" data-aos-delay="300" data-aos-anchor-placement="top-center">
               </div>
               <div class="swiper-slide">
-                <img src="static/images/main/box_3_3.png" alt="">
+                <img src="static/images/main/box_3_3.png" alt="" data-aos="fade-up" data-aos-delay="500" data-aos-anchor-placement="top-center">
               </div>
               <div class="swiper-slide">
-                <img src="static/images/main/box_3_4.png" alt="">
+                <img src="static/images/main/box_3_4.png" alt="" data-aos="fade-up" data-aos-delay="700" data-aos-anchor-placement="top-center">
               </div>
             </div>
             <div class="swiper-scrollbar"></div>
@@ -203,7 +203,7 @@
 
     setTimeout(function () {
       document.querySelector('.header').style.top = '0';
-    }, 4000);
+    }, 3000);
 
     setTimeout(function () {
       document.querySelector('.box-main').style.marginTop = '-180px';
@@ -258,7 +258,7 @@
         start: "30% top",
         end: "bottom 20%",
         scrub: 0.2,    //true, 1, 2,....
-        markers: true,
+        markers: false,
       }
     });
 
