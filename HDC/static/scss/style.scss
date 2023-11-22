@@ -127,6 +127,10 @@ body {
 }
 // reset
 
+* {
+  cursor: url(images/my-cursor-design.png), auto;
+}
+
 /* gate */
 .box-gate {
   background-color: #000;
@@ -186,10 +190,13 @@ body {
 // header
 .header {
   width: 100%;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 9999;
-  top:-100vmax;
-  transition: top .8s;
+  top: -100vmax;
+  transition: top 0.8s;
   .top-noti {
     width: 100%;
     height: 60px;
@@ -402,14 +409,14 @@ body {
   transition: all 1s;
   .top-vs {
     position: relative;
-    height: 800px;
+    height: 1040px;
     #section1 {
       position: absolute;
       top: 10%;
       left: 50%;
-      transform: translateX(-50%);
+      transform: translateX(-50%) scale(2);
       width: 100%;
-      height: 1800px;
+      height: 1040px;
       z-index: 2;
       overflow: hidden;
       background-color: #fff;
@@ -420,11 +427,27 @@ body {
     .text {
       position: absolute;
       transition: all 0.1s;
-      top: 818px;
+      bottom: -203px;
       left: 0;
       right: 0;
       text-align: center;
       z-index: 99999;
+      .bg {
+        width: 800px;
+        height: 300px;
+        background: url("https://user-images.githubusercontent.com/38034518/128056812-8d44a38e-9418-44b8-aa55-b04281e6cbb3.gif")
+          no-repeat center/100%;
+
+        background-clip: text;
+        -webkit-background-clip: text;
+        text-align: center;
+      }
+      .bg > span {
+        color: transparent;
+        font-size: 140px;
+        font-weight: 400;
+        line-height: 140px;
+      }
     }
   }
 }
@@ -595,4 +618,7 @@ body {
     }
   }
 }
-.footer{text-align: center;background: var(--primary-16-bg, #F5F5F5);}
+.footer {
+  text-align: center;
+  background: var(--primary-16-bg, #f5f5f5);
+}
