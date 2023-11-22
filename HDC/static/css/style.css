@@ -505,6 +505,9 @@ body {
   width: 790px;
   cursor: grab;
 }
+.swiper-1 .box-flex .mySwiper * {
+  cursor: grab;
+}
 
 .swiper-button-prev,
 .swiper-button-next {
@@ -591,6 +594,10 @@ body {
 }
 .swiper-3 .mySwiper {
   padding-bottom: 55px;
+  cursor: grab;
+}
+.swiper-3 .mySwiper * {
+  cursor: grab;
 }
 .swiper-3 .box-flex {
   padding: 0 135px;

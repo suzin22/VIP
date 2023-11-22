@@ -505,6 +505,9 @@ body {
     .mySwiper {
       width: 790px;
       cursor: grab;
+      *{
+        cursor: grab;
+      }
     }
   }
 }
@@ -587,6 +590,10 @@ body {
   }
   .mySwiper {
     padding-bottom: 55px;
+    cursor: grab;
+    *{
+      cursor: grab;
+    }
   }
   .box-flex {
     padding: 0 135px;
