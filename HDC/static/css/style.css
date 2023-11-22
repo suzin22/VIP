@@ -465,7 +465,10 @@ body {
   left: 0;
   right: 0;
   text-align: center;
+}
+.box-main .top-vs .text img {
   opacity: 0;
+  transition: all 5s;
 }
 .box-main .top-vs .text .bg {
   width: 1920px;

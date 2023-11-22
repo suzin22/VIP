@@ -468,7 +468,10 @@ body {
       left: 0;
       right: 0;
       text-align: center;
-      opacity: 0;
+      img{
+        opacity: 0;
+        transition: all 5s;
+      }
       .bg {
         width: 1920px;
         height: 800px;

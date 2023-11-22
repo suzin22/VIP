@@ -191,10 +191,16 @@
 
     AOS.init();
 
+    window.onload = () => {
+      setTimeout(() => {
+        scrollTo(0, 0);
+      }, 100)
+    }
+
     const indexText = document.querySelector('.top-vs .text');
 
     setTimeout(function () {
-      indexText.style.opacity = 1;
+      document.querySelector('.top-vs .text img').style.opacity = 1;
     }, 4000);
 
     setTimeout(function () {
@@ -203,7 +209,7 @@
 
     setTimeout(function () {
       document.querySelector('body').style.overflow = 'initial';
-    }, 3000);
+    }, 5000);
 
     setTimeout(function () {
       document.querySelector('.header').style.top = '0';
@@ -267,10 +273,10 @@
 
       scrollTrigger: {
         trigger: '.trigger-1',
-        start: "top 20%",
+        start: "top 30%",
         end: "bottom top",
         scrub: 0.2,    //true, 1, 2,....
-        markers: true,
+        markers: false,
       }
     });
 
