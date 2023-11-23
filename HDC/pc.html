@@ -23,7 +23,9 @@
         <img src="static/images/header_3_on.png" alt="" class="right on">
       </div>
       <div class="middle">
-        <a href="pc.html"><div class="logo" style="cursor: pointer;"></div></a>
+        <a href="pc.html">
+          <div class="logo" style="cursor: pointer;"></div>
+        </a>
         <img src="static/images/header_5.png" alt="" class="right">
         <img src="static/images/header_5_on.png" alt="" class="right on">
       </div>
@@ -34,14 +36,18 @@
 
         <img src="static/images/header_7.png" alt="" class="right" usemap="#image-map">
         <map name="image-map">
-          <area target="" alt="이벤트" title="이벤트" href="event.html" coords="315,52,253,12" shape="rect" style="cursor: pointer;">
-          <area target="" alt="기획전" title="기획전" href="special.html" coords="362,13,420,52" shape="rect" style="cursor: pointer;">
+          <area target="" alt="이벤트" title="이벤트" href="event.html" coords="315,52,253,12" shape="rect"
+            style="cursor: pointer;">
+          <area target="" alt="기획전" title="기획전" href="special.html" coords="362,13,420,52" shape="rect"
+            style="cursor: pointer;">
         </map>
 
         <img src="static/images/header_7_up.png" alt="" class="right up" usemap="#image-map2">
         <map name="image-map2">
-          <area target="" alt="이벤트" title="이벤트" href="event.html" coords="315,52,253,12" shape="rect" style="cursor: pointer;">
-          <area target="" alt="기획전" title="기획전" href="special.html" coords="362,13,420,52" shape="rect" style="cursor: pointer;">
+          <area target="" alt="이벤트" title="이벤트" href="event.html" coords="315,52,253,12" shape="rect"
+            style="cursor: pointer;">
+          <area target="" alt="기획전" title="기획전" href="special.html" coords="362,13,420,52" shape="rect"
+            style="cursor: pointer;">
         </map>
       </div>
     </div>
@@ -53,12 +59,30 @@
       <section id="section1" class="parallax__item">
         <div class="parallax__item__img"></div>
       </section>
-      <!-- <div class="text">
-        <div class="bg">
-          <span>BEAUTY BRAND SALE</span>
+      <div class="text">
+        <div class="bg" style="background-position: center;">
+          <span id="text-motion">
+            <span class="m">B</span>
+            <span class="m">E</span>
+            <span class="m">A</span>
+            <span class="m">U</span>
+            <span class="m" style="margin-right:0;">T</span>
+            <span class="m">Y</span>
+            <span class="gap"> </span>
+            <span class="m">B</span>
+            <span class="m">R</span>
+            <span class="m">A</span>
+            <span class="m">N</span>
+            <span class="m">D</span>
+            <span class="gap"> </span>
+            <span class="m">S</span>
+            <span class="m">A</span>
+            <span class="m">L</span>
+            <span class="m">E</span>
+          </span>
         </div>
-      </div> -->
-      <p class="text"><img src="static/images/main/box_0_2.png" alt=""></p>
+      </div>
+      <!-- <p class="text"><img src="static/images/main/box_0_2.png" alt=""></p> -->
     </div>
     <!-- //top-vs -->
     <div class="inner-gap-1">
@@ -219,28 +243,61 @@
 
     const indexText = document.querySelector('.top-vs .text');
 
+    // 상단 TEXT
     setTimeout(function () {
-      document.querySelector('.top-vs .text img').style.opacity = 1;
-    }, 4000);
+      document.querySelector('.top-vs .text').style.opacity = 1;
+    }, 2000);
+
+    setTimeout(() => {
+      // 상단 text 배열 모션
+      document.querySelectorAll('#text-motion .m').forEach((e, index) => {
+        const tg = e;
+
+        setTimeout(() => {
+          tg.classList.add('motion')
+        }, 1000 * (index / 10));
+      })
+    }, 3000)
+    
+    setTimeout(() => {
+      // 상단 text 배열 모션
+      document.querySelectorAll('#text-motion .m').forEach((e, index) => {
+        const tg = e;
+
+        setTimeout(() => {
+          tg.style.color = 'transparent';
+        }, 1000 * (index / 10));
+      })
+    }, 4000)
 
     setTimeout(function () {
       indexText.style.zIndex = 2;
     }, 4500);
 
+    // body scroll
     setTimeout(function () {
       document.querySelector('body').style.overflow = 'initial';
     }, 5000);
 
+    // header 노출
     setTimeout(function () {
       document.querySelector('.header').style.top = '0';
-    }, 3500);
+    }, 2400);
 
-    // setTimeout(function () {
-    //   document.querySelector('.box-main').style.marginTop = '-180px';
-    // }, 2000);
+    // body 높이 컨트롤
+    setTimeout(function () {
+      document.querySelector('.box-main').style.marginTop = '-360px';
+    }, 3200);
 
     // 상단 kv motion
     const motion1 = document.querySelector("#section1");
+    setTimeout(() => {
+      gsap.to(motion1, {
+        duration: 2,
+        top: '-100px'
+      });
+    }, 1500)
+
     setTimeout(() => {
       gsap.to(motion1, {
         duration: 1,
@@ -251,7 +308,7 @@
         height: "1221px",
         top: '0'
       });
-    }, 3000)// 2000
+    }, 2500)// 2000
 
     setTimeout(() => {
       // loading motion
@@ -268,21 +325,21 @@
     }, 500);
 
     // text motion
-    const motion3 = document.querySelector(".top-vs .text");
+    // const motion3 = document.querySelector(".top-vs .text");
 
-    gsap.to(motion3, {
-      duration: 1,
-      y: -600,
-      //x: -1000,
+    // gsap.to(motion3, {
+    //   duration: 1,
+    //   y: -600,
+    //   //x: -1000,
 
-      scrollTrigger: {
-        trigger: motion1,
-        start: "30% top",
-        end: "bottom 20%",
-        scrub: 0.2,    //true, 1, 2,....
-        markers: false,
-      }
-    });
+    //   scrollTrigger: {
+    //     trigger: motion1,
+    //     start: "40% top",
+    //     end: "bottom 50%",
+    //     scrub: 0.2,    //true, 1, 2,....
+    //     markers: false,
+    //   }
+    // });
 
     // 지금 뜨는 상품
     const motion4 = document.querySelector(".box-gap .img-1");
