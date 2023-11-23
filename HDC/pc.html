@@ -323,21 +323,21 @@
     }, 500);
 
     // text motion
-    // const motion3 = document.querySelector(".top-vs .text");
+    const motion3 = document.querySelector("#text-motion");
 
-    // gsap.to(motion3, {
-    //   duration: 1,
-    //   y: -600,
-    //   //x: -1000,
+    gsap.to(motion3, {
+      duration: 1,
+      y: -600,
+      //x: -1000,
 
-    //   scrollTrigger: {
-    //     trigger: motion1,
-    //     start: "40% top",
-    //     end: "bottom 50%",
-    //     scrub: 0.2,    //true, 1, 2,....
-    //     markers: false,
-    //   }
-    // });
+      scrollTrigger: {
+        trigger: motion1,
+        start: "40% top",
+        end: "bottom 50%",
+        scrub: 0.2,    //true, 1, 2,....
+        markers: false,
+      }
+    });
 
     // 지금 뜨는 상품
     const motion4 = document.querySelector(".box-gap .img-1");
