@@ -3,7 +3,7 @@
   font-family: "Cosi Times";
   font-weight: 400;
   font-display: swap;
-  src: local("Cosi Times"), url("/static/fonts/CosiTimes-Light.woff2") format("woff2");
+  src: local("Cosi Times"), url("CosiTimes-Light.woff2") format("woff2");
 }
 * {
   margin: 0;
