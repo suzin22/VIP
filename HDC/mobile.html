@@ -9,11 +9,14 @@
   <link rel="stylesheet" href="static/css/swiper-bundle.min.css" />
   <link rel="stylesheet" href="static/css/aos.css">
   <style>
-    body{overflow: initial;overflow-x:hidden;}
+    body {
+      overflow: initial;
+      overflow-x: hidden;
+    }
   </style>
 </head>
 
-<body>
+<body class="mobile">
   <header class="header mob" data-event="header">
     <div class="top-noti">
       <img src="static/images/m_header_1.png" alt="">
@@ -28,110 +31,197 @@
   <div class="box-main mob">
     <!-- mob-kv -->
     <div class="mob-kv">
+      <!-- kv-img -->
       <div class="kv-img">
+        <div class="box-flex">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img src="static/images/main/mob/m_box_0_1.png" alt="" class="img">
+                <img src="static/images/main/mob/m_box_0_4.png" alt="" class="img-2" width="96px" height="13px">
+              </div>
+              <div class="swiper-slide">
+                <img src="static/images/main/mob/m_box_0_1_2.png" alt="" class="img">
+                <img src="static/images/main/mob/m_box_0_4_2.png" alt="" class="img-2" width="130px" height="13px">
+              </div>
+              <div class="swiper-slide">
+                <img src="static/images/main/mob/m_box_0_1_3.png" alt="" class="img">
+                <img src="static/images/main/mob/m_box_0_4_3.png" alt="" class="img-2" width="248px" height="13px"> 
+              </div>
+            </div>
+            <!-- <div class="swiper-scrollbar"></div> -->
+          </div>
+        </div>
+        <div class="box-swiperControl">
+          <div class="swiper-pagination"></div>
+          <div class="loadingBar"><span></span></div>
+        </div>
+      </div>
+      <!-- //kv-img -->
+      <!-- <div class="kv-img">
         <img src="static/images/main/mob/m_box_0_1.png" alt="" data-aos="zoom-in" data-aos-duration="900">
         <img src="static/images/main/mob/m_box_0_2.png" alt="" class="scroll" data-aos="fade-up" data-aos-duration="900" data-aos-delay="100">
-      </div>
-      <div class="inner-gap-1">
-        <div class="txt-1" data-aos="fade-up" data-aos-duration="900" data-aos-delay="200">
-          <img src="static/images/main/mob/m_box_0_3.png" alt="">
-        </div>
-        <div class="txt-2" data-aos="fade-up" data-aos-duration="900" data-aos-delay="300">
-          <img src="static/images/main/mob/m_box_0_4.png" alt="">
-        </div>
-        <div class="txt-3" data-aos="fade-up" data-aos-duration="900" data-aos-delay="400" data-aos-anchor-placement="top-bottom">
-          <img src="static/images/main/mob/m_box_0_5.png" alt="">
+      </div> -->
+      <div class="inner-gap-1 box-textMotion">
+        <div class="text">
+          <div id="bg-type" class="bg bg-0" style="background-position: center;">
+            <span class="text-motion" data-TextMotionIndex="1">
+              <span class="m">B</span>
+              <span class="m">E</span>
+              <span class="m">A</span>
+              <span class="m">U</span>
+              <span class="m" style="margin-right:0;">T</span>
+              <span class="m">Y</span>
+              <span class="gap"> </span>
+              <span class="m">B</span>
+              <span class="m">R</span>
+              <span class="m">A</span>
+              <span class="m">N</span>
+              <span class="m">D</span>
+              <span class="gap" style="display: inline-block;"> </span>
+              <span class="m">S</span>
+              <span class="m">A</span>
+              <span class="m">L</span>
+              <span class="m">E</span>
+            </span>
+            <span class="text-motion" data-TextMotionIndex="2">
+              <span class="m">D</span>
+              <span class="m">I</span>
+              <span class="m">O</span>
+              <span class="m" style="margin-right:0;">R</span>
+              <span class="gap"> </span>
+              <span class="m">H</span>
+              <span class="m">O</span>
+              <span class="m">L</span>
+              <span class="m">I</span>
+              <span class="m">D</span>
+              <span class="m">A</span>
+              <span class="m">Y</span>
+            </span>
+            <span class="text-motion" data-TextMotionIndex="3">
+              <span class="m">L</span>
+              <span class="m">U</span>
+              <span class="m">X</span>
+              <span class="m">U</span>
+              <span class="m">R</span>
+              <span class="m" style="margin-right:0;">Y</span>
+              <span class="gap"> </span>
+              <span class="m">O</span>
+              <span class="m">U</span>
+              <span class="m">T</span>
+              <span class="m">L</span>
+              <span class="m">E</span>
+              <span class="m">T</span>
+            </span>
+          </div>
         </div>
       </div>
     </div>
     <!-- //mob-kv -->
+    <div class="kv-img-2">
+      <img src="static/images/main/mob/m_box_0_2.png" alt="" class="scroll">
+    </div>
     <!-- swiper-1 -->
     <div class="swiper-1 inner-gap-1">
       <p class="tit-1"><img src="static/images/main/mob/m_box_1_1.png" alt=""></p>
-        <div class="box-flex">
-          <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <p class="img-1" data-aos="fade-up" data-aos-delay="100" data-aos-duration="900"><img src="static/images/main/mob/m_box_1_2.png" alt=""></p>
-              </div>
-              <div class="swiper-slide">
-                <p class="img-1" data-aos="fade-up" data-aos-delay="300" data-aos-duration="900"><img src="static/images/main/mob/m_box_1_3.png" alt=""></p>
-              </div>
-              <div class="swiper-slide">
-                <p class="img-1" data-aos="fade-up" data-aos-delay="500" data-aos-duration="900"><img src="static/images/main/mob/m_box_1_4.png" alt=""></p>
-              </div>
+      <div class="box-flex">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <p class="img-1" data-aos="fade-up" data-aos-delay="100" data-aos-duration="900"><img
+                  src="static/images/main/mob/m_box_1_2.png" alt=""></p>
+            </div>
+            <div class="swiper-slide">
+              <p class="img-1" data-aos="fade-up" data-aos-delay="300" data-aos-duration="900"><img
+                  src="static/images/main/mob/m_box_1_3.png" alt=""></p>
+            </div>
+            <div class="swiper-slide">
+              <p class="img-1" data-aos="fade-up" data-aos-delay="500" data-aos-duration="900"><img
+                  src="static/images/main/mob/m_box_1_4.png" alt=""></p>
             </div>
           </div>
         </div>
+      </div>
     </div>
     <!-- //swiper-1 -->
     <!-- swiper-2 -->
     <div class="swiper-2 inner-gap-1">
-      <p class="tit-1" data-aos="fade-down" data-aos-duration="900"><img src="static/images/main/mob/m_box_2_1.png" alt=""></p>
-        <div class="box-flex">
-          <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <p data-aos="fade-up" data-aos-delay="100" data-aos-duration="900"><img src="static/images/main/mob/m_box_2_2.png" alt=""></p>
-              </div>
-              <div class="swiper-slide">
-                <p data-aos="fade-up" data-aos-delay="300" data-aos-duration="900"><img src="static/images/main/mob/m_box_2_3.png" alt=""></p>
-              </div>
+      <p class="tit-1" data-aos="fade-down" data-aos-duration="900"><img src="static/images/main/mob/m_box_2_1.png"
+          alt=""></p>
+      <div class="box-flex">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <p data-aos="fade-up" data-aos-delay="100" data-aos-duration="900"><img
+                  src="static/images/main/mob/m_box_2_2.png" alt=""></p>
+            </div>
+            <div class="swiper-slide">
+              <p data-aos="fade-up" data-aos-delay="300" data-aos-duration="900"><img
+                  src="static/images/main/mob/m_box_2_3.png" alt=""></p>
             </div>
           </div>
         </div>
+      </div>
     </div>
     <!-- //swiper-2 -->
     <!-- swiper-3 -->
     <div class="swiper-3 inner-gap-1">
       <p class="tit-1"><img src="static/images/main/mob/m_box_3_1.png" alt=""></p>
-        <div class="box-flex">
-          <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <p data-aos="fade-up" data-aos-delay="100" data-aos-duration="900"><img src="static/images/main/mob/m_box_3_2.png" alt=""></p>
-              </div>
-              <div class="swiper-slide">
-                <p data-aos="fade-up" data-aos-delay="300" data-aos-duration="900"><img src="static/images/main/mob/m_box_3_3.png" alt=""></p>
-              </div>
-              <div class="swiper-slide">
-                <p data-aos="fade-up" data-aos-delay="500" data-aos-duration="900"><img src="static/images/main/mob/m_box_3_4.png" alt=""></p>
-              </div>
-              <div class="swiper-slide">
-                <p data-aos="fade-up" data-aos-delay="700" data-aos-duration="900"><img src="static/images/main/mob/m_box_3_5.png" alt=""></p>
-              </div>
+      <div class="box-flex">
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <p data-aos="fade-up" data-aos-delay="100" data-aos-duration="900"><img
+                  src="static/images/main/mob/m_box_3_2.png" alt=""></p>
+            </div>
+            <div class="swiper-slide">
+              <p data-aos="fade-up" data-aos-delay="300" data-aos-duration="900"><img
+                  src="static/images/main/mob/m_box_3_3.png" alt=""></p>
+            </div>
+            <div class="swiper-slide">
+              <p data-aos="fade-up" data-aos-delay="500" data-aos-duration="900"><img
+                  src="static/images/main/mob/m_box_3_4.png" alt=""></p>
+            </div>
+            <div class="swiper-slide">
+              <p data-aos="fade-up" data-aos-delay="700" data-aos-duration="900"><img
+                  src="static/images/main/mob/m_box_3_5.png" alt=""></p>
             </div>
           </div>
         </div>
+      </div>
     </div>
     <!-- //swiper-3 -->
     <!-- swiper-4 -->
     <div class="swiper-4 inner-gap-1">
       <p class="tit-1"><img src="static/images/main/mob/m_box_4_1.png" alt=""></p>
-        <div class="box-flex">
-          <div class="tab">
-            <img src="static/images/main/mob/m_box_4_2.png" alt="">
-          </div>
-          <div class="img-1" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="900">
-            <img src="static/images/main/mob/m_box_4_3.png" alt="">
-          </div>
-          <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <p data-aos="fade-up" data-aos-delay="100" data-aos-duration="900"><img src="static/images/main/mob/m_box_4_4.png" alt=""></p>
-              </div>
-              <div class="swiper-slide">
-                <p data-aos="fade-up" data-aos-delay="300" data-aos-duration="900"><img src="static/images/main/mob/m_box_4_5.png" alt=""></p>
-              </div>
-              <div class="swiper-slide">
-                <p data-aos="fade-up" data-aos-delay="500" data-aos-duration="900"><img src="static/images/main/mob/m_box_4_6.png" alt=""></p>
-              </div>
-              <div class="swiper-slide">
-                <p data-aos="fade-up" data-aos-delay="700" data-aos-duration="900"><img src="static/images/main/mob/m_box_4_7.png" alt=""></p>
-              </div>
+      <div class="box-flex">
+        <div class="tab">
+          <img src="static/images/main/mob/m_box_4_2.png" alt="">
+        </div>
+        <div class="img-1" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="900">
+          <img src="static/images/main/mob/m_box_4_3.png" alt="">
+        </div>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <p data-aos="fade-up" data-aos-delay="100" data-aos-duration="900"><img
+                  src="static/images/main/mob/m_box_4_4.png" alt=""></p>
+            </div>
+            <div class="swiper-slide">
+              <p data-aos="fade-up" data-aos-delay="300" data-aos-duration="900"><img
+                  src="static/images/main/mob/m_box_4_5.png" alt=""></p>
+            </div>
+            <div class="swiper-slide">
+              <p data-aos="fade-up" data-aos-delay="500" data-aos-duration="900"><img
+                  src="static/images/main/mob/m_box_4_6.png" alt=""></p>
+            </div>
+            <div class="swiper-slide">
+              <p data-aos="fade-up" data-aos-delay="700" data-aos-duration="900"><img
+                  src="static/images/main/mob/m_box_4_7.png" alt=""></p>
             </div>
           </div>
         </div>
+      </div>
     </div>
     <!-- //swiper-4 -->
     <div class="item-box">
@@ -211,6 +301,90 @@
       spaceBetween: 8,
       loop: false,
     });
+
+    // top kv text motion
+    const indexText = document.querySelector('.box-textMotion .text');
+
+    indexText.style.zIndex = 2;
+
+    // 상단 TEXT
+    document.querySelector('.box-textMotion .text').style.opacity = '1';
+
+    // top kv swiper
+    document.querySelector('.kv-img .box-swiperControl').style.opacity = '1';
+
+    let itemSp = 800,   // slide speed
+      itemSp2 = 6000; // autoplay speed
+
+    function ldBar() {
+      // loading
+      $('.kv-img .loadingBar span').css({ "width": "0" });
+      $('.kv-img .loadingBar span').stop().animate({ "width": "100%" }, itemSp + itemSp2);
+    }
+
+    ldBar();
+
+    var swiper = new Swiper(".kv-img .mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      centeredSlides: true,
+      loop: true,
+      speed: itemSp,
+      autoplay: {
+        delay: itemSp2,
+        disableOnInteraction: true,
+      },
+      effect: 'fade',
+      fadeEffect: { crossFade: true },
+      simulateTouch: false,
+      pagination: {
+        el: '.kv-img .swiper-pagination',
+        type: 'fraction',
+        renderBullet: function (index, className) {
+          return '<div class="' + className + '"><span>' + (index) + '</span></div>';
+        }
+      },
+      on: {
+        slideChange: function () {
+          ldBar();
+
+          let idx = this.realIndex;
+
+          $('.text-motion').hide();
+          $('.text-motion:eq(' + idx + ')').show();
+
+          document.querySelector('#bg-type').classList.remove('bg-0');
+          document.querySelector('#bg-type').classList.remove('bg-1');
+          document.querySelector('#bg-type').classList.remove('bg-2');
+
+          document.querySelector('#bg-type').classList.add('bg-' + idx);
+
+          // 상단 text 배열 모션
+          document.querySelectorAll('.text-motion .m').forEach((e, index) => {
+            const tg = e;
+
+            tg.classList.remove('motion');
+
+            setTimeout(() => {
+              tg.classList.add('motion')
+            }, 1000 * (index / 20));
+          })
+
+          // 상단 text 배열 모션
+          document.querySelectorAll('.text-motion .m').forEach((e, index) => {
+            const tg = e;
+
+            tg.style.color = '#ccc';
+            //tg.style.color = 'transparent';
+
+            setTimeout(() => {
+              tg.style.color = 'transparent';
+            }, 1000 * (index / 20));
+          })
+        }
+      }
+    });
+    // //top kv swiper
   </script>
 
 </body>
