@@ -451,6 +451,16 @@ body {
   }
 }
 
+.event{
+  .header{
+    &.on {
+      .gnb {
+        top: 0px;
+      }
+    }
+  }
+}
+
 // pc
 .loading {
   position: fixed;
