@@ -86,8 +86,8 @@
         </div>
       </section>
       <div class="text">
-        <div class="bg" style="background-position: center;">
-          <span id="text-motion">
+        <div id="bg-type" class="bg bg-0" style="background-position: center;">
+          <span class="text-motion" data-TextMotionIndex="1">
             <span class="m">B</span>
             <span class="m">E</span>
             <span class="m">A</span>
@@ -105,6 +105,35 @@
             <span class="m">A</span>
             <span class="m">L</span>
             <span class="m">E</span>
+          </span>
+          <span class="text-motion" data-TextMotionIndex="2">
+            <span class="m">D</span>
+            <span class="m">I</span>
+            <span class="m">O</span>
+            <span class="m" style="margin-right:0;">R</span>
+            <span class="gap"> </span>
+            <span class="m">H</span>
+            <span class="m">O</span>
+            <span class="m">L</span>
+            <span class="m">I</span>
+            <span class="m">D</span>
+            <span class="m">A</span>
+            <span class="m">Y</span>
+          </span>
+          <span class="text-motion" data-TextMotionIndex="3">
+            <span class="m">L</span>
+            <span class="m">U</span>
+            <span class="m">X</span>
+            <span class="m">U</span>
+            <span class="m">R</span>
+            <span class="m" style="margin-right:0;">Y</span>
+            <span class="gap"> </span>
+            <span class="m">O</span>
+            <span class="m">U</span>
+            <span class="m">T</span>
+            <span class="m">L</span>
+            <span class="m">E</span>
+            <span class="m">T</span>
           </span>
         </div>
       </div>
@@ -279,7 +308,7 @@
 
     setTimeout(() => {
       // 상단 text 배열 모션
-      document.querySelectorAll('#text-motion .m').forEach((e, index) => {
+      document.querySelectorAll('.text-motion .m').forEach((e, index) => {
         const tg = e;
 
         setTimeout(() => {
@@ -290,7 +319,7 @@
 
     setTimeout(() => {
       // 상단 text 배열 모션
-      document.querySelectorAll('#text-motion .m').forEach((e, index) => {
+      document.querySelectorAll('.text-motion .m').forEach((e, index) => {
         const tg = e;
 
         setTimeout(() => {
@@ -354,7 +383,7 @@
     }, 500);
 
     // text motion
-    const motion3 = document.querySelector("#text-motion");
+    const motion3 = document.querySelector(".text-motion");
 
     gsap.to(motion3, {
       duration: 1,
@@ -421,8 +450,41 @@
           }
         },
         on: {
-          slideChange: function (swiper) {
+          slideChange : function () {
             ldBar();
+
+            let idx = this.realIndex;
+
+            $('.text-motion').hide();
+            $('.text-motion:eq(' + idx + ')').show();
+
+            document.querySelector('#bg-type').classList.remove('bg-0');
+            document.querySelector('#bg-type').classList.remove('bg-1');
+            document.querySelector('#bg-type').classList.remove('bg-2');
+
+            document.querySelector('#bg-type').classList.add('bg-' + idx);
+
+            // 상단 text 배열 모션
+            document.querySelectorAll('.text-motion .m').forEach((e, index) => {
+              const tg = e;
+
+              tg.classList.remove('motion');
+
+              setTimeout(() => {
+                tg.classList.add('motion')
+              }, 1000 * (index / 10));
+            })
+
+            // 상단 text 배열 모션
+            document.querySelectorAll('.text-motion .m').forEach((e, index) => {
+              const tg = e;
+
+              tg.style.color = '#ccc';
+
+              setTimeout(() => {
+                tg.style.color = 'transparent';
+              }, 1000 * (index / 10));
+            })
           }
         }
         // navigation: {

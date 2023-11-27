@@ -140,7 +140,7 @@ body {
 // reset
 
 * {
-  cursor: url(images/my-cursor-design.png), auto;
+  //cursor: url(images/my-cursor-design.png), auto;
 }
 
 /* gate */
@@ -514,14 +514,33 @@ body {
       .bg {
         width: 100vw;
         height: 800px;
-        background: url(../images/main/box_0_1.png) no-repeat 34%/244%;
-
-        background-attachment: fixed;
-        background-clip: text;
-        -webkit-background-clip: text;
-        text-align: center;
-        position: relative;
-        color: transparent;
+        &.bg-0 {
+          background: url(../images/main/box_0_1.png) no-repeat 34%/244%;
+          background-attachment: fixed;
+          background-clip: text;
+          -webkit-background-clip: text;
+          text-align: center;
+          position: relative;
+          color: transparent;
+        }
+        &.bg-1 {
+          background: url(../images/main/box_0_1_2.png) no-repeat 34%/244%;
+          background-attachment: fixed;
+          background-clip: text;
+          -webkit-background-clip: text;
+          text-align: center;
+          position: relative;
+          color: transparent;
+        }
+        &.bg-2 {
+          background: url(../images/main/box_0_1_3.png) no-repeat 34%/244%;
+          background-attachment: fixed;
+          background-clip: text;
+          -webkit-background-clip: text;
+          text-align: center;
+          position: relative;
+          color: transparent;
+        }
       }
       .bg > span {
         font-size: 140px;
@@ -542,7 +561,7 @@ body {
         }
       }
     }
-    #text-motion {
+    .text-motion {
       span {
         transition: all 1s;
         color: #ccc;
@@ -1106,7 +1125,7 @@ body {
   position: relative;
   width: 100vw;
   max-width: 1920px;
-  margin:0 auto;
+  margin: 0 auto;
   .mySwiper {
     .img-1 {
       width: 100%;
@@ -1136,11 +1155,11 @@ body {
       color: transparent;
       .swiper-pagination-current {
         color: var(--primary-6, #fff) !important;
-        padding-right:35px;
+        padding-right: 35px;
       }
       .swiper-pagination-total {
         color: var(--primary-6, #fff) !important;
-        padding-left:35px;
+        padding-left: 35px;
       }
     }
     .loadingBar {
@@ -1150,7 +1169,7 @@ body {
       opacity: 0.5;
       z-index: 10;
       position: relative;
-      top:-4px;
+      top: -4px;
       span {
         display: block;
         height: 2px;

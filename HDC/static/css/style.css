@@ -151,10 +151,6 @@ body {
   overflow: hidden;
 }
 
-* {
-  cursor: url(images/my-cursor-design.png), auto;
-}
-
 /* gate */
 .box-gate {
   background-color: #000;
@@ -498,7 +494,27 @@ body {
 .box-main .top-vs .text .bg {
   width: 100vw;
   height: 800px;
+}
+.box-main .top-vs .text .bg.bg-0 {
   background: url(../images/main/box_0_1.png) no-repeat 34%/244%;
+  background-attachment: fixed;
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-align: center;
+  position: relative;
+  color: transparent;
+}
+.box-main .top-vs .text .bg.bg-1 {
+  background: url(../images/main/box_0_1_2.png) no-repeat 34%/244%;
+  background-attachment: fixed;
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-align: center;
+  position: relative;
+  color: transparent;
+}
+.box-main .top-vs .text .bg.bg-2 {
+  background: url(../images/main/box_0_1_3.png) no-repeat 34%/244%;
   background-attachment: fixed;
   background-clip: text;
   -webkit-background-clip: text;
@@ -524,13 +540,13 @@ body {
   margin: 0;
   display: inline-block;
 }
-.box-main .top-vs #text-motion span {
+.box-main .top-vs .text-motion span {
   transition: all 1s;
   color: #ccc;
   opacity: 1;
   transform: translate(0, 100%);
 }
-.box-main .top-vs #text-motion span.motion {
+.box-main .top-vs .text-motion span.motion {
   opacity: 1;
   transform: none;
 }
