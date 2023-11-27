@@ -364,7 +364,7 @@ body {
       padding: 9px 160px;
       height: 77px;
       position: fixed;
-      top: 0;
+      top: 60px;
       left: 0;
       .top {
         display: none;
@@ -878,13 +878,15 @@ body {
     &.on {
       .gnb {
         .left {
-          filter: invert(1);
+          //filter: invert(1);
+          background: url(../images/m_header_2_sc.png) no-repeat;
         }
         .logo {
           background: url(../images/header_4_on.png) no-repeat;
         }
         .right {
-          filter: invert(1);
+          //filter: invert(1);
+          background: url(../images/m_header_4_sc.png) no-repeat;
         }
       }
 
