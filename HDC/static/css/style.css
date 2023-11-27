@@ -479,10 +479,6 @@ body {
   height: 1221px;
   z-index: 2;
   overflow: hidden;
-  background-color: #fff;
-  background-position: center 421px;
-  background-image: url(../images/main/box_0_1.png);
-  background-repeat: no-repeat;
 }
 .box-main .top-vs .text {
   position: absolute;
@@ -1052,4 +1048,60 @@ body {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.swiper-kv-top {
+  position: relative;
+  width: 100vw;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+.swiper-kv-top .mySwiper .img-1 {
+  width: 100%;
+  height: 1221px;
+  background-position: center 421px;
+  background-repeat: no-repeat;
+}
+.swiper-kv-top .box-swiperControl {
+  position: absolute;
+  bottom: 109px;
+  left: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  width: 120px;
+  opacity: 0;
+}
+.swiper-kv-top .box-swiperControl .swiper-pagination {
+  font-family: Faktum;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: transparent;
+}
+.swiper-kv-top .box-swiperControl .swiper-pagination .swiper-pagination-current {
+  color: var(--primary-6, #fff) !important;
+  padding-right: 35px;
+}
+.swiper-kv-top .box-swiperControl .swiper-pagination .swiper-pagination-total {
+  color: var(--primary-6, #fff) !important;
+  padding-left: 35px;
+}
+.swiper-kv-top .box-swiperControl .loadingBar {
+  width: 64px;
+  height: 2px;
+  background: var(--gray-12, rgba(255, 255, 255, 0.4));
+  opacity: 0.5;
+  z-index: 10;
+  position: relative;
+  top: -4px;
+}
+.swiper-kv-top .box-swiperControl .loadingBar span {
+  display: block;
+  height: 2px;
+  width: 0;
+  background: var(--primary-4, #a88f6a);
 }/*# sourceMappingURL=style.css.map */

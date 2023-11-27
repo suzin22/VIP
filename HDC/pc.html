@@ -57,7 +57,39 @@
     <!-- top-vs -->
     <div class="top-vs">
       <section id="section1" class="parallax__item">
-        <div class="parallax__item__img"></div>
+        <!-- <div class="parallax__item__img"></div> -->
+        <div>
+          <!-- swiper-kv-top -->
+          <div class="swiper-kv-top">
+            <div class="box-flex">
+              <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <p class="img-1" style="background-image: url(static/images/main/box_0_1.png);"></p>
+                  </div>
+                  <div class="swiper-slide">
+                    <p class="img-1" style="background-image: url(static/images/main/box_0_1.png);"></p>
+                  </div>
+                  <div class="swiper-slide">
+                    <p class="img-1" style="background-image: url(static/images/main/box_0_1.png);"></p>
+                  </div>
+                  <div class="swiper-slide">
+                    <p class="img-1" style="background-image: url(static/images/main/box_0_1.png);"></p>
+                  </div>
+                  <div class="swiper-slide">
+                    <p class="img-1" style="background-image: url(static/images/main/box_0_1.png);"></p>
+                  </div>
+                </div>
+                <!-- <div class="swiper-scrollbar"></div> -->
+              </div>
+            </div>
+            <div class="box-swiperControl">
+              <div class="swiper-pagination"></div>
+              <div class="loadingBar"><span></span></div>
+            </div>
+          </div>
+          <!-- //swiper-kv-top -->
+        </div>
       </section>
       <div class="text">
         <div class="bg" style="background-position: center;">
@@ -90,20 +122,21 @@
       <div class="swiper-1">
         <p class="tit-1"><img src="static/images/main/box_1_1.png" alt=""></p>
         <div class="box-flex">
-          <p class="img-1" data-aos="fade-up" data-aos-delay="100" data-aos-anchor-placement="top-center"><img src="static/images/main/box_1_3.png" alt=""></p>
+          <p class="img-1" data-aos="fade-up" data-aos-delay="100" data-aos-anchor-placement="top-center"><img
+              src="static/images/main/box_1_3.png" alt=""></p>
           <div class="swiper mySwiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <p class="img-1" data-aos="fade-up" data-aos-delay="300" data-aos-anchor-placement="top-center"><img src="static/images/main/box_1_4.png"
-                    alt=""></p>
+                <p class="img-1" data-aos="fade-up" data-aos-delay="300" data-aos-anchor-placement="top-center"><img
+                    src="static/images/main/box_1_4.png" alt=""></p>
               </div>
               <div class="swiper-slide">
-                <p class="img-1" data-aos="fade-up" data-aos-delay="500" data-aos-anchor-placement="top-center"><img src="static/images/main/box_1_5.png"
-                    alt=""></p>
+                <p class="img-1" data-aos="fade-up" data-aos-delay="500" data-aos-anchor-placement="top-center"><img
+                    src="static/images/main/box_1_5.png" alt=""></p>
               </div>
               <div class="swiper-slide">
-                <p class="img-1" data-aos="fade-up" data-aos-delay="700" data-aos-anchor-placement="top-center"><img src="static/images/main/box_1_6.png"
-                    alt=""></p>
+                <p class="img-1" data-aos="fade-up" data-aos-delay="700" data-aos-anchor-placement="top-center"><img
+                    src="static/images/main/box_1_6.png" alt=""></p>
               </div>
             </div>
             <div class="swiper-scrollbar"></div>
@@ -174,10 +207,14 @@
         <p class="tit-1"><img src="static/images/main/box_4_1.png" alt=""></p>
         <div class="box-gap">
           <img src="static/images/main/box_4_2.png" alt="" class="img-1" data-aos="fade-down">
-          <img src="static/images/main/box_4_3.png" alt="" class="img img-2" data-aos="fade-down" data-aos-anchor-placement="top-center" data-aos-duration="1500">
-          <img src="static/images/main/box_4_4.png" alt="" class="img img-3" data-aos="fade-down" data-aos-anchor-placement="top-center" data-aos-duration="1500">
-          <img src="static/images/main/box_4_5.png" alt="" class="img img-4" data-aos="fade-down" data-aos-duration="1500">
-          <img src="static/images/main/box_4_6.png" alt="" class="img img-5" data-aos="fade-down" data-aos-duration="1500">
+          <img src="static/images/main/box_4_3.png" alt="" class="img img-2" data-aos="fade-down"
+            data-aos-anchor-placement="top-center" data-aos-duration="1500">
+          <img src="static/images/main/box_4_4.png" alt="" class="img img-3" data-aos="fade-down"
+            data-aos-anchor-placement="top-center" data-aos-duration="1500">
+          <img src="static/images/main/box_4_5.png" alt="" class="img img-4" data-aos="fade-down"
+            data-aos-duration="1500">
+          <img src="static/images/main/box_4_6.png" alt="" class="img img-5" data-aos="fade-down"
+            data-aos-duration="1500">
         </div>
       </div>
     </div>
@@ -256,7 +293,7 @@
         }, 1000 * (index / 10));
       })
     }, 3500) // 3000
-    
+
     setTimeout(() => {
       // 상단 text 배열 모션
       document.querySelectorAll('#text-motion .m').forEach((e, index) => {
@@ -355,6 +392,57 @@
       }
     });
 
+    // 상단 KV swiper-kv-top
+    setTimeout(() => {
+      document.querySelector('.swiper-kv-top .box-swiperControl').style.opacity = '1';
+
+      let itemSp = 800,   // slide speed
+        itemSp2 = 6000; // autoplay speed
+
+      function ldBar() {
+        // loading
+        $('.swiper-kv-top .loadingBar span').css({ "width": "0" });
+        $('.swiper-kv-top .loadingBar span').stop().animate({ "width": "100%" }, itemSp + itemSp2);
+      }
+
+      ldBar();
+
+      var swiper = new Swiper(".swiper-kv-top .mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        centeredSlides: true,
+        loop: true,
+        speed: itemSp,
+        autoplay: {
+          delay: itemSp2,
+          disableOnInteraction: true,
+        },
+        effect: 'fade',
+        fadeEffect: { crossFade: true },
+        pagination: {
+          el: '.swiper-kv-top .swiper-pagination',
+          type: 'fraction',
+          renderBullet: function (index, className) {
+            return '<div class="' + className + '"><span>' + (index) + '</span></div>';
+          }
+        },
+        on: {
+          slideChange: function (swiper) {
+            ldBar();
+          }
+        }
+        // navigation: {
+        //   prevEl: '.swiper-kv-top .swiper-button-prev',
+        //   nextEl: '.swiper-kv-top .swiper-button-next'
+        // },
+        // scrollbar: {
+        //   el: '.swiper-kv-top .swiper-scrollbar',
+        //   dragSize: 395
+        // },
+      });
+      // //상단 KV swiper-kv-top
+    }, 3500)
+
     // 추천 브랜드 swiper-1
     var swiper = new Swiper(".swiper-1 .mySwiper", {
       slidesPerView: 2,
@@ -371,7 +459,7 @@
       },
     });
 
-    // One Day Time Sale swiper-1
+    // One Day Time Sale swiper-2
     var swiper = new Swiper(".swiper-2 .mySwiper", {
       slidesPerView: 1,
       spaceBetween: 20,
