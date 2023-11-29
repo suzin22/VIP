@@ -117,7 +117,9 @@
 
     requestAnimationFrame(raf)
 
-    AOS.init();
+    setTimeout(() => {
+      AOS.init();
+    }, 1000)
 
     // window.onload = () => {
     //   setTimeout(() => {

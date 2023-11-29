@@ -272,7 +272,9 @@
 
     requestAnimationFrame(raf)
 
-    AOS.init();
+    setTimeout(() => {
+      AOS.init();
+    }, 1000)
 
     // 추천 브랜드 swiper-1
     var swiper = new Swiper(".swiper-1 .mySwiper", {
