@@ -1,20 +1,23 @@
 {
   "liveSassCompile.settings.formats": [
-    {
-      "format": "expanded",
-      "extensionName": ".css",
-      "savePath": "/HD/static/css"
-    }
+      {
+          "format": "expanded",
+          "extensionName": ".css",
+          "savePath": "~/../css/", // 컴파일된 css 파일이 저장될 경로
+          "savePathReplacementPairs": null
+      }
   ],
-  "liveSassCompile.settings.generateMap": true,
-  "liveSassCompile.settings.includeItems": [
-    "/HD/static/css/scss/*.scss"
-  ],
-  "editor.fontLigatures": false,
-  "editor.fontVariations": false,
+  "liveServer.settings.port": 5502,
   "launch": {
-    
+  
     "configurations": [],
     "compounds": []
-  }
+  },
+  "json.schemas": [
+    
+
+    
+    
+
+  ]
 }
