@@ -1,0 +1,208 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Cosi Times";
+  font-weight: 400;
+  font-display: swap;
+  src: local("Cosi Times"), url("CosiTimes-Light.woff2") format("woff2");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+  scroll-behavior: initial;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+p,
+button,
+input {
+  margin: 0;
+  padding: 0;
+  -webkit-text-size-adjust: none;
+  word-break: keep-all;
+}
+
+input,
+textarea {
+  border-radius: 0;
+  resize: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+button {
+  font-family: "Pretendard", Dotum, "돋움", Helvetica, AppleSDGothicNeo, sans-serif;
+  font-size: 12px;
+}
+
+body {
+  color: #000;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+caption,
+legend {
+  font-size: 0;
+  line-height: 0;
+  text-indent: -5000px;
+}
+
+img,
+fieldset,
+iframe {
+  border: 0 none;
+  vertical-align: top;
+}
+
+fieldset {
+  font-size: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+i,
+em,
+address {
+  font-style: normal;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+hr {
+  display: none;
+}
+
+input[type=submit] {
+  cursor: pointer;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px white inset;
+}
+
+button {
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.hidden {
+  clear: both;
+  height: 0;
+  line-height: 0;
+  width: 0;
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+body {
+  overflow: hidden;
+}
+
+/* gate */
+.box-gate {
+  background-color: #000;
+}
+.box-gate .box-flex {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+.box-gate h1 {
+  position: absolute;
+  top: 30px;
+  left: 40px;
+}
+.box-gate .txt-1,
+.box-gate .txt-2,
+.box-gate .txt-3 {
+  position: absolute;
+}
+.box-gate .txt-1 {
+  top: 30px;
+  right: 40px;
+}
+.box-gate .txt-2 {
+  bottom: 40px;
+  left: 40px;
+}
+.box-gate .txt-3 {
+  bottom: 40px;
+  right: 40px;
+}
+.box-gate .box-type {
+  position: relative;
+}
+.box-gate .box-type + .box-type {
+  margin-left: 16px;
+}
+.box-gate .box-type .btn-flex {
+  width: calc(100% - 60px);
+  position: absolute;
+  bottom: 44px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0 10px;
+}
+.box-gate .box-type .btn-flex .btn {
+  width: 100%;
+  height: 60px;
+  background-position: center !important;
+  background-size: contain !important;
+}/*# sourceMappingURL=style.css.map */
