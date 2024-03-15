@@ -1,0 +1,5 @@
+- 영상 스크롤 느낌
+https://cloud.protopie.io/p/6665c821ce19dd4a5b689b7c?ui=false&scaleToFit=true&enableHotspotHints=true&cursorType=touch&mockup=false&bgColor=%23111111&bgImage=undefined&playSpeed=1
+
+- 참고 사이트
+https://dddhotel.jp/en/concept/

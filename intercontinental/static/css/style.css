@@ -1,0 +1,243 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 700;
+  font-display: swap;
+  src: local("Pretendard Bold"), url("/HD/static/fonts/Pretendard-Bold.subset.woff2") format("woff2"), url("/HD/static/fonts/Pretendard-Bold.subset.woff") format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 600;
+  font-display: swap;
+  src: local("Pretendard SemiBold"), url("/HD/static/fonts/Pretendard-SemiBold.subset.woff2") format("woff2"), url("/HD/static/fonts/Pretendard-SemiBold.subset.woff") format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 500;
+  font-display: swap;
+  src: local("Pretendard Medium"), url("/HD/static/fonts/Pretendard-Medium.subset.woff2") format("woff2"), url("/HD/static/fonts/Pretendard-Medium.subset.woff") format("woff");
+}
+@font-face {
+  font-family: "Pretendard";
+  font-weight: 400;
+  font-display: swap;
+  src: local("Pretendard Regular"), url("/HD/static/fonts/Pretendard-Regular.subset.woff2") format("woff2"), url("/HD/static/fonts/Pretendard-Regular.subset.woff") format("woff");
+}
+@font-face {
+  font-family: "PPNeueMontreal";
+  font-weight: 400;
+  font-display: swap;
+  src: local("PPNeueMontreal Regular"), url("/HD/static/fonts/PPNeueMontreal-Regular.woff2") format("woff2"), url("/HD/static/fonts/PPNeueMontreal-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "PPNeueMontreal";
+  font-weight: 500;
+  font-display: swap;
+  src: local("PPNeueMontreal Medium"), url("/HD/static/fonts/PPNeueMontreal-Medium.woff2") format("woff2"), url("/HD/static/fonts/PPNeueMontreal-Medium.woff") format("woff");
+}
+@font-face {
+  font-family: "PPNeueMontreal";
+  font-weight: 700;
+  font-display: swap;
+  src: local("PPNeueMontreal Bold"), url("/HD/static/fonts/PPNeueMontreal-Book.woff2") format("woff2"), url("/HD/static/fonts/PPNeueMontreal-Bold.woff") format("woff");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+  scroll-behavior: initial;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body.dark {
+  background: #1a1718;
+}
+body.white {
+  background: #f4f4f4;
+}
+body.white .wrap {
+  background: #f4f4f4;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+p,
+button,
+input {
+  margin: 0;
+  padding: 0;
+  -webkit-text-size-adjust: none;
+  word-break: keep-all;
+}
+
+input,
+textarea {
+  border-radius: 0;
+  resize: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+button {
+  font-family: "Pretendard", Dotum, "돋움", Helvetica, AppleSDGothicNeo, sans-serif;
+  font-size: 12px;
+}
+
+body {
+  color: #000;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+caption,
+legend {
+  font-size: 0;
+  line-height: 0;
+  text-indent: -5000px;
+}
+
+img,
+fieldset,
+iframe {
+  border: 0 none;
+  vertical-align: top;
+}
+
+fieldset {
+  font-size: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+i,
+em,
+address {
+  font-style: normal;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+hr {
+  display: none;
+}
+
+input[type=submit] {
+  cursor: pointer;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px white inset;
+}
+
+button {
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.hidden {
+  clear: both;
+  height: 0;
+  line-height: 0;
+  width: 0;
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+/* gate */
+.box-gate {
+  background-color: #000;
+}
+.box-gate .box-flex {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+.box-gate h1 {
+  position: absolute;
+  top: 30px;
+  left: 40px;
+}
+.box-gate .txt-1,
+.box-gate .txt-2,
+.box-gate .txt-3 {
+  position: absolute;
+}
+.box-gate .txt-1 {
+  top: 30px;
+  right: 40px;
+}
+.box-gate .txt-2 {
+  bottom: 40px;
+  left: 40px;
+}
+.box-gate .txt-3 {
+  bottom: 40px;
+  right: 40px;
+}
+.box-gate .box-type {
+  position: relative;
+}
+.box-gate .box-type + .box-type {
+  margin-left: 16px;
+}
+.box-gate .box-type .btn-pc,
+.box-gate .box-type .btn-mobile {
+  position: absolute;
+  bottom: 40px;
+  width: 244px;
+  height: 60px;
+}
+.box-gate .box-type .btn-pc {
+  left: 30px;
+}
+.box-gate .box-type .btn-mobile {
+  right: 30px;
+}/*# sourceMappingURL=style.css.map */
