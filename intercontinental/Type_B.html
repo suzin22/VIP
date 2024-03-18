@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=1200, user-scalable=yes">
+  <!-- <meta name="viewport" content="width=1200, user-scalable=yes"> -->
   <title>INTERCONTINENTAL</title>
   <link rel="stylesheet" href="static/css/style.css">
   <link rel="stylesheet" href="static/css/swiper-bundle.min.css" />
@@ -260,14 +260,16 @@
         document.querySelector('.scroll-btn').classList.remove('right');
       },
       onUpdate: (self) => {
-        if (self.progress.toFixed(1) >= 0.2) {
+        if (self.progress.toFixed(1) >= 0.2) { // 스크롤 조금 내렸을 때
           document.querySelector('.logo-h2').classList.add('scroll');
           document.querySelector('.btn-right').classList.add('scroll');
           document.querySelector('.en').classList.add('scroll');
-        } else if (self.progress.toFixed(1) < 0.2) {
+          document.querySelector('.scroll-btn').style.display = 'none';
+        } else if (self.progress.toFixed(1) < 0.2) { // 위로 돌아왔을 때
           document.querySelector('.logo-h2').classList.remove('scroll');
           document.querySelector('.btn-right').classList.remove('scroll');
           document.querySelector('.en').classList.remove('scroll');
+          document.querySelector('.scroll-btn').style.display = 'block';
         }
       }, // scroll 퍼센트 구하기 가능
     });
@@ -575,7 +577,14 @@
     });
 
     // section-7
+    const aniSec7 = gsap.timeline();
+    aniSec7.to(".section-7 .img-bottom", {
+      y: -100,
+      scale: 1.1
+    })
+
     ScrollTrigger.create({
+      animation: aniSec7,
       trigger: ".section-7",
       start: "top top",
       end: "bottom bottom",
