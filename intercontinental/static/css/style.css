@@ -242,25 +242,63 @@ button {
   right: 30px;
 }
 
-.logo-h2 img {
+.window-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  pointer-events: none;
+  transition: opacity 0.3s, width 0.3s, height 0.3s;
+  z-index: 4000;
+  width: 68px;
+  height: 68px;
+  border-radius: 999px;
+  border: 1.5px solid var(--SIgnature-1, #e7542c);
+  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
+  padding: 27px 18.5px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  mix-blend-mode: multiply;
+  color: var(--SIgnature-1, #e7542c);
+  font-family: "Benton Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 14px */
+  display: none;
+}
+.window-cursor.type-1 {
+  display: flex;
+}
+.window-cursor.type-2 {
+  display: flex;
+  border-radius: 999px;
+  border: 1px solid var(--Gray-white, #fff);
+  box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+  color: #fff;
+  mix-blend-mode: lighten;
+}
+
+.typeB .logo-h2 img {
   position: fixed;
   top: 110px;
   left: 96px;
   z-index: 1000;
   transition: all 0.4s;
 }
-.logo-h2 img.scroll-img {
+.typeB .logo-h2 img.scroll-img {
   opacity: 0;
   transform: translate(0, -41px);
 }
-.logo-h2.scroll img.noScroll-img {
+.typeB .logo-h2.scroll img.noScroll-img {
   opacity: 0;
 }
-.logo-h2.scroll img.scroll-img {
+.typeB .logo-h2.scroll img.scroll-img {
   opacity: 1;
 }
-
-.btn-right {
+.typeB .btn-right {
   position: fixed;
   top: 0;
   right: 0;
@@ -269,7 +307,7 @@ button {
   align-items: center;
   gap: 146px;
   overflow: hidden;
-  animation: my-animation 0s 1 2s;
+  animation: my-animation 0s 1 1.8s;
   animation-fill-mode: forwards;
 }
 @keyframes my-animation {
@@ -277,20 +315,20 @@ button {
     overflow: visible;
   }
 }
-.btn-right .menu {
+.typeB .btn-right .menu {
   display: block;
   overflow: hidden;
 }
-.btn-right .menu img {
+.typeB .btn-right .menu img {
   transition: all 0.4s;
   animation: menuimg 2s 1;
   animation-fill-mode: forwards;
 }
-.btn-right .menu img.noScroll-img {
+.typeB .btn-right .menu img.noScroll-img {
   opacity: 1;
   width: auto;
 }
-.btn-right .menu img.scroll-img {
+.typeB .btn-right .menu img.scroll-img {
   opacity: 0;
   width: 0;
 }
@@ -302,7 +340,7 @@ button {
     transform: translateY(0);
   }
 }
-.btn-right .btn {
+.typeB .btn-right .btn {
   display: flex;
   width: 192px;
   height: 192px;
@@ -329,11 +367,11 @@ button {
     transform: translateY(0);
   }
 }
-.btn-right .btn img {
+.typeB .btn-right .btn img {
   position: relative;
   z-index: 100;
 }
-.btn-right .btn .bg {
+.typeB .btn-right .btn .bg {
   display: block;
   width: 192px;
   height: 192px;
@@ -344,53 +382,55 @@ button {
   transform: translate(-50%, -50%);
   transition: all 0.4s;
 }
-.btn-right .btn:hover .bg {
+.typeB .btn-right .btn:hover .bg {
   border-radius: 999px;
   transform: translate(-50%, -50%) rotate(360deg) scale(1.6);
 }
-.btn-right.scroll img.noScroll-img {
+.typeB .btn-right.scroll img.noScroll-img {
   opacity: 0;
   width: 0;
 }
-.btn-right.scroll img.scroll-img {
+.typeB .btn-right.scroll img.scroll-img {
   opacity: 1;
   width: auto;
 }
-
-.en {
+.typeB .en {
   position: fixed;
   left: 96px;
   bottom: 93px;
   z-index: 1000;
 }
-.en img {
+.typeB .en img {
   transition: all 0.4s;
 }
-.en img.noScroll-img {
+.typeB .en img.noScroll-img {
   opacity: 1;
   width: auto;
 }
-.en img.scroll-img {
+.typeB .en img.scroll-img {
   opacity: 0;
   width: 0;
 }
-.en.scroll img.noScroll-img {
+.typeB .en.scroll img.noScroll-img {
   opacity: 0;
   width: 0;
 }
-.en.scroll img.scroll-img {
+.typeB .en.scroll img.scroll-img {
   opacity: 1;
   width: auto;
 }
-
-.scroll-btn {
+.typeB .scroll-btn {
   position: fixed;
   left: 219px;
   bottom: 108px;
   z-index: 1000;
   padding: 10px 10px 10px 67px;
+  transition: all 0.4s;
 }
-.scroll-btn > img {
+.typeB .scroll-btn.right {
+  left: calc(50% + 480px);
+}
+.typeB .scroll-btn > img {
   position: relative;
   z-index: 100;
   filter: invert(0);
@@ -408,14 +448,14 @@ button {
     opacity: 1;
   }
 }
-.scroll-btn span {
+.typeB .scroll-btn span {
   position: absolute;
   top: 0;
   left: 0;
   width: 100px;
   height: 100px;
 }
-.scroll-btn span img {
+.typeB .scroll-btn span img {
   position: absolute;
   top: 10px;
   left: 67px;
@@ -424,7 +464,7 @@ button {
   animation: scrollimg 2s 1;
   animation-fill-mode: forwards;
 }
-.scroll-btn span::after {
+.typeB .scroll-btn span::after {
   content: "";
   display: block;
   background-color: #000;
@@ -436,18 +476,17 @@ button {
   left: 0;
   transition: all 0.4s;
 }
-.scroll-btn:hover {
+.typeB .scroll-btn:hover {
   cursor: pointer;
 }
-.scroll-btn:hover span img {
+.typeB .scroll-btn:hover span img {
   filter: invert(1);
   z-index: 1100;
 }
-.scroll-btn:hover span::after {
+.typeB .scroll-btn:hover span::after {
   transform: scale(3);
 }
-
-.line {
+.typeB .line {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='202' viewBox='0 0 4 202' fill='none'%3E%3Cline x1='1' y1='25' x2='0.999992' y2='202' stroke='black' stroke-width='2'/%3E%3Crect width='4' height='4' rx='2' fill='black'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   position: fixed;
@@ -468,8 +507,7 @@ button {
     height: 202px;
   }
 }
-
-.main-kv {
+.typeB .main-kv {
   background: var(--SIgnature-5, #efedec);
   display: flex;
   width: 100vw;
@@ -477,7 +515,7 @@ button {
   justify-content: center;
   align-items: center;
 }
-.main-kv .video {
+.typeB .main-kv .video {
   position: absolute;
   top: 0;
   left: 0;
@@ -487,13 +525,13 @@ button {
   background-size: cover;
   transform: scale(0.7);
 }
-.main-kv .video .primary-video {
+.typeB .main-kv .video .primary-video {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
 }
-.main-kv .text-1 {
+.typeB .main-kv .text-1 {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -506,7 +544,7 @@ button {
   justify-content: center;
   align-items: center;
 }
-.main-kv .text-1 img {
+.typeB .main-kv .text-1 img {
   transition: all 0.2s;
   animation: text-1img 2s 1;
   animation-fill-mode: forwards;
@@ -519,7 +557,7 @@ button {
     transform: translateY(0);
   }
 }
-.main-kv .text-2 {
+.typeB .main-kv .text-2 {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -533,29 +571,28 @@ button {
   opacity: 0;
   transform: translate(-50%, -50%);
 }
-
-.section-1 {
+.typeB .section-1 {
   background: var(--SIgnature-3, #c1c6c9);
   width: 100vw;
   height: 100vh;
   overflow: hidden;
   position: relative;
 }
-.section-1 .inner {
+.typeB .section-1 .inner {
   position: relative;
   height: 100vh;
   z-index: 100;
 }
-.section-1 .inner .box-text {
+.typeB .section-1 .inner .box-text {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.section-1 .inner .box-text .text-1 {
+.typeB .section-1 .inner .box-text .text-1 {
   padding-bottom: 50px;
 }
-.section-1 .img-cover {
+.typeB .section-1 .img-cover {
   overflow: hidden;
   width: 470px;
   height: 670px;
@@ -565,7 +602,7 @@ button {
   transform: translate(-50%, -50%);
   z-index: 50;
 }
-.section-1 .img-cover::after {
+.typeB .section-1 .img-cover::after {
   content: "";
   display: block;
   position: absolute;
@@ -577,10 +614,333 @@ button {
   right: 0;
   bottom: 0;
 }
-.section-1 .img-cover img {
+.typeB .section-1 .img-cover img {
+  transition: all 0.4s;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(calc(-50% - 209px), calc(-50% + 166px));
   height: 1033px;
+}
+.typeB .section-2 {
+  background: var(--Intercontinental-Secondary-6, #f5f5f5);
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+.typeB .section-2 .inner {
+  position: absolute;
+  height: 576px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, calc(-50% - 50px));
+  width: 1360px;
+}
+.typeB .section-2 .img-cover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.typeB .section-2 .img-cover img {
+  margin-left: 80vw;
+}
+.typeB .section-3 {
+  background: var(--Intercontinental-Secondary-5, #cac7c3);
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+.typeB .section-3 .inner {
+  position: absolute;
+  height: 576px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, calc(-50% - 50px));
+  width: 1360px;
+  z-index: 100;
+}
+.typeB .section-3 .text-1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+.typeB .section-3 .img-cover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.typeB .section-4 {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+.typeB .section-4::before, .typeB .section-4::after {
+  content: "";
+  display: block;
+  right: 0;
+  left: 0;
+  position: absolute;
+}
+.typeB .section-4::before {
+  top: 0;
+  bottom: 50%;
+  background-color: #f0efec;
+}
+.typeB .section-4::after {
+  top: 50%;
+  bottom: 0;
+  background-color: #d9d9d9;
+}
+.typeB .section-4 .inner {
+  position: absolute;
+  height: 576px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, calc(-50% - 50px));
+  width: 1360px;
+  z-index: 100;
+}
+.typeB .section-4 .img-cover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 200;
+  height: 680px;
+}
+.typeB .section-4 .img-cover .inner {
+  display: flex;
+  gap: 192px;
+  padding-left: 40vw;
+}
+.typeB .section-5 {
+  background: var(--Gray-white, #fff);
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+.typeB .section-5 .inner {
+  position: relative;
+  height: 100vh;
+  z-index: 100;
+}
+.typeB .section-5 .inner .box-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.typeB .section-5 .inner .box-text .text-1 {
+  padding-bottom: 80px;
+}
+.typeB .section-5 .inner .box-text .text-2 {
+  padding-left: 80px;
+}
+.typeB .section-5 .img-cover {
+  overflow: hidden;
+  width: 526px;
+  height: 700px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(calc(-50% + 337px), -50%);
+  z-index: 50;
+}
+.typeB .section-5 .img-cover::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.typeB .section-5 .img-cover img {
+  transition: all 0.4s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 982px;
+  transform: translate(calc(-50% + 40px), calc(-50% + 19px));
+}
+.typeB .section-6 {
+  background: var(--Intercontinental-Secondary-5, #cac7c3);
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+.typeB .section-6 .inner {
+  position: relative;
+  height: 100vh;
+  z-index: 100;
+}
+.typeB .section-6 .inner .box-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.typeB .section-6 .inner .box-text .text-1 {
+  padding-bottom: 80px;
+}
+.typeB .section-6 .inner .box-text .text-2 {
+  padding-left: 80px;
+}
+.typeB .section-6 .img-cover {
+  overflow: hidden;
+  width: 998px;
+  height: 600px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(calc(-50% - 300px), -50%);
+  z-index: 50;
+}
+.typeB .section-6 .img-cover::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.typeB .section-6 .img-cover img {
+  transition: all 0.4s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1200px;
+  transform: translate(calc(-50% + 40px), calc(-50% + 19px));
+}
+.typeB .section-7 {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.typeB .section-7 .inner {
+  position: absolute;
+  top: 4vh;
+  left: 50%;
+  height: 50vh;
+  transform: translate(-50%, 0);
+}
+.typeB .section-7 .inner p {
+  text-align: center;
+}
+.typeB .section-7 .inner p.text-1 {
+  padding: 36px 0 91px 0;
+}
+.typeB .section-7 .img-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  min-height: 480px;
+  height: 50vh;
+  background-image: url(../../static/images/section7_img_1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.typeB .section-8 {
+  background-image: url(../../static/images/section8_bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  position: relative;
+}
+.typeB .section-8 .inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.typeB .section-9 {
+  background: var(--SIgnature-5, #efedec);
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+.typeB .section-9 .inner {
+  position: relative;
+  height: 100vh;
+  z-index: 100;
+}
+.typeB .section-9 .inner .box-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.typeB .section-9 .inner .box-text .text-1 {
+  padding-bottom: 208px;
+}
+.typeB .section-9 .inner .box-text .text-2 {
+  padding-left: 40px;
+}
+.typeB .section-9 .inner .box-text .text-2 .inner-text {
+  overflow: hidden;
+  height: 150px;
+}
+.typeB .section-9 .img-cover {
+  overflow: hidden;
+  width: 470px;
+  height: 670px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(calc(-50% - 186px), -50%);
+  z-index: 50;
+}
+.typeB .section-9 .img-cover::after {
+  content: "";
+  position: absolute;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+}
+.typeB .section-9 .img-cover img {
+  transition: all 0.4s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1300px;
+  transform: translate(calc(-50% - 234px), calc(-50% + 19px));
+}
+.typeB .section-9 .bottom-text {
+  position: absolute;
+  bottom: 96px;
+  left: 316px;
+  right: 96px;
+  display: flex;
+  justify-content: space-between;
 }/*# sourceMappingURL=style.css.map */
