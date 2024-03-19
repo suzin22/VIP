@@ -279,7 +279,7 @@ button {
 // box-header
 .box-header {
   position: fixed;
-  top: 0;
+  top: -100%;
   left: 48px;
   right: 48px;
   background-blend-mode: multiply;
@@ -287,7 +287,17 @@ button {
   z-index: 5000;
   padding: 20px 0;
   border-bottom: 1px solid var(--Transparent-w_60, rgba(255, 255, 255, 0.6));
-  transition: all .4s;
+  transition: all 0.4s;
+
+  animation: header 1.9s infinite;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+
+  @keyframes header {
+    to {
+      top: 0;
+    }
+  }
   &::before {
     content: "";
     display: block;
@@ -297,7 +307,7 @@ button {
     left: -48px;
     right: -48px;
     height: 72px;
-    transition: all .4s;
+    transition: all 0.4s;
   }
   .inner {
     .gap {
@@ -327,7 +337,7 @@ button {
     // padding-right: 48px;
     height: 73px;
     border-bottom: 1px solid var(--Transparent-b_60, rgba(0, 0, 0, 0.6));
-    
+
     &::before {
       background: var(--Gray-white, #fff);
     }
@@ -379,10 +389,20 @@ button {
   }
   .bottom-img {
     position: absolute;
-    bottom: 0;
+    bottom: -100%;
     left: 50%;
     transform: translate(-50%, 0);
     z-index: 100;
+
+    animation: bottomImg 2s infinite;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
+    @keyframes bottomImg {
+      to {
+        bottom: 0;
+      }
+    }
   }
   .swiper-button-next,
   .swiper-button-prev {
@@ -516,6 +536,7 @@ button {
   .svg {
     opacity: 0;
     svg {
+      border-radius: 999;
       position: absolute;
       top: -4px;
       left: -4px;
@@ -763,5 +784,12 @@ button {
 
 // box-footer
 .box-footer {
+  background: var(--Gray-bg, #F9F9F9);
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img{
+    object-fit: contain;
+  }
 }

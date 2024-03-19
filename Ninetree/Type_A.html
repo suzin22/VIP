@@ -31,9 +31,30 @@
     <img src="static/images/arrow-right.svg" alt="" class="swiper-button-cion">
     <div class="swiper-pagination"></div>
     <div class="svg">
+      <!-- 모션은 되지만 깨짐 -->
+      <!-- <svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g filter="url(#filter0_d_124_4894)">
+          <rect x="4" y="4" width="84" height="84" rx="999" stroke="#E7542C" stroke-width="3"
+            shape-rendering="crispEdges" />
+        </g>
+        <defs>
+          <filter id="filter0_d_124_4894" x="0.5" y="0.5" width="95" height="95" filterUnits="userSpaceOnUse"
+            color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+              result="hardAlpha" />
+            <feOffset dx="2" dy="2" />
+            <feGaussianBlur stdDeviation="2" />
+            <feComposite in2="hardAlpha" operator="out" />
+            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_124_4894" />
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_124_4894" result="shape" />
+          </filter>
+        </defs>
+      </svg> -->
       <svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g filter="url(#filter0_d_124_4894)">
-          <rect x="4" y="4" width="84" height="84" rx="42" stroke="#E7542C" stroke-width="3"
+          <rect x="4" y="4" width="84" height="84" rx="999" stroke="#E7542C" stroke-width="3"
             shape-rendering="crispEdges" />
         </g>
         <defs>
@@ -51,6 +72,28 @@
           </filter>
         </defs>
       </svg>
+      <!-- 깨지지 않지만 모션이 불가 -->
+      <!-- <svg xmlns="http://www.w3.org/2000/svg" width="95" height="96" viewBox="0 0 95 96" fill="none">
+        <g filter="url(#filter0_d_133_4910)">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M5 46C5 23.6325 23.1325 5.5 45.5 5.5C67.8675 5.5 86 23.6325 86 46C86 68.3675 67.8675 86.5 45.5 86.5C23.1325 86.5 5 68.3675 5 46ZM45.5 2.5C21.4756 2.5 2 21.9756 2 46C2 70.0244 21.4756 89.5 45.5 89.5C69.5244 89.5 89 70.0244 89 46C89 21.9756 69.5244 2.5 45.5 2.5Z"
+            fill="#E7542C" />
+        </g>
+        <defs>
+          <filter id="filter0_d_133_4910" x="0" y="0.5" width="95" height="95" filterUnits="userSpaceOnUse"
+            color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix" />
+            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+              result="hardAlpha" />
+            <feOffset dx="2" dy="2" />
+            <feGaussianBlur stdDeviation="2" />
+            <feComposite in2="hardAlpha" operator="out" />
+            <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_133_4910" />
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_133_4910" result="shape" />
+          </filter>
+        </defs>
+      </svg> -->
     </div>
   </div>
   <!-- //마우스 커서 -->
@@ -77,15 +120,15 @@
     <div class="swiper-wrapper">
       <div class="swiper-slide">
         <div class="img"><span><img src="static/images/main_kv_1.jpg" alt=""></span></div>
-        <div class="text"><img src="static/images/kv_text_1.png" alt=""></div>
+        <div class="text"><img src="static/images/kv_text_1.png" alt="" data-aos="fade-up"></div>
       </div>
       <div class="swiper-slide">
         <div class="img"><span><img src="static/images/main_kv_2.png" alt=""></span></div>
-        <div class="text"><img src="static/images/kv_text_2.png" alt=""></div>
+        <div class="text"><img src="static/images/kv_text_2.png" alt="" data-aos="fade-up"></div>
       </div>
       <div class="swiper-slide">
         <div class="img"><span><img src="static/images/main_kv_3.png" alt=""></span></div>
-        <div class="text"><img src="static/images/kv_text_1.png" alt=""></div>
+        <div class="text"><img src="static/images/kv_text_1.png" alt="" data-aos="fade-up"></div>
       </div>
     </div>
     <div class="swiper-button-prev"></div>
@@ -98,28 +141,28 @@
   <div class="box-location">
     <div class="inner">
       <div class="top-info">
-        <img src="static/images/location_text_1.png" alt="">
-        <img src="static/images/location_text_2.png" alt="" class="posi">
+        <img src="static/images/location_text_1.png" alt="" data-aos="fade-up">
+        <img src="static/images/location_text_2.png" alt="" class="posi" data-aos="fade-up">
       </div>
       <div class="swiper-location">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <img src="static/images/location_img_1.png" alt="">
+            <img src="static/images/location_img_1.png" alt="" data-aos="fade-left">
           </div>
           <div class="swiper-slide">
-            <img src="static/images/location_img_2.png" alt="">
+            <img src="static/images/location_img_2.png" alt="" data-aos="fade-left" data-aos-delay="300">
           </div>
           <div class="swiper-slide">
-            <img src="static/images/location_img_3.png" alt="">
+            <img src="static/images/location_img_3.png" alt="" data-aos="fade-left" data-aos-delay="500">
           </div>
           <div class="swiper-slide">
-            <img src="static/images/location_img_4.png" alt="">
+            <img src="static/images/location_img_4.png" alt="" data-aos="fade-left" data-aos-delay="700">
           </div>
           <div class="swiper-slide">
-            <img src="static/images/location_img_5.png" alt="">
+            <img src="static/images/location_img_5.png" alt="" data-aos="fade-left" data-aos-delay="900">
           </div>
           <div class="swiper-slide">
-            <img src="static/images/location_img_6.png" alt="">
+            <img src="static/images/location_img_6.png" alt="" data-aos="fade-left" data-aos-delay="1100">
           </div>
         </div>
       </div>
@@ -133,25 +176,25 @@
   <div class="box-special">
     <div class="inner">
       <div class="top-info">
-        <img src="static/images/special_text_1.png" alt="">
-        <img src="static/images/special_text_2.png" alt="" class="posi">
+        <img src="static/images/special_text_1.png" alt="" data-aos="fade-up">
+        <img src="static/images/special_text_2.png" alt="" class="posi" data-aos="fade-up">
       </div>
       <div class="swiper-special">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <img src="static/images/special_img_1.png" alt="">
+            <img src="static/images/special_img_1.png" alt="" data-aos="fade-left">
           </div>
           <div class="swiper-slide">
-            <img src="static/images/special_img_2.png" alt="">
+            <img src="static/images/special_img_2.png" alt="" data-aos="fade-left" data-aos-delay="300">
           </div>
           <div class="swiper-slide">
-            <img src="static/images/special_img_3.png" alt="">
+            <img src="static/images/special_img_3.png" alt="" data-aos="fade-left" data-aos-delay="500">
           </div>
           <div class="swiper-slide">
-            <img src="static/images/special_img_4.png" alt="">
+            <img src="static/images/special_img_4.png" alt="" data-aos="fade-left" data-aos-delay="700">
           </div>
           <div class="swiper-slide">
-            <img src="static/images/special_img_5.png" alt="">
+            <img src="static/images/special_img_5.png" alt="" data-aos="fade-left" data-aos-delay="900">
           </div>
         </div>
       </div>
@@ -165,19 +208,19 @@
   <div class="box-gallery">
     <div class="inner">
       <div class="top-info">
-        <img src="static/images/gallery_text_1.png" alt="">
-        <img src="static/images/gallery_text_2.png" alt="" class="posi">
+        <img src="static/images/gallery_text_1.png" alt="" data-aos="fade-up">
+        <img src="static/images/gallery_text_2.png" alt="" class="posi" data-aos="fade-up">
       </div>
       <div class="swiper-gallery">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <img src="static/images/gallery_img_1.png" alt="">
+            <img src="static/images/gallery_img_1.png" alt="" data-aos="fade-left">
           </div>
           <div class="swiper-slide">
-            <img src="static/images/gallery_img_2.png" alt="">
+            <img src="static/images/gallery_img_2.png" alt="" data-aos="fade-left" data-aos-delay="300">
           </div>
           <div class="swiper-slide">
-            <img src="static/images/gallery_img_3.png" alt="">
+            <img src="static/images/gallery_img_3.png" alt="" data-aos="fade-left" data-aos-delay="500">
           </div>
         </div>
       </div>
@@ -187,7 +230,7 @@
   </div>
   <!-- //box-gallery -->
 
-  <div class="ct_text_1">
+  <div class="ct_text_1" data-aos="fade-up">
     <img src="static/images/footer_ct_text_1.png" alt="">
   </div>
 
@@ -195,12 +238,12 @@
   <div class="box-footer-ct">
     <div class="inner">
       <div class="flex">
-        <img src="static/images/footer_ct_1.png" alt="">
-        <img src="static/images/footer_ct_2.png" alt="">
+        <img src="static/images/footer_ct_1.png" alt="" data-aos="fade-right">
+        <img src="static/images/footer_ct_2.png" alt="" data-aos="fade-left" data-aos-offest="200">
       </div>
       <div class="flex">
-        <img src="static/images/footer_ct_3.png" alt="">
-        <img src="static/images/footer_ct_4.png" alt="">
+        <img src="static/images/footer_ct_3.png" alt="" data-aos="fade-right">
+        <img src="static/images/footer_ct_4.png" alt="" data-aos="fade-left" data-aos-offest="200">
       </div>
     </div>
   </div>
@@ -220,7 +263,7 @@
 
     // box-hedaer
     ScrollTrigger.create({
-      trigger: ".box-header",
+      trigger: ".box-main-kv",
       start: "top top",
       end: "bottom bototm",
       scrub: 2,
