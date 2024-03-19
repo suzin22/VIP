@@ -270,6 +270,7 @@ button {
   z-index: 5000;
   padding: 20px 0;
   border-bottom: 1px solid var(--Transparent-w_60, rgba(255, 255, 255, 0.6));
+  transition: all 0.4s;
 }
 .box-header::before {
   content: "";
@@ -280,15 +281,42 @@ button {
   left: -48px;
   right: -48px;
   height: 72px;
+  transition: all 0.4s;
 }
-.box-header .inner {
+.box-header .inner .gap {
   display: flex;
   justify-content: space-between;
   position: relative;
   z-index: 10;
 }
+.box-header .inner .gap.default {
+  opacity: 1;
+}
+.box-header .inner .gap.scroll {
+  opacity: 0;
+}
 .box-header .inner img {
   object-fit: contain;
+}
+.box-header .inner .scroll {
+  opacity: 0;
+  pointer-events: none;
+}
+.box-header.scroll {
+  height: 73px;
+  border-bottom: 1px solid var(--Transparent-b_60, rgba(0, 0, 0, 0.6));
+}
+.box-header.scroll::before {
+  background: var(--Gray-white, #fff);
+}
+.box-header.scroll .gap.default {
+  opacity: 0;
+  pointer-events: none;
+  height: 0;
+}
+.box-header.scroll .gap.scroll {
+  opacity: 1;
+  pointer-events: all;
 }
 
 .box-main-kv .swiper-slide {
@@ -361,7 +389,7 @@ button {
 }
 @keyframes nextPrev {
   to {
-    width: 35%;
+    width: 50%;
   }
 }
 .box-main-kv .swiper-button-prev {

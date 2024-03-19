@@ -287,24 +287,60 @@ button {
   z-index: 5000;
   padding: 20px 0;
   border-bottom: 1px solid var(--Transparent-w_60, rgba(255, 255, 255, 0.6));
+  transition: all .4s;
   &::before {
     content: "";
     display: block;
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
-    //background-blend-mode: multiply;
     position: absolute;
     top: 0;
     left: -48px;
     right: -48px;
     height: 72px;
+    transition: all .4s;
   }
   .inner {
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    z-index: 10;
+    .gap {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      z-index: 10;
+      &.default {
+        opacity: 1;
+      }
+      &.scroll {
+        opacity: 0;
+      }
+    }
     img {
       object-fit: contain;
+    }
+    .scroll {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+  &.scroll {
+    // left: 0;
+    // right: 0;
+    // padding-left: 48px;
+    // padding-right: 48px;
+    height: 73px;
+    border-bottom: 1px solid var(--Transparent-b_60, rgba(0, 0, 0, 0.6));
+    
+    &::before {
+      background: var(--Gray-white, #fff);
+    }
+    .gap {
+      &.default {
+        opacity: 0;
+        pointer-events: none;
+        height: 0;
+      }
+      &.scroll {
+        opacity: 1;
+        pointer-events: all;
+      }
     }
   }
 }
@@ -384,7 +420,7 @@ button {
   }
   @keyframes nextPrev {
     to {
-      width: 35%;
+      width: 50%;
     }
   }
   .swiper-button-prev {
@@ -721,11 +757,11 @@ button {
     justify-content: space-between;
     & + .flex {
       margin-top: 120px;
-    } 
+    }
   }
 }
 
 // box-footer
-.box-footer{
+.box-footer {
   text-align: center;
 }

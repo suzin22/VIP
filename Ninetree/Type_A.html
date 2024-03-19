@@ -58,9 +58,16 @@
   <!-- box-header -->
   <div class="box-header">
     <div class="inner">
-      <img src="static/images/header_left.png" alt="" class="left">
-      <img src="static/images/header_menu.png" alt="" class="menu">
-      <img src="static/images/header_right.png" alt="" class="right">
+      <div class="gap default">
+        <a href=""><img src="static/images/header_left.png" alt="" class="left"></a>
+        <a href=""><img src="static/images/header_menu.png" alt="" class="menu"></a>
+        <a href=""><img src="static/images/header_right.png" alt="" class="right"></a>
+      </div>
+      <div class="gap scroll">
+        <a href=""><img src="static/images/header_left_scroll.png" alt="" class="left"></a>
+        <a href=""><img src="static/images/header_menu_scroll.png" alt="" class="menu"></a>
+        <a href=""><img src="static/images/header_right_scroll.png" alt="" class="right"></a>
+      </div>
     </div>
   </div>
   <!-- //box-header -->
@@ -210,6 +217,24 @@
       // AOS
       AOS.init();
     }, 500);
+
+    // box-hedaer
+    ScrollTrigger.create({
+      trigger: ".box-header",
+      start: "top top",
+      end: "bottom bototm",
+      scrub: 2,
+      pin: false,
+      markers: false,
+      anticipatePin: 1,
+      onUpdate: (self) => {
+        if (self.progress.toFixed(1) >= 0.1) { // 스크롤 조금 내렸을 때
+          document.querySelector('.box-header').classList.add('scroll');
+        } else if (self.progress.toFixed(1) < 0.1) { // 위로 돌아왔을 때
+          document.querySelector('.box-header').classList.remove('scroll');
+        }
+      }, // scroll 퍼센트 구하기 가능
+    });
 
     // box-main-kv
     const cursorSvgAni = () => {
