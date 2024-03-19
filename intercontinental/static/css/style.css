@@ -1145,6 +1145,10 @@ button {
   grid-template-columns: repeat(3, 1fr);
   border: 1px solid var(--Gray-6, #e1e0e1);
 }
+.typeA .box-wedding.bg-ani .inner::after {
+  opacity: 1;
+  left: 0;
+}
 .typeA .box-wedding .inner {
   text-align: center;
   position: relative;
@@ -1159,9 +1163,11 @@ button {
   height: 490px;
   position: absolute;
   top: 50%;
-  left: 0;
-  transform: translate(0, -50%);
+  left: -100%;
+  opacity: 0.5;
   width: 57vw;
+  transform: translate(0, -50%);
+  transition: all 0.4s;
 }
 .typeA .box-wedding .inner .box-ct {
   z-index: 100;

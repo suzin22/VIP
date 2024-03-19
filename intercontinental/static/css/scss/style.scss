@@ -1131,7 +1131,7 @@ button {
     }
     .swiper-pagination {
       font-size: 14px;
-      bottom:50%;
+      bottom: 50%;
       transform: translateY(calc(-50% + 330px));
     }
     .swiper-button-next,
@@ -1239,6 +1239,14 @@ button {
   }
   // box-wedding
   .box-wedding {
+    &.bg-ani{
+      .inner{
+        &::after {
+          opacity: 1;
+          left: 0;
+        }
+      }
+    }
     .inner {
       text-align: center;
       position: relative;
@@ -1252,9 +1260,11 @@ button {
         height: 490px;
         position: absolute;
         top: 50%;
-        left: 0;
-        transform: translate(0, -50%);
+        left: -100%;
+        opacity: 0.5;
         width: 57vw;
+        transform: translate(0, -50%);
+        transition: all 0.4s;
       }
       .box-ct {
         z-index: 100;
@@ -1492,7 +1502,7 @@ button {
     position: absolute;
     bottom: 0;
     right: 0;
-    transition: all .4s;
+    transition: all 0.4s;
     &.fixed {
       position: fixed;
       bottom: auto;

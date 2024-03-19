@@ -1,15 +1,9 @@
-- 제안 url
+- 인터콘티넨탈
 https://melllow.co.kr/intercontinental/Type_A.html
 https://melllow.co.kr/intercontinental/Type_B.html
 
-- 영상 스크롤 느낌
-https://cloud.protopie.io/p/6665c821ce19dd4a5b689b7c?ui=false&scaleToFit=true&enableHotspotHints=true&cursorType=touch&mockup=false&bgColor=%23111111&bgImage=undefined&playSpeed=1
-
 - 참고 사이트
 https://dddhotel.jp/en/concept/
-
-- 전반적으로 이거 쓰면 될듯.ㅋㅋ
-/00_GUIDE/gsap04.html
 
 3월 27일 ~ 29일 제안 PT.
 - 인터콘티넨탈 > TypeA > https://www.shinsegae.com/index.do
