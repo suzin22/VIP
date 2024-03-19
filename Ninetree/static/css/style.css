@@ -494,7 +494,7 @@ button {
   stroke-dashoffset: 630;
 }
 .window-cursor .svg svg.svg-ani {
-  animation: stroke-ani 12s linear;
+  animation: stroke-ani 12.5s linear;
 }
 @keyframes stroke-ani {
   from {
