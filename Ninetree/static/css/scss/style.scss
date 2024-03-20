@@ -357,6 +357,34 @@ button {
     //top: 0;
     margin-top: 0;
   }
+  .flex {
+    display: flex;
+    gap: 30px;
+  }
+  .layer1 {
+    position: absolute;
+    top: 36px;
+    left: 158px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s;
+    &.show {
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+  .layer2 {
+    position: absolute;
+    top: 36px;
+    left: 158px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s;
+    &.show {
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
 }
 
 // box-main-kv
@@ -640,6 +668,69 @@ button {
   }
 }
 
+// box-location
+.box-location-2 {
+  background-color: #fff;
+  position: relative;
+  .inner {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 118px 0 120px;
+    position: relative;
+    z-index: 1000;
+    .top-info {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 21px;
+      img {
+        object-fit: contain;
+        &.posi {
+          position: relative;
+          top: 2px;
+          right: 2px;
+        }
+      }
+    }
+    .swiper-location-2 {
+      * {
+        &:hover {
+          cursor: grab;
+        }
+      }
+    }
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 49px;
+    height: 49px;
+    display: block;
+    opacity: 1;
+    z-index: 3000;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='49' height='49' viewBox='0 0 49 49' fill='none'%3E%3Cpath d='M32.9116 7.12256L16.9116 24.4559L32.9116 41.7892' stroke='white'/%3E%3C/svg%3E");
+    top: 50%;
+    &:hover {
+      cursor: pointer;
+    }
+    &::after {
+      content: "";
+      opacity: 1;
+    }
+    &.swiper-button-disabled {
+      opacity: 1 !important;
+    }
+  }
+  .swiper-button-prev {
+    left: 0;
+    right: auto;
+    transform: translate(calc(-50% - 68px), calc(-50% - 19px));
+  }
+  .swiper-button-next {
+    left: auto;
+    right: 0;
+    transform: rotate(180deg) translate(calc(-50% - 62px), calc(-50% - -67px));
+  }
+}
+
 // box-special
 .box-special {
   background: var(--NineTree-Secondary-1, #776f68);
@@ -704,16 +795,17 @@ button {
 
 // box-gallery
 .box-gallery {
+  background: var(--Gray-5, #F0F0F0);
   .inner {
     max-width: 1600px;
     margin: 0 auto;
-    padding: 120px 0 120px;
+    padding: 88px 0 81px;
     position: relative;
     z-index: 1000;
     .top-info {
       display: flex;
       justify-content: space-between;
-      margin-bottom: 21px;
+      margin-bottom: 32px;
       img {
         object-fit: contain;
         &.posi {
@@ -795,5 +887,80 @@ button {
   align-items: center;
   img {
     object-fit: contain;
+  }
+}
+
+// sub-1
+.box-sub-top {
+  background: var(--Gray-5, #f0f0f0);
+  padding: 108px 0 122px 0;
+  .inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    text-align: center;
+    .text-2 {
+      padding: 62px 0 75px 0;
+    }
+  }
+}
+
+// box-services
+.box-services {
+  .inner {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 129px 0 120px;
+    position: relative;
+    z-index: 1000;
+    .top-info {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 32px;
+      img {
+        object-fit: contain;
+        &.posi {
+          position: relative;
+          top: 2px;
+          right: 2px;
+        }
+      }
+    }
+    .swiper-gallery-2 {
+      * {
+        &:hover {
+          cursor: grab;
+        }
+      }
+    }
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    width: 49px;
+    height: 49px;
+    display: block;
+    opacity: 1;
+    z-index: 3000;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='49' height='49' viewBox='0 0 49 49' fill='none'%3E%3Cpath d='M32.9116 7.12256L16.9116 24.4559L32.9116 41.7892' stroke='white'/%3E%3C/svg%3E");
+    top: 50%;
+    &:hover {
+      cursor: pointer;
+    }
+    &::after {
+      content: "";
+      opacity: 1;
+    }
+    &.swiper-button-disabled {
+      opacity: 1 !important;
+    }
+  }
+  .swiper-button-prev {
+    left: 0;
+    right: auto;
+    transform: translate(calc(-50% - 68px), calc(-50% - -54px));
+  }
+  .swiper-button-next {
+    left: auto;
+    right: 0;
+    transform: rotate(180deg) translate(calc(-50% - 62px), calc(-50% + -3px));
   }
 }
