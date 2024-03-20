@@ -331,10 +331,6 @@ button {
     }
   }
   &.scroll {
-    // left: 0;
-    // right: 0;
-    // padding-left: 48px;
-    // padding-right: 48px;
     height: 73px;
     border-bottom: 1px solid var(--Transparent-b_60, rgba(0, 0, 0, 0.6));
 
@@ -352,6 +348,14 @@ button {
         pointer-events: all;
       }
     }
+  }
+  &.scroll-down {
+    //top: -100%;
+    margin-top: -100px;
+  }
+  &.scroll-up {
+    //top: 0;
+    margin-top: 0;
   }
 }
 

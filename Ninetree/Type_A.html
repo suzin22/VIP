@@ -276,8 +276,23 @@
         } else if (self.progress.toFixed(1) < 0.1) { // 위로 돌아왔을 때
           document.querySelector('.box-header').classList.remove('scroll');
         }
-      }, // scroll 퍼센트 구하기 가능
+      },
     });
+
+    // 마우스 휠 이벤트 감지
+    window.addEventListener('wheel', (event) => {
+      // 스크롤 방향 판단
+      if (event.deltaY > 0) {
+        console.log('아래로 스크롤');
+        document.querySelector('.box-header').classList.remove('scroll-up');
+        document.querySelector('.box-header').classList.add('scroll-down');
+      } else {
+        console.log('위로 스크롤');
+        document.querySelector('.box-header').classList.add('scroll-up');
+        document.querySelector('.box-header').classList.remove('scroll-down');
+      }
+    });
+
 
     // box-main-kv
     const cursorSvgAni = () => {
