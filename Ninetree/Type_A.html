@@ -104,50 +104,47 @@
       <div class="gap default">
         <div class="flex">
           <a href="Type_A.html"><img src="static/images/logo.png" alt="" class="left"></a>
-          <a href="#none" class="btn-layer1"><img src="static/images/header_left.png" alt="" class="left"></a>
+          <a href="#none" class="btn-layer"><img src="static/images/header_left.png" alt="" class="left"></a>
         </div>
         <a href="#none"><img src="static/images/header_menu.png" alt="" class="menu"></a>
         <a href="#none"><img src="static/images/header_right.png" alt="" class="right"></a>
-        <a href="Sub_1.html" class="layer1"><img src="static/images/layer_select.png" alt=""></a>
+        <a href="Sub_1.html" class="layer"><img src="static/images/layer_select.png" alt=""></a>
       </div>
       <div class="gap scroll">
         <div class="flex">
           <a href="Type_A.html"><img src="static/images/logo_scroll.png" alt="" class="left"></a>
-          <a href="#none" class="btn-layer2"><img src="static/images/header_left_scroll.png" alt="" class="left"></a>
+          <a href="#none" class="btn-layer"><img src="static/images/header_left_scroll.png" alt="" class="left"></a>
         </div>
         <a href="#none"><img src="static/images/header_menu_scroll.png" alt="" class="menu"></a>
         <a href="#none"><img src="static/images/header_right_scroll.png" alt="" class="right"></a>
-        <a href="Sub_1.html" class="layer2"><img src="static/images/layer_select.png" alt=""></a>
+        <a href="Sub_1.html" class="layer"><img src="static/images/layer_select.png" alt=""></a>
       </div>
     </div>
   </div>
   <script>
     // location mouse event
-    document.querySelector('.btn-layer1').addEventListener('mouseover', () => {
-      document.querySelector('.box-header .layer1').classList.add('show');
-    })
+    const layers = document.querySelectorAll('.box-header .layer');
+    const buttons = document.querySelectorAll('.btn-layer');
 
-    document.querySelector('.box-header').addEventListener('mouseleave', () => {
-      document.querySelector('.box-header .layer1').classList.remove('show');
+    buttons.forEach((button, index) => {
+      button.addEventListener('mouseover', () => {
+        layers[index].classList.add('show');
+      });
     });
 
-    document.querySelector('.btn-layer2').addEventListener('mouseover', () => {
-      document.querySelector('.box-header .layer2').classList.add('show');
-    })
-
     document.querySelector('.box-header').addEventListener('mouseleave', () => {
-      document.querySelector('.box-header .layer2').classList.remove('show');
+      layers.forEach((e) => {
+        e.classList.remove('show');
+      });
     });
 
     // 마우스 휠 이벤트 감지
     window.addEventListener('wheel', (event) => {
       // 스크롤 방향 판단
       if (event.deltaY > 0) {
-        console.log('아래로 스크롤');
         document.querySelector('.box-header').classList.remove('scroll-up');
         document.querySelector('.box-header').classList.add('scroll-down');
       } else {
-        console.log('위로 스크롤');
         document.querySelector('.box-header').classList.add('scroll-up');
         document.querySelector('.box-header').classList.remove('scroll-down');
       }

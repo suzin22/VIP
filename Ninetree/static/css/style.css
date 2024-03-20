@@ -336,7 +336,7 @@ button {
   display: flex;
   gap: 30px;
 }
-.box-header .layer1 {
+.box-header .layer {
   position: absolute;
   top: 36px;
   left: 158px;
@@ -344,19 +344,7 @@ button {
   pointer-events: none;
   transition: all 0.4s;
 }
-.box-header .layer1.show {
-  opacity: 1;
-  pointer-events: all;
-}
-.box-header .layer2 {
-  position: absolute;
-  top: 36px;
-  left: 158px;
-  opacity: 0;
-  pointer-events: none;
-  transition: all 0.4s;
-}
-.box-header .layer2.show {
+.box-header .layer.show {
   opacity: 1;
   pointer-events: all;
 }
