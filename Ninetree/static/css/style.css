@@ -718,7 +718,7 @@ button {
 }
 
 .box-footer {
-  background: var(--Gray-bg, #F9F9F9);
+  background: var(--Gray-bg, #f9f9f9);
   text-align: center;
   display: flex;
   justify-content: center;

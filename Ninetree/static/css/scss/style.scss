@@ -784,12 +784,12 @@ button {
 
 // box-footer
 .box-footer {
-  background: var(--Gray-bg, #F9F9F9);
+  background: var(--Gray-bg, #f9f9f9);
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  img{
+  img {
     object-fit: contain;
   }
 }
