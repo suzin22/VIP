@@ -98,9 +98,9 @@
   <!-- //box-controll -->
 
   <!-- box-controll-bottom -->
-  <div class="box-controll-bottom" data-aos="fade-up" data-aos-delay="500">
+  <div class="box-controll-bottom">
     <div class="inner">
-      <img src="static/images/typeA/kv-controll.png" alt="">
+      <img src="static/images/typeA/kv-controll-bottom.png" alt="">
     </div>
   </div>
   <!-- //box-controll-bottom -->
@@ -237,25 +237,25 @@
           <!-- swiper-right -->
           <div class="swiper-right">
             <div class="swiper-wrapper">
-              <div class="swiper-slide" data-aos="fade-up" data-offset="300" data-aos-delay="500">
+              <div class="swiper-slide" data-aos="fade-up" data-offset="100" data-aos-delay="500">
                 <img src="static/images/typeA/wedding-1.png" alt="">
               </div>
-              <div class="swiper-slide" data-aos="fade-up" data-offset="300" data-aos-delay="700">
+              <div class="swiper-slide" data-aos="fade-up" data-offset="100" data-aos-delay="700">
                 <img src="static/images/typeA/wedding-2.png" alt="">
               </div>
-              <div class="swiper-slide" data-aos="fade-up" data-offset="300" data-aos-delay="900">
+              <div class="swiper-slide" data-aos="fade-up" data-offset="100" data-aos-delay="900">
                 <img src="static/images/typeA/wedding-3.png" alt="">
               </div>
-              <div class="swiper-slide" data-aos="fade-up" data-offset="300" data-aos-delay="1100">
+              <div class="swiper-slide" data-aos="fade-up" data-offset="100" data-aos-delay="1100">
                 <img src="static/images/typeA/wedding-4.png" alt="">
               </div>
-              <div class="swiper-slide" data-aos="fade-up" data-offset="300" data-aos-delay="1300">
+              <div class="swiper-slide" data-aos="fade-up" data-offset="100" data-aos-delay="1300">
                 <img src="static/images/typeA/wedding-5.png" alt="">
               </div>
-              <div class="swiper-slide" data-aos="fade-up" data-offset="300" data-aos-delay="1500">
+              <div class="swiper-slide" data-aos="fade-up" data-offset="100" data-aos-delay="1500">
                 <img src="static/images/typeA/wedding-6.png" alt="">
               </div>
-              <div class="swiper-slide" data-aos="fade-up" data-offset="300" data-aos-delay="1700">
+              <div class="swiper-slide" data-aos="fade-up" data-offset="100" data-aos-delay="1700">
                 <img src="static/images/typeA/wedding-7.png" alt="">
               </div>
             </div>
@@ -530,6 +530,39 @@
 
       },
     });
+
+    // box-res click
+    let isClickEventAttached = false;
+
+    const clickEventScroll = () => {
+      if (!document.querySelector('.box-controll-bottom').classList.contains('is-show')) {
+        document.querySelector('.box-controll-bottom').classList.add('is-show');
+      } else {
+        document.querySelector('.box-controll-bottom').classList.remove('is-show');
+      }
+    }
+
+    const removeClickEventScroll = () => {
+      document.querySelector('.box-controll-bottom').classList.remove('is-show');
+      document.querySelector('.box-res').removeEventListener('click', clickEventScroll);
+      isClickEventAttached = false;
+    }
+
+    const scrollSet = () => {
+      document.querySelector('.box-controll-bottom').classList.remove('is-show');
+      if (window.scrollY > 100 && !isClickEventAttached) {
+        document.querySelector('.box-res').addEventListener('click', clickEventScroll);
+        isClickEventAttached = true;
+      } else if (window.scrollY < 100 && isClickEventAttached) {
+        removeClickEventScroll();
+      }
+    };
+
+    if (window.scrollY > 300) {
+      scrollSet();
+    }
+
+    window.addEventListener('scroll', scrollSet);
 
     // .box-wedding bg animation
     ScrollTrigger.create({

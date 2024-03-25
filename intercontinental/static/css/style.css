@@ -1620,7 +1620,7 @@ button {
 .typeA .box-controll-bottom {
   border-top: 1px solid var(--Gray-6, #E1E0E1);
   position: fixed;
-  bottom: 0;
+  bottom: -300px;
   left: 0;
   right: 0;
   z-index: 1800;
@@ -1628,4 +1628,11 @@ button {
   display: flex;
   justify-content: center;
   background-color: #fff;
+  transition: all 0.4s;
+  will-change: auto;
+  opacity: 0;
+}
+.typeA .box-controll-bottom.is-show {
+  opacity: 1;
+  bottom: -31px;
 }/*# sourceMappingURL=style.css.map */
