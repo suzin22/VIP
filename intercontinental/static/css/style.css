@@ -506,16 +506,21 @@ button {
   z-index: 100;
   width: 4px;
   background-position: center;
-  transition: all 0.2s;
-  animation: line 2s 1;
+  transition: all 0.2;
+}
+.typeB .line.ani-show {
+  animation: line 5s infinite;
   animation-fill-mode: forwards;
 }
 @keyframes line {
-  from {
+  0% {
     height: 0;
   }
-  to {
+  50% {
     height: 202px;
+  }
+  100% {
+    height: 0;
   }
 }
 .typeB .main-kv {
@@ -677,14 +682,32 @@ button {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, calc(-50% + 100px));
   z-index: 100;
+  transition: all 0.4s;
+}
+.typeB .section-3 .text-1 img {
+  opacity: 0;
 }
 .typeB .section-3 .img-cover {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.typeB .section-3 .img-cover .inner-2 {
+  display: flex;
+  gap: 387px;
+  padding-left: 20vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1360px;
+  z-index: 100;
+}
+.typeB .section-3 .img-cover .inner-2 img {
+  object-fit: contain;
 }
 .typeB .section-4 {
   width: 100vw;

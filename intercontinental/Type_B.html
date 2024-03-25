@@ -138,7 +138,11 @@
       <img src="static//images/section3_text_2.png" alt="">
     </div>
     <div class="img-cover">
-      <img src="static/images/section3_img_1.png" alt="">
+      <div class="inner-2">
+        <img src="static/images/section3_img_1.png" alt="">
+        <img src="static/images/section3_img_2.png" alt="">
+        <img src="static/images/section3_img_3.png" alt="">
+      </div>
     </div>
   </div>
 
@@ -234,6 +238,11 @@
   <!-- //마우스 커서 -->
 
   <script>
+    // line
+    setTimeout(() => {
+      document.querySelector('.line').classList.add('ani-show');
+    }, 1000)
+
     // 상단 동영상
     const ani2 = gsap.timeline();
     ani2.to(".main-kv .video", {
@@ -253,6 +262,7 @@
         document.querySelector('.en').classList.remove('scroll');
         document.querySelector('.btn-right').classList.remove('scroll');
         document.querySelector('.scroll-btn').classList.add('right');
+        //document.querySelector('.line').classList.remove('ani-show');
       },
       onEnterBack: () => { // end 지점 반대로 돌아옴
         document.querySelector('.en').classList.add('scroll');
@@ -359,7 +369,13 @@
       scrub: 2,
       pin: false,
       markers: false,
-      anticipatePin: 1
+      anticipatePin: 1,
+      onEnter: () => { // 시작 지점 진입
+        document.querySelector('.line').classList.add('ani-show');
+      },
+      onLeave: () => { // end 지점 밖으로 나감
+        document.querySelector('.line').classList.remove('ani-show');
+      },
     });
 
     // section-2
@@ -379,10 +395,10 @@
       markers: false,
       anticipatePin: 1,
       onEnter: () => { // 시작 지점 진입
-
+        document.querySelector('.line').classList.add('ani-show');
       },
       onLeave: () => { // end 지점 밖으로 나감
-
+        document.querySelector('.line').classList.remove('ani-show');
       },
       onEnterBack: () => { // end 지점 반대로 돌아옴
 
@@ -401,23 +417,28 @@
     // section-3
     const ani8 = gsap.timeline();
     ani8.to(".section-3 .text-1 img", {
-      marginTop: -500
-    })
+      //marginTop: -500,
+      opacity: 1,
+      y: -100
+    }, 'start01').to(".section-3 .img-cover", {
+      //marginLeft: -500
+      x: -2000
+    }, 'start01')
 
     ScrollTrigger.create({
       animation: ani8,
       trigger: ".section-3",
       start: "top top",
-      end: "+=2000",
+      end: "+=3000",
       scrub: 2,
-      pin: false,
+      pin: true,
       markers: false,
       anticipatePin: 1,
       onEnter: () => { // 시작 지점 진입
-
+        document.querySelector('.line').classList.add('ani-show');
       },
       onLeave: () => { // end 지점 밖으로 나감
-
+        document.querySelector('.line').classList.remove('ani-show');
       },
       onEnterBack: () => { // end 지점 반대로 돌아옴
         document.querySelector('.scroll-btn').classList.add('right');
@@ -452,9 +473,10 @@
         document.querySelector('.scroll-btn').classList.remove('right');
         document.querySelector('.btn-right').classList.remove('scroll');
         document.querySelector('.en').classList.remove('scroll');
+        document.querySelector('.line').classList.add('ani-show');
       },
       onLeave: () => { // end 지점 밖으로 나감
-
+        //document.querySelector('.line').classList.remove('ani-show');
       },
       onEnterBack: () => { // end 지점 반대로 돌아옴
 
@@ -486,10 +508,10 @@
       markers: false,
       anticipatePin: 1,
       onEnter: () => { // 시작 지점 진입
-
+        document.querySelector('.line').classList.add('ani-show');
       },
       onLeave: () => { // end 지점 밖으로 나감
-
+        //document.querySelector('.line').classList.remove('ani-show');
       },
       onEnterBack: () => { // end 지점 반대로 돌아옴
 
@@ -538,11 +560,12 @@
       markers: false,
       anticipatePin: 1,
       onEnter: () => { // 시작 지점 진입
-
+        document.querySelector('.line').classList.add('ani-show');
       },
       onLeave: () => { // end 지점 밖으로 나감
         document.querySelector('.scroll-btn').style.display = 'none';
         document.querySelector('.en').style.display = 'none';
+        //document.querySelector('.line').classList.remove('ani-show');
       },
       onEnterBack: () => { // end 지점 반대로 돌아옴
         document.querySelector('.scroll-btn').style.display = 'block';
@@ -634,7 +657,8 @@
       onEnter: () => { // 시작 지점 진입
         document.querySelector('.en').classList.remove('scroll');
         document.querySelector('.btn-right').classList.remove('scroll');
-        document.querySelector('.line').style.display = 'none';
+        //document.querySelector('.line').style.display = 'none';
+        document.querySelector('.line').classList.remove('ani-show');
       },
       onLeave: () => { // end 지점 밖으로 나감
 
@@ -645,7 +669,8 @@
       onLeaveBack: () => { // start 지점 반대로 돌아옴
         document.querySelector('.en').classList.add('scroll');
         document.querySelector('.btn-right').classList.add('scroll');
-        document.querySelector('.line').style.display = 'block';
+        //document.querySelector('.line').style.display = 'block';
+        document.querySelector('.line').classList.add('ani-show');
       },
       onUpdate: (self) => { // scroll 퍼센트 구하기 가능
 
