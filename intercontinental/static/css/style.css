@@ -1150,6 +1150,7 @@ button {
   gap: 40px;
 }
 .typeA .box-club .inner {
+  position: relative;
   max-width: 1400px;
   margin: 0 auto;
   text-align: center;
@@ -1163,10 +1164,82 @@ button {
 .typeA .box-club .inner h4 {
   padding: 60px 0 79px 0;
 }
-.typeA .box-club .inner .list {
+.typeA .box-club .inner .swiper-club-item {
+  position: relative;
+  height: 920px;
+}
+.typeA .box-club .inner .swiper-club-item .list {
+  margin-top: 39px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   border: 1px solid var(--Gray-6, #e1e0e1);
+  opacity: 0;
+  pointer-events: none;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: all 0.4s;
+  will-change: auto;
+}
+.typeA .box-club .inner .swiper-club-item .list.show {
+  overflow: visible;
+  opacity: 1;
+  display: grid;
+  pointer-events: all;
+}
+.typeA .box-club .swiper-club {
+  overflow: hidden;
+  margin: 0 -65px;
+}
+.typeA .box-club .swiper-club .swiper-wrapper {
+  display: flex;
+}
+.typeA .box-club .swiper-club .swiper-wrapper .swiper-slide {
+  flex-grow: 1;
+}
+.typeA .box-club .swiper-club .swiper-wrapper .swiper-slide img {
+  margin: 0 auto;
+}
+.typeA .box-club .swiper-button-prev,
+.typeA .box-club .swiper-button-next {
+  opacity: 1;
+  top: 189px;
+  bottom: auto;
+  padding: 0;
+  margin: 0;
+}
+.typeA .box-club .swiper-button-prev::after,
+.typeA .box-club .swiper-button-next::after {
+  content: "";
+  width: 48px;
+  height: 48px;
+  display: block;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 1;
+}
+.typeA .box-club .swiper-button-prev {
+  left: 50%;
+  transform: translateX(calc(-50% - 255px));
+}
+.typeA .box-club .swiper-button-prev:after {
+  background-image: url("../../static/images/typeA/btn_prev.png");
+}
+.typeA .box-club .swiper-button-next {
+  right: 50%;
+  transform: translateX(calc(-50% + 282px));
+}
+.typeA .box-club .swiper-button-next:after {
+  background-image: url("../../static/images/typeA/btn_next.png");
+}
+.typeA .box-club .swiper-club-item .swiper-wrapper {
+  overflow: hidden;
+}
+.typeA .box-wedding {
+  overflow: hidden;
 }
 .typeA .box-wedding.bg-ani .inner::after {
   opacity: 1;
@@ -1197,18 +1270,95 @@ button {
   position: relative;
   max-width: 1400px;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
 }
 .typeA .box-wedding .inner .box-ct .left {
-  margin-top: -99px;
-  width: 600px;
-  height: 460px;
+  position: absolute;
+  top: -99px;
+  left: 0;
+  z-index: 1000;
+}
+.typeA .box-wedding .inner .box-ct .left img {
+  position: relative;
+  z-index: 100;
+}
+.typeA .box-wedding .inner .box-ct .left::after {
+  content: "";
+  display: none;
+  position: absolute;
+  top: -22px;
+  left: -100%;
+  right: -119px;
+  bottom: 1px;
+  background: var(--SIgnature-4, #6f8895);
 }
 .typeA .box-wedding .inner .box-ct .right {
+  transform: translate(50%, 0);
   position: relative;
   top: -100px;
-  left: 120px;
+}
+.typeA .box-wedding .inner .box-ct .right .swiper-right {
+  overflow: hidden;
+}
+.typeA .box-wedding .inner .box-ct .right .swiper-right:hover {
+  cursor: grab;
+}
+.typeA .box-wedding .inner .box-ct .right .swiper-right .swiper-wrapper .swiper-slide {
+  width: 480px;
+  height: 480px;
+}
+.typeA .box-wedding .inner .box-ct .swiper-button-prev,
+.typeA .box-wedding .inner .box-ct .swiper-button-next {
+  opacity: 1;
+  z-index: 200;
+  width: 32px;
+  height: 32px;
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 419px;
+  left: 50%;
+  bottom: auto;
+}
+.typeA .box-wedding .inner .box-ct .swiper-button-prev::after,
+.typeA .box-wedding .inner .box-ct .swiper-button-next::after {
+  content: "";
+  opacity: 1;
+}
+.typeA .box-wedding .inner .box-ct .swiper-button-prev {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M10.6665 2.22217L5.33317 7.99995L10.6665 13.7777' stroke='white' stroke-width='2'/%3E%3C/svg%3E");
+  transform: translateX(calc(50% + 210px));
+}
+.typeA .box-wedding .inner .box-ct .swiper-button-next {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M5.3335 13.7778L10.6668 8.00005L5.3335 2.22228' stroke='white' stroke-width='2'/%3E%3C/svg%3E");
+  transform: translateX(calc(50% + 260px));
+}
+.typeA .box-wedding .inner .box-ct .swiper-pagination {
+  position: absolute;
+  top: 183px;
+  left: 0;
+  right: auto;
+  bottom: auto;
+  transform: translate(0, calc(50% + 210px));
+  width: 459px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.typeA .box-wedding .inner .box-ct .swiper-pagination .gap {
+  color: #fff;
+  font-size: 16px;
+}
+.typeA .box-wedding .inner .box-ct .swiper-pagination .gap span {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 100%; /* 16px */
+  text-transform: uppercase;
+}
+.typeA .box-wedding .inner .box-ct .swiper-pagination .gap .line {
+  padding: 0 5px;
+  font-size: 10px;
+  position: relative;
+  top: -2px;
 }
 .typeA .box-dining .inner {
   max-width: 1400px;
@@ -1268,12 +1418,19 @@ button {
   max-width: 1400px;
   margin: 0 auto;
   text-align: center;
+  position: relative;
 }
 .typeA .box-banquer .inner h2 {
-  padding: 80px 0 60px 0;
+  padding: 80px 0 0 0;
+  margin-bottom: -39px;
+  position: relative;
+  z-index: 1000;
 }
 .typeA .box-banquer .inner h3 {
-  padding: 60px 0 80px 0;
+  padding: 0 0 80px 0;
+  margin-top: -38px;
+  position: relative;
+  z-index: 1000;
 }
 .typeA .box-banquer .inner .gap {
   position: relative;
@@ -1301,6 +1458,63 @@ button {
   position: absolute;
   right: 59px;
   bottom: 33px;
+}
+.typeA .box-banquer .inner .swiper-banquer .swiper-slide {
+  background: var(--SIgnature-2, #1f4456);
+  padding: 100px;
+}
+.typeA .box-banquer .inner .swiper-button-prev,
+.typeA .box-banquer .inner .swiper-button-next {
+  opacity: 1;
+  z-index: 200;
+  width: 32px;
+  height: 32px;
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 663px;
+  left: 50%;
+  bottom: auto;
+}
+.typeA .box-banquer .inner .swiper-button-prev::after,
+.typeA .box-banquer .inner .swiper-button-next::after {
+  content: "";
+  opacity: 1;
+}
+.typeA .box-banquer .inner .swiper-button-prev {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M10.6665 2.22217L5.33317 7.99995L10.6665 13.7777' stroke='white' stroke-width='2'/%3E%3C/svg%3E");
+  transform: translateX(calc(50% + 550px));
+}
+.typeA .box-banquer .inner .swiper-button-next {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M5.3335 13.7778L10.6668 8.00005L5.3335 2.22228' stroke='white' stroke-width='2'/%3E%3C/svg%3E");
+  transform: translateX(calc(50% + 598px));
+}
+.typeA .box-banquer .inner .swiper-pagination {
+  position: absolute;
+  top: 648px;
+  left: auto;
+  right: 202px;
+  bottom: auto;
+  width: 459px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.typeA .box-banquer .inner .swiper-pagination .gap {
+  color: #fff;
+  font-size: 16px;
+}
+.typeA .box-banquer .inner .swiper-pagination .gap span {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 100%; /* 16px */
+  text-transform: uppercase;
+}
+.typeA .box-banquer .inner .swiper-pagination .gap .line {
+  padding: 0 5px;
+  font-size: 10px;
+  position: relative;
+  top: -2px;
 }
 .typeA .box-parnas .inner {
   max-width: 1400px;
@@ -1397,14 +1611,21 @@ button {
   padding: 10px 0 10px 0;
 }
 .typeA .box-res {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   right: 0;
   transition: all 0.4s;
+  z-index: 2000;
 }
-.typeA .box-res.fixed {
+.typeA .box-controll-bottom {
+  border-top: 1px solid var(--Gray-6, #E1E0E1);
   position: fixed;
-  bottom: auto;
-  top: 100px;
-  z-index: 300;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1800;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
 }/*# sourceMappingURL=style.css.map */
