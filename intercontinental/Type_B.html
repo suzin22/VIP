@@ -147,7 +147,7 @@
   </div>
 
   <div class="section-4">
-    <div class="inner">
+    <div class="inner" style="z-index: 1000;">
       <div class="box-text">
         <img src="static/images/section4_text_1.png" alt="">
       </div>
@@ -157,6 +157,8 @@
         <img src="static/images/section4_img_1.png" alt="">
         <img src="static/images/section4_img_2.png" alt="">
         <img src="static/images/section4_img_3.png" alt="">
+        <img src="static/images/section4_img_4.png" alt="">
+        <img src="static/images/section4_img_5.png" alt="">
       </div>
     </div>
   </div>
@@ -457,7 +459,7 @@
     // section-4
     const ani9 = gsap.timeline();
     ani9.to(".section-4 .img-cover", {
-      x: -2000
+      x: -4000
     })
 
     ScrollTrigger.create({
