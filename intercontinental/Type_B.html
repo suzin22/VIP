@@ -134,11 +134,12 @@
         <img src="static/images/section3_text_1.png" alt="">
       </div>
     </div>
-    <div class="text-1">
+    <!-- <div class="text-1">
       <img src="static//images/section3_text_2.png" alt="">
-    </div>
+    </div> -->
     <div class="img-cover">
       <div class="inner-2">
+        <img src="static//images/section3_text_2.png" alt="" class="img-text">
         <img src="static/images/section3_img_1.png" alt="">
       </div>
     </div>
@@ -416,12 +417,9 @@
 
     // section-3
     const ani8 = gsap.timeline();
-    ani8.to(".section-3 .text-1 img", {
-      //marginTop: -500,
-      x: -2000
-    }, 'start01').to(".section-3 .img-cover", {
+    ani8.to(".section-3 .img-cover", {
       //marginLeft: -500
-      x: -2000
+      x: -1800
     }, 'start01')
 
     ScrollTrigger.create({

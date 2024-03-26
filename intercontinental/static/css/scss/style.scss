@@ -756,14 +756,19 @@ button {
       transform: translate(-50%, -50%);
       .inner-2 {
         display: flex;
-        gap: 387px;
-        padding-left: 20vw;
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
-        width: 1360px;
+        transform: translate(0, -50%);
+        width:fit-content;
         z-index: 100;
+        .img-text {
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translate(calc(-50% + 1220px), -50%);
+          z-index: 200;
+        }
         img {
           object-fit: contain;
         }
@@ -1286,7 +1291,7 @@ button {
     .swiper-club {
       overflow: hidden;
       margin: 0 -65px;
-      &:hover{
+      &:hover {
         cursor: grab;
       }
       .swiper-wrapper {
@@ -1340,51 +1345,51 @@ button {
   // box-wedding
   .box-wedding {
     overflow: hidden;
-    &.bg-1{
-      .inner{
-        &::after{
+    &.bg-1 {
+      .inner {
+        &::after {
           background: #46575f;
         }
       }
     }
-    &.bg-2{
-      .inner{
-        &::after{
+    &.bg-2 {
+      .inner {
+        &::after {
           background: #545a5d;
         }
       }
     }
-    &.bg-3{
-      .inner{
-        &::after{
+    &.bg-3 {
+      .inner {
+        &::after {
           background: #4d6470;
         }
       }
     }
-    &.bg-4{
-      .inner{
-        &::after{
+    &.bg-4 {
+      .inner {
+        &::after {
           background: rgb(65, 80, 88);
         }
       }
     }
-    &.bg-5{
-      .inner{
-        &::after{
+    &.bg-5 {
+      .inner {
+        &::after {
           background: #5a6c75;
         }
       }
     }
-    &.bg-6{
-      .inner{
-        &::after{
+    &.bg-6 {
+      .inner {
+        &::after {
           background: #3b6c8a;
         }
       }
     }
-    &.bg-7{
-      .inner{
-        &::after{
+    &.bg-7 {
+      .inner {
+        &::after {
           background: #7a848a;
         }
       }
@@ -1815,7 +1820,7 @@ button {
 
   // box-controll-bottom
   .box-controll-bottom {
-    border-top: 1px solid var(--Gray-6, #E1E0E1);
+    border-top: 1px solid var(--Gray-6, #e1e0e1);
     position: fixed;
     bottom: -300px;
     left: 0;
@@ -1825,12 +1830,12 @@ button {
     display: flex;
     justify-content: center;
     background-color: #fff;
-    transition: all .4s;
+    transition: all 0.4s;
     will-change: auto;
     opacity: 0;
-    &.is-show{
+    &.is-show {
       opacity: 1;
-      bottom:-31px;
+      bottom: -31px;
     }
   }
 }

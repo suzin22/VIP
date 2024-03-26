@@ -694,14 +694,19 @@ button {
 }
 .typeB .section-3 .img-cover .inner-2 {
   display: flex;
-  gap: 387px;
-  padding-left: 20vw;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  width: 1360px;
+  transform: translate(0, -50%);
+  width: fit-content;
   z-index: 100;
+}
+.typeB .section-3 .img-cover .inner-2 .img-text {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(calc(-50% + 1220px), -50%);
+  z-index: 200;
 }
 .typeB .section-3 .img-cover .inner-2 img {
   object-fit: contain;
@@ -1640,7 +1645,7 @@ button {
   z-index: 2000;
 }
 .typeA .box-controll-bottom {
-  border-top: 1px solid var(--Gray-6, #E1E0E1);
+  border-top: 1px solid var(--Gray-6, #e1e0e1);
   position: fixed;
   bottom: -300px;
   left: 0;
