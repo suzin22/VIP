@@ -716,7 +716,7 @@ button {
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%);
+      transform: translate(-35%, -50%);
       img {
         margin-left: 80vw;
       }
@@ -742,11 +742,11 @@ button {
       top: 50%;
       left: 50%;
       //transform: translate(-50%, calc(-50% + 30vh));
-      transform: translate(-50%, calc(-50% + 100px));
+      transform: translate(calc(-50% + 923px), -50%);
       z-index: 100;
       transition: all 0.4s;
       img {
-        opacity: 0;
+        //opacity: 0;
       }
     }
     .img-cover {

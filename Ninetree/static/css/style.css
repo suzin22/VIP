@@ -469,7 +469,7 @@ button {
   opacity: 1;
   width: 30px;
   height: 30px;
-  transition: all 1s;
+  transition: all 0.5s;
 }
 .window-cursor.main-swiperButton-prev .swiper-pagination, .window-cursor.main-swiperButton-next .swiper-pagination {
   opacity: 1;

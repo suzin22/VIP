@@ -140,8 +140,6 @@
     <div class="img-cover">
       <div class="inner-2">
         <img src="static/images/section3_img_1.png" alt="">
-        <img src="static/images/section3_img_2.png" alt="">
-        <img src="static/images/section3_img_3.png" alt="">
       </div>
     </div>
   </div>
@@ -384,14 +382,14 @@
     const ani7 = gsap.timeline();
     ani7.to(".section-2 .img-cover img", {
       //x: -500
-      marginLeft: -500
+      marginLeft: -2500
     })
 
     ScrollTrigger.create({
       animation: ani7,
       trigger: ".section-2",
       start: "top top",
-      end: "+=2000",
+      end: "+=4000",
       scrub: 2,
       pin: true,
       markers: false,
@@ -420,8 +418,7 @@
     const ani8 = gsap.timeline();
     ani8.to(".section-3 .text-1 img", {
       //marginTop: -500,
-      opacity: 1,
-      y: -100
+      x: -2000
     }, 'start01').to(".section-3 .img-cover", {
       //marginLeft: -500
       x: -2000
@@ -466,7 +463,7 @@
       animation: ani9,
       trigger: ".section-4",
       start: "top top",
-      end: "+=2000",
+      end: "+=5000",
       scrub: 2,
       pin: true,
       markers: false,
