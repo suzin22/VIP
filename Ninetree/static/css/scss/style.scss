@@ -556,28 +556,20 @@ button {
   }
   .svg {
     opacity: 0;
-    svg {
-      border-radius: 999;
-      position: absolute;
-      top: -4px;
-      left: -4px;
-      width: 94px;
-      height: 94px;
-      stroke-dasharray: 630;
-      stroke-dashoffset: 630;
-      //transition: all .4s;
-      &.svg-ani {
-        // stroke-dasharray: 630;
-        // stroke-dashoffset: 400;
-        animation: stroke-ani 12.5s linear;
-      }
-    }
-    @keyframes stroke-ani {
-      from {
-        stroke-dashoffset: 630;
-      }
-      to {
-        stroke-dashoffset: 0;
+    .autoplay-progress {
+      svg {
+        --progress: 0;
+        position: absolute;
+        top: -8px;
+        left: -8px;
+        width: 98px;
+        height: 98px;
+        stroke-width: 2px;
+        stroke: #e7542c;
+        fill: none;
+        stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
+        stroke-dasharray: 125.6;
+        transform: rotate(-90deg);
       }
     }
   }
@@ -784,7 +776,7 @@ button {
 
 // box-gallery
 .box-gallery {
-  background: var(--Gray-5, #F0F0F0);
+  background: var(--Gray-5, #f0f0f0);
   .inner {
     max-width: 1600px;
     margin: 0 auto;
