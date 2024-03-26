@@ -598,14 +598,15 @@
       slidesPerView: 3,
       slidesPerGroup: 1,
       spaceBetween: 0,
-      simulateTouch: true,
+      //simulateTouch: true,
       loop: true,
       centeredSlides: true,
       speed: 1000,
+      slideToClickedSlide : true,
       autoplay: {
         delay: 5000,
       },
-      touchRatio: 0,
+      //touchRatio: 0,
       navigation: {
         nextEl: '.box-club .swiper-button-next',
         prevEl: '.box-club .swiper-button-prev',
@@ -654,8 +655,6 @@
               document.querySelector('[data-ct="3"]').classList.add('show');
             }
           }, 100)
-
-          //console.log("data-index 값:", dataIndex);
         },
       },
     });

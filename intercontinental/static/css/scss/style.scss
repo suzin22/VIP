@@ -1286,6 +1286,9 @@ button {
     .swiper-club {
       overflow: hidden;
       margin: 0 -65px;
+      &:hover{
+        cursor: grab;
+      }
       .swiper-wrapper {
         display: flex;
         .swiper-slide {

@@ -1193,6 +1193,9 @@ button {
   overflow: hidden;
   margin: 0 -65px;
 }
+.typeA .box-club .swiper-club:hover {
+  cursor: grab;
+}
 .typeA .box-club .swiper-club .swiper-wrapper {
   display: flex;
 }
