@@ -469,6 +469,7 @@ button {
   opacity: 1;
   width: 30px;
   height: 30px;
+  transition: all 1s;
 }
 .window-cursor.main-swiperButton-prev .swiper-pagination, .window-cursor.main-swiperButton-next .swiper-pagination {
   opacity: 1;
@@ -477,7 +478,7 @@ button {
   opacity: 1;
 }
 .window-cursor.main-swiperButton-prev .swiper-button-cion {
-  transform: rotate(180deg);
+  transform: rotate(-180deg);
 }
 .window-cursor .swiper-pagination {
   opacity: 0;
