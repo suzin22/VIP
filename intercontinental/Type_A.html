@@ -602,7 +602,7 @@
       loop: true,
       centeredSlides: true,
       speed: 1000,
-      slideToClickedSlide : true,
+      slideToClickedSlide: true,
       autoplay: {
         delay: 5000,
       },
@@ -671,7 +671,7 @@
       loop: true,
       speed: 1000,
       autoplay: {
-        delay: 5000,
+        delay: 4000,
       },
       navigation: {
         nextEl: '.box-ct .swiper-button-next',
@@ -682,7 +682,14 @@
 
         },
         slideChange: function (swiper) {
+          let cnt = swiper.realIndex;
 
+          const totalSlides = swiper.slides.length;
+          for (let i = 1; i < totalSlides; i++) {
+            document.querySelector('.box-wedding').classList.remove('bg-' + i);
+          }
+
+          document.querySelector('.box-wedding').classList.add('bg-' + cnt);
         },
       },
       pagination: {

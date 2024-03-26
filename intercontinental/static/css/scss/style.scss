@@ -1340,6 +1340,55 @@ button {
   // box-wedding
   .box-wedding {
     overflow: hidden;
+    &.bg-1{
+      .inner{
+        &::after{
+          background: #46575f;
+        }
+      }
+    }
+    &.bg-2{
+      .inner{
+        &::after{
+          background: #545a5d;
+        }
+      }
+    }
+    &.bg-3{
+      .inner{
+        &::after{
+          background: #4d6470;
+        }
+      }
+    }
+    &.bg-4{
+      .inner{
+        &::after{
+          background: rgb(65, 80, 88);
+        }
+      }
+    }
+    &.bg-5{
+      .inner{
+        &::after{
+          background: #5a6c75;
+        }
+      }
+    }
+    &.bg-6{
+      .inner{
+        &::after{
+          background: #3b6c8a;
+        }
+      }
+    }
+    &.bg-7{
+      .inner{
+        &::after{
+          background: #7a848a;
+        }
+      }
+    }
     &.bg-ani {
       .inner {
         &::after {
@@ -1365,7 +1414,8 @@ button {
         opacity: 0.5;
         width: 57vw;
         transform: translate(0, -50%);
-        transition: all 0.4s;
+        transition: all 2s;
+        will-change: auto;
       }
       .box-ct {
         z-index: 100;
