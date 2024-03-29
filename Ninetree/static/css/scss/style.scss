@@ -907,6 +907,12 @@ button {
       }
     }
     .swiper-gallery-2 {
+      .swiper-slide{
+        width: 478px;
+        &:nth-child(1){
+          width: 977px;
+        }
+      }
       * {
         &:hover {
           cursor: grab;

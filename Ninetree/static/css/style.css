@@ -841,6 +841,12 @@ button {
   top: 2px;
   right: 2px;
 }
+.box-services .inner .swiper-gallery-2 .swiper-slide {
+  width: 478px;
+}
+.box-services .inner .swiper-gallery-2 .swiper-slide:nth-child(1) {
+  width: 977px;
+}
 .box-services .inner .swiper-gallery-2 *:hover {
   cursor: grab;
 }
