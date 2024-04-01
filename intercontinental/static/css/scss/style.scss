@@ -1999,6 +1999,38 @@ button {
           object-fit: contain;
         }
       }
+      &.up {
+        .up {
+          opacity: 1;
+          pointer-events: all;
+          height: auto;
+          padding: 30px 80px;
+        }
+        .down {
+          opacity: 0;
+          pointer-events: none;
+          height: 0;
+          padding: 0;
+        }
+      }
+      &.down {
+        background: #fff;
+        .inner {
+          border-bottom: 1px solid var(--Gray-6, #e1e0e1);
+        }
+        .up {
+          opacity: 0;
+          pointer-events: none;
+          height: 0;
+          padding: 0;
+        }
+        .down {
+          opacity: 1;
+          pointer-events: all;
+          height: auto;
+          padding: 30px 80px;
+        }
+      }
     }
     // box-main-kv
     .box-main-kvEshop {
@@ -2008,7 +2040,7 @@ button {
       height: 100vh;
 
       animation: mainMotion 1s linear infinite;
-      animation-delay: 1.5s;
+      animation-delay: 0.5s;
       animation-iteration-count: 1;
       animation-fill-mode: forwards;
 
@@ -2031,7 +2063,7 @@ button {
           height: 100vh;
 
           animation: mainMotion2 1s linear infinite;
-          animation-delay: 1.5s;
+          animation-delay: 0.5s;
           animation-iteration-count: 1;
           animation-fill-mode: forwards;
 

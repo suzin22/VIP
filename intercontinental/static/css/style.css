@@ -1810,13 +1810,43 @@ button {
 .typeA.eshopB .box-header .inner img {
   object-fit: contain;
 }
+.typeA.eshopB .box-header.up .up {
+  opacity: 1;
+  pointer-events: all;
+  height: auto;
+  padding: 30px 80px;
+}
+.typeA.eshopB .box-header.up .down {
+  opacity: 0;
+  pointer-events: none;
+  height: 0;
+  padding: 0;
+}
+.typeA.eshopB .box-header.down {
+  background: #fff;
+}
+.typeA.eshopB .box-header.down .inner {
+  border-bottom: 1px solid var(--Gray-6, #e1e0e1);
+}
+.typeA.eshopB .box-header.down .up {
+  opacity: 0;
+  pointer-events: none;
+  height: 0;
+  padding: 0;
+}
+.typeA.eshopB .box-header.down .down {
+  opacity: 1;
+  pointer-events: all;
+  height: auto;
+  padding: 30px 80px;
+}
 .typeA.eshopB .box-main-kvEshop {
   margin: 0 auto;
   overflow: hidden;
   position: relative;
   height: 100vh;
   animation: mainMotion 1s linear infinite;
-  animation-delay: 1.5s;
+  animation-delay: 0.5s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
@@ -1839,7 +1869,7 @@ button {
 .typeA.eshopB .box-main-kvEshop .swiper-slide.is-start {
   height: 100vh;
   animation: mainMotion2 1s linear infinite;
-  animation-delay: 1.5s;
+  animation-delay: 0.5s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }

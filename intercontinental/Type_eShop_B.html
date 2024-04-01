@@ -54,11 +54,16 @@
 <body class="typeA eshop eshopB">
 
   <!-- box-header -->
-  <div class="box-header">
-    <div class="inner">
+  <div class="box-header up">
+    <div class="inner up">
       <a href="Type_B.html"><img src="static/images/eshopB/header_left.png" alt=""></a>
       <a href="Type_B.html"><img src="static/images/eshopB/header_h1.png" alt=""></a>
       <img src="static/images/eshopB/header_right.png" alt="">
+    </div>
+    <div class="inner down">
+      <a href="Type_B.html"><img src="static/images/eshopB/header_left_down.png" alt=""></a>
+      <a href="Type_B.html"><img src="static/images/eshopB/header_h1_down.png" alt=""></a>
+      <img src="static/images/eshopB/header_right_down.png" alt="">
     </div>
   </div>
   <!-- //box-header -->
@@ -165,10 +170,10 @@
         <div class="right">
           <div class="gap-swiper">
             <div class="flex">
-              <div data-aos="fade-up" data-aos-delay="400"><img
-                  src="static/images/eshopA/special_img_2.png" alt=""></div>
-              <div data-aos="fade-up" data-aos-delay="600"><img
-                  src="static/images/eshopA/special_img_3.png" alt=""></div>
+              <div data-aos="fade-up" data-aos-delay="400"><img src="static/images/eshopA/special_img_2.png" alt="">
+              </div>
+              <div data-aos="fade-up" data-aos-delay="600"><img src="static/images/eshopA/special_img_3.png" alt="">
+              </div>
             </div>
             <div class="line"><img src="static/images/eshopA/special_line.png" alt=""></div>
           </div>
@@ -262,13 +267,7 @@
         element.classList.remove('is-start');
         element.classList.add('is-end');
       });
-
-      // var elements = document.querySelectorAll('.box-main-kvEshop .swiper-slide .text-1, .box-main-kvEshop .swiper-slide .text-2');
-
-      // elements.forEach(function (element) {
-      //   element.style.opacity = '1';
-      // });
-    }, 3000); // 초 뒤에 실행 (2000밀리초)
+    }, 2000); // 초 뒤에 실행 (2000밀리초)
 
     setTimeout(() => {
       // promotion
@@ -328,7 +327,8 @@
 
     // 스크롤 up down 체크
     let lastScrollTop = 0,
-      btnFixed = document.querySelector('.btn-fixed');
+      btnFixed = document.querySelector('.btn-fixed'),
+      header = document.querySelector('.box-header');
 
     window.addEventListener("scroll", function () {
       var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
@@ -347,8 +347,11 @@
 
       if (scrollPosition < 100) {
         btnFixed.classList.remove('scroll-up');
+        header.classList.remove('down');
+        header.classList.add('up');
       } else {
-
+        header.classList.add('down');
+        header.classList.remove('up');
       }
     });
 
