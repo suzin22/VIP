@@ -1835,5 +1835,157 @@ button {
       bottom: -31px;
     }
   }
+
+  // eshop
+  &.eshop {
+    // box-main-kv
+    .box-main-kv {
+      height: 70vh;
+      padding-top: 49px;
+      .swiper-pagination {
+        transform: translateY(calc(-50% + 351px));
+      }
+    }
+    .box-picks {
+      margin-top: 140px;
+      background-image: url("../../../static/images/eshopA/bg_picks.png");
+      background-position: center top;
+      background-repeat: no-repeat;
+      .inner {
+        padding: 123px 0 0 0;
+        h2 {
+          text-align: center;
+          & + h2 {
+            padding-top: 31px;
+          }
+        }
+        .list {
+          max-width: 1400px;
+          margin: 60px auto 0;
+          display: flex;
+          gap: 20px;
+        }
+      }
+    }
+    .box-offers {
+      padding-top: 120px;
+      padding-bottom: 140px;
+      .inner {
+        h3 {
+          padding: 31px 0 60px 0;
+        }
+        .list {
+          gap: 20px;
+        }
+      }
+    }
+    .box-footer {
+      background: #1c1c1c;
+      margin-top: 140px;
+      .inner {
+        h2 {
+          padding: 0;
+        }
+      }
+    }
+    .box-promotion {
+      .inner {
+        max-width: 1920px;
+        margin: 0 auto;
+        .flex {
+          display: flex;
+          .left {
+            flex: 0 0 950px;
+            margin-right: 125px;
+            position: relative;
+            z-index: 10;
+            .cap {
+              margin-top: 60px;
+              width: 950px;
+              height: 1080px;
+              overflow: hidden;
+              position: relative;
+              display: block;
+              img {
+                position: absolute;
+                top: 0;
+                left: -101px;
+                width: 1100px;
+              }
+            }
+          }
+          .right {
+            flex-grow: 1;
+            position: relative;
+            padding-top: 197px;
+            &:after {
+              content: "";
+              display: block;
+              background: var(--SIgnature-4, #6f8895);
+              width: 1372px;
+              height: 643px;
+              position: absolute;
+              top: 0;
+              right: 0;
+            }
+            h2 {
+              position: relative;
+              z-index: 10;
+              padding: 0 0 38px 0;
+            }
+            .box-list {
+              position: relative;
+              z-index: 10;
+              padding: 83px 0 0 0;
+              margin-left: -5px;
+              .list {
+                display: flex;
+                gap: 40px;
+              }
+              .line {
+                padding-top: 56px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .box-parnasBanner {
+      margin: 80px 0 0;
+      .inner {
+        max-width: 1760px;
+        margin: 0 auto;
+      }
+    }
+    .box-special {
+      .inner {
+        max-width: 1400px;
+        margin: 0 auto -13px;
+        padding: 143px 0 0;
+        h2 {
+          text-align: center;
+          padding-bottom: 60px;
+        }
+        .flex {
+          display: flex;
+          .left {
+          }
+          .right {
+            margin-left: 40px;
+            .gap-swiper {
+              .flex {
+                display: flex;
+                gap: 40px;
+              }
+              .line {
+                padding-top: 56px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  // //eshop
 }
 // //Type-A

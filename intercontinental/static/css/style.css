@@ -1665,4 +1665,138 @@ button {
 .typeA .box-controll-bottom.is-show {
   opacity: 1;
   bottom: -31px;
+}
+.typeA.eshop .box-main-kv {
+  height: 70vh;
+  padding-top: 49px;
+}
+.typeA.eshop .box-main-kv .swiper-pagination {
+  transform: translateY(calc(-50% + 351px));
+}
+.typeA.eshop .box-picks {
+  margin-top: 140px;
+  background-image: url("../../../static/images/eshopA/bg_picks.png");
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+.typeA.eshop .box-picks .inner {
+  padding: 123px 0 0 0;
+}
+.typeA.eshop .box-picks .inner h2 {
+  text-align: center;
+}
+.typeA.eshop .box-picks .inner h2 + h2 {
+  padding-top: 31px;
+}
+.typeA.eshop .box-picks .inner .list {
+  max-width: 1400px;
+  margin: 60px auto 0;
+  display: flex;
+  gap: 20px;
+}
+.typeA.eshop .box-offers {
+  padding-top: 120px;
+  padding-bottom: 140px;
+}
+.typeA.eshop .box-offers .inner h3 {
+  padding: 31px 0 60px 0;
+}
+.typeA.eshop .box-offers .inner .list {
+  gap: 20px;
+}
+.typeA.eshop .box-footer {
+  background: #1c1c1c;
+  margin-top: 140px;
+}
+.typeA.eshop .box-footer .inner h2 {
+  padding: 0;
+}
+.typeA.eshop .box-promotion .inner {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+.typeA.eshop .box-promotion .inner .flex {
+  display: flex;
+}
+.typeA.eshop .box-promotion .inner .flex .left {
+  flex: 0 0 950px;
+  margin-right: 125px;
+  position: relative;
+  z-index: 10;
+}
+.typeA.eshop .box-promotion .inner .flex .left .cap {
+  margin-top: 60px;
+  width: 950px;
+  height: 1080px;
+  overflow: hidden;
+  position: relative;
+  display: block;
+}
+.typeA.eshop .box-promotion .inner .flex .left .cap img {
+  position: absolute;
+  top: 0;
+  left: -101px;
+  width: 1100px;
+}
+.typeA.eshop .box-promotion .inner .flex .right {
+  flex-grow: 1;
+  position: relative;
+  padding-top: 197px;
+}
+.typeA.eshop .box-promotion .inner .flex .right:after {
+  content: "";
+  display: block;
+  background: var(--SIgnature-4, #6f8895);
+  width: 1372px;
+  height: 643px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.typeA.eshop .box-promotion .inner .flex .right h2 {
+  position: relative;
+  z-index: 10;
+  padding: 0 0 38px 0;
+}
+.typeA.eshop .box-promotion .inner .flex .right .box-list {
+  position: relative;
+  z-index: 10;
+  padding: 83px 0 0 0;
+  margin-left: -5px;
+}
+.typeA.eshop .box-promotion .inner .flex .right .box-list .list {
+  display: flex;
+  gap: 40px;
+}
+.typeA.eshop .box-promotion .inner .flex .right .box-list .line {
+  padding-top: 56px;
+}
+.typeA.eshop .box-parnasBanner {
+  margin: 80px 0 0;
+}
+.typeA.eshop .box-parnasBanner .inner {
+  max-width: 1760px;
+  margin: 0 auto;
+}
+.typeA.eshop .box-special .inner {
+  max-width: 1400px;
+  margin: 0 auto -13px;
+  padding: 143px 0 0;
+}
+.typeA.eshop .box-special .inner h2 {
+  text-align: center;
+  padding-bottom: 60px;
+}
+.typeA.eshop .box-special .inner .flex {
+  display: flex;
+}
+.typeA.eshop .box-special .inner .flex .right {
+  margin-left: 40px;
+}
+.typeA.eshop .box-special .inner .flex .right .gap-swiper .flex {
+  display: flex;
+  gap: 40px;
+}
+.typeA.eshop .box-special .inner .flex .right .gap-swiper .line {
+  padding-top: 56px;
 }/*# sourceMappingURL=style.css.map */
