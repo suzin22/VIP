@@ -56,7 +56,11 @@
   <!-- box-header -->
   <div class="box-header">
     <div class="top">
-      <img src="static/images/typeA/header_utill.png" alt="">
+      <!-- <img src="static/images/typeA/header_utill.png" alt=""> -->
+      <img src="static/images/typeA/header_utill_1.png" alt="">
+      <a href="#none"><img src="static/images/typeA/header_utill_2.png" alt="" style="padding:0 
+      10px;"></a>
+      <img src="static/images/typeA/header_utill_3.png" alt="">
     </div>
     <div class="inner">
       <img src="static/images/typeA/header_left.png" alt="" style="height: 32px;">
@@ -553,8 +557,10 @@
       if (window.scrollY > 100 && !isClickEventAttached) {
         document.querySelector('.box-res').addEventListener('click', clickEventScroll);
         isClickEventAttached = true;
+        document.querySelector('.box-res').classList.add('is-active');
       } else if (window.scrollY < 100 && isClickEventAttached) {
         removeClickEventScroll();
+        document.querySelector('.box-res').classList.remove('is-active');
       }
     };
 

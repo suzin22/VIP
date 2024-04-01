@@ -1640,9 +1640,12 @@ button {
 .typeA .box-res {
   position: fixed;
   bottom: 0;
-  right: 0;
+  right: -300px;
   transition: all 0.4s;
   z-index: 2000;
+}
+.typeA .box-res.is-active {
+  right: 0;
 }
 .typeA .box-controll-bottom {
   border-top: 1px solid var(--Gray-6, #e1e0e1);
