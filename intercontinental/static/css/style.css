@@ -1860,7 +1860,7 @@ button {
   background: var(--Primary-5, #000);
 }
 .typeA.eshopB .box-header {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
 }
 .typeA.eshopB .box-header .inner {
   border-bottom: 1px solid rgba(255, 255, 255, 0.16);
@@ -1869,11 +1869,22 @@ button {
 .typeA.eshopB .box-header .inner img {
   object-fit: contain;
 }
+.typeA.eshopB .box-header .utill {
+  display: block;
+  text-align: right;
+  border-bottom: 1px solid var(--Transparent-w_20, rgba(255, 255, 255, 0.2));
+}
+.typeA.eshopB .box-header .utill.up {
+  padding: 14px 80px !important;
+}
+.typeA.eshopB .box-header .utill.down {
+  border-bottom: 1px solid var(--Gray-5, #f0f0f0);
+}
 .typeA.eshopB .box-header.up .up {
   opacity: 1;
   pointer-events: all;
   height: auto;
-  padding: 30px 80px;
+  padding: 11px 80px;
 }
 .typeA.eshopB .box-header.up .down {
   opacity: 0;
@@ -1891,13 +1902,13 @@ button {
   opacity: 0;
   pointer-events: none;
   height: 0;
-  padding: 0;
+  padding: 0 !important;
 }
 .typeA.eshopB .box-header.down .down {
   opacity: 1;
   pointer-events: all;
   height: auto;
-  padding: 30px 80px;
+  padding: 12px 80px !important;
 }
 .typeA.eshopB .box-main-kvEshop {
   margin: 0 auto;
@@ -1924,6 +1935,7 @@ button {
   background-color: #fff;
   background-repeat: no-repeat;
   background-size: cover;
+  transition: all 0.4s;
 }
 .typeA.eshopB .box-main-kvEshop .swiper-slide.is-start {
   height: 100vh;
@@ -1998,7 +2010,7 @@ button {
   margin: 0 10px;
 }
 .typeA.eshopB .box-main-kvEshop .swiper-pagination .inner .autoplay-progress span {
-  background: var(--Primary-4, #a88f6a);
+  background: var(--Primary-4, #8e6f42);
   position: absolute;
   top: 0;
   left: 0;
