@@ -1133,7 +1133,7 @@ button {
   z-index: 200;
 }
 .typeA .box-offers {
-  background: var(--Gray-bg, #f9f9f9);
+  background: linear-gradient(180deg, rgba(249, 249, 249, 0) 0%, #fff 100%), #f7f7f7;
   padding: 80px 0 0 0;
 }
 .typeA .box-offers .inner {
@@ -1680,7 +1680,7 @@ button {
   transform: translateY(calc(-50% + 351px));
 }
 .typeA.eshop .box-picks {
-  margin-top: 140px;
+  margin-top: 155px;
   background-image: url("../../../static/images/eshopA/bg_picks.png");
   background-position: center top;
   background-repeat: no-repeat;
@@ -1709,10 +1709,11 @@ button {
 }
 .typeA.eshop .box-offers .inner .list {
   gap: 20px;
+  padding: 67px 0 0 0;
 }
 .typeA.eshop .box-footer {
   background: #1c1c1c;
-  margin-top: 140px;
+  margin-top: 163px;
 }
 .typeA.eshop .box-footer .inner h2 {
   padding: 0;
@@ -1726,28 +1727,19 @@ button {
 }
 .typeA.eshop .box-promotion .inner .flex .left {
   flex: 0 0 950px;
-  margin-right: 125px;
+  margin-right: 120px;
   position: relative;
   z-index: 10;
 }
 .typeA.eshop .box-promotion .inner .flex .left .cap {
   margin-top: 60px;
   width: 950px;
-  height: 1080px;
-  overflow: hidden;
-  position: relative;
-  display: block;
-}
-.typeA.eshop .box-promotion .inner .flex .left .cap img {
-  position: absolute;
-  top: 0;
-  left: -101px;
-  width: 1100px;
+  height: 960px;
 }
 .typeA.eshop .box-promotion .inner .flex .right {
   flex-grow: 1;
   position: relative;
-  padding-top: 197px;
+  padding-top: 218px;
 }
 .typeA.eshop .box-promotion .inner .flex .right:after {
   content: "";
@@ -1759,10 +1751,37 @@ button {
   top: 0;
   right: 0;
 }
+.typeA.eshop .box-promotion .inner .flex .right .list-swiper {
+  width: 41.4vw;
+  overflow: hidden;
+  z-index: 300;
+}
+.typeA.eshop .box-promotion .inner .flex .right .list-swiper .swiper-wrapper {
+  display: flex;
+}
+.typeA.eshop .box-promotion .inner .flex .right .list-swiper .swiper-wrapper:hover {
+  cursor: grab;
+}
+.typeA.eshop .box-promotion .inner .flex .right .list-swiper .swiper-wrapper .swiper-slide {
+  width: 354px;
+}
+.typeA.eshop .box-promotion .inner .flex .right .list-swiper .swiper-wrapper .swiper-slide a:hover {
+  cursor: grab;
+}
+.typeA.eshop .box-promotion .inner .flex .right .list-swiper .swiper-pagination {
+  background: var(--Warm-Gray-19, #c5beb4);
+  height: 2px;
+  top: auto;
+  bottom: 155px;
+  width: 36.8vw;
+}
+.typeA.eshop .box-promotion .inner .flex .right .list-swiper .swiper-pagination .swiper-pagination-progressbar-fill {
+  background: var(--Primary-5, #000);
+}
 .typeA.eshop .box-promotion .inner .flex .right h2 {
   position: relative;
   z-index: 10;
-  padding: 0 0 38px 0;
+  padding: 0 0 67px;
 }
 .typeA.eshop .box-promotion .inner .flex .right .box-list {
   position: relative;
@@ -1778,11 +1797,25 @@ button {
   padding-top: 56px;
 }
 .typeA.eshop .box-parnasBanner {
-  margin: 80px 0 0;
+  margin: 139px 0 0;
 }
 .typeA.eshop .box-parnasBanner .inner {
   max-width: 1760px;
   margin: 0 auto;
+}
+.typeA.eshop .box-parnasBanner .inner .swiper-banner .swiper-wrapper .swiper-slide {
+  width: 1760px;
+  height: 480px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.typeA.eshop .box-parnasBanner .inner .img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
 }
 .typeA.eshop .box-special .inner {
   max-width: 1400px;
@@ -1791,20 +1824,34 @@ button {
 }
 .typeA.eshop .box-special .inner h2 {
   text-align: center;
-  padding-bottom: 60px;
+  padding-bottom: 67px;
 }
 .typeA.eshop .box-special .inner .flex {
   display: flex;
 }
 .typeA.eshop .box-special .inner .flex .right {
   margin-left: 40px;
+  position: relative;
+}
+.typeA.eshop .box-special .inner .flex .right .gap-swiper {
+  overflow: hidden;
+  width: 918px;
 }
 .typeA.eshop .box-special .inner .flex .right .gap-swiper .flex {
   display: flex;
-  gap: 40px;
 }
-.typeA.eshop .box-special .inner .flex .right .gap-swiper .line {
-  padding-top: 56px;
+.typeA.eshop .box-special .inner .flex .right .gap-swiper .flex .swiper-slide {
+  width: 440px;
+}
+.typeA.eshop .box-special .inner .flex .right .swiper-pagination {
+  background: var(--Warm-Gray-19, #c5beb4);
+  height: 2px;
+  top: auto;
+  bottom: 0;
+  width: 100%;
+}
+.typeA.eshop .box-special .inner .flex .right .swiper-pagination .swiper-pagination-progressbar-fill {
+  background: var(--Primary-5, #000);
 }
 .typeA.eshopB .box-header {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
