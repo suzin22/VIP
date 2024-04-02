@@ -1625,6 +1625,9 @@ button {
         }
       }
       .swiper-banquer {
+        &:hover {
+          cursor: grab;
+        }
         .swiper-slide {
           background: var(--SIgnature-2, #1f4456);
           padding: 100px;
@@ -2040,7 +2043,8 @@ button {
       height: 100vh;
 
       animation: mainMotion 1s linear infinite;
-      animation-delay: 0.5s;
+      //animation-delay: 0.5s;
+      animation-delay: 2s;
       animation-iteration-count: 1;
       animation-fill-mode: forwards;
 
@@ -2063,7 +2067,8 @@ button {
           height: 100vh;
 
           animation: mainMotion2 1s linear infinite;
-          animation-delay: 0.5s;
+          //animation-delay: 0.5s;
+          animation-delay: 2s;
           animation-iteration-count: 1;
           animation-fill-mode: forwards;
 
@@ -2105,7 +2110,7 @@ button {
         }
         .text-2 {
           bottom: -42px;
-          transition: all 2s;
+          transition: all .5s;
         }
       }
       .swiper-pagination {

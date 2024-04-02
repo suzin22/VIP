@@ -499,13 +499,28 @@
       markers: false,
       anticipatePin: 1,
       onUpdate: (self) => {
-        if (self.progress.toFixed(1) >= 0.1) { // 스크롤 조금 내렸을 때
-          document.querySelector('.box-header').classList.add('fixed');
-        } else if (self.progress.toFixed(1) < 0.1) { // 위로 돌아왔을 때
-          document.querySelector('.box-header').classList.remove('fixed');
-        }
+        // if (self.progress.toFixed(1) >= 0.1) { // 스크롤 조금 내렸을 때
+        //   document.querySelector('.box-header').classList.add('fixed');
+        // } else if (self.progress.toFixed(1) < 0.1) { // 위로 돌아왔을 때
+        //   document.querySelector('.box-header').classList.remove('fixed');
+        // }
       }, // scroll 퍼센트 구하기 가능
     });
+
+    // header scroll
+    let lastScrollTop = 0;
+
+    window.addEventListener("scroll", function () {
+      var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+      if (currentScroll > lastScrollTop) {
+        // 아래로 스크롤 중
+        document.querySelector('.box-header').classList.add('fixed');
+      } else {
+        // 위로 스크롤 중
+        document.querySelector('.box-header').classList.remove('fixed');
+      }
+      lastScrollTop = currentScroll;
+    }, false);
 
     // btn reservation .box-res
     ScrollTrigger.create({

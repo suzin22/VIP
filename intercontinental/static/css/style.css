@@ -1486,6 +1486,9 @@ button {
   right: 59px;
   bottom: 33px;
 }
+.typeA .box-banquer .inner .swiper-banquer:hover {
+  cursor: grab;
+}
 .typeA .box-banquer .inner .swiper-banquer .swiper-slide {
   background: var(--SIgnature-2, #1f4456);
   padding: 100px;
@@ -1846,7 +1849,7 @@ button {
   position: relative;
   height: 100vh;
   animation: mainMotion 1s linear infinite;
-  animation-delay: 0.5s;
+  animation-delay: 2s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
@@ -1869,7 +1872,7 @@ button {
 .typeA.eshopB .box-main-kvEshop .swiper-slide.is-start {
   height: 100vh;
   animation: mainMotion2 1s linear infinite;
-  animation-delay: 0.5s;
+  animation-delay: 2s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
@@ -1907,7 +1910,7 @@ button {
 }
 .typeA.eshopB .box-main-kvEshop .swiper-slide .text-2 {
   bottom: -42px;
-  transition: all 2s;
+  transition: all 0.5s;
 }
 .typeA.eshopB .box-main-kvEshop .swiper-pagination {
   font-size: 14px;

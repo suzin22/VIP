@@ -225,6 +225,13 @@
       AOS.init();
     }, 3000);
 
+    setTimeout(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }, 100);
+
     // box-main-kvEshop
     const swiper = new Swiper('.box-main-kvEshop', {
       slidesPerView: 1,
@@ -267,7 +274,21 @@
         element.classList.remove('is-start');
         element.classList.add('is-end');
       });
-    }, 2000); // 초 뒤에 실행 (2000밀리초)
+    }, 3500); // 초 뒤에 실행
+
+    // box-main-kvEshop scroll text-1 text-2
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.to('.box-main-kvEshop .text-2', {
+      y: -30, // 위로 이동할 거리
+      scrollTrigger: {
+        markers: true,
+        trigger: '.box-main-kvEshop', // 스크롤을 감시할 요소
+        start: '50% 45%', // 시작 지점
+        end: 'bottom bottom', // 종료 지점
+        scrub: true, // 스크롤 스크럽 효과를 사용
+      }
+    });
 
     setTimeout(() => {
       // promotion
@@ -355,14 +376,12 @@
       }
     });
 
-
     btnFixed.addEventListener("click", function () {
       window.scrollTo({
         top: 0,
         behavior: 'smooth'
       });
     });
-
 
   </script>
 

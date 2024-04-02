@@ -160,8 +160,10 @@
         <div class="right">
           <div class="gap-swiper">
             <div class="flex">
-              <div data-aos="fade-up" data-offset="400" data-aos-delay="200"  data-aos-offset="600"><img src="static/images/eshopA/special_img_2.png" alt=""></div>
-              <div data-aos="fade-up" data-offset="400" data-aos-delay="400"  data-aos-offset="600"><img src="static/images/eshopA/special_img_3.png" alt=""></div>
+              <div data-aos="fade-up" data-offset="400" data-aos-delay="200" data-aos-offset="600"><img
+                  src="static/images/eshopA/special_img_2.png" alt=""></div>
+              <div data-aos="fade-up" data-offset="400" data-aos-delay="400" data-aos-offset="600"><img
+                  src="static/images/eshopA/special_img_3.png" alt=""></div>
             </div>
             <div class="line"><img src="static/images/eshopA/special_line.png" alt=""></div>
           </div>
@@ -250,13 +252,23 @@
       markers: false,
       anticipatePin: 1,
       onUpdate: (self) => {
-        if (self.progress.toFixed(1) >= 0.1) { // 스크롤 조금 내렸을 때
-          document.querySelector('.box-header').classList.add('fixed');
-        } else if (self.progress.toFixed(1) < 0.1) { // 위로 돌아왔을 때
-          document.querySelector('.box-header').classList.remove('fixed');
-        }
       }, // scroll 퍼센트 구하기 가능
     });
+
+    // header scroll
+    let lastScrollTop = 0;
+    
+    window.addEventListener("scroll", function () {
+      var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+      if (currentScroll > lastScrollTop) {
+        // 아래로 스크롤 중
+        document.querySelector('.box-header').classList.add('fixed');
+      } else {
+        // 위로 스크롤 중
+        document.querySelector('.box-header').classList.remove('fixed');
+      }
+      lastScrollTop = currentScroll;
+    }, false);
 
     // promotion
     const boxPromotion = gsap.timeline();
