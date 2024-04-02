@@ -1941,9 +1941,9 @@ button {
               z-index: 300;
               .swiper-wrapper {
                 display: flex;
-                &:hover {
-                  cursor: grab;
-                }
+                // &:hover {
+                //   cursor: grab;
+                // }
                 .swiper-slide {
                   width: 354px;
                   a {
@@ -2031,9 +2031,9 @@ button {
               overflow: hidden;
               //width: 41vw;
               width: 918px;
-              &:hover {
-                cursor: grab;
-              }
+              // &:hover {
+              //   cursor: grab;
+              // }
               .flex {
                 display: flex;
                 .swiper-slide {
@@ -2150,6 +2150,9 @@ button {
         background-repeat: no-repeat;
         background-size: cover;
         transition: all 0.4s;
+        &.swiper-slide-active{
+          z-index: 1000;
+        }
         &.is-start {
           height: 100vh;
 

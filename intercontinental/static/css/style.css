@@ -1759,9 +1759,6 @@ button {
 .typeA.eshop .box-promotion .inner .flex .right .list-swiper .swiper-wrapper {
   display: flex;
 }
-.typeA.eshop .box-promotion .inner .flex .right .list-swiper .swiper-wrapper:hover {
-  cursor: grab;
-}
 .typeA.eshop .box-promotion .inner .flex .right .list-swiper .swiper-wrapper .swiper-slide {
   width: 354px;
 }
@@ -1836,9 +1833,6 @@ button {
 .typeA.eshop .box-special .inner .flex .right .gap-swiper {
   overflow: hidden;
   width: 918px;
-}
-.typeA.eshop .box-special .inner .flex .right .gap-swiper:hover {
-  cursor: grab;
 }
 .typeA.eshop .box-special .inner .flex .right .gap-swiper .flex {
   display: flex;
@@ -1939,6 +1933,9 @@ button {
   background-repeat: no-repeat;
   background-size: cover;
   transition: all 0.4s;
+}
+.typeA.eshopB .box-main-kvEshop .swiper-slide.swiper-slide-active {
+  z-index: 1000;
 }
 .typeA.eshopB .box-main-kvEshop .swiper-slide.is-start {
   height: 100vh;
