@@ -1432,6 +1432,9 @@ button {
           top: -99px;
           left: 0;
           z-index: 1000;
+          .title-1 {
+            padding: 42px 0 48px 0;
+          }
           img {
             position: relative;
             z-index: 100;
@@ -2110,7 +2113,7 @@ button {
         }
         .text-2 {
           bottom: -42px;
-          transition: all .5s;
+          transition: all 0.5s;
         }
       }
       .swiper-pagination {

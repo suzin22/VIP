@@ -1304,6 +1304,9 @@ button {
   left: 0;
   z-index: 1000;
 }
+.typeA .box-wedding .inner .box-ct .left .title-1 {
+  padding: 42px 0 48px 0;
+}
 .typeA .box-wedding .inner .box-ct .left img {
   position: relative;
   z-index: 100;

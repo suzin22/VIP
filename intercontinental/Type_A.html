@@ -230,6 +230,17 @@
       <div class="box-ct">
         <!-- left -->
         <div class="left" data-aos="fade-right" data-offset="300">
+
+          <div class="title-1">
+            <img src="static/images/typeA/box-wedding-text_1.png" alt="" data-index="1" style="display: block;">
+            <img src="static/images/typeA/box-wedding-text_2.png" alt="" data-index="2" style="display: none;">
+            <img src="static/images/typeA/box-wedding-text_3.png" alt="" data-index="3" style="display: none;">
+            <img src="static/images/typeA/box-wedding-text_4.png" alt="" data-index="4" style="display: none;">
+            <img src="static/images/typeA/box-wedding-text_1.png" alt="" data-index="5" style="display: none;">
+            <img src="static/images/typeA/box-wedding-text_2.png" alt="" data-index="6" style="display: none;">
+            <img src="static/images/typeA/box-wedding-text_3.png" alt="" data-index="7" style="display: none;">
+          </div>
+
           <img src="static/images/typeA/box-wedding-left.png" alt="">
           <div class="swiper-button-prev" data-aos="fade-up"></div>
           <div class="swiper-button-next" data-aos="fade-up"></div>
@@ -499,11 +510,7 @@
       markers: false,
       anticipatePin: 1,
       onUpdate: (self) => {
-        // if (self.progress.toFixed(1) >= 0.1) { // 스크롤 조금 내렸을 때
-        //   document.querySelector('.box-header').classList.add('fixed');
-        // } else if (self.progress.toFixed(1) < 0.1) { // 위로 돌아왔을 때
-        //   document.querySelector('.box-header').classList.remove('fixed');
-        // }
+
       }, // scroll 퍼센트 구하기 가능
     });
 
@@ -689,8 +696,6 @@
       slidesPerView: 2.7,
       slidesPerGroup: 1,
       spaceBetween: 0,
-      //simulateTouch: true,
-      //centeredSlides: true,
       loop: true,
       speed: 1000,
       autoplay: {
@@ -706,6 +711,7 @@
 
         },
         slideChange: function (swiper) {
+          // swiper 맞는 bg 매칭
           let cnt = swiper.realIndex;
 
           const totalSlides = swiper.slides.length;
@@ -714,6 +720,19 @@
           }
 
           document.querySelector('.box-wedding').classList.add('bg-' + cnt);
+
+          // swiper 맞는 title 매칭
+          let cnt2 = swiper.realIndex + 1; // 실제 인덱스를 가져와서 1을 더해줌
+          const images = document.querySelectorAll('.left img[data-index]');
+
+          // 모든 이미지를 숨김
+          images.forEach(img => img.style.display = 'none');
+
+          // 해당하는 인덱스의 이미지만 표시
+          const targetImage = document.querySelector(`.left img[data-index="${cnt2}"]`);
+          if (targetImage) {
+            targetImage.style.display = 'block';
+          }
         },
       },
       pagination: {
