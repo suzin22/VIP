@@ -1837,11 +1837,17 @@ button {
   overflow: hidden;
   width: 918px;
 }
+.typeA.eshop .box-special .inner .flex .right .gap-swiper:hover {
+  cursor: grab;
+}
 .typeA.eshop .box-special .inner .flex .right .gap-swiper .flex {
   display: flex;
 }
 .typeA.eshop .box-special .inner .flex .right .gap-swiper .flex .swiper-slide {
   width: 440px;
+}
+.typeA.eshop .box-special .inner .flex .right .gap-swiper .flex .swiper-slide a:hover {
+  cursor: grab;
 }
 .typeA.eshop .box-special .inner .flex .right .swiper-pagination {
   background: var(--Warm-Gray-19, #c5beb4);
