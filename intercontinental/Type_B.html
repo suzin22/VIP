@@ -618,11 +618,34 @@
       onLeave: () => { // end 지점 밖으로 나감
         document.querySelector('.en').style.display = 'block';
         document.querySelector('.en').classList.add('scroll');
-        document.querySelector('.btn-right').classList.add('scroll');
       },
       onEnterBack: () => { // end 지점 반대로 돌아옴
         document.querySelector('.en').style.display = 'none';
         document.querySelector('.en').classList.remove('scroll');
+      },
+      onLeaveBack: () => { // start 지점 반대로 돌아옴
+
+      },
+      onUpdate: (self) => { // scroll 퍼센트 구하기 가능
+
+      },
+      onToggle: (e) => { // true false callback
+
+      },
+    });
+
+    // section-7 img-bottom
+    ScrollTrigger.create({
+      trigger: ".section-7 .img-bottom",
+      start: "top 20%",
+      end: "bottom bottom",
+      onEnter: () => { // 시작 지점 진입
+
+      },
+      onLeave: () => { // end 지점 밖으로 나감
+        document.querySelector('.btn-right').classList.add('scroll');
+      },
+      onEnterBack: () => { // end 지점 반대로 돌아옴
         document.querySelector('.btn-right').classList.remove('scroll');
       },
       onLeaveBack: () => { // start 지점 반대로 돌아옴
