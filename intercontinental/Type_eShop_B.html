@@ -81,7 +81,7 @@
   <div class="box-main-kvEshop">
     <div class="swiper-wrapper">
       <div class="swiper-slide is-start"
-        style="background-image: url('static/images/eshopB/main_kv_1.png');background-position: center 85%;">
+        style="background-image: url('static/images/eshopB/main_kv_1.png');background-position: top 50% right 50%;">
         <span class="text-1">
           <img src="static/images/eshopB/kv_text_1.png" alt="">
         </span>
@@ -90,7 +90,7 @@
         </span>
       </div>
       <div class="swiper-slide is-start"
-        style="background-image: url('static/images/eshopB/main_kv_2.png');background-position: center;">
+        style="background-image: url('static/images/eshopB/main_kv_2.png');background-position: top 50% right 50%;">
         <span class="text-1">
           <img src="static/images/eshopB/kv_text_3.png" alt="">
         </span>
@@ -99,7 +99,7 @@
         </span>
       </div>
       <div class="swiper-slide is-start"
-        style="background-image: url('static/images/eshopB/main_kv_3.png');background-position: center;">
+        style="background-image: url('static/images/eshopB/main_kv_3.png');background-position: top 50% right 50%;">
         <span class="text-1">
           <img src="static/images/eshopB/kv_text_3.png" alt="">
         </span>
@@ -291,7 +291,7 @@
       speed: 1000,
       effect: 'fade',
       autoplay: {
-        delay: 5000,
+        delay: 4000,
         disableOnInteraction: false, // false-스와이프 후 자동 재생
       },
       navigation: {
@@ -337,6 +337,25 @@
         scrub: true, // 스크롤 스크럽 효과를 사용
       }
     });
+
+    setTimeout(() => {
+      gsap.registerPlugin(ScrollTrigger);
+
+      // 각 swiper-slide에 대해 배경 이미지 위치 애니메이션 설정
+      document.querySelectorAll('.box-main-kvEshop .swiper-slide').forEach(function (slide) {
+        gsap.to(slide, {
+          // y: -100,
+          backgroundPositionY: '-30%',
+          scrollTrigger: {
+            markers: false,
+            trigger: ".box-main-kvEshop", // 스크롤을 감시할 요소
+            start: "top 0%", // 애니메이션 시작 지점
+            end: "bottom 30%", // 애니메이션 종료 지점
+            scrub: 3 // 스크롤 스크럽 효과 사용
+          }
+        });
+      });
+    }, 1000);
 
     setTimeout(() => {
       // promotion
