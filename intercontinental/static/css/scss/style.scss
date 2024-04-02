@@ -2038,6 +2038,9 @@ button {
                 display: flex;
                 .swiper-slide {
                   width: 440px;
+                  &:last-child{
+                    margin-right:-1px;
+                  }
                   a {
                     &:hover {
                       cursor: grab;

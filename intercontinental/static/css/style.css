@@ -1846,6 +1846,9 @@ button {
 .typeA.eshop .box-special .inner .flex .right .gap-swiper .flex .swiper-slide {
   width: 440px;
 }
+.typeA.eshop .box-special .inner .flex .right .gap-swiper .flex .swiper-slide:last-child {
+  margin-right: -1px;
+}
 .typeA.eshop .box-special .inner .flex .right .gap-swiper .flex .swiper-slide a:hover {
   cursor: grab;
 }
