@@ -1121,6 +1121,13 @@ button {
       align-items: center;
       border-bottom: 1px solid #e1e0e1;
       padding: 12px 80px;
+      .logo {
+        position: relative;
+        left: -25px;
+      }
+      * {
+        object-fit: contain;
+      }
     }
     &.fixed {
       top: -41px;
@@ -2038,8 +2045,8 @@ button {
                 display: flex;
                 .swiper-slide {
                   width: 440px;
-                  &:last-child{
-                    margin-right:-1px;
+                  &:last-child {
+                    margin-right: -1px;
                   }
                   a {
                     &:hover {
@@ -2150,7 +2157,7 @@ button {
         background-repeat: no-repeat;
         background-size: cover;
         transition: all 0.4s;
-        &.swiper-slide-active{
+        &.swiper-slide-active {
           z-index: 1000;
         }
         &.is-start {

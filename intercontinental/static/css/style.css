@@ -1039,6 +1039,13 @@ button {
   border-bottom: 1px solid #e1e0e1;
   padding: 12px 80px;
 }
+.typeA .box-header .inner .logo {
+  position: relative;
+  left: -25px;
+}
+.typeA .box-header .inner * {
+  object-fit: contain;
+}
 .typeA .box-header.fixed {
   top: -41px;
 }
