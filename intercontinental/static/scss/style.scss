@@ -1853,7 +1853,8 @@ button {
   &.eshop {
     // box-main-kv
     .box-main-kv {
-      height: 70vh;
+      //height: 70vh;
+      height: 892px;
       padding-top: 49px;
       .swiper-pagination {
         transform: translateY(calc(-50% + 351px));
@@ -1917,15 +1918,6 @@ button {
               margin-top: 60px;
               width: 950px;
               height: 960px;
-              // overflow: hidden;
-              // position: relative;
-              // display: block;
-              img {
-                // position: absolute;
-                // top: 0;
-                // left: -101px;
-                // width: 1100px;
-              }
             }
           }
           .right {
@@ -1943,14 +1935,11 @@ button {
               right: 0;
             }
             .list-swiper {
-              width: 41.4vw;
               overflow: hidden;
               z-index: 300;
+              width: calc(50vw - 110px);
               .swiper-wrapper {
                 display: flex;
-                // &:hover {
-                //   cursor: grab;
-                // }
                 .swiper-slide {
                   width: 354px;
                   a {

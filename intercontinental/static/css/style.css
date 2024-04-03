@@ -1680,7 +1680,7 @@ button {
   bottom: -31px;
 }
 .typeA.eshop .box-main-kv {
-  height: 70vh;
+  height: 892px;
   padding-top: 49px;
 }
 .typeA.eshop .box-main-kv .swiper-pagination {
@@ -1759,9 +1759,9 @@ button {
   right: 0;
 }
 .typeA.eshop .box-promotion .inner .flex .right .list-swiper {
-  width: 41.4vw;
   overflow: hidden;
   z-index: 300;
+  width: calc(50vw - 110px);
 }
 .typeA.eshop .box-promotion .inner .flex .right .list-swiper .swiper-wrapper {
   display: flex;
