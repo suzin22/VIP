@@ -2131,7 +2131,7 @@ button {
       height: 100vh;
 
       animation: mainMotion 1s linear infinite;
-      animation-delay: 2s;
+      animation-delay: .7s;
       //animation-delay: .5s;
       animation-iteration-count: 1;
       animation-fill-mode: forwards;
@@ -2159,7 +2159,7 @@ button {
           height: 100vh;
 
           animation: mainMotion2 1s linear infinite;
-          animation-delay: 2s;
+          animation-delay: .7s;
           //animation-delay: .5s;
           animation-iteration-count: 1;
           animation-fill-mode: forwards;

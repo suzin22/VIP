@@ -1926,7 +1926,7 @@ button {
   position: relative;
   height: 100vh;
   animation: mainMotion 1s linear infinite;
-  animation-delay: 2s;
+  animation-delay: 0.7s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
@@ -1953,7 +1953,7 @@ button {
 .typeA.eshopB .box-main-kvEshop .swiper-slide.is-start {
   height: 100vh;
   animation: mainMotion2 1s linear infinite;
-  animation-delay: 2s;
+  animation-delay: 0.7s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
