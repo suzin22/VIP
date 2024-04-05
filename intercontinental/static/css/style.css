@@ -242,6 +242,12 @@ button {
   right: 30px;
 }
 
+.typeB.is-active {
+  display: none;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
 .typeB .window-cursor {
   position: fixed;
   top: 0;

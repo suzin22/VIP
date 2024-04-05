@@ -7,7 +7,7 @@
   <title>INTERCONTINENTAL</title>
   <link rel="stylesheet" href="static/css/style.css">
   <link rel="stylesheet" href="static/css/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="static/css/aos.css">
+  <!-- <link rel="stylesheet" href="static/css/aos.css"> -->
 
   <link rel="apple-touch-icon" sizes="57x57"
     href="https://seoul.intercontinental.com/hub/kor/assets/favicon/apple-icon-57x57.png">
@@ -110,7 +110,7 @@
   <!-- //parnas products -->
 
   <!-- box-promotion -->
-  <div class="box-promotion">
+  <div class="box-promotion" style="overflow-x: hidden;">
     <div class="inner">
       <div class="flex">
         <!-- left -->
@@ -156,7 +156,7 @@
   <!-- //box-promotion -->
 
   <!-- box-parnasBanner -->
-  <div class="box-parnasBanner" data-aos="fade-up">
+  <div class="box-parnasBanner" data-aos="fade-up" style="position: relative;">
     <div class="inner">
       <!-- swiper-banner -->
       <div class="swiper-banner">
@@ -238,187 +238,123 @@
   <!-- //box-footer -->
 
   <!-- 마우스 커서 -->
-  <div class="window-cursor type-2"><img src="static/images/typeA/arrow-right.png" alt="" class="swiper-button-cion">
-  </div>
+  <div class="window-cursor type-2"><img src="static/images/typeA/arrow-right.png" alt="" class="swiper-button-cion"></div>
   <!-- //마우스 커서 -->
 
   <script>
-    setTimeout(() => {
-      // 마우스커서
-      gsap.set(".window-cursor.type-2", { xPercent: -50, yPercent: -50 });
+    // setTimeout(() => {
+    //   // AOS
+    //   AOS.init();
+    // }, 500);
 
-      const Tc3 = document.querySelector(".window-cursor.type-2"),
-        Pc3 = document.querySelectorAll("a, button");
+    // // box-main-kv
+    // const swiper = new Swiper('.box-main-kv', {
+    //   slidesPerView: 1,
+    //   slidesPerGroup: 1,
+    //   spaceBetween: 0,
+    //   simulateTouch: true,
+    //   loop: true,
+    //   speed: 1000,
+    //   effect: 'fade',
+    //   autoplay: {
+    //     delay: 3000,
+    //     disableOnInteraction: false, // false-스와이프 후 자동 재생
+    //   },
+    //   navigation: {
+    //     nextEl: '.box-main-kv .swiper-button-next',
+    //     prevEl: '.box-main-kv .swiper-button-prev',
+    //   },
+    //   pagination: {
+    //     el: ".box-main-kv .swiper-pagination",
+    //     type: "fraction",
+    //     renderFraction: function (currentClass, totalClass) {
+    //       return '<div class="inner"><span class="' + currentClass + '"></span>' +
+    //         ' <span class="line">-</span> ' +
+    //         '<span class="' + totalClass + '"></span></div>';
+    //     }
+    //   },
+    //   fadeEffect: {
+    //     crossFade: false
+    //   },
+    // });
 
-      let xTo3 = gsap.quickTo(".window-cursor.type-2", "x", { duration: 0.6, ease: "power3" }),
-        yTo3 = gsap.quickTo(".window-cursor.type-2", "y", { duration: 0.6, ease: "power3" });
+    // ScrollTrigger.create({
+    //   //animation: ani1,
+    //   trigger: ".box-header",
+    //   start: "top top",
+    //   end: "bottom bototm",
+    //   scrub: 2,
+    //   pin: false,
+    //   markers: false,
+    //   anticipatePin: 1,
+    //   onUpdate: (self) => {
+    //   }, // scroll 퍼센트 구하기 가능
+    // });
 
-      window.addEventListener("mousemove", e => {
-        xTo3(e.clientX);
-        yTo3(e.clientY);
-      });
+    // // header scroll
+    // let lastScrollTop = 0;
 
-      document.addEventListener("mouseenter", (function () {
-        Tc3.style.opacity = 1
-      }
-      ));
-      document.addEventListener("mouseleave", (function () {
-        Tc3.style.opacity = 0
-      }
-      ));
+    // window.addEventListener("scroll", function () {
+    //   var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+    //   if (currentScroll > lastScrollTop) {
+    //     // 아래로 스크롤 중
+    //     document.querySelector('.box-header').classList.add('fixed');
+    //   } else {
+    //     // 위로 스크롤 중
+    //     document.querySelector('.box-header').classList.remove('fixed');
+    //   }
+    //   lastScrollTop = currentScroll;
+    // }, false);
 
-      // main swiper-button hover
-      let swiperPrev = document.querySelector('.box-main-kv .swiper-button-prev'),
-        swiperNext = document.querySelector('.box-main-kv .swiper-button-next');
+    // // promotion
+    // const boxPromotion = gsap.timeline();
+    // boxPromotion.to(".box-promotion .cap img", {
+    //   y: -100
+    // })
 
-      if (document.querySelectorAll('.box-main-kv').length) {
-        swiperPrev.addEventListener('mouseover', () => {
-          Tc3.classList.add('main-swiperButton-prev');
-        })
-        swiperPrev.addEventListener('mouseleave', () => {
-          Tc3.classList.remove('main-swiperButton-prev');
-        })
-        swiperNext.addEventListener('mouseover', () => {
-          Tc3.classList.add('main-swiperButton-next');
-        })
-        swiperNext.addEventListener('mouseleave', () => {
-          Tc3.classList.remove('main-swiperButton-next');
-        })
-      }
-      //마우스커서
-    }, 500);
+    // ScrollTrigger.create({
+    //   animation: boxPromotion,
+    //   trigger: ".box-promotion",
+    //   start: "top 20%",
+    //   end: "bottom 80%",
+    //   scrub: 2,
+    //   pin: false,
+    //   markers: false,
+    //   anticipatePin: 1,
+    // });
 
-    setTimeout(() => {
-      // AOS
-      AOS.init();
-    }, 500);
+    // // list-swiper
+    // const listSwiper = new Swiper('.list-swiper', {
+    //   slidesPerView: 'auto',
+    //   spaceBetween: 40,
+    //   pagination: {
+    //     el: ".list-swiper .swiper-pagination",
+    //     type: "progressbar",
+    //   },
+    // });
 
-    // box-main-kv
-    const swiper = new Swiper('.box-main-kv', {
-      slidesPerView: 1,
-      slidesPerGroup: 1,
-      spaceBetween: 0,
-      simulateTouch: true,
-      loop: true,
-      speed: 1000,
-      effect: 'fade',
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false, // false-스와이프 후 자동 재생
-      },
-      navigation: {
-        nextEl: '.box-main-kv .swiper-button-next',
-        prevEl: '.box-main-kv .swiper-button-prev',
-      },
-      pagination: {
-        el: ".box-main-kv .swiper-pagination",
-        type: "fraction",
-        renderFraction: function (currentClass, totalClass) {
-          return '<div class="inner"><span class="' + currentClass + '"></span>' +
-            ' <span class="line">-</span> ' +
-            '<span class="' + totalClass + '"></span></div>';
-        }
-      },
-      fadeEffect: {
-        crossFade: false
-      },
-    });
+    // // gap-swiper
+    // const gapSwiper = new Swiper('.gap-swiper', {
+    //   slidesPerView: 'auto',
+    //   spaceBetween: 40,
+    //   pagination: {
+    //     el: ".box-special .swiper-pagination",
+    //     type: "progressbar",
+    //   },
+    // });
 
-    ScrollTrigger.create({
-      //animation: ani1,
-      trigger: ".box-header",
-      start: "top top",
-      end: "bottom bototm",
-      scrub: 2,
-      pin: false,
-      markers: false,
-      anticipatePin: 1,
-      onUpdate: (self) => {
-      }, // scroll 퍼센트 구하기 가능
-    });
-
-    // header scroll
-    let lastScrollTop = 0;
-
-    window.addEventListener("scroll", function () {
-      var currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-      if (currentScroll > lastScrollTop) {
-        // 아래로 스크롤 중
-        document.querySelector('.box-header').classList.add('fixed');
-      } else {
-        // 위로 스크롤 중
-        document.querySelector('.box-header').classList.remove('fixed');
-      }
-      lastScrollTop = currentScroll;
-    }, false);
-
-    // promotion
-    const boxPromotion = gsap.timeline();
-    boxPromotion.to(".box-promotion .cap img", {
-      y: -100
-    })
-
-    ScrollTrigger.create({
-      animation: boxPromotion,
-      trigger: ".box-promotion",
-      start: "top 20%",
-      end: "bottom 80%",
-      scrub: 2,
-      pin: false,
-      markers: false,
-      anticipatePin: 1,
-      onEnter: () => { // 시작 지점 진입
-
-      },
-      onLeave: () => { // end 지점 밖으로 나감
-
-      },
-      onEnterBack: () => { // end 지점 반대로 돌아옴
-
-      },
-      onLeaveBack: () => { // start 지점 반대로 돌아옴
-
-      },
-      onUpdate: (self) => { // scroll 퍼센트 구하기 가능
-
-      },
-      onToggle: (e) => { // true false callback
-
-      },
-    });
-
-    // list-swiper
-    const listSwiper = new Swiper('.list-swiper', {
-      slidesPerView: 'auto',
-      spaceBetween: 40,
-      pagination: {
-        el: ".list-swiper .swiper-pagination",
-        type: "progressbar",
-      },
-    });
-
-    // gap-swiper
-    const gapSwiper = new Swiper('.gap-swiper', {
-      slidesPerView: 'auto',
-      spaceBetween: 40,
-      pagination: {
-        el: ".box-special .swiper-pagination",
-        type: "progressbar",
-      },
-    });
-
-    // swiper-banner
-    const swiperBanner = new Swiper('.swiper-banner', {
-      slidesPerView: 'auto',
-      spaceBetween: 40,
-      effect: 'fade',
-      speed: 1000,
-      loop: true,
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false, // false-스와이프 후 자동 재생
-      }
-    });
+    // // swiper-banner
+    // const swiperBanner = new Swiper('.swiper-banner', {
+    //   slidesPerView: 'auto',
+    //   spaceBetween: 40,
+    //   effect: 'fade',
+    //   speed: 1000,
+    //   loop: true,
+    //   autoplay: {
+    //     delay: 3000,
+    //     disableOnInteraction: false, // false-스와이프 후 자동 재생
+    //   }
+    // });
   </script>
 
 </body>
