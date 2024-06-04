@@ -19,6 +19,31 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Gibson";
+  font-weight: 200;
+  font-display: swap;
+  src:
+    local("GibsonLight"),
+    url("../font/GibsonLight.otf") format("opentype");
+}
+@font-face {
+  font-family: "Gibson";
+  font-weight: 300;
+  font-display: swap;
+  src:
+    local("GibsonSemiBd"),
+    url("../font/GibsonSemiBd.otf") format("opentype");
+}
+@font-face {
+  font-family: "Gibson";
+  font-weight: 400;
+  font-display: swap;
+  src:
+    local("GibsonBold"),
+    url("../font/GibsonBold.otf") format("opentype");
+}
+
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
 
 /* basic-reset */
@@ -690,6 +715,81 @@ a {
           opacity: 0;
           transition: transform, opacity;
           will-change: transform, opacity;
+        }
+      }
+    }
+    .btn {
+      position: absolute;
+      bottom: -71px;
+      left: 50%;
+      transform: translate(-50%, 0);
+      width: fit-content;
+      margin: 0 auto;
+      display: block;
+      opacity: 0;
+      span {
+        padding-right: 35px;
+        position: relative;
+        color: var(--Font-dark, #000);
+
+        /* Button/md 03 01 */
+        font-family: Gibson;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 200;
+        line-height: 100%; /* 24px */
+        text-transform: uppercase;
+        &:after {
+          content: "";
+          display: block;
+          background-image: url("../images/icon_arrow.svg");
+          position: absolute;
+          top: 50%;
+          right: 0;
+          transform: translateY(-50%);
+          width: 27px;
+          height: 27px;
+        }
+      }
+    }
+  }
+}
+
+.box-solution {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+  z-index: 10;
+  .top-text {
+    * {
+      text-align: center;
+    }
+    .text-2 {
+      padding: 36px 0 28px 0;
+    }
+    margin-bottom: 148px;
+  }
+  .box-card {
+    display: flex;
+    width: 100%;
+    gap: 16px;
+    span {
+      width: 100%;
+      flex: 1 1 40%;
+      position: relative;
+      height: 420px;
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        &.img{
+          z-index: 20;
         }
       }
     }

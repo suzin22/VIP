@@ -18,6 +18,24 @@
   font-weight: 400;
   font-style: normal;
 }
+@font-face {
+  font-family: "Gibson";
+  font-weight: 200;
+  font-display: swap;
+  src: local("GibsonLight"), url("../font/GibsonLight.otf") format("opentype");
+}
+@font-face {
+  font-family: "Gibson";
+  font-weight: 300;
+  font-display: swap;
+  src: local("GibsonSemiBd"), url("../font/GibsonSemiBd.otf") format("opentype");
+}
+@font-face {
+  font-family: "Gibson";
+  font-weight: 400;
+  font-display: swap;
+  src: local("GibsonBold"), url("../font/GibsonBold.otf") format("opentype");
+}
 /* basic-reset */
 *,
 *:before,
@@ -657,4 +675,80 @@ a {
   opacity: 0;
   transition: transform, opacity;
   will-change: transform, opacity;
+}
+.box-logo-motion > span .btn {
+  position: absolute;
+  bottom: -71px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  display: block;
+  opacity: 0;
+}
+.box-logo-motion > span .btn span {
+  padding-right: 35px;
+  position: relative;
+  color: var(--Font-dark, #000);
+  /* Button/md 03 01 */
+  font-family: Gibson;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: 100%; /* 24px */
+  text-transform: uppercase;
+}
+.box-logo-motion > span .btn span:after {
+  content: "";
+  display: block;
+  background-image: url("../images/icon_arrow.svg");
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 27px;
+  height: 27px;
+}
+
+.box-solution {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+  z-index: 10;
+}
+.box-solution .top-text {
+  margin-bottom: 148px;
+}
+.box-solution .top-text * {
+  text-align: center;
+}
+.box-solution .top-text .text-2 {
+  padding: 36px 0 28px 0;
+}
+.box-solution .box-card {
+  display: flex;
+  width: 100%;
+  gap: 16px;
+}
+.box-solution .box-card span {
+  width: 100%;
+  flex: 1 1 40%;
+  position: relative;
+  height: 420px;
+}
+.box-solution .box-card span img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.box-solution .box-card span img.img {
+  z-index: 20;
 }/*# sourceMappingURL=style.css.map */

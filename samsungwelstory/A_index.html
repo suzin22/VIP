@@ -56,6 +56,7 @@
           <div class="hidden"><span>우리의 삶이 건강해지고</span></div>
           <div class="hidden"><span>당신의 비즈니스가 더 성장하는</span></div>
           <div class="hidden"><span>스토리를 만듭니다</span></div>
+          <a href="#none" class="btn"><span>ABOUT</span></a>
         </div>
         <div class="right-motion"><img src="static/images/text_motion_right.svg" alt=""></div>
       </span>
@@ -115,6 +116,21 @@
         </video>
       </div>
     </div>
+    <div class="box-solution">
+      <div class="top-text">
+        <p class="text-1"><img src="static/images/text_solution.png" alt=""></p>
+        <p class="text-2"><img src="static/images/text_foodService.png" alt=""></p>
+        <p class="text-3"><img src="static/images/text_solution2.png" alt=""></p>
+      </div>
+      <div class="box-card">
+        <span><img src="static/images/img_1.png" alt=""></span>
+        <span><img src="static/images/img_2.png" alt="" class="img"></span>
+        <span><img src="static/images/img_3.png" alt=""></span>
+      </div>
+    </div>
+
+
+
     <div class="box-img-cover">
       <div class="inner">
         <div class="bg-container">
@@ -283,7 +299,7 @@
         markers: false,
         onUpdate: (self) => {
           if (self.direction === -1 && self.progress === 0) {
-            gsap.to(".box-text .hidden span", {
+            gsap.to(".box-logo-motion .box-text .hidden span", {
               y: "100%",
               stagger: 0.3,
               duration: 1,
@@ -301,11 +317,17 @@
               duration: 1,
               ease: "power2.out"
             });
+            gsap.to(".right-motion", {
+              x: 0,
+              y: 0,
+              duration: 1,
+              ease: "power2.out"
+            });
           }
         }
       },
       onStart: () => {
-        gsap.to(".box-text .hidden span", {
+        gsap.to(".box-logo-motion .box-text .hidden span", {
           y: "0%",
           opacity: 1,
           stagger: 0.3,
@@ -324,13 +346,13 @@
           duration: 1,
           ease: "power2.out"
         });
+        gsap.to(".box-logo-motion .btn", {
+          opacity: 1,
+          duration: 1,
+          ease: "power2.out"
+        });
       }
     });
-
-
-
-
-
 
     // video scroll motion
     gsap.to([".list-text", ".list-text-2"], {
@@ -353,7 +375,7 @@
         scroller: scrollContainer,
         start: "top center",
         end: "bottom center",
-        markers: true,
+        markers: false,
         scrub: true,
         onEnter: () => activateSection(index, true),
         onEnterBack: () => activateSection(index, false),
@@ -404,6 +426,23 @@
       const activeListItem2 = document.querySelectorAll(".list-text-2 li")[index];
       activeListItem2.classList.add("is-active");
     }
+
+    // food service motion
+    gsap.to(".box-solution .img", {
+      scrollTrigger: {
+        trigger: ".box-solution",
+        scroller: scrollContainer,
+        start: "top top",
+        end: "+=8000",
+        pin: true,
+        scrub: true,
+        markers: true
+      },
+      x: '-50%',
+      y: '-50%',
+      width: '100vw',
+      height: '100vh'
+    });
 
 
 
