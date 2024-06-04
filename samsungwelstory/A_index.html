@@ -64,38 +64,56 @@
     <div class="box-section-fixed">
       <ul class="list-text">
         <li class="is-active">
-          <a href="#none">Wellness Stories</a>
+          <a href="#none">우리의 삶이 건강해지고</a>
         </li>
         <li>
-          <a href="#none">Healthful Stories</a>
+          <a href="#none">당신의 비즈니스가 더 성장하는</a>
         </li>
         <li>
-          <a href="#none">Collaborative Stories</a>
+          <a href="#none">스토리를 만듭니다</a>
         </li>
       </ul>
       <ul class="list-text-2">
         <li class="is-active">
-          <p class="text-1">오늘 더 나은 음식. <br>내일의 더 나은 세상.</p>
+          <p class="text-1">
+            삼성웰스토리는<br>
+            고객의 삶에 새로운 경험을 만들고<br>
+            건강한 미래를 열어가고 있습니다
+          </p>
         </li>
         <li>
-          <p class="text-1">고객, 소비자, 협력사, 지역사회, 미래세대<br> 모두 함께하는 건강한 가치를 만듭니다.</p>
+          <p class="text-1">
+            삼성웰스토리는<br>
+            고객의 삶에 새로운 경험을 만들고<br>
+            건강한 미래를 열어가고 있습니다
+          </p>
         </li>
         <li>
-          <p class="text-1">글로벌 건강한 식생활의 선도자, <br>삼성웰스토리가 세계로 나아갑니다. </p>
+          <p class="text-1">
+            삼성웰스토리의<br>
+            지속적 성장의 노하우를<br>
+            세계 속에 펼쳐가고 있습니다
+          </p>
         </li>
       </ul>
       <section class="bg-1"></section>
       <section class="bg-2"></section>
       <section class="bg-3"></section>
-      <video class="video-1 is-active" autoplay muted loop playsinline>
-        <source src="static/video/1.mp4" type="video/mp4">
-      </video>
-      <video class="video-2" autoplay muted loop playsinline>
-        <source src="static/video/2.mp4" type="video/mp4">
-      </video>
-      <video class="video-3" autoplay muted loop playsinline>
-        <source src="static/video/3.mp4" type="video/mp4">
-      </video>
+      <div class="video-wrapper">
+        <video class="video-1 is-active" autoplay muted loop playsinline>
+          <source src="static/video/1.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="video-wrapper">
+        <video class="video-2" autoplay muted loop playsinline>
+          <source src="static/video/2.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="video-wrapper">
+        <video class="video-3" autoplay muted loop playsinline>
+          <source src="static/video/3.mp4" type="video/mp4">
+        </video>
+      </div>
     </div>
     <div class="box-img-cover">
       <div class="inner">
@@ -132,7 +150,7 @@
       }
     });
 
-    locoScroll.stop();
+    //locoScroll.stop();
 
     // ScrollTrigger와 Locomotive Scroll 연동
     locoScroll.on("scroll", ScrollTrigger.update);
@@ -251,18 +269,18 @@
     });
 
     // motion text
-    // translate(-11px, -69px)
     gsap.to(".box-logo-motion > span > .hidden img", {
       opacity: "0",
+      duration: 0.1, // 애니메이션 속도를 더 빠르게 설정
       scrollTrigger: {
         trigger: ".box-logo-motion",
         start: "top top",
         scroller: scrollContainer,
-        end: "bottom top",
+        end: "bottom 40%",
         scrub: true,
         pin: true,
         pinSpacing: true,
-        markers: true,
+        markers: false,
         onUpdate: (self) => {
           if (self.direction === -1 && self.progress === 0) {
             gsap.to(".box-text .hidden span", {
@@ -289,6 +307,7 @@
       onStart: () => {
         gsap.to(".box-text .hidden span", {
           y: "0%",
+          opacity: 1,
           stagger: 0.3,
           duration: 1,
           ease: "power2.out"
@@ -308,6 +327,11 @@
       }
     });
 
+
+
+
+
+
     // video scroll motion
     gsap.to([".list-text", ".list-text-2"], {
       scrollTrigger: {
@@ -317,7 +341,7 @@
         end: "bottom bottom",
         pin: true,
         pinSpacing: false,
-        markers: true,
+        markers: false,
         scrub: false
       }
     });
@@ -329,26 +353,64 @@
         scroller: scrollContainer,
         start: "top center",
         end: "bottom center",
-        markers: false,
-        scrub: false,
-        onEnter: () => activateSection(index),
-        onEnterBack: () => activateSection(index)
+        markers: true,
+        scrub: true,
+        onEnter: () => activateSection(index, true),
+        onEnterBack: () => activateSection(index, false),
+        onUpdate: (self) => {
+          const videoWrapper = document.querySelectorAll(".box-section-fixed .video-wrapper")[index];
+          const progress = self.progress;
+
+          if (progress >= 0.5) {
+            videoWrapper.querySelector('video').style.clipPath = "ellipse(100vw 100vh at -14% 0)";
+            videoWrapper.style.setProperty('--after-opacity', 0.4);
+            videoWrapper.style.setProperty('--after-clip-path', "ellipse(100vw 100vh at -14% 0)");
+          } else {
+            videoWrapper.querySelector('video').style.clipPath = "ellipse(100vw 100vh at 14% 50%)";
+            videoWrapper.style.setProperty('--after-opacity', 0);
+            videoWrapper.style.setProperty('--after-clip-path', "ellipse(100vw 100vh at 14% 50%)");
+          }
+
+          const activeListItem2 = document.querySelectorAll(".list-text-2 li")[index];
+          if (progress >= 0.5) {
+            activeListItem2.querySelector('.text-1').style.color = "#000"; // 폰트 색상 변경
+          } else {
+            activeListItem2.querySelector('.text-1').style.color = "#fff"; // 폰트 색상 초기화
+          }
+        }
       });
     });
 
-    function activateSection(index) {
+    function activateSection(index, isEntering) {
       // List-text activation
       document.querySelectorAll(".list-text li").forEach(a => a.classList.remove("is-active"));
-      document.querySelectorAll(".list-text li")[index].classList.add("is-active");
+      const activeListItem1 = document.querySelectorAll(".list-text li")[index];
+      activeListItem1.classList.add("is-active");
 
       // Video activation
-      document.querySelectorAll("video").forEach(video => video.classList.remove("is-active"));
-      document.querySelector(`.video-${index + 1}`).classList.add("is-active");
+      document.querySelectorAll(".box-section-fixed .video-wrapper").forEach((videoWrapper, videoIndex) => {
+        const video = videoWrapper.querySelector('video');
+        video.classList.remove("is-active");
+        if (videoIndex === index) {
+          video.classList.add("is-active");
+        }
+      });
 
       // List-text-2 activation
-      document.querySelectorAll(".list-text-2 li").forEach(p => p.classList.remove("is-active"));
-      document.querySelectorAll(".list-text-2 li")[index].classList.add("is-active");
+      document.querySelectorAll(".list-text-2 li").forEach(p => {
+        p.classList.remove("is-active");
+        p.style.color = ""; // 폰트 색상 초기화
+      });
+      const activeListItem2 = document.querySelectorAll(".list-text-2 li")[index];
+      activeListItem2.classList.add("is-active");
     }
+
+
+
+
+
+
+
 
   </script>
 

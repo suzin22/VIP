@@ -468,10 +468,10 @@ a {
   height: 100vh;
 }
 
-.box-section-fixed::after {
+.box-section-fixed::before {
   content: "";
   display: block;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%);
+  background-color: #fff;
   position: absolute;
   top: 0;
   left: 0;
@@ -490,6 +490,9 @@ a {
   padding-bottom: 30px;
   display: block;
 }
+.box-section-fixed .list-text li.is-active {
+  color: var(--Primary-1, #fff);
+}
 .box-section-fixed .list-text li.is-active a {
   color: var(--Primary-1, #fff);
 }
@@ -498,25 +501,24 @@ a {
 }
 .box-section-fixed .list-text li a {
   color: var(--transparent-w-60, rgba(255, 255, 255, 0.6));
+  pointer-events: none;
+  /* Heading/Heading 64 */
   font-family: "Welstory gothic";
-  font-size: 48px;
+  font-size: 64px;
   font-style: normal;
   font-weight: 400;
-  line-height: 100%; /* 48px */
-  letter-spacing: -1.44px;
+  line-height: 100%; /* 64px */
+  letter-spacing: -3.84px;
   position: relative;
   will-change: color;
   transition: color 0.4s;
-}
-.box-section-fixed .list-text li a:hover {
-  color: var(--Primary-1, #fff);
 }
 .box-section-fixed .list-text li a:hover::after {
   width: 100%;
 }
 .box-section-fixed .list-text li a::after {
   content: "";
-  display: block;
+  display: none;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -528,8 +530,8 @@ a {
 }
 .box-section-fixed .list-text-2 {
   position: absolute;
-  top: 90vh;
-  right: 96px;
+  top: 87vh;
+  right: 93px;
   z-index: 10;
   will-change: transform;
 }
@@ -543,12 +545,12 @@ a {
 }
 .box-section-fixed .list-text-2 li .text-1 {
   color: var(--Primary-1, #fff);
-  /* Caption/Caption 28 */
-  font-family: Pretendard;
+  /* Title/md 01 01 */
+  font-family: "Welstory gothic";
   font-size: 28px;
   font-style: normal;
-  font-weight: 500;
-  line-height: 1.5;
+  font-weight: 400;
+  line-height: 1.5; /* 28px */
   letter-spacing: -0.84px;
   opacity: 0;
   will-change: opacity;
@@ -559,20 +561,44 @@ a {
 .box-section-fixed section {
   height: 100vh;
 }
-.box-section-fixed video {
+.box-section-fixed .video-wrapper {
   position: absolute;
   top: 0;
   left: 50%;
   width: 100%;
   height: 101vh;
+  transform: translate(-50%, 0);
+}
+.box-section-fixed .video-wrapper::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ff5624;
+  opacity: var(--after-opacity, 0);
+  transition: 1s -webkit-clip-path;
+  transition: 1s clip-path;
+  transition: 1s clip-path, 1s -webkit-clip-path;
+  -webkit-clip-path: var(--after-clip-path, ellipse(100vw 100vh at 14% 50%));
+          clip-path: var(--after-clip-path, ellipse(100vw 100vh at 14% 50%));
+}
+.box-section-fixed .video-wrapper video {
+  width: 100%;
+  height: 101vh;
+  opacity: 0;
   -o-object-fit: cover;
      object-fit: cover;
-  transform: translate(-50%, 0);
-  opacity: 0;
   will-change: opacity;
-  transition: opacity 2s;
+  transition: 2s opacity, 1s -webkit-clip-path;
+  transition: 2s opacity, 1s clip-path;
+  transition: 2s opacity, 1s clip-path, 1s -webkit-clip-path;
+  -webkit-clip-path: ellipse(100vw 100vh at 14% 50%);
+          clip-path: ellipse(100vw 100vh at 14% 50%);
 }
-.box-section-fixed video.is-active {
+.box-section-fixed .video-wrapper video.is-active {
   opacity: 1;
 }
 
@@ -600,7 +626,7 @@ a {
   display: block;
 }
 .box-logo-motion > span > .hidden img {
-  transform: translateY(0%);
+  transform: translateY(-4px);
 }
 .box-logo-motion > span .box-text {
   position: absolute;
@@ -628,4 +654,7 @@ a {
   line-height: 100%; /* 64px */
   letter-spacing: -3.84px;
   transform: translateY(100%);
+  opacity: 0;
+  transition: transform, opacity;
+  will-change: transform, opacity;
 }/*# sourceMappingURL=style.css.map */
