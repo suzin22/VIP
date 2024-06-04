@@ -372,7 +372,7 @@ a {
   z-index: 30;
   overflow: hidden;
   will-change: auto;
-  transition: 0.4s all;
+  transition: 0.4s width;
   background-color: #00040e;
 }
 .box-kv-cover.is-active {
@@ -380,11 +380,14 @@ a {
 }
 .box-kv-cover.end {
   transform: translate(-50%, -50%);
-  transition: 2s all;
+  transition: 2s transform, 2s top, 2s left, 2s width, 2s height, 0.4s border-radius;
   top: 50%;
   left: 50%;
   width: 100vw;
   height: 100vh;
+  border-radius: 30px;
+}
+.box-kv-cover.border {
   border-radius: 0;
 }
 
@@ -642,6 +645,9 @@ a {
 .box-logo-motion > span > .hidden {
   overflow: hidden;
   display: block;
+  opacity: 1;
+  transition: 0.4s opacity;
+  will-change: opacity;
 }
 .box-logo-motion > span > .hidden img {
   transform: translateY(-4px);
@@ -755,7 +761,40 @@ a {
   overflow: hidden;
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 100.1vh;
+}
+.box-solution-tab #mainVisual .box-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.box-solution-tab #mainVisual .box-img::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 74.09%, rgba(0, 0, 0, 0.1) 100%), linear-gradient(180deg, rgba(0, 0, 0, 0) 75.77%, rgba(0, 0, 0, 0.6) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%);
+}
+.box-solution-tab #mainVisual .box-img div {
+  opacity: 0;
+  transition: opacity 1s;
+  will-change: opacity;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.box-solution-tab #mainVisual .box-img div.is-active {
+  opacity: 1;
 }
 .box-solution-tab #mainVisual .main_bg {
   opacity: 0.7;
@@ -794,16 +833,16 @@ a {
   width: 100%;
   height: 100%;
   position: relative;
-  background-color: #000;
 }
 .box-solution-tab #mainVisual .main_slide .swiper-slide {
   height: 100%;
   overflow: hidden;
   backface-visibility: hidden;
+  width: 978px;
 }
 .box-solution-tab #mainVisual .main_slide .swiper-slide::after {
   content: "";
-  display: block;
+  display: none;
   position: absolute;
   top: 0;
   left: 0;
@@ -846,16 +885,88 @@ a {
   line-height: 100%; /* 22px */
   position: relative;
 }
+.box-solution-tab #mainVisual .box-controll a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -1px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: #fff;
+  width: 0;
+}
 .box-solution-tab #mainVisual .box-controll a.is-active {
   color: var(--Primary-1, #fff);
 }
-.box-solution-tab #mainVisual .box-controll a.is-active::after {
+.box-solution-tab #mainVisual .box-controll a.progress::after {
+  transition: width 3s;
+  background-color: #fff;
+  width: 100%;
+}
+
+.box-gallery {
+  background-color: #fff;
+  padding: 96px 0;
+  /* 전체 슬라이더 컨테이너 */
+}
+.box-gallery .section-inner {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.box-gallery .section-inner ul {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+  will-change: transform;
+}
+.box-gallery .section-inner ul .img-holder {
+  width: 351px;
+}
+
+.box-make {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  gap: 31vh;
+  position: relative;
+}
+.box-make .img {
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+  will-change: widht, height;
+  transition: 0.3s width, 0.4s height;
+}
+.box-make .img img {
+  width: auto;
+  height: 420px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  will-change: widht, height;
+  transition: 0.3s width, 0.4s height;
+}
+.box-make .img::after {
   content: "";
   display: block;
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  height: 3px;
-  background-color: #fff;
+  bottom: 0;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%);
+}
+
+.box-new {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }/*# sourceMappingURL=style.css.map */

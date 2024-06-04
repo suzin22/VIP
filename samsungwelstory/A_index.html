@@ -57,7 +57,7 @@
           <div class="hidden"><span>우리의 삶이 건강해지고</span></div>
           <div class="hidden"><span>당신의 비즈니스가 더 성장하는</span></div>
           <div class="hidden"><span>스토리를 만듭니다</span></div>
-          <a href="#none" class="btn"><span>ABOUT</span></a>
+          <!-- <a href="#none" class="btn"><span>ABOUT</span></a> -->
         </div>
         <div class="right-motion"><img src="static/images/text_motion_right.svg" alt=""></div>
       </span>
@@ -131,36 +131,94 @@
     </div>
     <div class="box-solution-tab">
       <div id="mainVisual">
+        <div class="box-img">
+          <div class="bg-1 is-active" style="background-image: url(static/images/img_4.png);"></div>
+          <div class="bg-2" style="background-image: url(static/images/img_3.png);"></div>
+          <div class="bg-3" style="background-image: url(static/images/img_5.png);"></div>
+        </div>
         <div class="main_slide swiper-container">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div class="main_txt">
                 <p class="tit" data-swiper-parallax-x="40%"><img src="static/images/swiper_1.png" alt=""></p>
               </div>
-              <div class="main_bg" style="background-image:url(static/images/img_2.png)" data-swiper-parallax-x="50%">
+              <div class="main_bg" data-swiper-parallax-x="50%">
               </div>
             </div>
             <div class="swiper-slide">
               <div class="main_txt">
                 <p class="tit" data-swiper-parallax-x="40%"><img src="static/images/swiper_2.png" alt=""></p>
               </div>
-              <div class="main_bg bg02" style="background-image:url(static/images/img_3.png)"
-                data-swiper-parallax-x="50%"></div>
+              <div class="main_bg bg02" data-swiper-parallax-x="50%"></div>
             </div>
             <div class="swiper-slide">
               <div class="main_txt">
                 <p class="tit" data-swiper-parallax-x="40%"><img src="static/images/swiper_3.png" alt=""></p>
               </div>
-              <div class="main_bg bg03" style="background-image:url(static/images/img_5.png)"
-                data-swiper-parallax-x="50%"></div>
+              <div class="main_bg bg03" data-swiper-parallax-x="50%"></div>
             </div>
           </div>
           <div class="box-controll">
-            <a href="#" class="is-active">Food Service</a>
+            <a href="#" class="is-active progress">Food Service</a>
             <a href="#">Food Distribution</a>
             <a href="#">Global Service</a>
           </div>
         </div>
+      </div>
+    </div>
+    <div class="box-gallery">
+      <div class="section-inner">
+        <ul>
+          <li>
+            <span><img src="static/images/banner_1.png" alt=""></span>
+          </li>
+          <li>
+            <span><img src="static/images/banner_2.png" alt=""></span>
+          </li>
+          <li>
+            <span><img src="static/images/banner_3.png" alt=""></span>
+          </li>
+          <li>
+            <span><img src="static/images/banner_4.png" alt=""></span>
+          </li>
+          <li>
+            <span><img src="static/images/banner_5.png" alt=""></span>
+          </li>
+          <li>
+            <span><img src="static/images/banner_6.png" alt=""></span>
+          </li>
+          <li>
+            <span><img src="static/images/banner_1.png" alt=""></span>
+          </li>
+          <li>
+            <span><img src="static/images/banner_2.png" alt=""></span>
+          </li>
+          <li>
+            <span><img src="static/images/banner_3.png" alt=""></span>
+          </li>
+          <li>
+            <span><img src="static/images/banner_4.png" alt=""></span>
+          </li>
+          <li>
+            <span><img src="static/images/banner_5.png" alt=""></span>
+          </li>
+          <li>
+            <span><img src="static/images/banner_6.png" alt=""></span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="box-make">
+      <div class="top-text">
+        <img src="static/images/text_make.png" alt="">
+      </div>
+      <div class="img">
+        <img src="static/images/img_make.png" alt="">
+      </div>
+    </div>
+    <div class="box-new">
+      <div class="top-text">
+        <img src="static/images/text_new.png" alt="">
       </div>
     </div>
 
@@ -203,7 +261,7 @@
     });
 
     //123
-    locoScroll.stop();
+    //locoScroll.stop();
 
     // ScrollTrigger와 Locomotive Scroll 연동
     locoScroll.on("scroll", ScrollTrigger.update);
@@ -280,6 +338,10 @@
         }, 1000);
 
         setTimeout(() => {
+          document.querySelector('.box-kv-cover').classList.add('border');
+        }, 2800);
+
+        setTimeout(() => {
           document.querySelector('.box-header').classList.remove('hide');
 
           locoScroll.start();
@@ -323,7 +385,6 @@
 
     // motion text
     gsap.to(".box-logo-motion > span > .hidden img", {
-      opacity: "0",
       duration: 0.1,
       scrollTrigger: {
         trigger: ".box-logo-motion",
@@ -334,62 +395,64 @@
         pin: true,
         pinSpacing: true,
         markers: false,
-        onUpdate: (self) => {
-          if (self.direction === -1 && self.progress === 0) {
-            gsap.to(".box-logo-motion .box-text .hidden span", {
-              y: "100%",
-              stagger: 0.3,
-              duration: 1,
-              ease: "power2.out"
-            });
-            gsap.to(".left-motion", {
-              x: 0,
-              y: 0,
-              duration: 1,
-              ease: "power2.out"
-            });
-            gsap.to(".right-motion", {
-              x: 0,
-              y: 0,
-              duration: 1,
-              ease: "power2.out"
-            });
-            gsap.to(".box-logo-motion .btn", {
-              opacity: 0,
-              duration: 1,
-              ease: "power2.out"
-            });
-          }
-        }
-      },
-      onStart: () => {
-        gsap.to(".box-logo-motion .box-text .hidden span", {
-          y: "0%",
-          opacity: 1,
-          stagger: 0.3,
-          duration: 1,
-          ease: "power2.out"
-        });
-        gsap.to(".left-motion", {
-          x: -25,
-          y: -69,
-          duration: 1,
-          ease: "power2.out"
-        });
-        gsap.to(".right-motion", {
-          x: -35,
-          y: 109,
-          duration: 1,
-          ease: "power2.out"
-        });
-        gsap.to(".box-logo-motion .btn", {
-          opacity: 1,
-          duration: 1,
-          ease: "power2.out"
-        });
+        onEnter: () => {
+          document.querySelector('.box-logo-motion > span > .hidden').style.opacity = 0;
+          gsap.to(".box-logo-motion .box-text .hidden span", {
+            y: "0%",
+            opacity: 1,
+            stagger: 0.3,
+            duration: 1,
+            ease: "power2.out"
+          });
+          gsap.to(".left-motion", {
+            x: -25,
+            y: -69,
+            duration: 1,
+            ease: "power2.out"
+          });
+          gsap.to(".right-motion", {
+            x: -35,
+            y: 109,
+            duration: 1,
+            //ease: "power2.out"
+          });
+          gsap.to(".box-logo-motion .btn", {
+            opacity: 1,
+            duration: 1,
+            ease: "power2.out"
+          });
+        },
+        onLeaveBack: () => {
+          setTimeout(() => {
+            document.querySelector('.box-logo-motion > span > .hidden').style.opacity = 1;
+          }, 400);
+          gsap.to(".box-logo-motion .box-text .hidden span", {
+            y: "100%",
+            opacity: 0,
+            stagger: 0.3,
+            duration: 1,
+            ease: "power2.out"
+          });
+          gsap.to(".left-motion", {
+            x: 0,
+            y: 0,
+            duration: 1,
+            ease: "power2.out"
+          });
+          gsap.to(".right-motion", {
+            x: 0,
+            y: 0,
+            duration: 1,
+            //ease: "power2.out"
+          });
+          gsap.to(".box-logo-motion .btn", {
+            opacity: 0,
+            duration: 1,
+            ease: "power2.out"
+          });
+        },
       }
     });
-
 
     // video scroll motion
     gsap.to([".list-text", ".list-text-2"], {
@@ -405,40 +468,43 @@
       }
     });
 
-    // Activating sections and videos
     document.querySelectorAll(".box-section-fixed section").forEach((section, index) => {
       ScrollTrigger.create({
         trigger: section,
         scroller: scrollContainer,
-        start: "top center",
-        end: "bottom 20%",
+        start: "top bottom",
+        end: "bottom center",
         markers: false,
         scrub: true,
         onEnter: () => activateSection(index, true),
         onEnterBack: () => activateSection(index, false),
-        onUpdate: (self) => {
-          const videoWrapper = document.querySelectorAll(".box-section-fixed .video-wrapper")[index];
-          const progress = self.progress;
-
-          if (progress >= 0.5) {
-            videoWrapper.querySelector('video').style.clipPath = "ellipse(100vw 100vh at -14% 0)";
-            videoWrapper.style.setProperty('--after-opacity', 0.4);
-            videoWrapper.style.setProperty('--after-clip-path', "ellipse(100vw 100vh at -14% 0)");
-          } else {
-            videoWrapper.querySelector('video').style.clipPath = "ellipse(100vw 100vh at 14% 50%)";
-            videoWrapper.style.setProperty('--after-opacity', 0);
-            videoWrapper.style.setProperty('--after-clip-path', "ellipse(100vw 100vh at 14% 50%)");
-          }
-
-          const activeListItem2 = document.querySelectorAll(".list-text-2 li")[index];
-          if (progress >= 0.5) {
-            activeListItem2.querySelector('.text-1').style.color = "#000"; // 폰트 색상 변경
-          } else {
-            activeListItem2.querySelector('.text-1').style.color = "#fff"; // 폰트 색상 초기화
-          }
-        }
+        onUpdate: (self) => handleUpdate(self, index)
       });
     });
+
+    function handleUpdate(self, index) {
+      const videoWrapper = document.querySelectorAll(".box-section-fixed .video-wrapper")[index];
+      const activeListItem2 = document.querySelectorAll(".list-text-2 li")[index];
+
+      let progressThreshold = 0.65;
+      if (self.direction === -1) { // 스크롤이 위로 올라갈 때
+        progressThreshold = 0.7;
+      }
+
+      const progress = self.progress;
+
+      if (progress >= progressThreshold) {
+        videoWrapper.querySelector('video').style.clipPath = "ellipse(100vw 100vh at -100% 0)";
+        videoWrapper.style.setProperty('--after-opacity', 0.4);
+        videoWrapper.style.setProperty('--after-clip-path', "ellipse(100vw 100vh at -100% 0)");
+        activeListItem2.querySelector('.text-1').style.color = "#000"; // 폰트 색상 변경
+      } else {
+        videoWrapper.querySelector('video').style.clipPath = "ellipse(100vw 100vh at 14% 50%)";
+        videoWrapper.style.setProperty('--after-opacity', 0);
+        videoWrapper.style.setProperty('--after-clip-path', "ellipse(100vw 100vh at 14% 50%)");
+        activeListItem2.querySelector('.text-1').style.color = "#fff"; // 폰트 색상 초기화
+      }
+    }
 
     function activateSection(index, isEntering) {
       // List-text activation
@@ -464,6 +530,7 @@
       activeListItem2.classList.add("is-active");
     }
 
+
     // food service motion
     gsap.to(".box-solution .img", {
       scrollTrigger: {
@@ -486,13 +553,15 @@
         trigger: ".box-solution-tab",
         scroller: scrollContainer,
         start: "top top",
-        end: "+=4000",
+        end: "+=2000",
         pin: true,
         pinSpacing: true,
         scrub: true,
         markers: false,
         onEnter: () => {
           document.querySelector('.box-solution-tab').classList.add('is-active');
+          swiper.autoplay.start(); // onEnter 시 autoplay 시작
+          swiper.slideTo(0);
         },
         onLeaveBack: () => {
           document.querySelector('.box-solution-tab').classList.remove('is-active');
@@ -500,21 +569,111 @@
       },
     });
 
-    var mainSwiper = new Swiper(".main_slide", {
-      parallax: true,
+    // swiper
+    var swiper = new Swiper(".main_slide", {
+      slidesPerView: 2,
+      spaceBetween: 30,
       grabCursor: true,
-      loop: true,
-      effect: 'slide',
-      direction: "horizontal",
-      allowTouchMove: true,
-      speed: 900,
-      slidesPerView: '1',
-      spaceBetween: 0,
-      // autoplay: {
-      //   delay: 3500,
-      //   disableOnInteraction: false,
-      // },
+      centeredSlides: true,
+      speed: 800,
+      autoplay: {
+        delay: 3000, // 자동 슬라이드 전환 시간 (밀리초)
+        disableOnInteraction: false, // 사용자 상호작용 후에도 자동 슬라이드가 계속되도록 설정
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      on: {
+        init: function () {
+          this.autoplay.stop(); // 초기 로드 시 autoplay 중지
+        },
+        slideChange: function () {
+          const activeIndex = this.activeIndex;
+          const backgrounds = document.querySelectorAll(".box-img div");
+          const links = document.querySelectorAll('.box-controll a');
+
+          backgrounds.forEach((bg, index) => {
+            if (index === activeIndex) {
+              bg.classList.add("is-active");
+            } else {
+              bg.classList.remove("is-active");
+            }
+          });
+
+          links.forEach((link, index) => {
+            if (index === activeIndex) {
+              link.classList.add("is-active");
+              link.classList.add("progress");
+            } else {
+              link.classList.remove("is-active");
+              link.classList.remove("progress");
+            }
+          });
+        },
+      },
     });
+
+    document.querySelectorAll('.box-controll a').forEach((link, index) => {
+      link.addEventListener('click', function (event) {
+        event.preventDefault();
+        swiper.slideTo(index);
+      });
+    });
+
+    // loop
+    const sliderItem = document.querySelector(".box-gallery .section-inner ul");
+    const sliderItems = document.querySelectorAll(".box-gallery .section-inner li");
+
+    const slideWidth = sliderItems[0].offsetWidth + parseInt(getComputedStyle(sliderItems[0]).marginRight);
+
+    // 슬라이드를 복제해 무한 루프를 만듭니다.
+    const numOfClones = sliderItems.length; // 슬라이드 수만큼 복제
+    for (let i = 0; i < numOfClones; i++) {
+      const clone = sliderItems[i].cloneNode(true);
+      sliderItem.appendChild(clone);
+    }
+
+    // 애니메이션 설정 함수
+    function setSliderAnimation(duration) {
+      gsap.to(sliderItem, {
+        x: `-${slideWidth * numOfClones}px`,
+        ease: "none",
+        repeat: -1,
+        duration: duration, // 미디어 쿼리에 따라 지정된 지속 시간 사용
+        modifiers: {
+          x: gsap.utils.unitize((x) => parseFloat(x) % (slideWidth * numOfClones))
+        }
+      });
+    }
+    setSliderAnimation(70);
+
+    // make img motion
+    gsap.to(".box-make .img img", {
+      width: "80vw",
+      height: "100vh",
+      scrollTrigger: {
+        trigger: ".box-make",
+        start: "top top",
+        end: "bottom top",
+        pin: true,
+        pinSpacing: true, // 다른 콘텐츠와 겹치지 않도록 공간 확보
+        scrub: true,
+        markers: true,
+        scroller: scrollContainer,
+        onLeaveBack: () => {
+          gsap.to(".box-make .img img", { width: "auto", height: "auto" });
+        }
+      }
+    });
+
+
+
+
+
+
+
+
 
 
 
