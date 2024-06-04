@@ -232,6 +232,8 @@ a {
   right: 0;
   height: 112px;
   z-index: 1000;
+  will-change: transform;
+  transition: 0.4s transform;
   &.hide {
     transform: translateY(-100%);
   }
@@ -374,6 +376,7 @@ a {
   overflow: hidden;
   will-change: auto;
   transition: 0.4s all;
+  background-color: #00040e;
   &.is-active {
     width: 63px;
   }
@@ -419,6 +422,7 @@ a {
     font-weight: 400;
     line-height: 100%; /* 64px */
     letter-spacing: -3.84px;
+    z-index: 10;
   }
   .icon {
     position: absolute;
@@ -427,6 +431,19 @@ a {
     width: 60px;
     height: 60px;
     display: block;
+    z-index: 10;
+  }
+  &::after {
+    z-index: 8;
+    content: "";
+    display: block;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 75.77%, rgba(0, 0, 0, 0.4) 100%),
+      linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
   }
 }
 
@@ -589,6 +606,55 @@ a {
     transition: opacity 2s;
     &.is-active {
       opacity: 1;
+    }
+  }
+}
+
+.box-logo-motion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  > span {
+    position: relative;
+    .left-motion {
+      position: absolute;
+      top: 25px;
+      left: 0;
+    }
+    .right-motion {
+      position: absolute;
+      top: 25px;
+      right: 0;
+    }
+    > .hidden {
+      overflow: hidden;
+      display: block;
+      img {
+        transform: translateY(0%);
+      }
+    }
+    .box-text {
+      overflow: hidden;
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      .hidden {
+        color: var(--Font-dark, #000);
+        text-align: center;
+
+        /* Heading/Heading 64 */
+        font-family: "Welstory gothic";
+        font-size: 64px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 100%; /* 64px */
+        letter-spacing: -3.84px;
+
+        transform: translateY(0%);
+      }
     }
   }
 }

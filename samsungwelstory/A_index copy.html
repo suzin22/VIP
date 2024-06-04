@@ -48,6 +48,19 @@
       </div>
     </div>
 
+    <div class="box-logo-motion">
+      <span>
+        <div class="left-motion"><img src="static/images/text_motion_left.svg" alt=""></div>
+        <span class="hidden"><img src="static/images/logo_motion.svg" alt=""></span>
+        <div class="box-text">
+          <span class="hidden">우리의 삶이 건강해지고</span>
+          <span class="hidden">당신의 비즈니스가 더 성장하는</span>
+          <span class="hidden">스토리를 만듭니다</span>
+        </div>
+        <div class="right-motion"><img src="static/images/text_motion_right.svg" alt=""></div>
+      </span>
+    </div>
+
     <div class="box-section-fixed">
       <ul class="list-text">
         <li class="is-active">
@@ -175,15 +188,23 @@
           document.querySelector('.box-kv-cover').classList.remove('is-active');
           document.querySelector('.box-kv-cover').classList.add('end');
         }, 1000);
+
+        setTimeout(() => {
+          document.querySelector('.box-header').classList.remove('hide');
+        }, 3000);
+
+        // setTimeout(() => {
+        //   document.querySelector('.box-intro').style.display = 'none';
+        // }, 3000);
       }
     })
 
     // box-kv scroll motion
-    gsap.to(".inner-kv", {
+    gsap.to(".box-kv", {
       scrollTrigger: {
-        trigger: ".inner-kv",
+        trigger: ".box-kv",
         scroller: scrollContainer,
-        start: "top top",
+        start: "50px top",
         end: "bottom center",
         scrub: true,
         markers: false
@@ -251,6 +272,20 @@
           const translateY = startY + (endY - startY) * progress;
           document.querySelector(".bg-container").style.transform = `translateY(${translateY}px)`;
         }
+      }
+    });
+
+    // motion text
+    gsap.to(".box-logo-motion .hidden img", {
+      y: "-100%",
+      scrollTrigger: {
+        trigger: ".box-logo-motion",
+        scroller: scrollContainer,
+        start: "top top",
+        end: "bottom top",
+        scrub: true,
+        pin: true,
+        markers: true
       }
     });
   </script>
