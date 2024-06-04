@@ -1,20 +1,20 @@
 @font-face {
   font-family: "Welstory Gothic";
-  src: url("static/font/Welstorygothic-Bold.woff") format("woff");
+  src: url("../font/Welstorygothic-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Welstory Gothic";
-  src: url("static/font/Welstorygothic-Light.woff") format("woff");
+  src: url("../font/Welstorygothic-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Welstory Gothic";
-  src: url("static/font/Welstorygothic-Regular.woff") format("woff");
+  src: url("../font/Welstorygothic-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
@@ -232,6 +232,9 @@ a {
   right: 0;
   height: 112px;
   z-index: 1000;
+  &.hide {
+    transform: translateY(-100%);
+  }
   &.is-hover,
   &.is-active {
     border-bottom: 1px solid var(--Stroke-list, #ddd);
@@ -311,63 +314,119 @@ a {
   justify-content: center;
   height: 100vh;
   align-items: center;
+  position: relative;
   .box-text {
     color: var(--Font-dark, #000);
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
     .text {
-      /* Heading/Heading 72 */
-      font-family: "Welstory gothic";
-      font-size: 72px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 100%; /* 72px */
-      letter-spacing: -4.32px;
-
       position: relative;
       overflow: hidden;
       .gap {
-        will-change: transform;
+        /* Heading/Heading 72 */
+        font-family: "Welstory gothic";
+        font-size: 72px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 100%; /* 72px */
+        letter-spacing: -0.075em;
+
+        will-change: auto;
         display: block;
         transform: translateY(100%);
         opacity: 1;
+        &.is-none {
+          transform: none;
+        }
+        .right-gap {
+          transition: padding 0.4s;
+          will-change: padding;
+          &.is-active {
+            padding: 0 81px 0 0;
+          }
+        }
       }
     }
   }
 }
 
+.box-top-kv {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+.box-kv-cover {
+  width: 0;
+  height: 64px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(calc(-50% - 4px), calc(-50% - 45px));
+  //transform: translate(-50%, -50%);
+  border-top-right-radius: 100%;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  z-index: 30;
+  overflow: hidden;
+  will-change: auto;
+  transition: 0.4s all;
+  &.is-active {
+    width: 63px;
+  }
+  &.end {
+    transform: translate(-50%, -50%);
+    transition: 2s all;
+    top: 50%;
+    left: 50%;
+    //transform: translate(0, 0);
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+  }
+}
+
 .box-kv {
-  //background-color: #00040e;
   overflow: hidden;
   display: inline-block;
-  .inner-kv {
-    //height: 100vh;
-    background-position: center;
-    background-repeat: no-repeat;
-    //background-size: cover;
-    background-image: url("../images/kv_1.jpg");
-
-    opacity: 1;
-    will-change: opacity, transform;
-
-    display: inline-block;
-    width: 63px;
-    height: 64px;
-    //background-image: url("/mnt/data/image.png");
-    border-top-right-radius: 100%;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    &::after {
-      content: "";
-      display: block;
-      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 75.77%, rgba(0, 0, 0, 0.4) 100%),
-        linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%);
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-    }
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  min-height: 100vh;
+  video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    min-height: 100vh;
+    object-fit: cover;
+  }
+  .text-1 {
+    position: absolute;
+    bottom: 86px;
+    left: 96px;
+    color: var(--Basic-1, #fff);
+    text-align: center;
+    font-family: "Welstory gothic";
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 64px */
+    letter-spacing: -3.84px;
+  }
+  .icon {
+    position: absolute;
+    bottom: 86px;
+    right: 96px;
+    width: 60px;
+    height: 60px;
+    display: block;
   }
 }
 

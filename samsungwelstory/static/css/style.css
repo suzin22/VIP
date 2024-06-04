@@ -2,19 +2,19 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
 @font-face {
   font-family: "Welstory Gothic";
-  src: url("static/font/Welstorygothic-Bold.woff") format("woff");
+  src: url("../font/Welstorygothic-Bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: "Welstory Gothic";
-  src: url("static/font/Welstorygothic-Light.woff") format("woff");
+  src: url("../font/Welstorygothic-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
 }
 @font-face {
   font-family: "Welstory Gothic";
-  src: url("static/font/Welstorygothic-Regular.woff") format("woff");
+  src: url("../font/Welstorygothic-Regular.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
@@ -216,6 +216,9 @@ a {
   height: 112px;
   z-index: 1000;
 }
+.box-header.hide {
+  transform: translateY(-100%);
+}
 .box-header.is-hover, .box-header.is-active {
   border-bottom: 1px solid var(--Stroke-list, #ddd);
   background: var(--Material-bg, rgba(255, 255, 255, 0.9));
@@ -292,56 +295,118 @@ a {
   justify-content: center;
   height: 100vh;
   align-items: center;
+  position: relative;
 }
 .box-intro .box-text {
   color: var(--Font-dark, #000);
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 .box-intro .box-text .text {
+  position: relative;
+  overflow: hidden;
+}
+.box-intro .box-text .text .gap {
   /* Heading/Heading 72 */
   font-family: "Welstory gothic";
   font-size: 72px;
   font-style: normal;
   font-weight: 400;
   line-height: 100%; /* 72px */
-  letter-spacing: -4.32px;
-  position: relative;
-  overflow: hidden;
-}
-.box-intro .box-text .text .gap {
-  will-change: transform;
+  letter-spacing: -0.075em;
+  will-change: auto;
   display: block;
   transform: translateY(100%);
   opacity: 1;
+}
+.box-intro .box-text .text .gap.is-none {
+  transform: none;
+}
+.box-intro .box-text .text .gap .right-gap {
+  transition: padding 0.4s;
+  will-change: padding;
+}
+.box-intro .box-text .text .gap .right-gap.is-active {
+  padding: 0 81px 0 0;
+}
+
+.box-top-kv {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+.box-kv-cover {
+  width: 0;
+  height: 64px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(calc(-50% - 4px), calc(-50% - 45px));
+  border-top-right-radius: 100%;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  z-index: 30;
+  overflow: hidden;
+  will-change: auto;
+  transition: 0.4s all;
+}
+.box-kv-cover.is-active {
+  width: 63px;
+}
+.box-kv-cover.end {
+  transform: translate(-50%, -50%);
+  transition: 2s all;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 100vh;
+  border-radius: 0;
 }
 
 .box-kv {
   overflow: hidden;
   display: inline-block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  min-height: 100vh;
 }
-.box-kv .inner-kv {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url("../images/kv_1.jpg");
-  opacity: 1;
-  will-change: opacity, transform;
-  display: inline-block;
-  width: 63px;
-  height: 64px;
-  border-top-right-radius: 100%;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-}
-.box-kv .inner-kv::after {
-  content: "";
-  display: block;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 75.77%, rgba(0, 0, 0, 0.4) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%);
+.box-kv video {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  min-height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.box-kv .text-1 {
+  position: absolute;
+  bottom: 86px;
+  left: 96px;
+  color: var(--Basic-1, #fff);
+  text-align: center;
+  font-family: "Welstory gothic";
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 64px */
+  letter-spacing: -3.84px;
+}
+.box-kv .icon {
+  position: absolute;
+  bottom: 86px;
+  right: 96px;
+  width: 60px;
+  height: 60px;
+  display: block;
 }
 
 .box-img-cover {

@@ -22,22 +22,32 @@
   <!-- //box-header -->
 
   <div class="wrap" data-scroll-container>
-    <div class="box-intro">
-      <div class="box-text">
-        <div class="text">
-          <div class="gap">
-            <span>Better Fo</span>
-            <div class="box-kv">
-              <div class="inner-kv"></div>
-            </div>
-            <span>od today.</span>
-          </div class="gap">
+
+    <div class="box-top-kv">
+      <div class="box-intro">
+        <div class="box-text">
+          <div class="text">
+            <div class="gap">
+              <span class="right-gap">Better Fo</span><span>od today.</span>
+            </div class="gap">
+          </div>
+          <div class="text">
+            <div class="gap"><span>Better world tomorrow.</span></div>
+          </div>
         </div>
-        <div class="text">
-          <div class="gap"><span>Better world tomorrow.</span></div>
+      </div>
+
+      <div class="box-kv-cover">
+        <div class="box-kv">
+          <video class="video-1 is-active" autoplay muted loop playsinline>
+            <source src="static/video/top.mp4" type="video/mp4">
+          </video>
+          <p class="text-1">Make Stories Well</p>
+          <a href="#none" class="icon"><img src="static/images/icon_1.svg" alt=""></a>
         </div>
       </div>
     </div>
+
     <div class="box-section-fixed">
       <ul class="list-text">
         <li class="is-active">
@@ -155,34 +165,18 @@
       y: 0, // 원래 위치로 이동
       opacity: 1, // 불투명하게 변경
       duration: 1, // 애니메이션 지속 시간
-      stagger: 0.4 // 각 span 요소 사이에 0.4초 간격을 둡니다
+      stagger: 0.4, // 각 span 요소 사이에 0.4초 간격을 둡니다
+      onComplete: () => {
+        document.querySelector('.right-gap').classList.add('is-active');
+
+        document.querySelector('.box-kv-cover').classList.add('is-active');
+
+        setTimeout(() => {
+          document.querySelector('.box-kv-cover').classList.remove('is-active');
+          document.querySelector('.box-kv-cover').classList.add('end');
+        }, 1000);
+      }
     })
-      .to('.box-kv .inner-kv', {
-        // left: '0',
-        // right: '0',
-        width: '63px',
-        duration: 1, // 애니메이션 지속 시간
-        ease: 'power3.out', // 애니메이션 가속도 설정
-        onComplete: () => {
-
-          setTimeout(() => {
-            document.querySelector('.box-intro .gap').style = '';
-            document.querySelectorAll('.box-intro .gap span').forEach((e) => {
-              e.style.opacity = 0;
-            });
-            document.querySelector('.box-intro .gap').classList.add('is-none');
-            document.querySelector('.box-kv .inner-kv').style = '';
-          }, 100);
-
-          setTimeout(() => {
-            document.querySelector('.box-kv').classList.add('is-active');
-          }, 100);
-
-          setTimeout(() => {
-            header.classList.remove('hide');
-          }, 300);
-        }
-      }, '+=0.4'); // 이전 애니메이션이 끝난 후 0.4초 후에 실행
 
     // box-kv scroll motion
     gsap.to(".inner-kv", {
