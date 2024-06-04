@@ -635,25 +635,32 @@ a {
       }
     }
     .box-text {
-      overflow: hidden;
-      display: block;
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      width: 900px;
+      display: flex;
+      flex-flow: column;
+      gap: 24px;
       .hidden {
-        color: var(--Font-dark, #000);
-        text-align: center;
+        overflow: hidden;
+        display: block;
+        span {
+          color: var(--Font-dark, #000);
+          text-align: center;
+          display: block;
 
-        /* Heading/Heading 64 */
-        font-family: "Welstory gothic";
-        font-size: 64px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 100%; /* 64px */
-        letter-spacing: -3.84px;
+          /* Heading/Heading 64 */
+          font-family: "Welstory gothic";
+          font-size: 64px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 100%; /* 64px */
+          letter-spacing: -3.84px;
 
-        transform: translateY(0%);
+          transform: translateY(100%);
+        }
       }
     }
   }

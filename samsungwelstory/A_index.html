@@ -22,22 +22,45 @@
   <!-- //box-header -->
 
   <div class="wrap" data-scroll-container>
-    <div class="box-intro">
-      <div class="box-text">
-        <div class="text">
-          <div class="gap">
-            <span>Better Fo</span>
-            <div class="box-kv">
-              <div class="inner-kv"></div>
-            </div>
-            <span>od today.</span>
-          </div class="gap">
+
+    <div class="box-top-kv">
+      <div class="box-intro">
+        <div class="box-text">
+          <div class="text">
+            <div class="gap">
+              <span class="right-gap">Better Fo</span><span>od today.</span>
+            </div class="gap">
+          </div>
+          <div class="text">
+            <div class="gap"><span>Better world tomorrow.</span></div>
+          </div>
         </div>
-        <div class="text">
-          <div class="gap"><span>Better world tomorrow.</span></div>
+      </div>
+
+      <div class="box-kv-cover">
+        <div class="box-kv">
+          <video class="video-1 is-active" autoplay muted loop playsinline>
+            <source src="static/video/top.mp4" type="video/mp4">
+          </video>
+          <p class="text-1">Make Stories Well</p>
+          <a href="#none" class="icon"><img src="static/images/icon_1.svg" alt=""></a>
         </div>
       </div>
     </div>
+
+    <div class="box-logo-motion">
+      <span>
+        <div class="left-motion"><img src="static/images/text_motion_left.svg" alt=""></div>
+        <span class="hidden"><img src="static/images/logo_motion.svg" alt=""></span>
+        <div class="box-text">
+          <div class="hidden"><span>우리의 삶이 건강해지고</span></div>
+          <div class="hidden"><span>당신의 비즈니스가 더 성장하는</span></div>
+          <div class="hidden"><span>스토리를 만듭니다</span></div>
+        </div>
+        <div class="right-motion"><img src="static/images/text_motion_right.svg" alt=""></div>
+      </span>
+    </div>
+
     <div class="box-section-fixed">
       <ul class="list-text">
         <li class="is-active">
@@ -155,41 +178,29 @@
       y: 0, // 원래 위치로 이동
       opacity: 1, // 불투명하게 변경
       duration: 1, // 애니메이션 지속 시간
-      stagger: 0.4 // 각 span 요소 사이에 0.4초 간격을 둡니다
+      stagger: 0.4, // 각 span 요소 사이에 0.4초 간격을 둡니다
+      onComplete: () => {
+        document.querySelector('.right-gap').classList.add('is-active');
+
+        document.querySelector('.box-kv-cover').classList.add('is-active');
+
+        setTimeout(() => {
+          document.querySelector('.box-kv-cover').classList.remove('is-active');
+          document.querySelector('.box-kv-cover').classList.add('end');
+        }, 1000);
+
+        setTimeout(() => {
+          document.querySelector('.box-header').classList.remove('hide');
+        }, 3000);
+      }
     })
-      .to('.box-kv .inner-kv', {
-        // left: '0',
-        // right: '0',
-        width: '63px',
-        duration: 1, // 애니메이션 지속 시간
-        ease: 'power3.out', // 애니메이션 가속도 설정
-        onComplete: () => {
-
-          setTimeout(() => {
-            document.querySelector('.box-intro .gap').style = '';
-            document.querySelectorAll('.box-intro .gap span').forEach((e) => {
-              e.style.opacity = 0;
-            });
-            document.querySelector('.box-intro .gap').classList.add('is-none');
-            document.querySelector('.box-kv .inner-kv').style = '';
-          }, 100);
-
-          setTimeout(() => {
-            document.querySelector('.box-kv').classList.add('is-active');
-          }, 100);
-
-          setTimeout(() => {
-            header.classList.remove('hide');
-          }, 300);
-        }
-      }, '+=0.4'); // 이전 애니메이션이 끝난 후 0.4초 후에 실행
 
     // box-kv scroll motion
-    gsap.to(".inner-kv", {
+    gsap.to(".box-kv", {
       scrollTrigger: {
-        trigger: ".inner-kv",
+        trigger: ".box-kv",
         scroller: scrollContainer,
-        start: "top top",
+        start: "50px top",
         end: "bottom center",
         scrub: true,
         markers: false
@@ -259,6 +270,64 @@
         }
       }
     });
+
+    // motion text
+    // translate(-11px, -69px)
+    gsap.to(".box-logo-motion > span > .hidden img", {
+      opacity: "0",
+      scrollTrigger: {
+        trigger: ".box-logo-motion",
+        start: "top top",
+        scroller: scrollContainer,
+        end: "bottom top",
+        scrub: true,
+        pin: true,
+        markers: true,
+        onUpdate: (self) => {
+          if (self.direction === -1 && self.progress === 0) {
+            gsap.to(".box-text .hidden span", {
+              y: "100%",
+              stagger: 0.3,
+              duration: 1,
+              ease: "power2.out"
+            });
+            gsap.to(".left-motion", {
+              x: 0,
+              y: 0,
+              duration: 1,
+              ease: "power2.out"
+            });
+            gsap.to(".right-motion", {
+              x: 0,
+              y: 0,
+              duration: 1,
+              ease: "power2.out"
+            });
+          }
+        }
+      },
+      onStart: () => {
+        gsap.to(".box-text .hidden span", {
+          y: "0%",
+          stagger: 0.3,
+          duration: 1,
+          ease: "power2.out"
+        });
+        gsap.to(".left-motion", {
+          x: -25,
+          y: -69,
+          duration: 1,
+          ease: "power2.out"
+        });
+        gsap.to(".right-motion", {
+          x: -35,
+          y: 109,
+          duration: 1,
+          ease: "power2.out"
+        });
+      }
+    });
+
   </script>
 
 </body>
