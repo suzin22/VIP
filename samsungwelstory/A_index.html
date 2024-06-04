@@ -132,6 +132,8 @@
       }
     });
 
+    locoScroll.stop();
+
     // ScrollTrigger와 Locomotive Scroll 연동
     locoScroll.on("scroll", ScrollTrigger.update);
 
@@ -152,15 +154,32 @@
 
     // Header
     const header = document.querySelector('.box-header');
+    let lastScrollY = 0;
 
     locoScroll.on('scroll', (instance) => {
       const scrollY = instance.scroll.y;
+
+      // 스크롤이 30px 이하일 때는 hide 클래스를 추가하거나 제거하지 않음
+      if (scrollY > 30) {
+        if (scrollY > lastScrollY) {
+          // 스크롤 내릴 때
+          header.classList.add('hide');
+        } else {
+          // 스크롤 올릴 때
+          header.classList.remove('hide');
+        }
+      }
+
+      lastScrollY = scrollY;
+
+      // 특정 위치에서 header를 고정시키는 로직도 추가
       if (scrollY > 100) {
         header.classList.add('is-active');
       } else {
         header.classList.remove('is-active');
       }
     });
+
 
     header.addEventListener('mouseenter', () => {
       header.classList.add('is-hover');
@@ -191,6 +210,8 @@
 
         setTimeout(() => {
           document.querySelector('.box-header').classList.remove('hide');
+
+          locoScroll.start();
         }, 3000);
       }
     })
@@ -208,48 +229,6 @@
       opacity: 0.3,
       y: '25%'
     });
-
-    // video scroll motion
-    gsap.to([".list-text", ".list-text-2"], {
-      scrollTrigger: {
-        trigger: ".box-section-fixed",
-        scroller: scrollContainer,
-        start: "top top",
-        end: "bottom bottom",
-        pin: true,
-        pinSpacing: false,
-        markers: false,
-        scrub: false
-      }
-    });
-
-    // Activating sections and videos
-    document.querySelectorAll(".box-section-fixed section").forEach((section, index) => {
-      ScrollTrigger.create({
-        trigger: section,
-        scroller: scrollContainer,
-        start: "top center",
-        end: "bottom center",
-        markers: false,
-        scrub: false,
-        onEnter: () => activateSection(index),
-        onEnterBack: () => activateSection(index)
-      });
-    });
-
-    function activateSection(index) {
-      // List-text activation
-      document.querySelectorAll(".list-text li").forEach(a => a.classList.remove("is-active"));
-      document.querySelectorAll(".list-text li")[index].classList.add("is-active");
-
-      // Video activation
-      document.querySelectorAll("video").forEach(video => video.classList.remove("is-active"));
-      document.querySelector(`.video-${index + 1}`).classList.add("is-active");
-
-      // List-text-2 activation
-      document.querySelectorAll(".list-text-2 li").forEach(p => p.classList.remove("is-active"));
-      document.querySelectorAll(".list-text-2 li")[index].classList.add("is-active");
-    }
 
     // image motion
     gsap.to(".bg-container", {
@@ -282,6 +261,7 @@
         end: "bottom top",
         scrub: true,
         pin: true,
+        pinSpacing: true,
         markers: true,
         onUpdate: (self) => {
           if (self.direction === -1 && self.progress === 0) {
@@ -327,6 +307,48 @@
         });
       }
     });
+
+    // video scroll motion
+    gsap.to([".list-text", ".list-text-2"], {
+      scrollTrigger: {
+        trigger: ".box-section-fixed",
+        scroller: scrollContainer,
+        start: "top top",
+        end: "bottom bottom",
+        pin: true,
+        pinSpacing: false,
+        markers: true,
+        scrub: false
+      }
+    });
+
+    // Activating sections and videos
+    document.querySelectorAll(".box-section-fixed section").forEach((section, index) => {
+      ScrollTrigger.create({
+        trigger: section,
+        scroller: scrollContainer,
+        start: "top center",
+        end: "bottom center",
+        markers: false,
+        scrub: false,
+        onEnter: () => activateSection(index),
+        onEnterBack: () => activateSection(index)
+      });
+    });
+
+    function activateSection(index) {
+      // List-text activation
+      document.querySelectorAll(".list-text li").forEach(a => a.classList.remove("is-active"));
+      document.querySelectorAll(".list-text li")[index].classList.add("is-active");
+
+      // Video activation
+      document.querySelectorAll("video").forEach(video => video.classList.remove("is-active"));
+      document.querySelector(`.video-${index + 1}`).classList.add("is-active");
+
+      // List-text-2 activation
+      document.querySelectorAll(".list-text-2 li").forEach(p => p.classList.remove("is-active"));
+      document.querySelectorAll(".list-text-2 li")[index].classList.add("is-active");
+    }
 
   </script>
 

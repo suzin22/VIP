@@ -215,8 +215,8 @@ a {
   right: 0;
   height: 112px;
   z-index: 1000;
-  will-change: transform;
-  transition: 0.4s transform;
+  will-change: transform, background, backdrop-filter;
+  transition: transform 500ms, background-color 500ms;
 }
 .box-header.hide {
   transform: translateY(-100%);
