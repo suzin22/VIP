@@ -852,10 +852,57 @@ a {
           left: 0;
           right: 0;
           bottom: 0;
-          background:
-            linear-gradient(0deg, rgba(0, 0, 0, 0) 74.09%, rgba(0, 0, 0, 0.1) 100%),
+          background: linear-gradient(0deg, rgba(0, 0, 0, 0) 74.09%, rgba(0, 0, 0, 0.1) 100%),
             linear-gradient(180deg, rgba(0, 0, 0, 0) 75.77%, rgba(0, 0, 0, 0.6) 100%),
             linear-gradient(0deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%);
+        }
+      }
+    }
+    .box-controll {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      flex-flow: row;
+      height: fit-content;
+      z-index: 30;
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: var(--transparent-w-40, rgba(255, 255, 255, 0.4));
+      }
+      a {
+        display: block;
+        flex: 1 1 0;
+        padding: 30px 0;
+        color: var(--transparent-w-80, rgba(255, 255, 255, 0.8));
+        text-align: center;
+
+        /* Button/md 04 01 */
+        font-family: Pretendard;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 100%; /* 22px */
+        position: relative;
+        &.is-active {
+          color: var(--Primary-1, #fff);
+          &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background-color: #fff;
+          }
         }
       }
     }
