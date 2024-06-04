@@ -731,24 +731,83 @@ a {
 }
 .box-solution .box-card {
   display: flex;
-  width: 100%;
   gap: 16px;
 }
 .box-solution .box-card span {
-  width: 100%;
   flex: 1 1 40%;
-  position: relative;
-  height: 420px;
 }
 .box-solution .box-card span img {
+  width: 100%;
+}
+
+.box-solution-tab {
+  height: 100vh;
+  z-index: 30;
+  position: relative;
+  opacity: 0;
+  transition: opacity 0.4s;
+  will-change: opacity;
+}
+.box-solution-tab.is-active {
+  opacity: 1;
+}
+.box-solution-tab #mainVisual {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+.box-solution-tab #mainVisual .main_bg {
+  opacity: 0.7;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+  background: center no-repeat;
+  background-size: cover;
+}
+.box-solution-tab #mainVisual .main_txt {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  transform: translate(-50%, -50%);
+  max-width: 1400px;
+  font-size: 15px;
+  color: #fff;
+}
+.box-solution-tab #mainVisual .main_txt .tit {
+  margin-bottom: 40px;
+  font-size: 30px;
+  line-height: 1.3;
+  letter-spacing: -0.2px;
+  color: #fff;
+  border-radius: 24px;
+  background: var(--transparent-b-16, rgba(0, 0, 0, 0.16));
+  /* Material Blur */
+  -webkit-backdrop-filter: blur(25px);
+          backdrop-filter: blur(25px);
+}
+.box-solution-tab #mainVisual .main_slide {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: #000;
+}
+.box-solution-tab #mainVisual .main_slide .swiper-slide {
+  height: 100%;
+  overflow: hidden;
+  backface-visibility: hidden;
+}
+.box-solution-tab #mainVisual .main_slide .swiper-slide::after {
+  content: "";
+  display: block;
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.box-solution .box-card span img.img {
-  z-index: 20;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 74.09%, rgba(0, 0, 0, 0.1) 100%), linear-gradient(180deg, rgba(0, 0, 0, 0) 75.77%, rgba(0, 0, 0, 0.6) 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%);
 }/*# sourceMappingURL=style.css.map */

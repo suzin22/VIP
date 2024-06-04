@@ -9,6 +9,7 @@
   <title>삼성웰스토리 | 푸드서비스, 식자재유통</title>
   <link rel="stylesheet" href="static/css/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll/dist/locomotive-scroll.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 </head>
 
 <body>
@@ -123,9 +124,43 @@
         <p class="text-3"><img src="static/images/text_solution2.png" alt=""></p>
       </div>
       <div class="box-card">
-        <span><img src="static/images/img_1.png" alt=""></span>
-        <span><img src="static/images/img_2.png" alt="" class="img"></span>
-        <span><img src="static/images/img_3.png" alt=""></span>
+        <div><img src="static/images/img_1.png" alt=""></div>
+        <div><img src="static/images/img_2.png" alt="" class="img"></div>
+        <div><img src="static/images/img_3.png" alt=""></div>
+      </div>
+    </div>
+    <div class="box-solution-tab">
+      <div id="mainVisual">
+        <div class="main_slide swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="main_txt">
+                <p class="tit" data-swiper-parallax-x="40%"><img src="static/images/swiper_1.png" alt=""></p>
+              </div>
+              <div class="main_bg" style="background-image:url(static/images/img_2.png)" data-swiper-parallax-x="50%">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="main_txt">
+                <p class="tit" data-swiper-parallax-x="40%"><img src="static/images/swiper_2.png" alt=""></p>
+              </div>
+              <div class="main_bg bg02" style="background-image:url(static/images/img_3.png)"
+                data-swiper-parallax-x="50%"></div>
+            </div>
+            <div class="swiper-slide">
+              <div class="main_txt">
+                <p class="tit" data-swiper-parallax-x="40%"><img src="static/images/swiper_3.png" alt=""></p>
+              </div>
+              <div class="main_bg bg03" style="background-image:url(static/images/img_5.png)"
+                data-swiper-parallax-x="50%"></div>
+            </div>
+          </div>
+        </div>
+        <div class="box-controll">
+          <a href="">Food Service</a>
+          <a href="">Food Distribution</a>
+          <a href="">Global Service</a>
+        </div>
       </div>
     </div>
 
@@ -144,6 +179,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll/dist/locomotive-scroll.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
   <script>
     /**
@@ -166,7 +202,8 @@
       }
     });
 
-    //locoScroll.stop();
+    //123
+    locoScroll.stop();
 
     // ScrollTrigger와 Locomotive Scroll 연동
     locoScroll.on("scroll", ScrollTrigger.update);
@@ -287,12 +324,12 @@
     // motion text
     gsap.to(".box-logo-motion > span > .hidden img", {
       opacity: "0",
-      duration: 0.1, // 애니메이션 속도를 더 빠르게 설정
+      duration: 0.1,
       scrollTrigger: {
         trigger: ".box-logo-motion",
         start: "top top",
         scroller: scrollContainer,
-        end: "bottom 40%",
+        end: "bottom 70%",
         scrub: true,
         pin: true,
         pinSpacing: true,
@@ -317,9 +354,8 @@
               duration: 1,
               ease: "power2.out"
             });
-            gsap.to(".right-motion", {
-              x: 0,
-              y: 0,
+            gsap.to(".box-logo-motion .btn", {
+              opacity: 0,
               duration: 1,
               ease: "power2.out"
             });
@@ -354,6 +390,7 @@
       }
     });
 
+
     // video scroll motion
     gsap.to([".list-text", ".list-text-2"], {
       scrollTrigger: {
@@ -374,7 +411,7 @@
         trigger: section,
         scroller: scrollContainer,
         start: "top center",
-        end: "bottom center",
+        end: "bottom 20%",
         markers: false,
         scrub: true,
         onEnter: () => activateSection(index, true),
@@ -433,16 +470,53 @@
         trigger: ".box-solution",
         scroller: scrollContainer,
         start: "top top",
-        end: "+=8000",
+        end: "bottom top",
         pin: true,
+        pinSpacing: false,
+        //anticipatePin: 1,
         scrub: true,
-        markers: true
+        markers: false,
       },
-      x: '-50%',
-      y: '-50%',
-      width: '100vw',
-      height: '100vh'
+      scale: 4.5,
     });
+
+    // food tab
+    gsap.to(".box-solution-tab", {
+      scrollTrigger: {
+        trigger: ".box-solution-tab",
+        scroller: scrollContainer,
+        start: "top top",
+        end: "+=4000",
+        pin: true,
+        pinSpacing: true,
+        scrub: true,
+        markers: false,
+        onEnter: () => {
+          document.querySelector('.box-solution-tab').classList.add('is-active');
+        },
+        onLeaveBack: () => {
+          document.querySelector('.box-solution-tab').classList.remove('is-active');
+        }
+      },
+    });
+
+    var mainSwiper = new Swiper(".main_slide", {
+      parallax: true,
+      grabCursor: true,
+      loop: true,
+      effect: 'slide',
+      direction: "horizontal",
+      allowTouchMove: true,
+      speed: 900,
+      slidesPerView: '1',
+      spaceBetween: 0,
+      // autoplay: {
+      //   delay: 3500,
+      //   disableOnInteraction: false,
+      // },
+    });
+
+
 
 
 
