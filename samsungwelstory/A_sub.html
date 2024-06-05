@@ -15,7 +15,7 @@
 <body>
 
   <!-- box-header -->
-  <div class="box-header">
+  <div class="box-header start">
     <h1><a href="A_index.html"></a></h1>
     <a href="A_sub.html" class="gnb"></a>
     <a href="#none" class="etc"></a>
@@ -162,6 +162,14 @@
 
   </div>
 
+  <div class="box-floating">
+    <a href="#none" class="icon-4"><img src="static/images/icon_4.svg" alt=""></a>
+    <a href="#none" class="icon-3"><img src="static/images/icon_3.svg" alt=""></a>
+    <a href="#none" class="icon-2"><img src="static/images/icon_2.svg" alt=""></a>
+    <a href="#none" class="icon is-active"><img src="static/images/icon_1.svg" alt=""></a>
+    <a href="#none" class="icon-btn-close"><img src="static/images/icon_close.svg" alt=""></a>
+  </div>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll/dist/locomotive-scroll.min.js"></script>
@@ -215,11 +223,14 @@
       const scrollY = instance.scroll.y;
 
       if (scrollY > 30) {
+        header.classList.remove('start');
         if (scrollY > lastScrollY) {
           header.classList.add('hide');
         } else {
           header.classList.remove('hide');
         }
+      } else {
+        header.classList.add('start');
       }
 
       lastScrollY = scrollY;
@@ -309,7 +320,7 @@
       ease: 'power2.out',
       scrub: true,
       stagger: {
-        each: 2, // 2초 간격으로 애니메이션 적용
+        each: 1, // 2초 간격으로 애니메이션 적용
         onComplete: function () {
           gsap.to(this.targets(), { y: 0, opacity: 1, duration: 1 });
         }
@@ -318,11 +329,46 @@
         scroller: scrollContainer,
         trigger: '.mySwiper',
         start: "top center",
-        end: "bottom 90%",
+        end: "90% bottom",
         scrub: true,
         markers: false
       }
     });
+
+    // btn-top 버튼 클릭 시 맨 위로 스크롤
+    document.getElementById('btn-top').addEventListener('click', function () {
+      console.log(12313);
+      locoScroll.scrollTo('top', {
+        duration: 1000, // 스크롤 지속 시간 (밀리초)
+        easing: [0.25, 0.00, 0.35, 1.00], // 스크롤 애니메이션 이징 (베지어 곡선)
+        disableLerp: true // 애니메이션 동안 보간을 비활성화
+      });
+    });
+
+    // Floating 버튼 클릭 이벤트
+    document.querySelector('.box-floating .icon').addEventListener('click', function (event) {
+      event.preventDefault();
+      document.querySelectorAll('.box-floating a').forEach((e) => {
+        e.classList.add('is-active');
+      });
+      document.querySelector('.box-floating .icon').classList.remove('is-active');
+    });
+
+    document.querySelector('.box-floating .icon-btn-close').addEventListener('click', function (event) {
+      event.preventDefault();
+      document.querySelectorAll('.box-floating a').forEach((e) => {
+        e.classList.remove('is-active');
+      });
+      document.querySelector('.box-floating .icon').classList.add('is-active');
+    });
+
+    // Locomotive Scroll의 스크롤 이벤트 사용
+    // locoScroll.on('scroll', function () {
+    //   document.querySelectorAll('.box-floating a').forEach(function (e) {
+    //     e.classList.remove('is-active');
+    //   });
+    //   document.querySelector('.box-floating .icon').classList.add('is-active');
+    // });
 
 
 

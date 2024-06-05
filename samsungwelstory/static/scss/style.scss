@@ -269,6 +269,9 @@ a {
   transition:
     transform 500ms,
     background-color 500ms;
+  &.start {
+    border-bottom: 0 !important;
+  }
   &.hide {
     transform: translateY(-100%);
   }
@@ -1039,7 +1042,7 @@ a {
           }
         }
         &.progress::after {
-          transition: width 3s;
+          //transition: width 3s;
           background-color: #fff;
           width: 100%;
         }
@@ -1433,6 +1436,36 @@ a {
           line-height: 100%; /* 22px */
           letter-spacing: -0.66px;
         }
+      }
+    }
+  }
+}
+
+.box-floating {
+  position: fixed;
+  bottom: 86px;
+  right: 96px;
+  z-index: 30;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  a {
+    opacity: 0;
+    display: none;
+    pointer-events: none;
+    &.is-active {
+      opacity: 1;
+      display: block;
+      pointer-events: all;
+    }
+    &.icon {
+    }
+    &.icon-btn-close {
+      transition: 0.4s transform;
+      &:hover {
+        transform: rotate(180deg);
       }
     }
   }

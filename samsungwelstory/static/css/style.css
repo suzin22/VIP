@@ -305,6 +305,9 @@ a {
   will-change: transform, background, backdrop-filter;
   transition: transform 500ms, background-color 500ms;
 }
+.box-header.start {
+  border-bottom: 0 !important;
+}
 .box-header.hide {
   transform: translateY(-100%);
 }
@@ -1041,7 +1044,6 @@ a {
   color: var(--Primary-1, #fff);
 }
 .box-solution-tab #mainVisual .box-controll a.progress::after {
-  transition: width 3s;
   background-color: #fff;
   width: 100%;
 }
@@ -1408,4 +1410,32 @@ a {
   font-weight: 500;
   line-height: 100%; /* 22px */
   letter-spacing: -0.66px;
+}
+
+.box-floating {
+  position: fixed;
+  bottom: 86px;
+  right: 96px;
+  z-index: 30;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+.box-floating a {
+  opacity: 0;
+  display: none;
+  pointer-events: none;
+}
+.box-floating a.is-active {
+  opacity: 1;
+  display: block;
+  pointer-events: all;
+}
+.box-floating a.icon-btn-close {
+  transition: 0.4s transform;
+}
+.box-floating a.icon-btn-close:hover {
+  transform: rotate(180deg);
 }/*# sourceMappingURL=style.css.map */
