@@ -17,7 +17,7 @@
   <!-- box-header -->
   <div class="box-header hide">
     <h1><a href="A_index.html"></a></h1>
-    <a href="#none" class="gnb"></a>
+    <a href="A_sub.html" class="gnb"></a>
     <a href="#none" class="etc"></a>
   </div>
   <!-- //box-header -->
@@ -341,7 +341,7 @@
     });
 
     //123
-    //locoScroll.stop();
+    locoScroll.stop();
 
     // ScrollTrigger와 Locomotive Scroll 연동
     locoScroll.on("scroll", ScrollTrigger.update);
@@ -783,7 +783,7 @@
         start: "top bottom", // 애니메이션 시작 위치
         end: "bottom top", // 애니메이션 끝 위치
         scrub: true,
-        markers: true // 개발 시 시각적 디버깅을 위해 마커 사용, 완료 후 제거 가능
+        markers: false // 개발 시 시각적 디버깅을 위해 마커 사용, 완료 후 제거 가능
       }
     });
 
