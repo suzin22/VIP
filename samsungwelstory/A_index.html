@@ -301,7 +301,7 @@
       </ul>
     </div>
     <div class="box-footer">
-      <a href="#none" class="btn-top"><img src="static/images/btn_top.png" alt=""></a>
+      <a href="#none" id="btn-top" class="btn-top"><img src="static/images/btn_top.png" alt=""></a>
       <div class="top">
         <div> <img src="static/images/footer_left.png" alt=""></div>
         <div><img src="static/images/footer_right.png" alt=""></div>
@@ -785,6 +785,16 @@
         scrub: true,
         markers: false // 개발 시 시각적 디버깅을 위해 마커 사용, 완료 후 제거 가능
       }
+    });
+
+    // btn-top 버튼 클릭 시 맨 위로 스크롤
+    document.getElementById('btn-top').addEventListener('click', function () {
+      console.log(12313);
+      locoScroll.scrollTo('top', {
+        duration: 1000, // 스크롤 지속 시간 (밀리초)
+        easing: [0.25, 0.00, 0.35, 1.00], // 스크롤 애니메이션 이징 (베지어 곡선)
+        disableLerp: true // 애니메이션 동안 보간을 비활성화
+      });
     });
 
   </script>
