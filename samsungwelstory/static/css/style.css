@@ -1475,7 +1475,8 @@ a {
 }
 .box-story-content ul li {
   opacity: 0;
-  transition: 0.4s opaticy, 0.4s transform;
+  transform: translateY(300px);
+  will-change: transform;
 }
 
 .box-story-swiper {

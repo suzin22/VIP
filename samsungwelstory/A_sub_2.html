@@ -305,22 +305,37 @@
       }
     });
 
-    gsap.to('.box-story-content ul li', {
-      y: -100,
-      opacity: 1,
-      duration: 1,
-      ease: 'power2.out',
-      scrub: true,
-      stagger: {
-        each: 1, // 2초 간격으로 애니메이션 적용
-      },
+    // news motion
+    gsap.to(".box-story-content ul li", {
       scrollTrigger: {
-        scroller: scrollContainer,
-        trigger: '.box-story-content',
+        trigger: ".box-story-content",
         start: "top center",
-        end: "90% bottom",
+        end: "bottom bottom",
         scrub: true,
-        markers: false
+        markers: false,
+        scroller: scrollContainer,
+        onEnter: () => {
+          gsap.to(".box-story-content ul li", {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            stagger: {
+              each: 0.1,
+              from: "start"
+            }
+          });
+        },
+        onLeaveBack: () => {
+          gsap.to(".box-story-content ul li", {
+            opacity: 0,
+            y: 100,
+            duration: 1,
+            stagger: {
+              each: 0.1,
+              from: "end"
+            }
+          });
+        }
       }
     });
   </script>
