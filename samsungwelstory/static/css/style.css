@@ -69,6 +69,10 @@
   box-sizing: border-box;
 }
 
+.c-scrollbar {
+  z-index: 1000;
+}
+
 html,
 body {
   -webkit-text-size-adjust: none; /* 크롬, 사파리, 오페라 신버전 */
@@ -1203,4 +1207,116 @@ a {
   display: flex;
   justify-content: space-between;
   padding: 32px 92px 48px;
+}
+
+#subA .box-top-text {
+  padding: 377px 0 0 221px;
+  margin: 0 auto;
+}
+#subA .box-motion-img {
+  padding: 224px 0;
+}
+#subA .box-motion-img .flex {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+#subA .box-motion-img .flex .box-text {
+  position: absolute;
+  top: 57px;
+  left: 221px;
+  width: 661px;
+  z-index: 40;
+}
+#subA .box-motion-img .flex .box-text.type-2 {
+  z-index: 10;
+  top: 54px;
+}
+#subA .box-motion-img .flex .box-text.type-2 .text-1,
+#subA .box-motion-img .flex .box-text.type-2 .text-2 {
+  color: #fff;
+}
+#subA .box-motion-img .flex .box-text .text-1 {
+  color: var(--Font-dark, #000);
+  /* Title/lg 02 01 */
+  font-family: "Welstory gothic";
+  font-size: 54px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: -1.62px;
+}
+#subA .box-motion-img .flex .box-text .text-2 {
+  margin-top: 38px;
+  color: var(--Font-medium, #666);
+  /* Caption/Caption 24 */
+  font-family: Pretendard;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: -0.72px;
+}
+#subA .box-motion-img .flex .bg-cover {
+  overflow: hidden;
+  background-color: #fff;
+  position: absolute;
+  top: -3px;
+  left: 0;
+  right: 0;
+  bottom: -3px;
+  width: 50vw;
+  height: 101%;
+  z-index: 30;
+  will-change: width;
+}
+#subA .box-motion-img .flex .video {
+  overflow: hidden;
+}
+#subA .box-motion-img .flex .video video {
+  transform: scale(2);
+  width: 100vw;
+  height: 709px;
+}
+
+.box-step {
+  padding: 0 221px;
+}
+.box-step .item {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+}
+.box-step .item + .item {
+  margin-top: 160px;
+}
+.box-step .item:first-child .left {
+  transform: translateY(48px);
+}
+.box-step .item .left {
+  flex: 1 1 352px;
+}
+.box-step .item .right {
+  flex: 1;
+  transform: translateY(50px);
+  opacity: 0;
+  transition: 0.4s transform, 0.3s opacity;
+}
+.box-step .wlrn {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 100px auto 0 auto;
+}
+
+.box-service {
+  background: var(--BG-light-2, #fbfbfb);
+}
+.box-service .text-1 {
+  color: var(--Font-dark, #000);
+  font-family: "Welstory gothic";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 32px */
+  letter-spacing: -1.92px;
 }/*# sourceMappingURL=style.css.map */

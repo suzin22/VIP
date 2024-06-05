@@ -1,0 +1,198 @@
+<!doctype html>
+<html class="is-smooth-scroll-compatible is-loading" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="삼성웰스토리는 식자재유통, 사내식당, 단체급식, 푸드 서비스 분야, 40년 식음 사업 역량과 노하우를 가진 글로벌 식음 기업입니다.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>삼성웰스토리 | 푸드서비스, 식자재유통</title>
+  <link rel="stylesheet" href="static/css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll/dist/locomotive-scroll.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+
+<body>
+
+  <!-- box-header -->
+  <div class="box-header">
+    <h1><a href="A_index.html"></a></h1>
+    <a href="A_sub.html" class="gnb"></a>
+    <a href="#none" class="etc"></a>
+  </div>
+  <!-- //box-header -->
+
+  <div id="subA" class="wrap" data-scroll-container>
+
+    <div class="box-top-text">
+      <img src="static/images/subA/text_1.png" alt="">
+    </div>
+
+    <div class="box-motion-img">
+      <div class="flex">
+        <div class="bg-cover">
+          <div class="box-text">
+            <p class="text-1">다양한 고객의 요구에 맞춘<br> 맞춤형 식단</p>
+            <p class="text-2">최신 식품 연구와 첨단 기술을 바탕으로 <br>고품질의 급식 서비스를 제공합니다.</p>
+          </div>
+        </div>
+        <div class="box-text type-2">
+          <p class="text-1">다양한 고객의 요구에 맞춘<br> 맞춤형 식단</p>
+          <p class="text-2">최신 식품 연구와 첨단 기술을 바탕으로 <br>고품질의 급식 서비스를 제공합니다.</p>
+        </div>
+        <div class="video">
+          <video class="video-1 is-active" autoplay muted loop playsinline>
+            <source src="static/video/sub_1.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+
+    <div class="box-step">
+      <div class="item">
+        <div class="left">
+          <img src="static/images/subA/text_step_1.png" alt="">
+        </div>
+        <div class="right">
+          <img src="static/images/subA/step_1.png" alt="">
+        </div>
+      </div>
+      <div class="item">
+        <div class="left">
+          <img src="static/images/subA/text_step_2.png" alt="">
+        </div>
+        <div class="right">
+          <img src="static/images/subA/step_2.png" alt="">
+        </div>
+      </div>
+      <div class="item">
+        <div class="left">
+          <img src="static/images/subA/text_step_3.png" alt="">
+        </div>
+        <div class="right">
+          <img src="static/images/subA/step_3.png" alt="">
+        </div>
+      </div>
+      <div class="wlrn">
+        <img src="static/images/subA/wlrn.png" alt="">
+      </div>
+    </div>
+
+    <div class="box-service">
+      <div class="text-1">서비스 납품 현황</div>
+    </div>
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll/dist/locomotive-scroll.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <script>
+    /**
+     * data-scroll-section 사용x
+    */
+    const scrollContainer = document.querySelector('[data-scroll-container]');
+
+    const locoScroll = new LocomotiveScroll({
+      el: scrollContainer,
+      smooth: true,
+      lerp: 0.05,
+      multiplier: 1.2,
+      tablet: {
+        breakpoint: 0,
+      },
+      smartphone: {
+        smooth: false,
+        direction: 'vertical',
+        gestureDirection: 'vertical'
+      }
+    });
+
+    // ScrollTrigger와 Locomotive Scroll 연동
+    locoScroll.on("scroll", ScrollTrigger.update);
+
+    ScrollTrigger.scrollerProxy(scrollContainer, {
+      scrollTop(value) {
+        return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
+      },
+      getBoundingClientRect() {
+        return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
+      },
+      pinType: scrollContainer.style.transform ? "transform" : "fixed"
+    });
+
+    ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+    ScrollTrigger.refresh();
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Header
+    const header = document.querySelector('.box-header');
+    let lastScrollY = 0;
+
+    locoScroll.on('scroll', (instance) => {
+      const scrollY = instance.scroll.y;
+
+      if (scrollY > 30) {
+        if (scrollY > lastScrollY) {
+          header.classList.add('hide');
+        } else {
+          header.classList.remove('hide');
+        }
+      }
+
+      lastScrollY = scrollY;
+
+      header.classList.add('is-active');
+    });
+
+    header.addEventListener('mouseenter', () => {
+      header.classList.add('is-hover');
+    });
+
+    header.addEventListener('mouseleave', () => {
+      header.classList.remove('is-hover');
+    });
+
+    // top video motion
+    gsap.to(".box-motion-img .bg-cover", {
+      width: "0vw",
+      //ease: "power2.out",
+      scrollTrigger: {
+        scroller: scrollContainer,
+        trigger: ".box-motion-img .bg-cover",
+        start: "top 40% ",
+        end: "bottom 60%",
+        scrub: true,
+        markers: false,
+      }
+    });
+
+    // item 모션
+    gsap.utils.toArray('.box-step .item').forEach((item) => {
+      gsap.to(item.querySelector('.right'), {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        ease: 'power2.out',
+        scrollTrigger: {
+          scroller: scrollContainer,
+          trigger: item,
+          start: "top 80%", // 애니메이션 시작 위치
+          end: "top 50%", // 애니메이션 끝 위치
+          scrub: true,
+          markers: true // 개발 시 시각적 디버깅을 위해 마커 사용, 완료 후 제거 가능
+        }
+      });
+    });
+
+
+
+  </script>
+
+</body>
+
+</html>
