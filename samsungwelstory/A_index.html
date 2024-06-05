@@ -159,7 +159,6 @@
           <a href="#" data-images="swiper_5.png,swiper_6.png">Global Service</a>
         </div>
 
-
       </div>
     </div>
     <div class="box-gallery">
@@ -208,11 +207,16 @@
       <div class="top-text">
         <img src="static/images/text_make.png" alt="">
       </div>
-      <div class="img">
-        <img src="static/images/img_make.png" alt="">
-        <div class="box-text">
-          <p class="text-1">지속 가능한 미래를 위한 건강한 식문화, <br>삼성웰스토리가 만듭니다</p>
-          <div class="text-2">경제 사회 환경적 가치 창출 과정을 <br>다양한 이해관계자와 소통하기 위해 노력합니다</div>
+    </div>
+    <div class="box-img-motion">
+      <div class="cover">
+        <div class="img">
+          <img src="static/images/img_make.png" alt="" class="im">
+          <div class="box-text">
+            <!-- <img src="static/images/img_wlthr.png" alt="" style="width: 869px;"> -->
+            <p class="text-1">지속 가능한 미래를 위한 건강한 식문화, <br>삼성웰스토리가 만듭니다</p>
+            <div class="text-2">경제 사회 환경적 가치 창출 과정을 <br>다양한 이해관계자와 소통하기 위해 노력합니다</div>
+          </div>
         </div>
       </div>
     </div>
@@ -345,7 +349,7 @@
     });
 
     //123
-    //locoScroll.stop();
+    locoScroll.stop();
 
     // ScrollTrigger와 Locomotive Scroll 연동
     locoScroll.on("scroll", ScrollTrigger.update);
@@ -707,31 +711,32 @@
     }, 1000);
 
 
-    // make img motion
-    gsap.to(".box-make .img img", {
-      width: "95vw",
+    // box-img-motion img motion
+    gsap.to(".box-img-motion .cover", {
+      width: "100vw",
       height: "100vh",
       scrollTrigger: {
-        trigger: ".box-make",
+        trigger: ".box-img-motion",
         start: "top top",
-        end: "bottom top",
+        //end: "bottom center",
+        end: "+=3000",
         pin: true,
-        pinSpacing: true, // 다른 콘텐츠와 겹치지 않도록 공간 확보
+        pinSpacing: true,
         scrub: true,
         markers: false,
         scroller: scrollContainer,
       }
     });
 
-    gsap.to(".box-make .box-text", {
+    gsap.to(".box-img-motion .box-text", {
       opacity: 1,
       scrollTrigger: {
-        trigger: ".box-make .top-text",
-        start: "150px top",
-        end: "bottom top",
+        trigger: ".box-img-motion .box-text",
+        start: "top top",
+        end: "bottom bottom",
         pin: false,
         scrub: true,
-        markers: false,
+        markers: true,
         scroller: scrollContainer,
       }
     });
