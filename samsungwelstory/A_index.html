@@ -535,9 +535,9 @@
       ScrollTrigger.create({
         trigger: section,
         scroller: scrollContainer,
-        start: "top bottom",
+        start: "top center",
         end: "bottom center",
-        markers: false,
+        markers: true,
         scrub: true,
         onEnter: () => activateSection(index, true),
         onEnterBack: () => activateSection(index, false),
@@ -549,7 +549,7 @@
       const videoWrapper = document.querySelectorAll(".box-section-fixed .video-wrapper")[index];
       const activeListItem2 = document.querySelectorAll(".list-text-2 li")[index];
 
-      let progressThreshold = 0.65;
+      let progressThreshold = 1;
       if (self.direction === -1) {
         progressThreshold = 0.7;
       }
