@@ -973,7 +973,7 @@ a {
       position: relative;
       //background-color: #000;
       .swiper-slide {
-        &:hover{
+        &:hover {
           cursor: grab;
         }
         height: 100%;
@@ -1478,6 +1478,18 @@ a {
       &:hover {
         transform: rotate(180deg);
       }
+    }
+  }
+}
+
+.box-story-content {
+  padding: 0 221px;
+  ul{
+    display: flex;
+    gap: 80px 24px;
+    flex-flow: row wrap;
+    li{
+
     }
   }
 }

@@ -1452,4 +1452,13 @@ a {
 }
 .box-floating a.icon-btn-close:hover {
   transform: rotate(180deg);
+}
+
+.box-story-content {
+  padding: 0 221px;
+}
+.box-story-content ul {
+  display: flex;
+  gap: 80px 24px;
+  flex-flow: row wrap;
 }/*# sourceMappingURL=style.css.map */
