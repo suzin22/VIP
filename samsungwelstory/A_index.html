@@ -125,7 +125,7 @@
       </div>
       <div class="box-card">
         <div><img src="static/images/img_1.png" alt=""></div>
-        <div><img src="static/images/img_2.png" alt="" class="img"></div>
+        <div class="img"><img src="static/images/img_4.png" alt=""></div>
         <div><img src="static/images/img_3.png" alt=""></div>
       </div>
     </div>
@@ -214,21 +214,101 @@
       </div>
       <div class="img">
         <img src="static/images/img_make.png" alt="">
+        <div class="box-text">
+          <p class="text-1">지속 가능한 미래를 위한 건강한 식문화, <br>삼성웰스토리가 만듭니다</p>
+          <div class="text-2">경제 사회 환경적 가치 창출 과정을 <br>다양한 이해관계자와 소통하기 위해 노력합니다</div>
+        </div>
       </div>
     </div>
     <div class="box-new">
       <div class="top-text">
         <img src="static/images/text_new.png" alt="">
       </div>
+      <div class="list">
+        <a href="#none"><img src="static/images/news_1.png" alt=""></a>
+        <a href="#none"><img src="static/images/news_2.png" alt=""></a>
+        <a href="#none"><img src="static/images/news_3.png" alt=""></a>
+      </div>
     </div>
-
-
-
+    <div class="box-story">
+      <div class="top-text">
+        <img src="static/images/text_story.png" alt="">
+      </div>
+      <div class="section-inner">
+        <ul>
+          <li>
+            <span><img src="static/images/banner_bottom_1.png" alt=""></span>
+          </li>
+          <li>
+            <span><img src="static/images/banner_bottom_2.png" alt=""></span>
+          </li>
+          <li>
+            <span><img src="static/images/banner_bottom_3.png" alt=""></span>
+          </li>
+          <li>
+            <span><img src="static/images/banner_bottom_4.png" alt=""></span>
+          </li>
+          <li>
+            <span><img src="static/images/banner_bottom_5.png" alt=""></span>
+          </li>
+          <li>
+            <span><img src="static/images/banner_bottom_6.png" alt=""></span>
+          </li>
+          <li>
+            <span><img src="static/images/banner_bottom_1.png" alt=""></span>
+          </li>
+          <li>
+            <span><img src="static/images/banner_bottom_2.png" alt=""></span>
+          </li>
+          <li>
+            <span><img src="static/images/banner_bottom_3.png" alt=""></span>
+          </li>
+          <li>
+            <span><img src="static/images/banner_bottom_4.png" alt=""></span>
+          </li>
+          <li>
+            <span><img src="static/images/banner_bottom_5.png" alt=""></span>
+          </li>
+          <li>
+            <span><img src="static/images/banner_bottom_6.png" alt=""></span>
+          </li>
+        </ul>
+      </div>
+    </div>
     <div class="box-img-cover">
-      <div class="inner">
-        <div class="bg-container">
-          <img src="static/images/kv_2.jpg" alt="">
+      <a href="">
+        <div class="inner">
+          <div class="bg-container">
+            <img src="static/images/bottom_banner.png" alt="">
+          </div>
+          <div class="box-text">
+            <p class="text-1">Career</p>
+            <div class="text-2">
+              40여년의 식음 산업의 미래를 선도하는 삼성웰스토리와 함께<br>
+              글로벌 식음 기업으로 함께 즐기며 성장할 기회를 잡으세요.
+            </div>
+            <img src="static/images/icon_arrow_2.png" alt="" class="img">
+          </div>
         </div>
+      </a>
+    </div>
+    <div class="box-tab-bottom">
+      <ul>
+        <li><a href="#nmone"><img src="static/images/tab_1.png" alt=""></a></li>
+        <li><a href="#nmone"><img src="static/images/tab_2.png" alt=""></a></li>
+        <li><a href="#nmone"><img src="static/images/tab_3.png" alt=""></a></li>
+        <li><a href="#nmone"><img src="static/images/tab_4.png" alt=""></a></li>
+      </ul>
+    </div>
+    <div class="box-footer">
+      <a href="#none" class="btn-top"><img src="static/images/btn_top.png" alt=""></a>
+      <div class="top">
+        <div> <img src="static/images/footer_left.png" alt=""></div>
+        <div><img src="static/images/footer_right.png" alt=""></div>
+      </div>
+      <div class="bottom">
+        <div><img src="static/images/footer_bottom_!.png" alt=""></div>
+        <div><img src="static/images/footer_bottom_sns.png" alt=""></div>
       </div>
     </div>
   </div>
@@ -288,20 +368,16 @@
     locoScroll.on('scroll', (instance) => {
       const scrollY = instance.scroll.y;
 
-      // 스크롤이 30px 이하일 때는 hide 클래스를 추가하거나 제거하지 않음
       if (scrollY > 30) {
         if (scrollY > lastScrollY) {
-          // 스크롤 내릴 때
           header.classList.add('hide');
         } else {
-          // 스크롤 올릴 때
           header.classList.remove('hide');
         }
       }
 
       lastScrollY = scrollY;
 
-      // 특정 위치에서 header를 고정시키는 로직도 추가
       if (scrollY > 100) {
         header.classList.add('is-active');
       } else {
@@ -318,15 +394,14 @@
       header.classList.remove('is-hover');
     });
 
-    // GSAP Timeline 설정
     const tl = gsap.timeline();
 
     // intro text motion
     tl.to('.box-intro .text .gap', {
-      y: 0, // 원래 위치로 이동
-      opacity: 1, // 불투명하게 변경
-      duration: 1, // 애니메이션 지속 시간
-      stagger: 0.4, // 각 span 요소 사이에 0.4초 간격을 둡니다
+      y: 0,
+      opacity: 1,
+      duration: 1,
+      stagger: 0.4,
       onComplete: () => {
         document.querySelector('.right-gap').classList.add('is-active');
 
@@ -361,26 +436,6 @@
       },
       opacity: 0.3,
       y: '25%'
-    });
-
-    // image motion
-    gsap.to(".bg-container", {
-      y: -418.184, // 최종 y 좌표
-      scrollTrigger: {
-        trigger: ".box-img-cover",
-        scroller: scrollContainer,
-        start: "top bottom", // 트리거 시작점
-        end: "bottom top", // 트리거 끝점
-        scrub: true, // 스크롤에 따라 애니메이션 재생
-        markers: false,
-        onUpdate: (self) => {
-          const progress = self.progress; // 스크롤 진행 비율
-          const startY = -776.628; // 시작 y 좌표
-          const endY = -418.184; // 끝 y 좌표
-          const translateY = startY + (endY - startY) * progress;
-          document.querySelector(".bg-container").style.transform = `translateY(${translateY}px)`;
-        }
-      }
     });
 
     // motion text
@@ -487,7 +542,7 @@
       const activeListItem2 = document.querySelectorAll(".list-text-2 li")[index];
 
       let progressThreshold = 0.65;
-      if (self.direction === -1) { // 스크롤이 위로 올라갈 때
+      if (self.direction === -1) {
         progressThreshold = 0.7;
       }
 
@@ -497,12 +552,12 @@
         videoWrapper.querySelector('video').style.clipPath = "ellipse(100vw 100vh at -100% 0)";
         videoWrapper.style.setProperty('--after-opacity', 0.4);
         videoWrapper.style.setProperty('--after-clip-path', "ellipse(100vw 100vh at -100% 0)");
-        activeListItem2.querySelector('.text-1').style.color = "#000"; // 폰트 색상 변경
+        activeListItem2.querySelector('.text-1').style.color = "#000";
       } else {
         videoWrapper.querySelector('video').style.clipPath = "ellipse(100vw 100vh at 14% 50%)";
         videoWrapper.style.setProperty('--after-opacity', 0);
         videoWrapper.style.setProperty('--after-clip-path', "ellipse(100vw 100vh at 14% 50%)");
-        activeListItem2.querySelector('.text-1').style.color = "#fff"; // 폰트 색상 초기화
+        activeListItem2.querySelector('.text-1').style.color = "#fff";
       }
     }
 
@@ -524,12 +579,11 @@
       // List-text-2 activation
       document.querySelectorAll(".list-text-2 li").forEach(p => {
         p.classList.remove("is-active");
-        p.style.color = ""; // 폰트 색상 초기화
+        p.style.color = "";
       });
       const activeListItem2 = document.querySelectorAll(".list-text-2 li")[index];
       activeListItem2.classList.add("is-active");
     }
-
 
     // food service motion
     gsap.to(".box-solution .img", {
@@ -544,7 +598,7 @@
         scrub: true,
         markers: false,
       },
-      scale: 4.5,
+      scale: 4.6,
     });
 
     // food tab
@@ -575,10 +629,11 @@
       spaceBetween: 30,
       grabCursor: true,
       centeredSlides: true,
+      scroller: scrollContainer,
       speed: 800,
       autoplay: {
-        delay: 3000, // 자동 슬라이드 전환 시간 (밀리초)
-        disableOnInteraction: false, // 사용자 상호작용 후에도 자동 슬라이드가 계속되도록 설정
+        delay: 3000,
+        disableOnInteraction: false,
       },
       pagination: {
         el: ".swiper-pagination",
@@ -586,7 +641,7 @@
       },
       on: {
         init: function () {
-          this.autoplay.stop(); // 초기 로드 시 autoplay 중지
+          this.autoplay.stop();
         },
         slideChange: function () {
           const activeIndex = this.activeIndex;
@@ -622,35 +677,43 @@
     });
 
     // loop
-    const sliderItem = document.querySelector(".box-gallery .section-inner ul");
-    const sliderItems = document.querySelectorAll(".box-gallery .section-inner li");
+    function createSlider(selector, duration) {
+      const sliderItem = document.querySelector(`${selector} .section-inner ul`);
+      const sliderItems = document.querySelectorAll(`${selector} .section-inner li`);
 
-    const slideWidth = sliderItems[0].offsetWidth + parseInt(getComputedStyle(sliderItems[0]).marginRight);
+      if (sliderItems.length === 0) {
+        return;
+      }
 
-    // 슬라이드를 복제해 무한 루프를 만듭니다.
-    const numOfClones = sliderItems.length; // 슬라이드 수만큼 복제
-    for (let i = 0; i < numOfClones; i++) {
-      const clone = sliderItems[i].cloneNode(true);
-      sliderItem.appendChild(clone);
-    }
+      const slideWidth = sliderItems[0].offsetWidth + parseInt(getComputedStyle(sliderItems[0]).marginRight);
 
-    // 애니메이션 설정 함수
-    function setSliderAnimation(duration) {
+      const numOfClones = sliderItems.length;
+      for (let i = 0; i < numOfClones; i++) {
+        const clone = sliderItems[i].cloneNode(true);
+        sliderItem.appendChild(clone);
+      }
+
       gsap.to(sliderItem, {
         x: `-${slideWidth * numOfClones}px`,
         ease: "none",
         repeat: -1,
-        duration: duration, // 미디어 쿼리에 따라 지정된 지속 시간 사용
+        duration: duration,
         modifiers: {
           x: gsap.utils.unitize((x) => parseFloat(x) % (slideWidth * numOfClones))
         }
       });
     }
-    setSliderAnimation(70);
+
+    setTimeout(() => {
+      // 슬라이더 애니메이션 설정
+      createSlider('.box-gallery', 70);
+      createSlider('.box-story', 70);
+    }, 1000);
+
 
     // make img motion
     gsap.to(".box-make .img img", {
-      width: "80vw",
+      width: "95vw",
       height: "100vh",
       scrollTrigger: {
         trigger: ".box-make",
@@ -659,30 +722,70 @@
         pin: true,
         pinSpacing: true, // 다른 콘텐츠와 겹치지 않도록 공간 확보
         scrub: true,
-        markers: true,
+        markers: false,
         scroller: scrollContainer,
+      }
+    });
+
+    gsap.to(".box-make .box-text", {
+      opacity: 1,
+      scrollTrigger: {
+        trigger: ".box-make .top-text",
+        start: "150px top",
+        end: "bottom top",
+        pin: false,
+        scrub: true,
+        markers: false,
+        scroller: scrollContainer,
+      }
+    });
+
+    // news motion
+    gsap.to(".box-new .list a", {
+      scrollTrigger: {
+        trigger: ".box-new .list",
+        start: "top center",
+        end: "bottom bottom",
+        scrub: true,
+        markers: false,
+        scroller: scrollContainer,
+        onEnter: () => {
+          gsap.to(".box-new .list a", {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            stagger: {
+              each: 0.3,
+              from: "start"
+            }
+          });
+        },
         onLeaveBack: () => {
-          gsap.to(".box-make .img img", { width: "auto", height: "auto" });
+          gsap.to(".box-new .list a", {
+            opacity: 0,
+            y: 100,
+            duration: 1,
+            stagger: {
+              each: 0.3,
+              from: "end"
+            }
+          });
         }
       }
     });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    // box-img-cover
+    gsap.to(".bg-container", {
+      y: "-20vh",
+      scrollTrigger: {
+        scroller: scrollContainer,
+        trigger: ".box-img-cover",
+        start: "top bottom", // 애니메이션 시작 위치
+        end: "bottom top", // 애니메이션 끝 위치
+        scrub: true,
+        markers: true // 개발 시 시각적 디버깅을 위해 마커 사용, 완료 후 제거 가능
+      }
+    });
 
   </script>
 
