@@ -24,12 +24,109 @@
 
   <div id="subA" class="wrap" data-scroll-container>
 
-    <div class="box-top-text">
+    <div class="box-top-tt">
       <img src="static/images/subA/text_2.png" alt="">
     </div>
 
+    <div class="box-story-swiper">
+      <div class="swiper box-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="img-holder">
+              <span><img src="static/images/subA/swiper_story_1.png"></span>
+              <p class="tt-1">전문가 인터뷰 및 칼럼</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="img-holder">
+              <span><img src="static/images/subA/swiper_story_2.png"></span>
+              <p class="tt-1">전문가 인터뷰 및 칼럼</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="img-holder">
+              <span><img src="static/images/subA/swiper_story_3.png"></span>
+              <p class="tt-1">전문가 인터뷰 및 칼럼</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="img-holder">
+              <span><img src="static/images/subA/swiper_story_4.png"></span>
+              <p class="tt-1">전문가 인터뷰 및 칼럼</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="img-holder">
+              <span><img src="static/images/subA/swiper_story_5.png"></span>
+              <p class="tt-1">전문가 인터뷰 및 칼럼</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="img-holder">
+              <span><img src="static/images/subA/swiper_story_1.png"></span>
+              <p class="tt-1">전문가 인터뷰 및 칼럼</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="img-holder">
+              <span><img src="static/images/subA/swiper_story_2.png"></span>
+              <p class="tt-1">전문가 인터뷰 및 칼럼</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="img-holder">
+              <span><img src="static/images/subA/swiper_story_3.png"></span>
+              <p class="tt-1">전문가 인터뷰 및 칼럼</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="img-holder">
+              <span><img src="static/images/subA/swiper_story_4.png"></span>
+              <p class="tt-1">전문가 인터뷰 및 칼럼</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="img-holder">
+              <span><img src="static/images/subA/swiper_story_5.png"></span>
+              <p class="tt-1">전문가 인터뷰 및 칼럼</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="img-holder">
+              <span><img src="static/images/subA/swiper_story_1.png"></span>
+              <p class="tt-1">전문가 인터뷰 및 칼럼</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="img-holder">
+              <span><img src="static/images/subA/swiper_story_2.png"></span>
+              <p class="tt-1">전문가 인터뷰 및 칼럼</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="img-holder">
+              <span><img src="static/images/subA/swiper_story_3.png"></span>
+              <p class="tt-1">전문가 인터뷰 및 칼럼</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="img-holder">
+              <span><img src="static/images/subA/swiper_story_4.png"></span>
+              <p class="tt-1">전문가 인터뷰 및 칼럼</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="img-holder">
+              <span><img src="static/images/subA/swiper_story_5.png"></span>
+              <p class="tt-1">전문가 인터뷰 및 칼럼</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="box-story-content">
-      <div class="top-text"><img src="static/images/text_2.png" alt=""></div>
+      <div class="top-text"><img src="static/images/subA/text_3.png" alt=""></div>
       <ul>
         <li>
           <a href="#none"><img src="static/images/subA/img_story_1.png" alt=""></a>
@@ -181,6 +278,15 @@
         e.classList.remove('is-active');
       });
       document.querySelector('.box-floating .icon').classList.add('is-active');
+    });
+
+    // swiper
+    var swiper = new Swiper(".box-swiper", {
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 5,
+      loop: true,
+      spaceBetween: 16,
     });
   </script>
 

@@ -1454,11 +1454,77 @@ a {
   transform: rotate(180deg);
 }
 
+.box-top-tt {
+  max-width: 1480px;
+  margin: 0 auto;
+  padding: 377px 0 0 0;
+}
+
 .box-story-content {
-  padding: 0 221px;
+  max-width: 1480px;
+  margin: 302px auto 0 auto;
+}
+.box-story-content .top-text {
+  margin-bottom: 64px;
 }
 .box-story-content ul {
   display: flex;
   gap: 80px 24px;
   flex-flow: row wrap;
+}
+.box-story-swiper {
+  margin: 113px 0 0 0;
+  padding: 0 16px;
+}
+.box-story-swiper .box-swiper {
+  overflow: visible;
+}
+.box-story-swiper .box-swiper .swiper-wrapper {
+  overflow: visible;
+}
+.box-story-swiper .box-swiper .swiper-wrapper .swiper-slide.swiper-slide-active {
+  transition: transform 0.4s;
+  z-index: 10;
+  transform: scale(1.8) translateY(15%);
+}
+.box-story-swiper .box-swiper .swiper-wrapper .swiper-slide.swiper-slide-active .img-holder span {
+  border-radius: 24px;
+  padding-top: 67%;
+  box-shadow: 8px 8px 24px 0px rgba(0, 0, 0, 0.24);
+}
+.box-story-swiper .box-swiper .swiper-wrapper .swiper-slide.swiper-slide-active .img-holder span::after {
+  border-radius: 24px;
+}
+.box-story-swiper .box-swiper .swiper-wrapper .swiper-slide.swiper-slide-active .img-holder .tt-1 {
+  opacity: 1;
+}
+.box-story-swiper .box-swiper .swiper-wrapper .swiper-slide .img-holder span {
+  border-radius: 12px;
+}
+.box-story-swiper .box-swiper .swiper-wrapper .swiper-slide .img-holder span::after {
+  content: "";
+  display: block;
+  border-radius: 12px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%);
+  box-shadow: 8px 8px 24px 0px rgba(0, 0, 0, 0.24);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.box-story-swiper .box-swiper .swiper-wrapper .swiper-slide .img-holder .tt-1 {
+  opacity: 0;
+  transition: 0.4s opacity;
+  will-change: opacity;
+  color: var(--Primary-3, #000);
+  text-align: center;
+  /* Title/lg 04 01 */
+  font-family: "Welstory gothic";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 32px */
+  letter-spacing: -0.96px;
+  margin-top: 21px;
 }/*# sourceMappingURL=style.css.map */
