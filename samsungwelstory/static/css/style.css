@@ -1468,10 +1468,16 @@ a {
   margin-bottom: 64px;
 }
 .box-story-content ul {
+  padding-top: 100px;
   display: flex;
   gap: 80px 24px;
   flex-flow: row wrap;
 }
+.box-story-content ul li {
+  opacity: 0;
+  transition: 0.4s opaticy, 0.4s transform;
+}
+
 .box-story-swiper {
   margin: 113px 0 0 0;
   padding: 0 16px;
@@ -1482,8 +1488,10 @@ a {
 .box-story-swiper .box-swiper .swiper-wrapper {
   overflow: visible;
 }
+.box-story-swiper .box-swiper .swiper-wrapper .swiper-slide {
+  transition: 0.4s transform;
+}
 .box-story-swiper .box-swiper .swiper-wrapper .swiper-slide.swiper-slide-active {
-  transition: transform 0.4s;
   z-index: 10;
   transform: scale(1.8) translateY(15%);
 }
