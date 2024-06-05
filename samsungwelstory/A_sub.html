@@ -80,6 +80,84 @@
 
     <div class="box-service">
       <div class="text-1">서비스 납품 현황</div>
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="img-holder">
+              <span><img src="static/images/subA/ser_1.png" alt=""></span>
+              <p class="tt-1">오피스 산업체</p>
+              <p class="tt-2">직장생활의 오아시스, 사내식당</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="img-holder">
+              <span><img src="static/images/subA/ser_2.png" alt=""></span>
+              <p class="tt-1">대학교</p>
+              <p class="tt-2">캠퍼스의 활력과 낭만, 학생식당.</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="img-holder">
+              <span><img src="static/images/subA/ser_3.png" alt=""></span>
+              <p class="tt-1">병원</p>
+              <p class="tt-2">과학과 진심이 담긴 최고의 환자식.</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="img-holder">
+              <span><img src="static/images/subA/ser_4.png" alt=""></span>
+              <p class="tt-1">골프장</p>
+              <p class="tt-2">골프장에 특화된 맞춤 푸드서비스</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="img-holder">
+              <span><img src="static/images/subA/ser_5.png" alt=""></span>
+              <p class="tt-1">레저·문화시설</p>
+              <p class="tt-2">즐거움을 더해주는 다양한 메뉴 제공</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="img-holder">
+              <span><img src="static/images/subA/ser_6.png" alt=""></span>
+              <p class="tt-1">주거식음</p>
+              <p class="tt-2">입주민들을 대상으로 조식과 중식, 카페 등 제공</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="img-holder">
+              <span><img src="static/images/subA/ser_7.png" alt=""></span>
+              <p class="tt-1">군부대</p>
+              <p class="tt-2">국군장병들의 건강식 위주의 식단</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="box-img-cover type-2">
+      <a href="">
+        <div class="inner">
+          <div class="bg-container">
+            <img src="static/images/subA/bottom_banner_2.png" alt="">
+          </div>
+          <div class="box-text">
+            <p class="text-1">서비스 문의하기 <img src="static/images/icon_arrow_2.png" alt="" class="img"></p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <div class="box-footer">
+      <a href="#none" id="btn-top" class="btn-top"><img src="static/images/btn_top.png" alt=""></a>
+      <div class="top">
+        <div> <img src="static/images/footer_left.png" alt=""></div>
+        <div><img src="static/images/footer_right.png" alt=""></div>
+      </div>
+      <div class="bottom">
+        <div><img src="static/images/footer_bottom_!.png" alt=""></div>
+        <div><img src="static/images/footer_bottom_sns.png" alt=""></div>
+      </div>
     </div>
 
   </div>
@@ -171,6 +249,19 @@
       }
     });
 
+    // top video motion
+    gsap.to(".box-motion-img", {
+      y: -100,
+      scrollTrigger: {
+        scroller: scrollContainer,
+        trigger: ".box-motion-img",
+        start: "top 40% ",
+        end: "bottom 60%",
+        scrub: true,
+        markers: false,
+      }
+    });
+
     // item 모션
     gsap.utils.toArray('.box-step .item').forEach((item) => {
       gsap.to(item.querySelector('.right'), {
@@ -181,12 +272,56 @@
         scrollTrigger: {
           scroller: scrollContainer,
           trigger: item,
-          start: "top 80%", // 애니메이션 시작 위치
-          end: "top 50%", // 애니메이션 끝 위치
+          start: "top 80%",
+          end: "top 50%",
           scrub: true,
-          markers: true // 개발 시 시각적 디버깅을 위해 마커 사용, 완료 후 제거 가능
+          markers: false
         }
       });
+    });
+
+    // 서비스 납품 현황
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 'auto',
+      spaceBetween: 149,
+      freeMode: true,
+      grabCursor: true,
+    });
+
+    // box-img-cover
+    gsap.to(".bg-container", {
+      y: "-30vh",
+      scrollTrigger: {
+        scroller: scrollContainer,
+        trigger: ".box-img-cover",
+        start: "top bottom",
+        end: "bottom top",
+        scrub: true,
+        markers: false
+      }
+    });
+
+    // 각 .swiper-slide 요소에 대해 애니메이션 설정
+    gsap.to('.mySwiper .swiper-slide .img-holder', {
+      y: 0,
+      opacity: 1,
+      duration: 1,
+      ease: 'power2.out',
+      scrub: true,
+      stagger: {
+        each: 2, // 2초 간격으로 애니메이션 적용
+        onComplete: function () {
+          gsap.to(this.targets(), { y: 0, opacity: 1, duration: 1 });
+        }
+      },
+      scrollTrigger: {
+        scroller: scrollContainer,
+        trigger: '.mySwiper',
+        start: "top center",
+        end: "bottom 90%",
+        scrub: true,
+        markers: false
+      }
     });
 
 

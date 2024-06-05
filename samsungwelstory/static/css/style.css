@@ -520,7 +520,27 @@ a {
   z-index: 20;
   background-color: #fff;
   height: 480px;
-  margin: 0 0 192px 0;
+  margin: 96px;
+}
+.box-img-cover.type-2 .inner {
+  border-radius: 24px;
+}
+.box-img-cover.type-2 .inner .box-text {
+  padding-top: 213px;
+}
+.box-img-cover.type-2 .inner .box-text .text-1 {
+  color: var(--Basic-1, #fff);
+  /* Title/lg 02 01 */
+  font-family: "Welstory gothic";
+  font-size: 54px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 54px */
+  letter-spacing: -1.62px;
+}
+.box-img-cover.type-2 .inner .box-text .img {
+  position: relative;
+  top: -6px;
 }
 .box-img-cover .inner {
   overflow: hidden;
@@ -1281,6 +1301,9 @@ a {
 
 .box-step {
   padding: 0 221px;
+  min-width: 1925px;
+  max-width: 2000px;
+  margin: 0 auto;
 }
 .box-step .item {
   display: flex;
@@ -1311,6 +1334,7 @@ a {
 .box-service {
   background: var(--BG-light-2, #fbfbfb);
   padding: 128px 0;
+  margin: 150px 0 0;
 }
 .box-service .text-1 {
   color: var(--Font-dark, #000);
@@ -1320,5 +1344,68 @@ a {
   font-weight: 400;
   line-height: 100%; /* 32px */
   letter-spacing: -1.92px;
-  padding: 0 221px;
+  padding: 0 221px 70px 221px;
+}
+.box-service .mySwiper {
+  padding-right: 96px;
+}
+.box-service .mySwiper .swiper-wrapper {
+  padding: 0 0 0 96px;
+}
+.box-service .mySwiper .swiper-wrapper .swiper-slide {
+  width: 602px !important;
+}
+.box-service .mySwiper .swiper-wrapper .swiper-slide:last-child {
+  margin-right: 96px !important;
+}
+.box-service .mySwiper .swiper-wrapper .swiper-slide:nth-child(even) {
+  width: 477px !important;
+}
+.box-service .mySwiper .swiper-wrapper .swiper-slide:nth-child(even) .img-holder {
+  margin-top: 218px;
+}
+.box-service .mySwiper .swiper-wrapper .swiper-slide:nth-child(even) .img-holder span {
+  padding-top: 124%;
+}
+.box-service .mySwiper .swiper-wrapper .swiper-slide .img-holder {
+  transform: translateY(100px);
+  opacity: 0;
+  transition: 0.2s opacity, 2s transform;
+}
+.box-service .mySwiper .swiper-wrapper .swiper-slide .img-holder span {
+  border-radius: 16px;
+  padding-top: 101%;
+}
+.box-service .mySwiper .swiper-wrapper .swiper-slide .img-holder span::after {
+  content: "";
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  border-radius: 16px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%);
+}
+.box-service .mySwiper .swiper-wrapper .swiper-slide .tt-1 {
+  margin-top: 28px;
+  color: var(--Font-dark, #000);
+  /* Title/lg 04 01 */
+  font-family: "Welstory gothic";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 32px */
+  letter-spacing: -0.96px;
+}
+.box-service .mySwiper .swiper-wrapper .swiper-slide .tt-2 {
+  margin-top: 28px;
+  color: var(--Font-dark, #000);
+  /* Caption/Caption 22 */
+  font-family: Pretendard;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%; /* 22px */
+  letter-spacing: -0.66px;
 }/*# sourceMappingURL=style.css.map */

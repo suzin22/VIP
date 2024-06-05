@@ -496,7 +496,30 @@ a {
   z-index: 20;
   background-color: #fff;
   height: 480px;
-  margin: 0 0 192px 0;
+  margin: 96px;
+  &.type-2 {
+    .inner {
+      border-radius: 24px;
+      .box-text {
+        padding-top: 213px;
+        .text-1 {
+          color: var(--Basic-1, #fff);
+
+          /* Title/lg 02 01 */
+          font-family: "Welstory gothic";
+          font-size: 54px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 100%; /* 54px */
+          letter-spacing: -1.62px;
+        }
+        .img {
+          position: relative;
+          top: -6px;
+        }
+      }
+    }
+  }
   .inner {
     overflow: hidden;
     height: 480px;
@@ -1292,6 +1315,9 @@ a {
 
 .box-step {
   padding: 0 221px;
+  min-width: 1925px;
+  max-width: 2000px;
+  margin: 0 auto;
   .item {
     display: flex;
     flex-direction: row;
@@ -1325,6 +1351,7 @@ a {
 .box-service {
   background: var(--BG-light-2, #fbfbfb);
   padding: 128px 0;
+  margin: 150px 0 0;
   .text-1 {
     color: var(--Font-dark, #000);
     font-family: "Welstory gothic";
@@ -1333,6 +1360,80 @@ a {
     font-weight: 400;
     line-height: 100%; /* 32px */
     letter-spacing: -1.92px;
-    padding: 0 221px;
+    padding: 0 221px 70px 221px;
+  }
+  .mySwiper {
+    padding-right: 96px;
+    .swiper-wrapper {
+      padding: 0 0 0 96px;
+      .swiper-slide {
+        width: 602px !important;
+        // transition:
+        //   0.4s opacity,
+        //   0.3s transform;
+        // will-change: opacity, transform;
+        &:last-child {
+          margin-right: 96px !important;
+        }
+        &:nth-child(even) {
+          width: 477px !important;
+          .img-holder {
+            //transform: translateY(200px);
+            margin-top: 218px;
+            span {
+              padding-top: 124%;
+            }
+          }
+        }
+        &:last-child {
+        }
+        .img-holder {
+          transform: translateY(100px);
+          opacity: 0;
+          transition:
+            0.2s opacity,
+            2s transform;
+          span {
+            border-radius: 16px;
+            padding-top: 101%;
+            &::after {
+              content: "";
+              display: block;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              position: absolute;
+              border-radius: 16px;
+              background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%);
+            }
+          }
+        }
+        .tt-1 {
+          margin-top: 28px;
+          color: var(--Font-dark, #000);
+
+          /* Title/lg 04 01 */
+          font-family: "Welstory gothic";
+          font-size: 32px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 100%; /* 32px */
+          letter-spacing: -0.96px;
+        }
+        .tt-2 {
+          margin-top: 28px;
+          color: var(--Font-dark, #000);
+
+          /* Caption/Caption 22 */
+          font-family: Pretendard;
+          font-size: 22px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 100%; /* 22px */
+          letter-spacing: -0.66px;
+        }
+      }
+    }
   }
 }
